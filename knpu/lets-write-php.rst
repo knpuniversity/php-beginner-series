@@ -1,19 +1,19 @@
 Let's Write some PHP!
 =====================
 
-Welcome! We're glad you're here with us to learn how to become a great PHP
+Welcome! We're glad you're here with us to learn how to become an Epic PHP
 developer. PHP is a programming language that runs a `large percentage`_ of
 the web including sites as big as Facebook. But since PHP has been around
-for awhile, there is a lot  of bad, outdated and boring information about
+for awhile, there is a lot of bad, outdated and boring information about
 PHP on the web.
 
 But not here! In this course, we'll learn PHP from scratch by building a real
-website. This means you'll learn the practices used by real developers to build
-really cool things, and not just a bunch of theory. We'll teach you something
+website. This means you'll learn the practices used by real *employed* developers 
+to build really cool things, and not just a bunch of theory. We'll teach you something
 in each chapter and then you'll test and practice your new skills by coding
 right in your browser. Learn and then practice, that's the key! Before long,
 you'll be creating more and more complex things and be the coolest guy or
-gal that any of your friends know. 
+gal that any of your friends know - maybe :) 
 
 The Project
 -----------
@@ -21,7 +21,7 @@ The Project
 We're going to build a site that we're calling `AirPupnMeow.com`. Imagine a
 site like Airbnb.com, except where people rent cute pets instead of apartments.
 If you're looking for companionship without all that responsibility of walking
-your dog every morning and bringing a bag to pick up his... unmentionables,
+your dog every morning and bringing a bag to pick up his... uh gifts,
 then this site would be for you! Ok, the idea might be kinda silly, but that
 hasn't stopped startups in the past! So let's go!
 
@@ -31,7 +31,7 @@ What you see here is just an HTML page that I've loaded in my browser
 
 This is a template based on `Twitter Bootstrap`_ and it's just a bunch of
 hardcoded text and links that don't go anywhere yet. But it's already a cute
-start to our silly site.
+start to our rent-a-pet site. 
 
 For now, don't worry about the ``localhost`` part I have in the URL or that
 this file ends in ``.php``. Just know that when I load this page, the ``index.php``
@@ -51,14 +51,14 @@ Writing your first PHP
 
 Let's make this page more interesting!
 
-Before your write PHP code, you'll always write the same opening tag: ``<?php``.
+Before you write PHP code, you'll always start with the same opening tag: ``<?php``.
 This is what tells PHP that we're not writing HTML anymore - we actually
 want to write some PHP code. Let's print out a cool message by using the
-:phpfunction:`echo` statement and surrounding our message with single quotes.
-Finish off the line with a semicolon and then write ``?>``. These last two
-characters get us out of PHP mode and back into HTML mode. If ``<?php`` is
-Superman, then ``?>`` is Lex Luther: one gets us into PHP mode and the other
-exits PHP mode::
+:php:`echo` statement and surrounding our message with single quotes.
+Finish off the line with a semicolon and then write the PHP closing tag: ``?>``. 
+These last two characters get us out of PHP mode and back into HTML. 
+The ``<?php`` and ``?>`` tags are exact opposites and always come in a pair. 
+One gets us into PHP mode and the other exits PHP mode::
 
     <!-- index.php -->
     <!-- ... -->
@@ -68,9 +68,9 @@ exits PHP mode::
     </div>
 
 Before we talk about what we did, let's celebrate, because when I refresh
-the page, it works! PHP is printing our string in the middle of the page.
+the page, it works! PHP is printing our message in the middle of the page.
 
-The key is PHP's :function:`echo` statement, whose job is to print things
+The key is the :php:`echo` statement, whose job is to print things
 out. The message itself is called a "string" and strings are always surrounded
 by single quotes when you write them.
 
@@ -83,7 +83,7 @@ Creating and Using Variables
 ----------------------------
 
 Since printing a static string is boring, let's create a variable! Whenever
-we want to write PHP code, remember to pen up PHP with ``<?php`` and close
+we want to write PHP code, remember to open up PHP with ``<?php`` and close
 it with ``?>``::
 
     <!-- index.php -->
@@ -99,14 +99,14 @@ it with ``?>``::
 
 The open and close PHP tags can totally be on separate lines. If we refresh
 now, there's no change. Unless we print something from within PHP, nothing
-is shown on the page. Even if we add blank lines, they don't appear on inside
+is shown on the page. Even if we add blank lines, they don't appear inside
 the HTML source code.
 
 To create a variable, start with a dollar sign (``$``), write a clever name,
 then finish it up with an equal sign (``=``) and the value we want to give,
-or assign, to the variable. Remember to be a semi-colon at the end of the
-line: almost all lines in PHP end in a semi-colon, and forgetting it is one
-of the most common errors you'll make::
+or assign, to the variable. Remember to add a semi-colon at the end of the
+line: almost all lines in PHP end in a semi-colon. Did you hear me? Because, 
+forgetting this is one of the most common errors you'll make::
 
     <?php
         $welcomeMessage = 'AirPupnMeow.com: All the love, none of the crap!';
@@ -115,7 +115,7 @@ of the most common errors you'll make::
 If we refresh, nothing changes yet. that makes sense, because we haven't
 printing anything from within PHP! Using the variable is easy, replace our
 echo'd string with a ``$`` and the variable name. and just like that, we're
-creating and using variables::
+creating and using variables and one step closer to your new best friend::
 
     <!-- index.php -->
     <!-- ... -->
