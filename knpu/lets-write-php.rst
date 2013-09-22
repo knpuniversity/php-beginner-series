@@ -13,7 +13,7 @@ to build really cool things, and not just a bunch of theory. We'll teach you som
 in each chapter and then you'll test and practice your new skills by coding
 right in your browser. Learn and then practice, that's the key! Before long,
 you'll be creating more and more complex things and be the coolest guy or
-gal that any of your friends know - maybe :) 
+gal that any of your friends know - probably :) 
 
 The Project
 -----------
