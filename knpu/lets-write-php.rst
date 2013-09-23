@@ -58,7 +58,9 @@ want to write some PHP code. Let's print out a cool message by using the
 Finish off the line with a semicolon and then write the PHP closing tag: ``?>``. 
 These last two characters get us out of PHP mode and back into HTML. 
 The ``<?php`` and ``?>`` tags are exact opposites and always come in a pair. 
-One gets us into PHP mode and the other exits PHP mode::
+One gets us into PHP mode and the other exits PHP mode:
+
+.. code-block:: html+php
 
     <!-- index.php -->
     <!-- ... -->
@@ -88,7 +90,9 @@ Creating and Using Variables
 
 Since printing a static string is boring, let's create a variable! Whenever
 we want to write PHP code, remember to open up PHP with ``<?php`` and close
-it with ``?>``::
+it with ``?>``:
+
+.. code-block:: html+php
 
     <!-- index.php -->
     <!-- ... -->
@@ -114,16 +118,20 @@ To create a variable, start with a dollar sign (``$``), write a clever name,
 then finish it up with an equal sign (``=``) and the value we want to give,
 or assign, to the variable. Remember to add a semi-colon at the end of the
 line: almost all lines in PHP end in a semi-colon. Did you hear me? Because, 
-forgetting this is one of the most common errors you'll make::
+forgetting this is one of the most common errors you'll make:
+
+.. code-block:: html+php
 
     <?php
-        $welcomeMessage = 'All the love, none of the crap!';
+        $cleverWelcomeMessage = 'All the love, none of the crap!';
     ?>
 
 If we refresh, nothing changes yet. that makes sense, because we haven't
 printing anything from within PHP! Using the variable is easy, replace our
 echo'd string with a ``$`` and the variable name. and just like that, we're
-creating and using variables and one step closer to your new best friend::
+creating and using variables and one step closer to your new best friend:
+
+.. code-block:: html+php
 
     <!-- index.php -->
     <!-- ... -->
@@ -131,26 +139,33 @@ creating and using variables and one step closer to your new best friend::
     <div class="jumbotron">
         <div class="container">
             <?php
-                $welcomeMessage = 'All the love, none of the crap!';
+                $cleverWelcomeMessage = 'All the love, none of the crap!';
             ?>
 
-            <h1><?php echo $welcomeMessage; ?></h1>
+            <h1><?php echo $cleverWelcomeMessage; ?></h1>
 
             <!-- ... -->
         </div>
     </div>
 
+Variables as Strings or Numbers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Of course, variables can also be set to numbers which looks the same but without
-the quotes::
+the quotes:
+
+.. code-block:: html+php
 
     <?php
-        $welcomeMessage = 'All the love, none of the crap!';
+        $cleverWelcomeMessage = 'All the love, none of the crap!';
         $pupCount = 5000
     ?>
 
 Notice that I have 2 PHP lines, or statements, inside one set of opening and
 closing PHP tags. That's totally legal: once you open PHP, you can write
-as much as you want. Use your new variable to print another message::
+as much as you want. Use your new variable to print another message:
+
+.. code-block:: html+php
 
     <!-- index.php -->
     <!-- ... -->
@@ -158,11 +173,11 @@ as much as you want. Use your new variable to print another message::
     <div class="jumbotron">
         <div class="container">
             <?php
-                $welcomeMessage = 'All the love, none of the crap!';
+                $cleverWelcomeMessage = 'All the love, none of the crap!';
                 $pupCount = 5000;
             ?>
 
-            <h1><?php echo $welcomeMessage; ?></h1>
+            <h1><?php echo $cleverWelcomeMessage; ?></h1>
 
             <p>With over <?php echo $pupCount ?> pet friends!</p>
             <!-- ... -->
@@ -171,11 +186,13 @@ as much as you want. Use your new variable to print another message::
 
 When we fresh, it's a success!
 
-PHP Errors
-----------
+Making PHP Angry with Syntax Errors!
+------------------------------------
 
 Now, let's make a small error to see what happens. I'll just remove the semicolon
-from the end of the ``$welcomeMessage = `` line::
+from the end of the ``$cleverWelcomeMessage = `` line:
+
+.. code-block:: html+php
 
     <!-- index.php -->
     <!-- ... -->
@@ -183,11 +200,11 @@ from the end of the ``$welcomeMessage = `` line::
     <div class="jumbotron">
         <div class="container">
             <?php
-                $welcomeMessage = 'All the love, none of the crap!'
+                $cleverWelcomeMessage = 'All the love, none of the crap!'
                 $pupCount = 5000;
             ?>
 
-            <h1><?php echo $welcomeMessage; ?></h1>
+            <h1><?php echo $cleverWelcomeMessage; ?></h1>
 
             <p>With over <?php echo $pupCount ?> pet friends!</p>
             <!-- ... -->
