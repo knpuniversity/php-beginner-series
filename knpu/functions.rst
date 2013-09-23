@@ -231,5 +231,5 @@ The most important thing to remember is that PHP has a lot of functions, which
 are always written with a set or parenthesis after their name. Some have one
 or more arguments that allow you to control the function and the documentation
 explains these. Functions typically do some work and return a value, which
-you can assign to variables or print using echo. Go it? Ok, onto practicing with
+you can assign to variables or print using echo. Got it? Ok, onto practicing with
 the activities!
