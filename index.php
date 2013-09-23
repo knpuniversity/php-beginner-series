@@ -67,10 +67,10 @@
         <div class="container">
             <?php
                 $cleverWelcomeMessage = 'All the love, none of the crap!';
-                $pupCount = 50;
+                $pupCount = rand(50, 100);
             ?>
 
-            <h1><?php echo $cleverWelcomeMessage; ?></h1>
+            <h1><?php echo strtoupper(strtolower($cleverWelcomeMessage)); ?></h1>
 
             <p>Over <?php echo $pupCount ?> pet friends!</p>
 
