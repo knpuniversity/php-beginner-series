@@ -64,6 +64,11 @@ An argument appears between the parentheses of the function and tells the
 this argument is optional: the function will work without it and has a default
 value of ``0``. I know this by reading its documentation.
 
+.. tip::
+
+    PHP often uses the word "parameter" in place of argument in its documentation
+    and error messages. These two words mean the same thing.
+
 In fact, we can see that :phpfunction:`rand` has *2* arguments: the minimum
 number *and* a maximum. To pass a second argument, just add a comma after
 the first:
