@@ -1,0 +1,20 @@
+title:  Writing Epic PHP in one month
+price:  12
+length: 0:00:00
+summary: |
+    WIP - Becoming an epic PHP developer from scratch.
+illustration: epci-php.png
+priority: 0
+tags:
+    - { name: php }
+
+chapters:
+    "lets-write-php":
+        title:      Let's Write PHP
+        is_free:    true
+        length:     0:00
+
+    "functions":
+        title:      Functions!
+        is_free:    false
+        length:     0:00
