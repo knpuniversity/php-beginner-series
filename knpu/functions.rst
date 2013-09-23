@@ -23,7 +23,7 @@ do. So when you see a function, think "this does some work for me and then
 returns a value." It might return a number, a string like ``'Hello World'``,
 or something more complicated.
 
-The :phpfunction`rand` function returns a random number. We assign that number
+The :phpfunction:`rand` function returns a random number. We assign that number
 to the ``$pupCount`` variable and then print it just like before with the
 ``echo`` statement.
 
