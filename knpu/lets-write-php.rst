@@ -63,8 +63,12 @@ One gets us into PHP mode and the other exits PHP mode::
     <!-- index.php -->
     <!-- ... -->
 
-    <div class="container">
-        <?php echo 'Look mom, PHP!'; ?>
+    <div class="jumbotron">
+        <div class="container">
+            <h1><?php echo 'Look mom, PHP!'; ?></h1>
+
+            <!-- ... -->
+        </div>
     </div>
 
 Before we talk about what we did, let's celebrate, because when I refresh
@@ -88,13 +92,17 @@ it with ``?>``::
 
     <!-- index.php -->
     <!-- ... -->
-    
-    <div class="container">
-        <?php
-            
-        ?>
 
-        <?php echo 'Look mom, PHP!'; ?>
+    <div class="jumbotron">
+        <div class="container">
+            <?php
+
+            ?>
+
+            <h1><?php echo 'Look mom, PHP!'; ?></h1>
+
+            <!-- ... -->
+        </div>
     </div>
 
 The open and close PHP tags can totally be on separate lines. If we refresh
@@ -109,7 +117,7 @@ line: almost all lines in PHP end in a semi-colon. Did you hear me? Because,
 forgetting this is one of the most common errors you'll make::
 
     <?php
-        $welcomeMessage = 'AirPupnMeow.com: All the love, none of the crap!';
+        $welcomeMessage = 'All the love, none of the crap!';
     ?>
 
 If we refresh, nothing changes yet. that makes sense, because we haven't
@@ -120,19 +128,23 @@ creating and using variables and one step closer to your new best friend::
     <!-- index.php -->
     <!-- ... -->
 
-    <div class="container">
-        <?php
-            $welcomeMessage = 'AirPupnMeow.com: All the love, none of the crap!';
-        ?>
+    <div class="jumbotron">
+        <div class="container">
+            <?php
+                $welcomeMessage = 'All the love, none of the crap!';
+            ?>
 
-        <?php echo $welcomeMessage; ?>
+            <h1><?php echo $welcomeMessage; ?></h1>
+
+            <!-- ... -->
+        </div>
     </div>
 
 Of course, variables can also be set to numbers which looks the same but without
 the quotes::
 
     <?php
-        $welcomeMessage = 'AirPupnMeow.com: All the love, none of the crap!';
+        $welcomeMessage = 'All the love, none of the crap!';
         $pupCount = 5000
     ?>
 
@@ -143,14 +155,18 @@ as much as you want. Use your new variable to print another message::
     <!-- index.php -->
     <!-- ... -->
 
-    <div class="container">
-        <?php
-            $welcomeMessage = 'AirPupnMeow.com: All the love, none of the crap!';
-            $pupCount = 5000;
-        ?>
+    <div class="jumbotron">
+        <div class="container">
+            <?php
+                $welcomeMessage = 'All the love, none of the crap!';
+                $pupCount = 5000;
+            ?>
 
-        <?php echo $welcomeMessage; ?>
-        <?php echo $pupCount; ?>
+            <h1><?php echo $welcomeMessage; ?></h1>
+
+            <p>With over <?php echo $pupCount ?> pet friends!</p>
+            <!-- ... -->
+        </div>
     </div>
 
 When we fresh, it's a success!
@@ -164,18 +180,24 @@ from the end of the ``$welcomeMessage = `` line::
     <!-- index.php -->
     <!-- ... -->
 
-    <div class="container">
-        <?php
-            $welcomeMessage = 'AirPupnMeow.com: All the love, none of the crap!'
-            $pupCount = 5000;
-        ?>
+    <div class="jumbotron">
+        <div class="container">
+            <?php
+                $welcomeMessage = 'All the love, none of the crap!'
+                $pupCount = 5000;
+            ?>
 
-        <?php echo $welcomeMessage; ?>
-        <?php echo $pupCount; ?>
+            <h1><?php echo $welcomeMessage; ?></h1>
+
+            <p>With over <?php echo $pupCount ?> pet friends!</p>
+            <!-- ... -->
+        </div>
     </div>
 
+.. highlights::
+
     PHP Parse error: syntax error, unexpected '$pupCount' (T_VARIABLE) in
-    /path/to/site/index.php on line 40
+    /path/to/site/index.php on line 70
 
 You'll see a lot of error messages and the trick is to get good at knowing
 what they mean. Be sure to look at the line number and check that line *and*
