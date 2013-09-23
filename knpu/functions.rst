@@ -124,7 +124,7 @@ a "friendly" reminder:
 .. highlights::
 
     PHP Warning:  ucwords() expects exactly 1 parameter, 0 given in
-    /path/to/project/index.php on line 12
+    /path/to/project/index.php on line 69
 
 The point is that PHP has *a lot* of functions, and each has different arguments
 that mean different things. Some arguments are required, like the first and
