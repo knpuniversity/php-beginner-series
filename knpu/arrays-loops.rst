@@ -16,7 +16,7 @@ manually:
 
     <!-- index.php -->
     <!-- ... -->
-    
+
     <?php
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
@@ -68,12 +68,12 @@ the array:
 
     <!-- index.php -->
     <!-- ... -->
-    
+
     <?php
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
-        
+
         $pets = array($pet1, $pet2, $pet3);
     ?>
 
@@ -98,15 +98,15 @@ that will print all 3:
 
     <!-- index.php -->
     <!-- ... -->
-    
+
     <?php
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
-        
+
         $pets = array($pet1, $pet2, $pet3);
     ?>
-    
+
     <div class="container">
         <div class="row">
             <?php
@@ -177,7 +177,7 @@ is your new best friend:
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
-    
+
         $pets = array($pet1, $pet2, $pet3);
         var_dump($pets);
     ?>
@@ -224,9 +224,9 @@ syntax:
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
-    
+
         $pets = array($pet1, $pet2, $pet3);
-        
+
         echo $pets[0];
         echo $pets[2];
     ?>
@@ -239,7 +239,7 @@ gets angry::
 
 .. highlights::
 
-    Notice: Undefined offset: 3 in /path/to/project/index.php on line 7
+    Notice: Undefined offset: 3 in /path/to/project/index.php on line 87
 
 We'll talk more about array keys in the next chapter.
 
@@ -258,7 +258,7 @@ like a number:
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
-    
+
         $pets = array($pet1, $pet2, $pet3, 14);
     ?>
 
