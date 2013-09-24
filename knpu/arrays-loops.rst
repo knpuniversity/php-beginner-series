@@ -37,9 +37,9 @@ manually:
         </div>
     </div>
 
-When we refresh, we see the 3 pets in our styled list. Now obviously, we're
-repeating code unnecessarily and writing all the ``div`` and ``h2`` tags
-is too much work. Arrays to the rescue!
+When we refresh, we see the 3 park friendly pets in our styled list. Now obviously, we're
+repeating code unnecessarily and writing all the ``div`` and ``h2`` tags is too much work. 
+Arrays to the rescue!
 
 Creating an Array
 -----------------
@@ -61,7 +61,7 @@ This looks just like a function, and basically it is. But instead of returning
 a string or number, it returns an array, which is like a box that you can
 put strings, numbers or other things into. Right now the box is empty.
 
-To put things in the box, just pass those things are arguments when creating
+To put things in the box, just pass them as arguments when creating
 the array:
 
 .. code-block:: html+php
@@ -83,9 +83,9 @@ the array:
     into your array as you want!
 
 There are now 3 strings inside our array waiting to see what we'll do with
-them. Like any filing system full of items, we can either look at one specific
-item or loop through everything, looking at each item one at a time. We want
-to loop through each item and print the pet name inside our HTML markup.
+them. Like any box full of stuff, we can either pull out one specific
+item or pull out every item one at a time. In our case, we want to loop through 
+each pet and print its name inside our HTML markup.
 
 Looping over an Array
 ---------------------
@@ -121,7 +121,7 @@ that will print all 3:
         </div>
     </div>
 
-Refresh. Success! Congratulations on creating and looping over your first
+Refresh and success! Congratulations on creating and looping over your first
 array. This is one of the most common and important skills in PHP.
 
 One unfortunate side effect is that we're now printing out the static HTML
@@ -130,17 +130,15 @@ looks a bit uglier. There is a way to make this all look a lot prettier,
 which we'll talk about in the next episode of this series.
 
 ``foreach`` isn't a function, it's what's called a "language construct".
-That basically means that it's one of a very small number of things in PHP
-that have their own special syntax. It looks similar to a function, except
-we say ``$pets as $pet`` instead of passing it arguments. Language constructs
-are things that bend the rules of typical PHP syntax, just like this. There
-are very few of them, and I'll point them out along the way.
+That basically means that it looks and works like a function, but has its own,
+special syntax. There aren't many of these language constructs and I'll point
+them out along the way.
 
-With our ``foreach``, we say ``$pets as $pet``. The first variable is the
-array we're looping over and the second is a new variable name, which PHP
-sets to the value of each item in the array as we loop. Since our array has
-3 strings in it, ``foreach`` executes the lines between ``{`` and ``}`` 3
-times and ``$pet`` is set to a different string each time.
+To loop, we say ``$pets as $pet``. The first variable is the array we're looping
+over and the second is a new variable name, which PHP sets to the value of each
+item in the array as we loop. Since our array has 3 strings in it, ``foreach``
+executes the lines between ``{`` and ``}`` 3 times and ``$pet`` is set to a
+different string each time.
 
 If I change ``$pet`` to something else, that's fine, as long as I change it
 inside the curly braces as well::
@@ -163,12 +161,12 @@ Accessing Specific Items in an Array
 ------------------------------------
 
 In addition to looping over each item in an array, you can also just access
-one specific item. To see how, let's look at how an array looks under the
+one specific item. First, let's see how an array looks under the
 surface by using a handy debugging function called :phpfunction:`var_dump`.
 ``var_dump``, like ``echo``, prints things to the screen. But ``var_dump``
 is better for debugging because it prints things out in a really descriptive
 way. If you have a variable and want to know everything about it, ``var_dump``
-is your friend:
+is your new best friend:
 
 .. code-block:: html+php
 
@@ -201,7 +199,7 @@ Array Keys/Indexes
 ~~~~~~~~~~~~~~~~~~
 
 As we can see, an array does more than just hold things, it also gives each
-thing a unique identifier. Imagine you're going to see a fancy orchestra
+a unique identifier. Imagine you're going to see a fancy orchestra
 performance. When you walk in, there's a coat room. You give your coat to
 the attendee who attaches a unique number to it and then gives you a copy
 of that number. The coatroom is an array of different coats, but each has
@@ -209,10 +207,10 @@ a unique number. When the night is over, you tell the attendee your number
 and he finds and returns just your coat.
 
 A PHP array is just as simple and as you can see, the first item is assigned
-the number 0, the second is assigned 1, the third item is assigned 2, and
-so on if we had more pets in our array. This number is called the array key
-or index. Later we'll see how we can even control the key for an item in
-the array, instead of letting it be auto-assigned like it is now.
+the number 0, the second is assigned 1, the third item 2, and so on if we had 
+more pets. This number is called the array key or index. Later we'll see how 
+we can even control these keys instead of letting them be auto-assigned like
+it is now.
 
 To access a single item, just look it up by its key using a square bracket
 syntax:
@@ -248,7 +246,7 @@ We'll talk more about array keys in the next chapter.
 Putting other Stuff into an Array
 ---------------------------------
 
-Finally, we've only put strings into our array, but we can put anything there,
+We've only put strings into our array so far, but we can really put anything there,
 like a number:
 
 .. code-block:: html+php
