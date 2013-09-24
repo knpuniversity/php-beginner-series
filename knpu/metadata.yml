@@ -18,3 +18,7 @@ chapters:
         title:      Functions!
         is_free:    false
         length:     0:00
+    "arrays-loops":
+        title:      Arrays and Loops
+        is_free:    false
+        length:     0:00
