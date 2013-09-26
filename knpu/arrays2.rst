@@ -87,7 +87,7 @@ so we surround them by quotes. The end result looks like a map: the key on
 the left points to the value on the right.
 
 Now all we need to do is update our code to use the keys. Again, now that
-the keys are strings, we surround them by quotes:
+they are strings, we surround them by quotes:
 
 .. code-block:: html+php
 
@@ -115,12 +115,12 @@ the keys are strings, we surround them by quotes:
         </div>
     </div>
 
-Refresh! Success!
+Refresh and success!
 
 When you take control of the indexes, or keys, of an array, the array is
 known as an associative array. The name makes sense if you imagine associating
 each item in the array with a specific key. When an array is full of items
-where we don't specify the keys, it's known as a boring "indexed" array.
+where we *don't* specify the keys, it's known as a boring "indexed" array.
 I *may* have added the word boring.
 
     associate: array('name' => 'Pancake', 'weight' => 9);
