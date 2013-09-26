@@ -18,3 +18,15 @@ chapters:
         title:      Functions!
         is_free:    false
         length:     0:00
+    "arrays-loops":
+        title:      Arrays and Loops
+        is_free:    false
+        length:     0:00
+    "arrays2":
+        title:      Arrays Level 2: Associative Arrays
+        is_free:    false
+        length:     0:00
+    "arrays3":
+        title:      We put Arrays in your Arrays!
+        is_free:    false
+        length:     0:00
