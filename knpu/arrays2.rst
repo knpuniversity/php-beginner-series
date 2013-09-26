@@ -173,7 +173,7 @@ Adding Items to an Indexed Array
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 While we're on the topic, can we also add more items to an indexed array
-after it's been created? Following what we did wit the associative array,
+after it's been created? Following what we did with the associative array,
 we could guess that it might look something like this:
 
 .. code-block:: html+php
@@ -192,7 +192,7 @@ we could guess that it might look something like this:
     ?>
 
 But what key do we use between the square brackets? We could manually put
-in 4 (``$pets[3] = 'Kitty Gaga';``) since we can count the items in the array
+in 3 (``$pets[3] = 'Kitty Gaga';``) since we can count the items in the array
 and see what the next key will be. But it would be better if PHP could automatically
 assign the key, just like it did for the other items.
 
