@@ -2,12 +2,12 @@ Arrays Level 2: Associative Arrays
 ==================================
 
 Let's leave our array of pets behind and focus on one wonderful pet: Pancake
-the Bulldog! So far, we're just printing out the name of each pet, but Roxy
+the Bulldog! So far, we're just printing out the name of each pet, but Pancake
 has too much personality for that and deserves her own full bio! We'll print
 bios for every pet eventually, but let's just focus on Pancake first, because
 she's awesome!
 
-I know a lot of information about Roxy, including her age, weight, bio and
+I know a lot of information about Pancake, including her age, weight, bio and
 the filename to a photo. Let's store all of this information in an array and
 print it manually at the top of our pet list:
 
@@ -44,13 +44,12 @@ print it manually at the top of our pet list:
 I'm using the array for convenience here, but eventually we'll query a database,
 which will give us an array of information just like this. When we refresh,
 we see Pancake displayed at the top of our list. And yes, we're weighing our
-dogs in pounds because we're from the US and for some reason we do things
-different from everyone else. Feel free to write kilograms if you like that
+dogs in pounds because we're from the US. Feel free to write kilograms if you like that
 better!
 
 One big problem is that this is hard to read: it's not obvious that the 2
 index is weight or that 4 is the image filename. And if we decided that we
-don't want to include weight anymore, Roxy's bio and filename keys change
+don't want to include weight anymore, Pancake's bio and filename keys change
 and the whole thing blows up!
 
 .. highlights::
@@ -82,7 +81,7 @@ for us, let's tell the array exactly what key we want for each item:
 
 First, I'll put each item on its own line. This is meaningless, I'm just trying
 to keep my code a bit more readable. When you want to control the key, put
-the key to the left of the item, followed by an equal and greater than sign.
+the key to the left of the item, followed by the equal and greater than signs.
 I sometimes call this an "equal arrow". Notice that these keys are strings,
 so we surround them by quotes. The end result looks like a map: the key on
 the left points to the value on the right.
