@@ -13,7 +13,9 @@ chapters:
         title:      Let's Write PHP
         is_free:    true
         length:     0:00
-
+        activities:
+            - print_string1
+            - set_var2
     "functions":
         title:      Functions!
         is_free:    false
