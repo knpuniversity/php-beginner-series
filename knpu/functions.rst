@@ -23,7 +23,7 @@ do. So when you see a function, think "this does some work for me and then
 returns a value." It might return a number, a string like ``'Hello World'``,
 or something more complicated.
 
-The :phpfunction`rand` function returns a random number. We assign that number
+The :phpfunction:`rand` function returns a random number. We assign that number
 to the ``$pupCount`` variable and then print it just like before with the
 ``echo`` statement.
 
@@ -64,6 +64,11 @@ An argument appears between the parentheses of the function and tells the
 this argument is optional: the function will work without it and has a default
 value of ``0``. I know this by reading its documentation.
 
+.. tip::
+
+    PHP often uses the word "parameter" in place of argument in its documentation
+    and error messages. These two words mean the same thing.
+
 In fact, we can see that :phpfunction:`rand` has *2* arguments: the minimum
 number *and* a maximum. To pass a second argument, just add a comma after
 the first:
@@ -93,7 +98,7 @@ Capitalizing the first Letter of each Word
 ------------------------------------------
 
 Every function has a different number of total arguments that mean different
-things. Let's look up a cool function called :phpfunction`ucwords`. This
+things. Let's look up a cool function called :phpfunction:`ucwords`. This
 function has only one argument, but it's required:
 
 .. code-block:: html+php
@@ -124,7 +129,7 @@ a "friendly" reminder:
 .. highlights::
 
     PHP Warning:  ucwords() expects exactly 1 parameter, 0 given in
-    /path/to/project/index.php on line 12
+    /path/to/project/index.php on line 69
 
 The point is that PHP has *a lot* of functions, and each has different arguments
 that mean different things. Some arguments are required, like the first and
@@ -139,7 +144,7 @@ learn about similar functions.
 Lowercasing all letters / Using Functions in Different Places
 -------------------------------------------------------------
 
-Let's look at one of the related functions :phpfunction`strtolower`. Like the
+Let's look at one of the related functions :phpfunction:`strtolower`. Like the
 name suggests, when we give this function its one required argument, it will
 make every character lowercase and return it. Let's replace ``ucwords`` with this.
 But instead of using it to set the ``$cleverWelcomeMessage`` variable to a
@@ -163,7 +168,7 @@ lowercase string, we can use it to lowercase the string message just before
         </div>
     </div>
 
-So a function can go anywhere really. And variables can be used as arguments.
+Just like your new pup, a function can really go anywhere. And variables can be used as arguments.
 Remember, ``$cleverWelcomeMessage`` represents our string message, so this
 is the same as passing the string directly (e.g. ``strtolower('All the love, none of the crap!')``).
 
@@ -180,7 +185,7 @@ When we fresh, our string is all lowercase AND reversed.
 
     <h1>!parc eht fo enon ,evol eht lla</h1>
 
-You can use function inside of functions like this as much as you want. The
+You can use functions inside of functions like this as much as you want. The
 trick is to keep track of your parenthesis and always remember to have a
 closing parenthesis for every opening one.
 
@@ -199,10 +204,10 @@ When we refresh, the string displays completely in upper case:
     <h1>ALL THE LOVE, NONE OF THE CRAP!</h1>
 
 This proves that the string is lowercased first and *then* uppercased. Functions
-work from the inside out. First ``cleverWelcomeMessage`` is passed as the
+work from the inside out. Initially ``cleverWelcomeMessage`` is passed as the
 first argument to ``strtolower` and a lowercase string is returned. This
 lowercase string is then passed as the first argument to ``strtoupper``, which
-returns an upper case string. That string is finally printed with ``echo``.
+returns an upper case string. Which is finally printed with ``echo``.
 Phew!
 
 This is all really cool, but if you do feel overwhelmed, you could always
@@ -231,5 +236,5 @@ The most important thing to remember is that PHP has a lot of functions, which
 are always written with a set or parenthesis after their name. Some have one
 or more arguments that allow you to control the function and the documentation
 explains these. Functions typically do some work and return a value, which
-you can assign to variables or print using echo. Go it? Ok, practice with
-activities!
+you can assign to variables or print using echo. Got it? Ok, onto practicing with
+the activities!
