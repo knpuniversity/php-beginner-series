@@ -33,9 +33,9 @@ Multi-dimensional Arrays
 ------------------------
 
 This means that we can have multi-dimensional arrays: an array with another
-array inside of it. Multidimensional arrays are actually pretty common and
+one inside of it. Multidimensional arrays are actually pretty common and
 pretty easy. Let's tweak our code to make each pet an associate array, just
-like Pancake::
+like Pancake. I'll paste in the details::
 
     $pet1 = array(
         'name' => 'Chew Barka',
