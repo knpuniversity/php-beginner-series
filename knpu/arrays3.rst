@@ -73,7 +73,7 @@ like Pancake. I'll paste in the details::
     );
     $pancake['breed'] = 'Bulldog';
 
-Next, add ``$pancake`` to our ``$pets`` array::
+Next, add ``$pancake`` to our ``$pets`` array and remove Kitty Gaga::
 
     $pets = array($pancake, $pet1, $pet2, $pet3);
 
@@ -89,8 +89,8 @@ a new function called :phpfunction:`die`.
 ``die`` kills the execution of the script immediately. It's useful for debugging
 because now our variable will print and ``die`` will temporarily prevent
 the rest of the page from rendering. That just makes things easier to read.
-In my development, ``var_dump`` and ``die`` go together like a fat kid and
-cake. But as delicious as cake is, never use ``die`` in your real code.
+In my development, ``var_dump`` and ``die`` go together like kittens and
+catnip. But as delicious as catnip is to a kitten, never use ``die`` in your real code.
 
 When we refresh, we see the multi-dimensional array. Just like before, the
 outermost array is indexed with keys 0, 1 and 2. Each item is now an associative
@@ -111,8 +111,7 @@ the breed key. Let's ``var_dump`` this to make sure it works::
 
 Now that we have an array with details about multiple pets, we're dangerous!
 Look back at our ``foreach`` statement. We're still looping over ``$pets``.
-But now, instead of ``$cutePet`` being a string, it's the associative array
-for each pet. So instead of echoing ``$cutePet``, we'll echo its keys::
+But now, ``$cutePet`` is an associative array instead of a string::
 
     foreach ($pets as $cutePet) {
         echo '<div class="col-lg-4">';
@@ -122,12 +121,13 @@ for each pet. So instead of echoing ``$cutePet``, we'll echo its keys::
     }
 
 In fact, we already did all this work when we rendered Pancake's details.
-Let's just re-use that code and change ``$pancake`` to ``$cutePet``.
+Let's just re-use that code and change ``$pancake`` to ``$cutePet``. I'll
+tweak a class name as well so that the our pets tile nicely.
 
 .. code-block:: html+php
 
     <?php foreach ($pets as $cutePet) { ?>
-        <div class="col-lg-4 pet-list-item">
+        <div class="col-md-4 pet-list-item">
             <h2><?php echo $cutePet[0]; ?></h2>
 
             <img src="/images/<?php echo $cutePet[4]; ?>" class="img-rounded">
@@ -143,7 +143,7 @@ Let's just re-use that code and change ``$pancake`` to ``$cutePet``.
         </div>
     <?php } ?>
 
-Refresh and voilà! And to make things cleaner, I also closed the PHP tag
+Refresh and voilà! To make things cleaner, I also closed the PHP tag
 after my ``foreach`` statement. This let me write HTML instead of printing
 it from inside PHP, which is hard to read. But it's really the same as before:
 we opened PHP, started the ``foreach``, closed PHP, then later opened PHP
