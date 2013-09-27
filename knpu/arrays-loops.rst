@@ -186,6 +186,8 @@ When we refresh, we see the word "array" that tells us what type of value
 our variable is. Afterwards, we see our 3 strings next to the number 0, 1
 and 2:
 
+.. code-block:: text
+
     array(3) {
       [0] =>
       string(10) "Chew Barka"
