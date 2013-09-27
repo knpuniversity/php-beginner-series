@@ -143,10 +143,10 @@ tweak a class name as well so that the our pets tile nicely.
         </div>
     <?php } ?>
 
-Refresh and voilà! To make things cleaner, I also closed the PHP tag
-after my ``foreach`` statement. This let me write HTML instead of printing
+Refresh and voilà! To make things cleaner, I also close the PHP tag
+after my ``foreach`` statement. This lets me write HTML instead of printing
 it from inside PHP, which is hard to read. But it's really the same as before:
-we opened PHP, started the ``foreach``, closed PHP, then later opened PHP
+we open PHP, start the ``foreach``, close PHP, then later open it
 again to add the closing ``}`` for the ``foreach``. If you're not used to
 this yet, we'll practice it!
 
@@ -166,8 +166,19 @@ that does exactly that called :phpfunction:`count`:
 
     <p>Over <?php echo count($pets) ?> pet friends!</p>
 
-When we refresh, it works perfectly. If we add a 5th pet later, it will update
-automatically.
+When we refresh, we get an error:
+
+.. highlights::
+
+    Notice: Undefined variable: pets in /path/to/index.php on line 70
+
+The problem is that we're referencing the ``$pets`` variable, but it's not
+actually created until after this. PHP reads our file from top to bottom like
+a book, so we need to set a variable before using it.
+
+To fix this, let's move all of the variables all the way up to the top of the
+page. Now when we refresh, it works perfectly. If we add a 5th pet later, it will
+update automatically.
 
 Let's go to php.net and look up the docs for the :phpfunction:`count` function.
 As expected, it takes a single require argument. It also has a second, optional
