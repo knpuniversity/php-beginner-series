@@ -42,7 +42,7 @@ like Pancake. I'll paste in the details::
         'breed' => 'Bichon',
         'age'  => '2 years',
         'weight' => 8,
-        'bio'   => 'Lorem Ipsum',
+        'bio'   => 'The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!',
         'filename' => 'pet1.png'
     );
 
@@ -51,7 +51,7 @@ like Pancake. I'll paste in the details::
         'breed' => 'Pug',
         'age'  => '1.5 years',
         'weight' => 11,
-        'bio'   => 'Lorem Ipsum',
+        'bio'   => 'You want to go to the dog park in style? Then I am your pug!',
         'filename' => 'pet2.png'
     );
 
@@ -60,7 +60,7 @@ like Pancake. I'll paste in the details::
         'breed' => 'Bengal',
         'age'  => '5 years',
         'weight' => 9,
-        'bio'   => 'Lorem Ipsum',
+        'bio'   => 'Oh hai, if you do not have a can of salmon I am not interested.',
         'filename' => 'pet3.png'
     );
 
@@ -142,6 +142,11 @@ tweak a class name as well so that the our pets tile nicely.
             </p>
         </div>
     <?php } ?>
+
+.. tip::
+
+    I indented the ``col-md-4`` div 4 spaces inside the ``foreach`` just
+    to help me read my code better - it doesn't change anything in PHP or HTML.
 
 Refresh and voilà! To make things cleaner, I also close the PHP tag
 after my ``foreach`` statement. This lets me write HTML instead of printing
