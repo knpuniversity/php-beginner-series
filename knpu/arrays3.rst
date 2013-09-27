@@ -176,20 +176,20 @@ The problem is that we're referencing the ``$pets`` variable, but it's not
 actually created until after this. PHP reads our file from top to bottom like
 a book, so we need to set a variable before using it.
 
-To fix this, let's move all of the variables all the way up to the top of the
-page. Now when we refresh, it works perfectly. If we add a 5th pet later, it will
+To fix this, let's move every variable all the way up to the top of the
+file. Now when we refresh, it works perfectly. If we add a 5th pet later, it will
 update automatically.
 
 Let's go to php.net and look up the docs for the :phpfunction:`count` function.
-As expected, it takes a single require argument. It also has a second, optional
+As expected, it takes a single required argument. It also has a second, optional
 argument that you'll probably never use. You can tell it's optional because
 it's surrounded by square brackets. That's not really a PHP syntax, it's just
 a common way to document optional arguments.
 
 While we're here, take a look at the left navigation: it's full of the functions
 in PHP that help you work with arrays. It's a massive list and has great stuff.
-For example, let's look at :phpfunction:`array_reverse`. It accepts an array
-as its one required argument, it reversed it, then returns the reversed array.
+For example, let's look at :phpfunction:`array_reverse`. It takes an array
+as its one required argument, reverses it, and returns it.
 Let's use it to reverse ``$pets``:
 
     $pets = array($pancake, $pet1, $pet2, $pet3);
@@ -197,7 +197,7 @@ Let's use it to reverse ``$pets``:
 
 Sure enough, the pets reverse their order when we refresh. Notice also that
 I passed the ``$pets`` variable as the argument to ``array_reverse`` *and*
-set the result of the function to it. T his is totally legal in PHP. The
+set the result of the function to it. This is totally legal. The
 original value is passed to the function first and then the new, reversed
 value is set to ``$pets`` afterwards.
 
