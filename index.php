@@ -94,7 +94,6 @@
 
         $pets = array($pet1, $pet2, $pet3);
         $pets[] = 'Kitty Gaga';
-    throw new \Exception();
     ?>
 
     <div class="container">
