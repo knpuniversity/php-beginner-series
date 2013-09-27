@@ -32,3 +32,7 @@ chapters:
         title:      We put Arrays in your Arrays!
         is_free:    false
         length:     0:00
+    "files-json-booleans":
+        title:      "Working with Files, JSON and Booleans"
+        is_free:    false
+        length:     0:00
