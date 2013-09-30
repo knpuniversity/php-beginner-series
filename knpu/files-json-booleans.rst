@@ -15,7 +15,7 @@ I've put right inside my project directory.
 
     You can find this file in the "resources" directory of the code download.
 
-Let's open up this file and see what's inside:
+Open up this file and see what's inside:
 
 .. code-block:: json
 
@@ -23,8 +23,7 @@ Let's open up this file and see what's inside:
 
 Ok, let's step back and talk about JSON, which has nothing to do with PHP,
 except that PHP can read it. JSON is a text format that can be used to represent
-structured information. For example, this JSON is equivalent to the ``$pet``
-variable:
+structured information, like pet details:
 
 .. code-block:: json
 
@@ -36,10 +35,10 @@ variable:
         "bio": "The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!","filename":"pet1.png"
     }
 
-And that's really it: any PHP array has a JSON string equivalent and we can
+In fact, any PHP array has a JSON string equivalent and we can
 turn PHP arrays into JSON and vice-versa. In fact, there's a function called
 ``json_encode`` which takes an array and returns the equivalent JSON string.
-Let's use it to see how our pet's array would look in JSON:
+Let's use it to see how our pet's array would look::
 
     var_dump(json_encode($pets));die;
 
@@ -68,7 +67,7 @@ The reason JSON exists is because squiggly braces are awesome! Or maybe it's
 so that different systems can communicate. Imagine if our website saved files
 that were sent off and read by some completely different application. JSON
 is magical because it can be read by PHP or any other language, like Ruby,
-Python or JavaScript. So unless that other application is built by a bunch
+Python or JavaScript. So even if that other application is built by a bunch
 of puppies, they'll be able to read our information. So, JSON is a great way
 to share data.
 
@@ -82,7 +81,7 @@ Reading and Opening Files
 
 So first, how can we load the contents of a file in PHP? The answer is with
 the :phpfunction:`file_get_contents` function. When we pull up its documentation,
-we can see how easy it is. Its only require argument is a filename. It opens
+we can see how easy it is. Its only required argument is a filename. It opens
 up that file and returns its contents to us as a string.
 
 .. note::
