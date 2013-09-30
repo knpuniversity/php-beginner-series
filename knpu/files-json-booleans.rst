@@ -2,14 +2,14 @@ Working with Files, JSON and Booleans
 =====================================
 
 Right now our pet data array is just hardcoded and not dynamic. Eventually,
-we're going to pull our pet data array from a database and let users add
-new pets to that database. But before we get there, let's pretend someone
-has given us a file that contains all of the pet data. Our goal will be to
-read that file and turn its contents into a PHP array that looks just like
-the one we're creating now by hand.
+we're going to pull this array from a database and let users add
+new pets to it. But before we get there, let's pretend someone
+has given us a file that contains all of adorable pets available on airPupnMeow.com. 
+Our goal will be to read that file and turn its contents into a PHP array 
+that looks just like the one we're creating now by hand.
 
 To make things easy, I've already prepared a file called ``pets.json``, which
-I'll put right inside my project directory.
+I've put right inside my project directory.
 
 .. tip::
 
