@@ -113,7 +113,7 @@ this time, we see a warning from PHP:
     Warning: file_get_contents(dinosaurs.json): failed to open stream: No
     such file or directory in /path/to/index.php on line 16
 
-PHP has both errors and warning when things go wrong. The only difference
+PHP has both errors and warnings when things go wrong. The only difference
 is that if the code mistake isn't too bad, PHP just gives us a warning and
 tries to keep executing our code.
 
@@ -124,7 +124,7 @@ tries to keep executing our code.
 Booleans: True and False
 ------------------------
 
-It does continue, and executes our ``var_dump``, which return false. If we
+Here it continues, and executes our ``var_dump``, which returns false. If we
 look at the documentation again, we see that ``file_get_contents`` returns
 the contents of the file as a string *or* it returns ``false`` if it couldn't
 read the file. ``false`` is called a Boolean, which is our fourth PHP data
@@ -133,7 +133,7 @@ type. To review, we have:
 1. Strings, like ``$var = 'Hello World';``
 
 2. Numbers, like ``$var = 5;''. And actually, numbers are sub-divided into
-   integers like 5 and floats, which have decimals like 5.12. But most of
+   integers, like 5, and floats, which have decimals like 5.12. But most of
    the time in PHP, you don't care about this.
 
 3. Arrays, like ``$var = array('puppy1', 'puppy2', 4);``
@@ -153,7 +153,7 @@ functions can return Booleans. ``file_get_contents`` returns a string or
 Decoding JSON into an Array
 ---------------------------
 
-Phew! Let's get back to our project. First, fix the filename. Remember that
+Phew! Let's get back to our furry friends. First, fix the filename. Remember that
 the JSON contents we're reading from the file are a string and what we really
 want is to transform that JSON string into a PHP array. We used ``json_encode``
 to turn an array into JSON, so it makes sense that we can use :phpfunction:`json_decode`
@@ -176,7 +176,7 @@ return an associative array:
 
 Perfect! This is the exact array we were building by hand, so remove that
 along with the ``var_dump`` statement. When we refresh, our page is back!
-The JSON string is ready from the file and then converted into a PHP array.
+The JSON string is read from the file and then converted into a PHP array.
 Our code is ready to iterate over each pet in that array and print out its
 information by using each pet's keys. This works because the information
 in the JSON file exactly matches the PHP array we had before.
@@ -215,7 +215,7 @@ a new directory called ``data`` and refresh. Oh no, things blow up!
 
 .. highlights::
 
-    todo - fill in warning
+    Warning: Invalid argument supplied for foreach() in /path/to/index.php on line 87
 
 PHP no longer finds our file, which sets off a chain reaction of terrible
 things! First, ``file_get_contents`` returns ``false``. Of course, ``false``
@@ -230,9 +230,9 @@ To fix this, we can just change our file path to ``data/pets.json``::
     $petsJson = file_get_contents('data/pets.json');
 
 When we refresh, everyone is happy again! Notice that ``file_get_contents``
-looks for files relative to the file being executed. We'll play with file
+looks for files relative to the one being executed. We'll play with file
 paths more later, just don't think it's magic. PHP is happily stupid: it
-looks for files right in the directory of this file.
+looks for files right in the directory of this one.
 
 .. note::
 
@@ -242,11 +242,11 @@ looks for files right in the directory of this file.
 Saving to a File
 ----------------
 
-And what if oyu want to save data to a file? If we go back to the docs, you'll
-see a related function: :phpfunction:`file_put_contents`. It's also really
-simple: you give it a filename and a string, and it saves that string to
-that file. I'll let you try this on your own in the activities. Don't worry
-about its optional arguments.
+And what if you want to save data to a file? If we go back to the docs for
+``file_get_contents``, you'll see a related function: :phpfunction:`file_put_contents`. 
+It's also really simple: you give it a filename and a string, and it saves 
+that string to that file. I'll let you try this on your own in the activities. 
+Don't worry about its optional arguments.
 
 Other ways to Read and Save Files
 ---------------------------------
@@ -256,10 +256,9 @@ and ``file_put_contents``. These include :phpfunction:`fopen`, :phpfunction:`fre
 :phpfunction:`fwrite` and :phpfunction:`fclose`. For now, just forget these
 exist. Except for when you're dealing with very large files, these functions
 accomplish the exact same thing as ``file_get_contents`` and ``file_put_contents``,
-except that they're just harder and weirder to use. To make matters worse,
-most tutorial on the web teach you to use these functions. Madness! You'll
-probably use them someday, but forget about them now. Working with files
-in PHP need only our 2 handy functions.
+they're just harder and weirder to use. To make matters worse, most tutorials on 
+the web teach you to use these functions. Madness! You'll probably use them someday, 
+but forget about them now. Working with files in PHP we need only our 2 handy functions.
 
 
 .. _`JSONView`: https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc
