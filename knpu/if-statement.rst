@@ -137,7 +137,7 @@ If-else-if
 By now, you probably know that as soon as we get things working, I'll challenge
 us by adding something harder! Imagine that sometimes the dog owner knows
 the age of her dog, but purposefully wants to hide it. Let's change the age
-of Spark Pug to "hidden". When we see this age, let's print a friendly message
+of Spark Pug to "hidden". When we see this, let's print a friendly message
 to contact the owner for the age.
 
 We already have all the tools to make this happen, using another nested ``if``
@@ -153,8 +153,7 @@ statement::
         echo 'Unknown';
     }
 
-Let's modify Spark Pug in ``pets.json`` to have a "hidden" age and then
-try this out. It works perfectly!
+It works perfectly!
 
 But let's see if we can flatten our code to use just one level of an ``if``
 statement. There's nothing wrong with nested ``if`` statements, but sometimes
@@ -221,19 +220,18 @@ some pretty complex logic in your ``if`` statements.
     you do in math. We'll see this later.
 
 Finally, we used 2 equal signs (``==``) to see if the age value is equal
-to an empty string. This is *very* important: do not use a single quote when
+to an empty string. This is *very* important: do not use a single equal sign when
 comparing 2 values. In fact, no matter where you are, repeat after me: "I
-will not use a single equal sign to compare values in an if statement". Ok good!
+solemnly swear to not use a single equal sign to compare values in an if statement". 
 
-The problem is that we use one equal sign to set a value on a variable::
+The reason is that we use one equal sign to set a value on a variable::
 
     // sets the age key to an empty string
     $cutePet['age'] = '';
 
-This is especially tricky because if you forget and use only one equal, the
-code will run. But instead of comparing to see if the age is equal to an
-empty string, it sets the age to an empty string. For lucky reasons, this
-wouldn't break our code here, but it would in all most all other cases.
+This is especially tricky because if you use only one equal sign the code will run.
+But, instead of comparing the two values, it sets the age to an empty string. 
+This wouldn't break our code here, but it would in almost all other cases.
 
 So when comparing values, use ``!=`` and ``==``.
 
@@ -250,10 +248,10 @@ And by the way, these are called "operators". That's a generic word for a
 number of different symbols in PHP that operate on a value. We've seen a
 bunch so far, including ``=``, which is called an assignment operator since
 it assigns a value to a variable. ``&&`` and ``||`` are called logical operators,
-since they help put together different things to see if all of them put together
+they help combine different things to see if all of them put together
 are logically true or false. Knowing how to define an operator isn't important,
 just know that when you hear the word "operator", we're talking about some
-special symbol or group of symbols in that do some special job.
+special symbol or group of symbols that do some special job.
 
 Phew! Let's fill in the rest of our ``if-elseif`` statement, which should
 be pretty easy now::
@@ -266,7 +264,7 @@ be pretty easy now::
         echo $cutePet['age'];
     }
 
-Try it! Oh now, a terrible error!
+Try it! Oh man, a terrible error!
 
     TODO - fill in error
 
