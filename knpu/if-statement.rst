@@ -136,10 +136,9 @@ If-else-if
 
 By now, you probably know that as soon as we get things working, I'll challenge
 us by adding something harder! Imagine that sometimes the dog owner knows
-the age of her dog, but purposefully wants to hide it. In these cases, instead
-of printing "Unknown", we may want to offer a friendly message of how to get this 
-information. Also imagine that the age has been set to the string  ``hidden`` so that we 
-know when to print this message.
+the age of her dog, but purposefully wants to hide it. Let's change the age
+of Spark Pug to "hidden". When we see this age, let's print a friendly message
+to contact the owner for the age.
 
 We already have all the tools to make this happen, using another nested ``if``
 statement::
