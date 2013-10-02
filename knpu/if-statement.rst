@@ -33,12 +33,12 @@ really need is a function that can tell us if the ``age`` key exists on the
 ``$cutePet`` array.
 
 That function is called :phpfunction:`array_key_exists`. Let's look at its
-docs to make sure we know how it works. The first argument is the array, the
-second is the key, and it returns a Boolean. Perfect!
+docs to make sure we know how it works. The first argument is the key, the
+second is the array, and it returns a Boolean. Perfect!
 
 .. code-block:: php
 
-    if (array_key_exists($cutePet, 'age')) {
+    if (array_key_exists('age', $cutePet)) {
         echo $cutePet['age'];
     }
 
@@ -51,7 +51,7 @@ If-else
 But instead of rendering nothing if there is no age, let's print "Unknown".
 We can do this by adding an optional ``else`` part to our ``if``::
 
-    if (array_key_exists($cutePet, 'age')) {
+    if (array_key_exists('age', $cutePet)) {
         echo $cutePet['age'];
     } else {
         echo 'Unknown';
@@ -77,7 +77,7 @@ exists *and* isn't blank.
 Let's do this first by adding a new ``if`` statement inside our existing ``if``.
 We'll check to see if the age and only print it if it's *not* empty::
 
-    if (array_key_exists($cutePet, 'age')) {
+    if (array_key_exists('age', $cutePet)) {
         if ($pet['age'] != '') {
             echo $cutePet['age'];
         }
@@ -92,7 +92,7 @@ true and the first part of the if statement is run.
 Make sure also to add an ``else`` statement so that "Unknown" is printed
 if the ``age`` *is* empty::
 
-    if (array_key_exists($cutePet, 'age')) {
+    if (array_key_exists('age', $cutePet)) {
         if ($pet['age'] != '') {
             echo $cutePet['age'];
         } else {
@@ -114,7 +114,7 @@ Let's simplify. Really, we want to print the age if the ``age`` key exists
 *and* is not an empty string. Let's just put both of these conditions in
 one ``if`` statement::
 
-    if (array_key_exists($cutePet, 'age') && $pet['age'] != '') {
+    if (array_key_exists('age', $cutePet) && $pet['age'] != '') {
         echo $cutePet['age'];
     } else {
         echo 'Unknown';
@@ -145,7 +145,7 @@ know when to print this message.
 We already have all the tools to make this happen, using another nested ``if``
 statement::
 
-    if (array_key_exists($cutePet, 'age') && $pet['age'] != '') {
+    if (array_key_exists('age', $cutePet) && $pet['age'] != '') {
         if ($pet['age'] == 'hidden') {
             echo 'Hi! Email the owner for the age details please!';
         } else {
@@ -198,7 +198,7 @@ Let's make our code follow this format. First, we need to check if the age
 key does not exist or if its value is empty. This is kind of the opposite
 of what we had before::
 
-    if (!array_key_exists($cutePet, 'age') || $pet['age'] == '') {
+    if (!array_key_exists('age', $cutePet) || $pet['age'] == '') {
         echo 'Unknown';
     } elseif (condition #2) {
         echo 'Hi! Email the owner for the age details please!';
@@ -260,7 +260,7 @@ special symbol or group of symbols in that do some special job.
 Phew! Let's fill in the rest of our ``if-elseif`` statement, which should
 be pretty easy now::
 
-    if (!array_key_exists($cutePet, 'age') || $pet['age'] == '') {
+    if (!array_key_exists('age', $cutePet) || $pet['age'] == '') {
         echo 'Unknown';
     } elseif ($pet['age'] == 'hidden')
         echo 'Hi! Email the owner for the age details please!';
@@ -278,7 +278,7 @@ missed a semicolon - it's the most common mistake. And also look at the lines
 above the error. Ah ha! I forgot my opening ``{`` on the ``elseif`` part.
 Rookie mistake::
 
-    if (!array_key_exists($cutePet, 'age') || $pet['age'] == '') {
+    if (!array_key_exists('age', $cutePet) || $pet['age'] == '') {
         echo 'Unknown';
     } elseif ($pet['age'] == 'hidden')
         echo 'Hi! Email the owner for the age details please!';
