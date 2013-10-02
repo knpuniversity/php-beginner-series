@@ -272,7 +272,7 @@ Try it! Oh man, a terrible error!
     on line 101
 
 Let's go to the line number and try to spot the problem. My editor helps me
-find it, but let's look ourselves. In PHP, always look first to see if you
+find it, but let's look ourselves. Always look first to see if you
 missed a semicolon - it's the most common mistake. And also look at the lines
 above the error. Ah ha! I forgot my opening ``{`` on the ``elseif`` part.
 Rookie mistake::
@@ -290,8 +290,6 @@ After fixing it, everything looks great.
 Ok, you just learned a lot about if statements and using operators to compare
 values. I'll teach you some more tricks later, but now let's practice and
 get great with if statements.
-
-- whitespace and new lines with {} and their non-significance
 
 .. _`switch case`: http://us2.php.net/manual/en/control-structures.switch.php
 .. _`Comparison Operators`: http://us2.php.net/manual/en/language.operators.comparison.php
