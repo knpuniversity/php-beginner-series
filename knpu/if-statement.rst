@@ -1,5 +1,5 @@
-The wonderful if Statement
-==========================
+The wonderful if Statements
+===========================
 
 Let's start to make our code smarter! Modify your ``pets.json`` file and
 remove the ``breed`` key from just one of the pets. When we refresh, it doesn't
@@ -9,14 +9,14 @@ fail nicely, it gives us a big ugly warning:
 
 Let's dump the ``$cutePet`` variable inside the loop to see what's going on.
 Each pet is an associative array, but as you probably suspected, Pico de
-Gato is missing her ``breed`` key. In PHP, when you reference a key on an
+Gato is missing her ``breed`` key. When you reference a key on an
 array that doesn't exist, PHP will complain. Instead, let's code defensively.
 In other words, if we know that it's possible that the ``breed`` key might
 be missing, we should check for it and only print the breed if it's there.
 
 To do this, we'll finally meet the wonderful and super-common ``if`` statement.
 Like :ref:`foreach <php-foreach>`, it's a "language construct", and is one of those things
-that use curly braces to surround a block of code::
+that uses curly braces to surround a block of code::
 
     if (true) {
         echo $cutePet['breed'];
@@ -27,10 +27,10 @@ braces one time for each item, ``if`` accepts a Boolean value - in other words
 ``true`` or ``false``. If what you pass it is true, it executes the code
 between its curly braces.
 
-In this case, I'm literally passing it the boolean ``true``. This will run
-and the ``echo`` will always be called, since true will be true now, tomorrow
-and forever. What we really need is a function that can tell us if the ``breed``
-key exists on the ``$cutePet`` array.
+In this case, I'm literally passing it the boolean ``true``. The ``echo`` will
+always be called, since true will be true now, tomorrow and forever. What we
+really need is a function that can tell us if the ``breed`` key exists on the
+``$cutePet`` array.
 
 That function is called :phpfunction:`array_key_exists`. Let's look at its
 docs to make sure we know how it works. The first argument is the array, the
@@ -43,7 +43,7 @@ second is the key, and it returns a Boolean. Perfect!
     }
 
 Great! 3 pets have a breed and one doesn't. This all happens with no warnings.
-``array_key_exists`` returns true for 3 pets and false for the Pico.
+``array_key_exists`` returns true for 3 pets and false for our friend Pico de Gato.
 
 If-else
 -------
