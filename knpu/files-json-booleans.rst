@@ -132,7 +132,7 @@ type. To review, we have:
 
 1. Strings, like ``$var = 'Hello World';``
 
-2. Numbers, like ``$var = 5;''. And actually, numbers are sub-divided into
+2. Numbers, like ``$var = 5;``. And actually, numbers are sub-divided into
    integers, like 5, and floats, which have decimals like 5.12. But most of
    the time in PHP, you don't care about this.
 

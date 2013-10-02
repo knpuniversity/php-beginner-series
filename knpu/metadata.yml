@@ -36,3 +36,7 @@ chapters:
         title:      "Working with Files, JSON and Booleans"
         is_free:    false
         length:     0:00
+    "if-statement":
+        title:      "The wonderful if Statement"
+        is_free:    false
+        length:     0:00

@@ -87,6 +87,8 @@ them. Like any box full of stuff, we can either pull out one specific
 item or pull out every item one at a time. In our case, we want to loop through 
 each pet and print its name inside our HTML markup.
 
+.. _php-foreach:
+
 Looping over an Array
 ---------------------
 
