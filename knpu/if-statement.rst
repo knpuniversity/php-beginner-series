@@ -42,7 +42,7 @@ second is the array, and it returns a Boolean. Perfect!
         echo $cutePet['age'];
     }
 
-Great! 3 pets have a age and one doesn't. This all happens with no warnings.
+Great! 3 pets have an age and one doesn't. This all happens with no warnings.
 ``array_key_exists`` returns true for 3 pets and false for our friend Pico de Gato.
 
 If-else
@@ -69,13 +69,13 @@ we refresh, we're still free of errors. But the age for Chew Barka is missing.
 Since it's blank, I would rather it say "Unknown".
 
 If we dump the ``$pets`` array and refresh, we can see that this makes sense.
-Chew Barka has a ``age`` key, so ``array_key_exists`` returns true, and
+Chew Barka has an ``age`` key, so ``array_key_exists`` returns true, and
 the age - which is a blank string - is printed out. What we really want
 is for the code in the ``if`` statement to only run if the ``age`` key
 exists *and* isn't blank.
 
-Let's do this first by adding a new ``if`` statement inside our existing ``if``.
-We'll check to see if the age and only print it if it's *not* empty::
+Let's do this first by adding a new ``if`` statement inside our existing one.
+We'll check the age and only print it if it's *not* empty::
 
     if (array_key_exists('age', $cutePet)) {
         if ($pet['age'] != '') {
@@ -87,7 +87,7 @@ We'll check to see if the age and only print it if it's *not* empty::
 
 The ``!=`` is what you use when you want to compare 2 values to see if they
 are not the same. If the age is is not empty, then this expression returns
-true and the first part of the if statement is run.
+true and the echo runs.
 
 Make sure also to add an ``else`` statement so that "Unknown" is printed
 if the ``age`` *is* empty::
@@ -111,7 +111,7 @@ because when you need to change this word later, you may forget about the
 duplication and only change it in one spot. Code duplication creates bugs!
 
 Let's simplify. Really, we want to print the age if the ``age`` key exists
-*and* is not an empty string. Let's just put both of these conditions in
+*and* is not an empty string. We can just put both of these conditions in
 one ``if`` statement::
 
     if (array_key_exists('age', $cutePet) && $pet['age'] != '') {
@@ -120,10 +120,10 @@ one ``if`` statement::
         echo 'Unknown';
     }
 
-The secret is the double "and" sign, or ampersand to use its fancy name.
+The secret is the double "and" sign, or ampersand if we are being formal.
 An ``if`` statement can have as many parts, or expressions in it as you want.
 This ``if`` statement has two expressions, the ``array_key_exists`` part
-and the part that checks to see if the age is empty. Each part returns
+and the part that checks to see if the age is empty. Each returns
 true or false on its own. By using ``&&`` between each expression, it means
 that every part must be true in order for the ``if`` statement to run. In
 other words, this is perfect.
@@ -137,9 +137,8 @@ If-else-if
 By now, you probably know that as soon as we get things working, I'll challenge
 us by adding something harder! Imagine that sometimes the dog owner knows
 the age of her dog, but purposefully wants to hide it. In these cases, instead
-of printing "Unknown", we want to say something a bit friendlier, like:
-"Hi! Email the owner for the age details please!" Let's also imagine that
-in these cases, the age has been set to the string ``hidden`` so that we
+of printing "Unknown", we may want to offer a friendly message of how to get this 
+information. Also imagine that the age has been set to the string  ``hidden`` so that we 
 know when to print this message.
 
 We already have all the tools to make this happen, using another nested ``if``
