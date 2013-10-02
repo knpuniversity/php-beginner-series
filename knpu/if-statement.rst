@@ -2,24 +2,24 @@ The wonderful if Statements
 ===========================
 
 Let's start to make our code smarter! Modify your ``pets.json`` file and
-remove the ``breed`` key from just one of the pets. When we refresh, it doesn't
+remove the ``age`` key from just one of the pets. When we refresh, it doesn't
 fail nicely, it gives us a big ugly warning:
 
-    Undefined index: breed in /path/to/index.php on line 95
+    Undefined index: age in /path/to/index.php on line 95
 
 Let's dump the ``$cutePet`` variable inside the loop to see what's going on.
 Each pet is an associative array, but as you probably suspected, Pico de
-Gato is missing her ``breed`` key. When you reference a key on an
+Gato is missing her ``age`` key. When you reference a key on an
 array that doesn't exist, PHP will complain. Instead, let's code defensively.
-In other words, if we know that it's possible that the ``breed`` key might
-be missing, we should check for it and only print the breed if it's there.
+In other words, if we know that it's possible that the ``age`` key might
+be missing, we should check for it and only print the age if it's there.
 
 To do this, we'll finally meet the wonderful and super-common ``if`` statement.
 Like :ref:`foreach <php-foreach>`, it's a "language construct", and is one of those things
 that uses curly braces to surround a block of code::
 
     if (true) {
-        echo $cutePet['breed'];
+        echo $cutePet['age'];
     }
 
 Where ``foreach`` accepts an array and executes the code between its curly
@@ -29,7 +29,7 @@ between its curly braces.
 
 In this case, I'm literally passing it the boolean ``true``. The ``echo`` will
 always be called, since true will be true now, tomorrow and forever. What we
-really need is a function that can tell us if the ``breed`` key exists on the
+really need is a function that can tell us if the ``age`` key exists on the
 ``$cutePet`` array.
 
 That function is called :phpfunction:`array_key_exists`. Let's look at its
@@ -38,21 +38,21 @@ second is the key, and it returns a Boolean. Perfect!
 
 .. code-block:: php
 
-    if (array_key_exists($cutePet, 'breed')) {
-        echo $cutePet['breed'];
+    if (array_key_exists($cutePet, 'age')) {
+        echo $cutePet['age'];
     }
 
-Great! 3 pets have a breed and one doesn't. This all happens with no warnings.
+Great! 3 pets have a age and one doesn't. This all happens with no warnings.
 ``array_key_exists`` returns true for 3 pets and false for our friend Pico de Gato.
 
 If-else
 -------
 
-But instead of rendering nothing if there is no breed, let's print "Unknown".
+But instead of rendering nothing if there is no age, let's print "Unknown".
 We can do this by adding an optional ``else`` part to our ``if``::
 
-    if (array_key_exists($cutePet, 'breed')) {
-        echo $cutePet['breed'];
+    if (array_key_exists($cutePet, 'age')) {
+        echo $cutePet['age'];
     } else {
         echo 'Unknown';
     }
@@ -63,38 +63,38 @@ with and without the optional ``else`` part.
 Combining If Conditions
 -----------------------
 
-Let's complicate things again by removing the breed of another pet. But this
-time, don't remove the whole key, just set the breed to an empty string. When
-we refresh, we're still free of errors. But the breed for Chew Barka is missing.
+Let's complicate things again by removing the age of another pet. But this
+time, don't remove the whole key, just set the age to an empty string. When
+we refresh, we're still free of errors. But the age for Chew Barka is missing.
 Since it's blank, I would rather it say "Unknown".
 
 If we dump the ``$pets`` array and refresh, we can see that this makes sense.
-Chew Barka has a ``breed`` key, so ``array_key_exists`` returns true, and
-the breed - which is a blank string - is printed out. What we really want
-is for the code in the ``if`` statement to only run if the ``breed`` key
+Chew Barka has a ``age`` key, so ``array_key_exists`` returns true, and
+the age - which is a blank string - is printed out. What we really want
+is for the code in the ``if`` statement to only run if the ``age`` key
 exists *and* isn't blank.
 
 Let's do this first by adding a new ``if`` statement inside our existing ``if``.
-We'll check to see if the breed and only print it if it's *not* empty::
+We'll check to see if the age and only print it if it's *not* empty::
 
-    if (array_key_exists($cutePet, 'breed')) {
-        if ($pet['breed'] != '') {
-            echo $cutePet['breed'];
+    if (array_key_exists($cutePet, 'age')) {
+        if ($pet['age'] != '') {
+            echo $cutePet['age'];
         }
     } else {
         echo 'Unknown';
     }
 
 The ``!=`` is what you use when you want to compare 2 values to see if they
-are not the same. If the breed is is not empty, then this expression returns
+are not the same. If the age is is not empty, then this expression returns
 true and the first part of the if statement is run.
 
 Make sure also to add an ``else`` statement so that "Unknown" is printed
-if the ``breed`` *is* empty::
+if the ``age`` *is* empty::
 
-    if (array_key_exists($cutePet, 'breed')) {
-        if ($pet['breed'] != '') {
-            echo $cutePet['breed'];
+    if (array_key_exists($cutePet, 'age')) {
+        if ($pet['age'] != '') {
+            echo $cutePet['age'];
         } else {
             echo 'Unknown';
         }
@@ -103,19 +103,19 @@ if the ``breed`` *is* empty::
     }
 
 This is all getting a little messy, but let's try it! When we refresh, 2
-pets have breeds, 2 say "Unknown", and we have exactly zero warnings. Nice!
+pets have ages, 2 say "Unknown", and we have exactly zero warnings. Nice!
 
 The mess is that we have a lot of code for such a small problem. We also have
 the word "Unknown" written in 2 places. Code duplication is always a bummer
 because when you need to change this word later, you may forget about the
 duplication and only change it in one spot. Code duplication creates bugs!
 
-Let's simplify. Really, we want to print the breed if the ``breed`` key exists
+Let's simplify. Really, we want to print the age if the ``age`` key exists
 *and* is not an empty string. Let's just put both of these conditions in
 one ``if`` statement::
 
-    if (array_key_exists($cutePet, 'breed') && $pet['breed'] != '') {
-        echo $cutePet['breed'];
+    if (array_key_exists($cutePet, 'age') && $pet['age'] != '') {
+        echo $cutePet['age'];
     } else {
         echo 'Unknown';
     }
@@ -123,7 +123,7 @@ one ``if`` statement::
 The secret is the double "and" sign, or ampersand to use its fancy name.
 An ``if`` statement can have as many parts, or expressions in it as you want.
 This ``if`` statement has two expressions, the ``array_key_exists`` part
-and the part that checks to see if the breed is empty. Each part returns
+and the part that checks to see if the age is empty. Each part returns
 true or false on its own. By using ``&&`` between each expression, it means
 that every part must be true in order for the ``if`` statement to run. In
 other words, this is perfect.
@@ -136,38 +136,38 @@ If-else-if
 
 By now, you probably know that as soon as we get things working, I'll challenge
 us by adding something harder! Imagine that sometimes the dog owner knows
-the breed of her dog, but purposefully wants to hide it. In these cases, instead
+the age of her dog, but purposefully wants to hide it. In these cases, instead
 of printing "Unknown", we want to say something a bit friendlier, like:
-"Hi! Email the owner for the breed details please!" Let's also imagine that
-in these cases, the breed has been set to the string ``hidden`` so that we
+"Hi! Email the owner for the age details please!" Let's also imagine that
+in these cases, the age has been set to the string ``hidden`` so that we
 know when to print this message.
 
 We already have all the tools to make this happen, using another nested ``if``
 statement::
 
-    if (array_key_exists($cutePet, 'breed') && $pet['breed'] != '') {
-        if ($pet['breed'] == 'hidden') {
-            echo 'Hi! Email the owner for the breed details please!';
+    if (array_key_exists($cutePet, 'age') && $pet['age'] != '') {
+        if ($pet['age'] == 'hidden') {
+            echo 'Hi! Email the owner for the age details please!';
         } else {
-            echo $cutePet['breed'];
+            echo $cutePet['age'];
         }
     } else {
         echo 'Unknown';
     }
 
-Let's modify Spark Pug in ``pets.json`` to have a "hidden" breed and then
+Let's modify Spark Pug in ``pets.json`` to have a "hidden" age and then
 try this out. It works perfectly!
 
 But let's see if we can flatten our code to use just one level of an ``if``
 statement. There's nothing wrong with nested ``if`` statements, but sometimes
 they're harder to understand. We really have just 3 possible scenarios:
 
-1. The ``breed`` key does not exist or is blank. We print "Unknown".
+1. The ``age`` key does not exist or is blank. We print "Unknown".
 
-2. The ``breed`` key is equal to the string "hidden". For this, print our
+2. The ``age`` key is equal to the string "hidden". For this, print our
    nice message about contacting the owner.
 
-3. And if those other conditions don't apply, print the breed!
+3. And if those other conditions don't apply, print the age!
 
 When we had only one scenario, we just used an ``if``. When we had two scenarios,
 we used an ``if-else``. For 3 or more, we'll go crazy with an ``if-elseif``::
@@ -175,9 +175,9 @@ we used an ``if-else``. For 3 or more, we'll go crazy with an ``if-elseif``::
     if (condition #1) {
         echo 'Unknown';
     } elseif (condition #2) {
-        echo 'Hi! Email the owner for the breed details please!';
+        echo 'Hi! Email the owner for the age details please!';
     } else {
-        echo $cutePet['breed'];
+        echo $cutePet['age'];
     }
 
 This is really how it looks, except for the "condition #1" and "condition #2"
@@ -194,26 +194,26 @@ have.
 Combining Conditions with "or" and the not (!) Operator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Let's make our code follow this format. First, we need to check if the breed
+Let's make our code follow this format. First, we need to check if the age
 key does not exist or if its value is empty. This is kind of the opposite
 of what we had before::
 
-    if (!array_key_exists($cutePet, 'breed') || $pet['breed'] == '') {
+    if (!array_key_exists($cutePet, 'age') || $pet['age'] == '') {
         echo 'Unknown';
     } elseif (condition #2) {
-        echo 'Hi! Email the owner for the breed details please!';
+        echo 'Hi! Email the owner for the age details please!';
     } else {
-        echo $cutePet['breed'];
+        echo $cutePet['age'];
     }
 
 Ok, let's break this down. First, by putting the exclamation point in front
 of ``array_key_exists``, it negates its value. If the function returns ``true``,
 this changes it to ``false`` and vice-versa. We want the first part of our
-``if`` to execute if the ``breed`` key does *not* exist. The exclamation
+``if`` to execute if the ``age`` key does *not* exist. The exclamation
 gives us that exactly.
 
 Next, the ``&&`` becomes two "pipe" or line symbols (``||``). These mean
-"or" instead of and: we want our code to run if the ``breed`` key does not
+"or" instead of and: we want our code to run if the ``age`` key does not
 exist *or* if its value is blank. Between ``&&`` and ``||``, you can create
 some pretty complex logic in your ``if`` statements.
 
@@ -222,19 +222,19 @@ some pretty complex logic in your ``if`` statements.
     You can also use extra parenthesis to group conditions together, like
     you do in math. We'll see this later.
 
-Finally, we used 2 equal signs (``==``) to see if the breed value is equal
+Finally, we used 2 equal signs (``==``) to see if the age value is equal
 to an empty string. This is *very* important: do not use a single quote when
 comparing 2 values. In fact, no matter where you are, repeat after me: "I
 will not use a single equal sign to compare values in an if statement". Ok good!
 
 The problem is that we use one equal sign to set a value on a variable::
 
-    // sets the breed key to an empty string
-    $cutePet['breed'] = '';
+    // sets the age key to an empty string
+    $cutePet['age'] = '';
 
 This is especially tricky because if you forget and use only one equal, the
-code will run. But instead of comparing to see if the breed is equal to an
-empty string, it sets the breed to an empty string. For lucky reasons, this
+code will run. But instead of comparing to see if the age is equal to an
+empty string, it sets the age to an empty string. For lucky reasons, this
 wouldn't break our code here, but it would in all most all other cases.
 
 So when comparing values, use ``!=`` and ``==``.
@@ -260,12 +260,12 @@ special symbol or group of symbols in that do some special job.
 Phew! Let's fill in the rest of our ``if-elseif`` statement, which should
 be pretty easy now::
 
-    if (!array_key_exists($cutePet, 'breed') || $pet['breed'] == '') {
+    if (!array_key_exists($cutePet, 'age') || $pet['age'] == '') {
         echo 'Unknown';
-    } elseif ($pet['breed'] == 'hidden')
-        echo 'Hi! Email the owner for the breed details please!';
+    } elseif ($pet['age'] == 'hidden')
+        echo 'Hi! Email the owner for the age details please!';
     } else {
-        echo $cutePet['breed'];
+        echo $cutePet['age'];
     }
 
 Try it! Oh now, a terrible error!
@@ -278,12 +278,12 @@ missed a semicolon - it's the most common mistake. And also look at the lines
 above the error. Ah ha! I forgot my opening ``{`` on the ``elseif`` part.
 Rookie mistake::
 
-    if (!array_key_exists($cutePet, 'breed') || $pet['breed'] == '') {
+    if (!array_key_exists($cutePet, 'age') || $pet['age'] == '') {
         echo 'Unknown';
-    } elseif ($pet['breed'] == 'hidden')
-        echo 'Hi! Email the owner for the breed details please!';
+    } elseif ($pet['age'] == 'hidden')
+        echo 'Hi! Email the owner for the age details please!';
     } else {
-        echo $cutePet['breed'];
+        echo $cutePet['age'];
     }
 
 After fixing it, everything looks great.
