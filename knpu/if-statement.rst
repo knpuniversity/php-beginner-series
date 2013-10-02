@@ -266,7 +266,10 @@ be pretty easy now::
 
 Try it! Oh man, a terrible error!
 
-    TODO - fill in error
+.. highlights::
+
+    Parse error: syntax error, unexpected 'else' (T_ELSE) in /path/to/index.php
+    on line 101
 
 Let's go to the line number and try to spot the problem. My editor helps me
 find it, but let's look ourselves. In PHP, always look first to see if you
@@ -276,7 +279,7 @@ Rookie mistake::
 
     if (!array_key_exists('age', $cutePet) || $pet['age'] == '') {
         echo 'Unknown';
-    } elseif ($pet['age'] == 'hidden')
+    } elseif ($pet['age'] == 'hidden') {
         echo 'Hi! Email the owner for the age details please!';
     } else {
         echo $cutePet['age'];
