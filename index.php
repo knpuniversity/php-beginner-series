@@ -93,7 +93,16 @@
 
                     <blockquote class="pet-details">
                         <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
-                        <?php echo $cutePet['age']; ?>
+                        <?php
+
+                            if (!array_key_exists('age', $cutePet) || $cutePet['age'] == '') {
+                                echo 'Unknown';
+                            } elseif ($cutePet['age'] == 'hidden') {
+                                echo '(contact owner for age)';
+                            } else {
+                                echo $cutePet['age'];
+                            }
+                        ?>
                         <?php echo $cutePet['weight']; ?> lbs
                     </blockquote>
 
