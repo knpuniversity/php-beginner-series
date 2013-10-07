@@ -40,3 +40,7 @@ chapters:
         title:      "The wonderful if Statement"
         is_free:    false
         length:     0:00
+    "system-setup":
+        title:      "System Setup"
+        is_free:    false
+        length:     0:00
