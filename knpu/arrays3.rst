@@ -79,14 +79,14 @@ like Pancake. I'll paste in the details::
 
 Next, add ``$pancake`` to our ``$pets`` array and remove Kitty Gaga::
 
-    $pets = array($pancake, $pet1, $pet2, $pet3);
+    $pets = array($pet1, $pet2, $pet3, $pancake);
 
 Notice that instead of passing a string as each item, we're now passing an
 array with lots of information about each pet. Before we go any further,
 let's use ``var_dump`` to see how this array looks. I'm also going to use
 a new function called :phpfunction:`die`.
 
-    $pets = array($pancake, $pet1, $pet2, $pet3);
+    $pets = array($pet1, $pet2, $pet3, $pancake);
     var_dump($pets);
     die;
 
