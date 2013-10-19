@@ -13,7 +13,7 @@ illustration: php-ep1.png
 priority: 0
 tags:
     - { name: php }
-upcoming: 1
+is_upcoming: 1
 
 chapters:
     "lets-write-php":
