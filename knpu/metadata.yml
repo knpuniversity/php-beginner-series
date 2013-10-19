@@ -1,12 +1,19 @@
-title:  Writing Epic PHP in one month
-price:  12
+title:  How to win friends and develop in PHP
+price:  0
 length: 0:00:00
 summary: |
-    WIP - Becoming an epic PHP developer from scratch.
-illustration: epci-php.png
+    So you want to become a a PHP developer (or know someone who does). And
+    not just any ol' programmer, but someone who writes great code and can
+    work on exciting projects. Our upcoming screencast series is for you!
+    We'll learn how to develop with PHP from the very beginning, with a real
+    project, screencast and **coding exercises** so you can practice immediately.
+    Subscribe on this page and we'll email you as soon as we start posting
+    lessons.
+illustration: php-ep1.png
 priority: 0
 tags:
     - { name: php }
+upcoming: 1
 
 chapters:
     "lets-write-php":
