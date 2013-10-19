@@ -1,7 +1,7 @@
 print_string1:
     question: |
         Use PHP to print out the string "Hello world" between the `<h1>` and `</h1>` tags
-    skeletons: { index.php: print1/index.php }
+    skeletons: { index.php: Print1/index.php }
     worker: php
     entry_point: index.php
     asserts: Print1/PrintStringSuite.php
