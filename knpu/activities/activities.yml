@@ -1,7 +1,7 @@
 print_string1:
     question: |
         Use PHP to print out the string "Hello world" between the `<h1>` and `</h1>` tags
-    skeletons: { index.php: Print1/index.php }
+    skeletons: { index.php: shared/index.php }
     worker: php
     entry_point: index.php
     asserts: Print1/PrintStringSuite.php
@@ -9,7 +9,7 @@ print_string1:
 set_var2:
     question: |
         Now create a variable called `$pageTitle` and set it to the string "Hello World". Print this variable out inside the h1 tag.
-    skeletons: { index.php: SetVar2/index.php }
+    skeletons: { index.php: shared/index.php }
     worker: php
     entry_point: index.php
     asserts: SetVar2/SetVarSuite.php
