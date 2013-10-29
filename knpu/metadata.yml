@@ -24,7 +24,7 @@ chapters:
             - print_string1
             - set_var2
             - set_var_pupcount_3
-            - case_sensitivity_4
+            # - case_sensitivity_4
     "functions":
         title:      Functions!
         is_free:    false

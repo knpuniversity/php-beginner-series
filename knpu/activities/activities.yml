@@ -1,46 +1,44 @@
 print_string1:
     question: |
         Use PHP to print out the string "Hello world" between the `<h1>` and `</h1>` tags
-    coding:
-        worker: php
-        entry_point: index.php
-        skeletons: { index.php: shared/index.php }
-        asserts: Print1/PrintStringSuite.php
+    worker: php
+    entry_point: index.php
+    skeletons: { index.php: shared/index.php }
+    asserts: Print1/PrintStringSuite.php
 
 set_var2:
     question: |
         Now create a variable called `$pageTitle` and set it to the string "Hello World". Print this variable out inside the h1 tag.
-    coding:
-        skeletons: { index.php: shared/index.php }
-        worker: php
-        entry_point: index.php
-        asserts: SetVar2/SetVarSuite.php
+    skeletons: { index.php: shared/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: SetVar2/SetVarSuite.php
 
 set_var_pupcount_3:
     question: |
         Now create a second variable called `$pupCount` and set it to the number 50. Then print this inside the `<div class="count">` element.
-    coding:
-        skeletons: { index.php: SetVarPupCount3/index.php }
-        worker: php
-        entry_point: index.php
-        asserts: SetVarPupCount3/Test.php
+    skeletons: { index.php: SetVarPupCount3/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: SetVarPupCount3/Test.php
 
-case_sensitivity_4:
-    question: |
-        Is echo case sensitive (i.e. does ECHO work)? What about variable names - can we set `$pageTitle` and then print
-        `$PAGETITLE`? Does that work? Try it out below to find out.
-    answers:
-        1: Both `echo` and variable names are case *insensitive* (`echo` = `ECHO` and `$pageTitle` = `$PAGETITLE`)
-        2: Both `echo` and variable names are case *sensitive* (`echo` does not equal `ECHO` and `$pageTitle` does not equal `$PAGETITLE`)
-        3: `echo` is case *insensitive* but variables are case *sensitive* (`echo` = `ECHO` but `$pageTitle` does not equal `$PAGETITLE`)
-        4: `echo` is case *sensitive* but variables are case *insensitive* (`echo` does not equal `ECHO` but `$pageTitle` = `$PAGETITLE`)
-    correct: 3
-    correct_message: |
-        Many things in PHP are case insensitive, like `ECHO` or even `<?PHP`. But variables are different: PHP sees `$pageTitle`
-        and `$PAGETITLE` as completely different. But even when things are case insensitive, you'll see us use lowercase
-        (e.g. `echo`) letters so that our code looks consistent with how most developers write.
-    coding:
-        skeletons: { index.php: CaseSensitivity4/index.php }
-        entry_point: index.php
-        worker: php
-        # this is an ungraded coding box
+# this is a todo for later
+#case_sensitivity_4:
+#    question: |
+#        Is echo case sensitive (i.e. does ECHO work)? What about variable names - can we set `$pageTitle` and then print
+#        `$PAGETITLE`? Does that work? Try it out below to find out.
+#    answers:
+#        1: Both `echo` and variable names are case *insensitive* (`echo` = `ECHO` and `$pageTitle` = `$PAGETITLE`)
+#        2: Both `echo` and variable names are case *sensitive* (`echo` does not equal `ECHO` and `$pageTitle` does not equal `$PAGETITLE`)
+#        3: `echo` is case *insensitive* but variables are case *sensitive* (`echo` = `ECHO` but `$pageTitle` does not equal `$PAGETITLE`)
+#        4: `echo` is case *sensitive* but variables are case *insensitive* (`echo` does not equal `ECHO` but `$pageTitle` = `$PAGETITLE`)
+#    correct: 3
+#    correct_message: |
+#        Many things in PHP are case insensitive, like `ECHO` or even `<?PHP`. But variables are different: PHP sees `$pageTitle`
+#        and `$PAGETITLE` as completely different. But even when things are case insensitive, you'll see us use lowercase
+#        (e.g. `echo`) letters so that our code looks consistent with how most developers write.
+#    coding:
+#        skeletons: { index.php: CaseSensitivity4/index.php }
+#        entry_point: index.php
+#        worker: php
+#        # this is an ungraded coding box
