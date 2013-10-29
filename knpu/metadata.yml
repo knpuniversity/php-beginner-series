@@ -29,35 +29,28 @@ chapters:
     "functions":
         title:      Functions!
         is_free:    false
-        length:     0:00
-        unfinished: 1
+        is_finished: 0
     "arrays-loops":
         title:      Arrays and Loops
         is_free:    false
-        length:     0:00
-        unfinished: 1
+        is_finished: 0
     "arrays2":
         title:      Arrays Level 2: Associative Arrays
         is_free:    false
-        length:     0:00
-        unfinished: 1
+        is_finished: 0
     "arrays3":
         title:      We put Arrays in your Arrays!
         is_free:    false
-        length:     0:00
-        unfinished: 1
+        is_finished: 0
     "files-json-booleans":
         title:      "Working with Files, JSON and Booleans"
         is_free:    false
-        length:     0:00
-        unfinished: 1
+        is_finished: 0
     "if-statement":
         title:      "The wonderful if Statement"
         is_free:    false
-        length:     0:00
-        unfinished: 1
+        is_finished: 0
     "system-setup":
         title:      "System Setup"
         is_free:    false
-        length:     0:00
-        unfinished: 1
+        is_finished: 0
