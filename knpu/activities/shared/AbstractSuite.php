@@ -23,25 +23,40 @@ abstract class AbstractSuite extends PhpAwareSuite
      */
     protected function getCrawlerForSingleH1Element($output)
     {
-        $crawler = $this->getCrawler($output);
-        $h1 = $crawler->filter('h1');
-        $this->assertNotEquals(0, count($h1), 'I don\'t see your <h1> in the output - make sure you have <h1>Hello World</h1> in your final HTML');
-        $this->assertEquals(1, count($h1), 'I see more than 1 h1 tag - just create one <h1></h1> pair and print Hello World inside of it');
+        return $this->getCrawlerForSingleElement(
+            $output,
+            'h1',
+            'I don\'t see your <h1> in the output - make sure you have <h1>Hello World</h1> in your final HTML',
+            'I see more than 1 h1 tag - just create one <h1></h1> pair and print Hello World inside of it'
+        );
+    }
 
-        return $h1;
+    /**
+     * Returns the Crawler for the single h1 element
+     *
+     * @param string $output
+     * @param string $cssSelector
+     * @param string $zeroError
+     * @param string $moreThanOneError
+     * @return Crawler
+     */
+    protected function getCrawlerForSingleElement($output, $cssSelector, $zeroError, $moreThanOneError)
+    {
+        $crawler = $this->getCrawler($output);
+        $ele = $crawler->filter($cssSelector);
+        $this->assertNotEquals(0, count($ele), $zeroError);
+        $this->assertEquals(1, count($ele), $moreThanOneError);
+
+        return $ele;
     }
 
     protected function assertNodeContainsText(Crawler $node, $expectedText, $ignoreCase = true)
     {
         // 6) Look for Hello World in the output inside the h1
-        $this->assertEquals(
+        $this->assertContains(
             $expectedText,
             $node->text(),
             sprintf('I see your <%s> tag, but it has the wrong text in it. I see "%s"', $node->current()->nodeName, $node->text()),
-            0,
-            10,
-            false,
-            // these are all defaults - except this last one, which makes this case-insensitive
             $ignoreCase
         );
     }
