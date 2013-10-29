@@ -1,5 +1,5 @@
 title:  How to win friends and develop in PHP
-price:  0
+price:  12
 length: ~
 summary: |
     So you want to become a a PHP developer (or know someone who does). And
@@ -7,19 +7,20 @@ summary: |
     work on exciting projects. Our upcoming screencast series is for you!
     We'll learn how to develop with PHP from the very beginning, with a real
     project, screencast and **coding exercises** so you can practice immediately.
-    Subscribe on this page and we'll email you as soon as we start posting
-    lessons.
+
+    This course is a work-in-progress, but you can buy it immediately and
+    we'll email you when there are updates.
 illustration: php-ep1.png
-priority: 0
+priority: 50
 tags:
     - { name: php }
-is_upcoming: 1
+status: unfinished
 
 chapters:
     "lets-write-php":
         title:      Let's Write PHP
         is_free:    true
-        length:     0:00
+        length:     5:48
         activities:
             - print_string1
             - set_var2
@@ -29,27 +30,34 @@ chapters:
         title:      Functions!
         is_free:    false
         length:     0:00
+        unfinished: 1
     "arrays-loops":
         title:      Arrays and Loops
         is_free:    false
         length:     0:00
+        unfinished: 1
     "arrays2":
         title:      Arrays Level 2: Associative Arrays
         is_free:    false
         length:     0:00
+        unfinished: 1
     "arrays3":
         title:      We put Arrays in your Arrays!
         is_free:    false
         length:     0:00
+        unfinished: 1
     "files-json-booleans":
         title:      "Working with Files, JSON and Booleans"
         is_free:    false
         length:     0:00
+        unfinished: 1
     "if-statement":
         title:      "The wonderful if Statement"
         is_free:    false
         length:     0:00
+        unfinished: 1
     "system-setup":
         title:      "System Setup"
         is_free:    false
         length:     0:00
+        unfinished: 1
