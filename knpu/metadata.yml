@@ -22,9 +22,9 @@ chapters:
         is_free:    true
         length:     5:48
         activities:
-            - print_string1
-            - set_var2
-            - set_var_pupcount_3
+            - { name: print_string1, time: 2:56 }
+            - { name: set_var2, time: 4:31 }
+            - { name: set_var_pupcount_3, time: 5:13 }
             # - case_sensitivity_4
     "functions":
         title:      Functions!
