@@ -2,7 +2,7 @@
 
 use KnpU\ActivityRunner\Result;
 
-require __DIR__.'/../shared/AbstractSuite.php';
+require __DIR__.'/../../shared/AbstractSuite.php';
 
 class Test extends AbstractSuite
 {
@@ -22,10 +22,10 @@ class Test extends AbstractSuite
         // 3) check for the $pageTitle variable
         $this->assertContains('$pupCount', $code, 'I don\'t see your $pupCount variable. Make sure you create a new variable called $pupCount and set it to the number 50.');
 
-        // 4) check for Hello World to be inside the code
+        // 4) check for 50 to be inside the code
         $this->assertContains(self::EXPECTED, $code, 'Are you printing 50 - I don\'t see it!', true);
 
-        // 5) Make sure Hello World is in the output
+        // 5) Make sure 50 is in the output
         $this->assertContains(self::EXPECTED, $output, 'Are you printing 50 - I don\'t see it!', true);
 
         $ele = $this->getCrawlerForSingleElement(

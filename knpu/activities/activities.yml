@@ -1,26 +1,58 @@
-print_string1:
+ch1_print_string:
     question: |
         Use PHP to print out the string "Hello world" between the `<h1>` and `</h1>` tags
     worker: php
     entry_point: index.php
     skeletons: { index.php: shared/index.php }
-    asserts: Print1/PrintStringSuite.php
+    asserts: ch1/Print/PrintStringSuite.php
 
-set_var2:
+ch1_set_var:
     question: |
         Now create a variable called `$pageTitle` and set it to the string "Hello World". Print this variable out inside the h1 tag.
     skeletons: { index.php: shared/index.php }
     worker: php
     entry_point: index.php
-    asserts: SetVar2/SetVarSuite.php
+    asserts: ch1/SetVar/SetVarSuite.php
 
-set_var_pupcount_3:
+ch1_set_var_pupcount:
     question: |
         Now create a second variable called `$pupCount` and set it to the number 50. Then print this inside the `<div class="count">` element.
-    skeletons: { index.php: SetVarPupCount3/index.php }
+    skeletons: { index.php: ch1/SetVarPupCount/index.php }
     worker: php
     entry_point: index.php
-    asserts: SetVarPupCount3/Test.php
+    asserts: ch1/SetVarPupCount/Test.php
+
+ch2_rand_function:
+    # duplication with index.php skeleton and Test between this and the previous activity
+    question: |
+        Use the `rand()` function to get a random number between 10 and 20 and assign it to the `$pupCount` variable.
+    skeletons: { index.php: ch2/rand/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch2/rand/Test.php
+
+ch2_trim_whitespace:
+    question: |
+        In the code below, we're printing a string that has some empty space on both sides. Without changing the string,
+        use the `trim` function to remove those spaces before printing so that the `h1` tag has no spaces
+        (`<h1>No Spaces!</h1>`).
+    skeletons: { index.php: ch2/trim/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch2/trim/Test.php
+
+ch2_two_string_functions:
+    question: |
+        Now a hard one! Let's use 2 functions at once. First, we'll use a new function:
+        `strip_tags`. This removes any HTML elements from a string. For example, `Hello <span>World</span>` would
+          just be "Hello World" if we passed it as an argument to `strip_tags.
+
+        First, use `strip_tags` to remove the HTML from the `$comment` variable. Then, print out its length inside the
+        `<div class="comment-length"></div>` element using the `strlen` method.
+    skeletons: { index.php: ch2/two_string_functions/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch2/two_string_functions/Test.php
 
 # this is a todo for later
 #case_sensitivity_4:

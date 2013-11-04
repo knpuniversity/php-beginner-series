@@ -15,6 +15,15 @@ abstract class AbstractSuite extends PhpAwareSuite
         $this->assertContains('echo', $code, 'I don\'t see your "echo" statement. Did you remember to write "echo"?');
     }
 
+    protected function assertFunctionCallExists($functionName, $code)
+    {
+        $this->assertContains(
+            $functionName,
+            $code,
+            sprintf('I don\'t see the %s function being called. Did you remember to write "%s"?', $functionName, $functionName
+        ));
+    }
+
     /**
      * Returns the Crawler for the single h1 element
      *
@@ -52,11 +61,24 @@ abstract class AbstractSuite extends PhpAwareSuite
 
     protected function assertNodeContainsText(Crawler $node, $expectedText, $ignoreCase = true)
     {
-        // 6) Look for Hello World in the output inside the h1
         $this->assertContains(
             $expectedText,
             $node->text(),
             sprintf('I see your <%s> tag, but it has the wrong text in it. I see "%s"', $node->current()->nodeName, $node->text()),
+            $ignoreCase
+        );
+    }
+
+    protected function assertNodeEqualsText(Crawler $node, $expectedText, $ignoreCase = true)
+    {
+        $this->assertEquals(
+            $expectedText,
+            $node->text(),
+            sprintf('I see your <%s> tag, but it has the wrong text in it. I see "%s"', $node->current()->nodeName, $node->text()),
+            // next 3 are just defaults
+            0,
+            10,
+            false,
             $ignoreCase
         );
     }
