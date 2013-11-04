@@ -30,6 +30,7 @@ chapters:
         title:      Functions!
         is_free:    false
         is_finished: 1
+        length:     5:27
         activities:
             - { name: ch2_rand_function, time: 1:37 }
             # these are more of a "what happens if" style question - not supported yet
