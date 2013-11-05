@@ -10,7 +10,7 @@ ch1_print_string:
 
 ch1_set_var:
     question: |
-        Now it's your turn to create a variable! Create one called `$pageTitle` and set it to the string "Hello World". Print this variable out inside the h1 tag.
+        Now it's your turn to create a variable! Remove your 'Hello world' inside the h1 tag and replace it with a variable called `$pageTitle` and set it to the string "Hello World".
     skeletons: { index.php: shared/index.php }
     worker: php
     entry_point: index.php
