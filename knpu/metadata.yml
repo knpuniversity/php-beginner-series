@@ -20,6 +20,7 @@ tags:
     - { name: php }
 status: unfinished
 hasCodeDownload: 0
+hasVideoDownload: 0
 
 chapters:
     "lets-write-php":
