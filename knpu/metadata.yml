@@ -47,7 +47,8 @@ chapters:
     "arrays-loops":
         title:      Arrays and Loops
         is_free:    false
-        is_finished: 6:28
+        length:     6:28
+        is_finished: 1
         activities:
             # need the ability to have 2 at once for this first one
             # - { name: ch3_basic_array, time: 2:38 }
