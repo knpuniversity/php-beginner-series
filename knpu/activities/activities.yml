@@ -18,7 +18,7 @@ ch1_set_var:
 
 ch1_set_var_pupcount:
     question: |
-        Now create a second variable called `$pupCount` and set it to the number 50. Then print this inside the `<div class="count">` element.
+        Time to count your pups! Create a second variable called `$pupCount` and set it to the number 50. Then create and print this inside a `<div class="count">` element.
     skeletons: { index.php: ch1/SetVarPupCount/index.php }
     worker: php
     entry_point: index.php
