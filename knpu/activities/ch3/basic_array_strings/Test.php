@@ -32,7 +32,12 @@ class Test extends AbstractSuite
         ));
 
         $expectedFavoriteThings = array('ice cream', 'high-fives', 'vacation');
-        $lis->each(function (Crawler $node, $i) use ($expectedFavoriteThings) {
+        $lis->each(function ($node, $i) use ($expectedFavoriteThings) {
+            // Symfony 2.2 versus 2.3 compatability
+            if (!$node instanceof Crawler) {
+                $node = new Crawler($node);
+            }
+
             if (!in_array(strtolower($node->text()), $expectedFavoriteThings)) {
                 $this->fail(sprintf(
                     'I found "%s" in the li elements, but it\'s not one of my favorite things! I like "%s"',
