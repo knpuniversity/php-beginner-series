@@ -19,7 +19,7 @@ priority: 50
 tags:
     - { name: php }
 status: unfinished
-hasCodeDownload: false
+hasCodeDownload: 0
 
 chapters:
     "lets-write-php":
