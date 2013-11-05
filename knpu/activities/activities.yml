@@ -56,6 +56,25 @@ ch2_two_string_functions:
     entry_point: index.php
     asserts: ch2/two_string_functions/Test.php
 
+ch3_basic_array_strings:
+    question: |
+        Some of my favorite things are listed below in the 3 `<li>` tags. Unfortunately, needing to write `<li class="my-favorite">`
+        3 times is a bit wasteful. Create an array, put the 3 strings into it (`ice cream`, `high-fives` and `vacation`),
+        and re-render the 3 `<li>` tags dynamically by using a `foreach` statement.
+    skeletons: { index.php: ch3/basic_array_strings/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch3/basic_array_strings/Test.php
+
+ch3_print_array_key:
+    question: |
+        Using the same array of favorite things as before, print out *only* the second item (high-fives) in the new
+        `.second-thing` div.
+    skeletons: { index.php: ch3/print_array_key/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch3/print_array_key/Test.php
+
 # this is a todo for later
 #case_sensitivity_4:
 #    question: |

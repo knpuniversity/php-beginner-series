@@ -1,6 +1,6 @@
 title:  How to win friends and develop in PHP
 price:  12
-length: 5:48
+length: 17:43
 summary: |
     This course is a work-in-progress, but you can buy it immediately and
     we'll email you when new chapters are added.
@@ -47,7 +47,18 @@ chapters:
     "arrays-loops":
         title:      Arrays and Loops
         is_free:    false
-        is_finished: 0
+        is_finished: 6:28
+        activities:
+            # need the ability to have 2 at once for this first one
+            # - { name: ch3_basic_array, time: 2:38 }
+            - { name: ch3_basic_array_strings, time: 2:38 }
+            - { name: ch3_print_array_key, time: 5:51 }
+            # are meant to be questions that you then have code to experiment with - not supported yet
+            # - { name: ch3_array_multiple_line, time: 0:00 }
+            # - { name: ch3_how_many_items_in_array, time: 0:00 }
+            # - { name: ch3_foreach_whitespace, time: 0:00 }
+            # - { name: ch3_print_array_key, time: 0:00 }
+            # - { name: ch3_guess_keys, time: 0:00 }
     "arrays2":
         title:      Arrays Level 2: Associative Arrays
         is_free:    false

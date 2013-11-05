@@ -15,6 +15,11 @@ abstract class AbstractSuite extends PhpAwareSuite
         $this->assertContains('echo', $code, 'I don\'t see your "echo" statement. Did you remember to write "echo"?');
     }
 
+    protected function assertForeachExists($code)
+    {
+        $this->assertContains('foreach', $code, 'I don\'t see your "foreach" statement. Did you remember to write "foreach"?');
+    }
+
     protected function assertFunctionCallExists($functionName, $code)
     {
         $this->assertContains(
