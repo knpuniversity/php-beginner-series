@@ -1,7 +1,8 @@
 ch1_print_string:
     question: |
         Welcome to your first PHP activity! Follow the instructions below and hit submit to
-        see how you did! You can press 'skip' or 'next' to continue on to the rest of the tutorial
+        see how you did! You can press 'skip' or 'next' to continue on to the rest of the tutorial.
+        
         Use PHP to print out the string "Hello world" between the `<h1>` and `</h1>` tags
     worker: php
     entry_point: index.php
