@@ -48,7 +48,7 @@ ch2_two_string_functions:
     question: |
         Now a hard one! Let's use 2 functions at once. First, we'll use a new function:
         `strip_tags`. This removes any HTML elements from a string. For example, `Hello <span>World</span>` would
-          just be "Hello World" if we passed it as an argument to `strip_tags.
+          just be "Hello World" if we passed it as an argument to `strip_tags`.
 
         First, use `strip_tags` to remove the HTML from the `$comment` variable. Then, print out its length inside the
         `<div class="comment-length"></div>` element using the `strlen` method.
