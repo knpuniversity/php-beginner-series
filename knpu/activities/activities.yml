@@ -28,7 +28,7 @@ ch1_set_var_pupcount:
 ch2_rand_function:
     # duplication with index.php skeleton and Test between this and the previous activity
     question: |
-        Use the `rand()` function to get a random number between 10 and 20 and assign it to the `$pupCount` variable.
+        Give it a try! Use the `rand()` function to get a random number between 10 and 20 and assign it to the `$pupCount` variable.
     skeletons: { index.php: ch2/rand/index.php }
     worker: php
     entry_point: index.php
