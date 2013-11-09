@@ -19,12 +19,12 @@ class Test extends AbstractSuite
 
         $this->assertFunctionCallExists('trim', $code);
 
-        $originalCode = '\'  Hello \'';
+        $originalCode = '\'  Hello World \'';
         $this->assertContains($originalCode, $code, sprintf('Remove the whitespace without changing the `$pageTitle` variable - make sure it says `%s`.', $originalCode));
 
         $h1 = $this->getCrawlerForSingleH1Element($output);
         // this is what it is originally
-        $this->assertNotEquals('  Hello ', 'Be sure to use the trim() function in your echo statement to remove the extra whitespace!');
-        $this->assertNodeEqualsText($h1, 'Hello');
+        $this->assertNotEquals('  Hello World ', 'Be sure to use the trim() function in your echo statement to remove the extra whitespace!');
+        $this->assertNodeEqualsText($h1, 'Hello World');
     }
 }
