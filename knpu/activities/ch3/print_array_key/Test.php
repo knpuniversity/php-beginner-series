@@ -19,7 +19,7 @@ class Test extends AbstractSuite
         $secondNode = $this->getCrawlerForSingleElement($output, '.second-thing', 'Did you delete the .second-thing div? I don\'t see it!', 'Make sure you only have 1 .second-thing div - I see more!');
 
         $this->assertContains('$things[', $code, 'Are you using the [] syntax to find the second item on the $things variable? I\'m expecting to see $things[###] where ### is some number, but I don\'t see it!');
-        $this->assertContains('$things[1', $code, sprintf('Remember that you\'re looking or the second item, which is actually the array key 1'));
+        $this->assertContains('$things[1', $code, sprintf('Remember that you\'re looking for the second item, and devs start counting with the number 0'));
         $this->assertNodeContainsText($secondNode, 'high-fives');
     }
 }
