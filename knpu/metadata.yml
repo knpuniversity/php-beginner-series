@@ -65,11 +65,19 @@ chapters:
     "arrays2":
         title:      Arrays Level 2: Associative Arrays
         is_free:    false
-        is_finished: 0
+        is_finished: 1
+        activities:
+            - { name: ch4_associative_array_print, time: 2:28 }
+            # - { name: ch4_associative_add_indexed_key, time: 0:00 }
+            - { name: ch4_associative_array_more_items, time: 3:15 }
     "arrays3":
         title:      We put Arrays in your Arrays!
         is_free:    false
         is_finished: 0
+        activities: []
+#            - { name: ch4_multilevel_arrays, time: 0:00 }
+#            - { name: ch4_count_array, time: 0:00 }
+#            - { name: ch4_print_multilevel_key, time: 0:00 }
     "files-json-booleans":
         title:      "Working with Files, JSON and Booleans"
         is_free:    false

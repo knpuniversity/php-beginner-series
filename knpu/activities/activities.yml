@@ -76,6 +76,34 @@ ch3_print_array_key:
     entry_point: index.php
     asserts: ch3/print_array_key/Test.php
 
+ch4_associative_array_print:
+    question: |
+        Let's create our first associative array! Change the array so that Pancake's name is assigned to a `name` key
+        and his age to a `age` key. Once you've done that, update the code below so that we're still printing
+        out Pancake's information.
+    skeletons: { index.php: ch4/associative_array_print/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch4/associative_array_print/Test.php
+ch4_associative_array_more_items:
+    question: |
+        We want to tell people what breed Pancake is, so add a `breed` key to our array, set it to "Pug", and print
+        it in the `div` with the `pet-breed` class.
+    skeletons: { index.php: ch4/associative_array_print/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch4/associative_array_more_items/Test.php
+
+ch5_multilevel_arrays:
+    question: |
+        Let's print our pets! I've already prepared 3 associative arrays and am using them one by one to print out some
+        pets! Create a new indexed array called `$pets` and put each of these 3 arrays inside of it. Then, use `foreach`
+        to print out the 3 pets, but without the duplication we have right now.
+    skeletons: { index.php: ch4/multilevel_arrays/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch4/multilevel_arrays/Test.php
+
 # this is a todo for later
 #case_sensitivity_4:
 #    question: |

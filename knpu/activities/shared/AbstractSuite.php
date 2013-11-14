@@ -20,6 +20,22 @@ abstract class AbstractSuite extends PhpAwareSuite
         $this->assertContains('foreach', $code, 'I don\'t see your "foreach" statement. Did you remember to write "foreach"?');
     }
 
+    protected function assertVariableExists($variableName, $code)
+    {
+        $this->assertContains('$'.$variableName, $code, sprintf('I don\'t see the variable "%s". Did you remember to create it?', $variableName));
+    }
+
+    protected function assertStringExists($string, $code, $message = null)
+    {
+        if (stripos($code, "'".$string."'") === false && stripos($code, '"'.$string.'"') === false) {
+            if ($message === null) {
+                $message = sprintf('I don\'t see a string that\'s set to "%s"', $string);
+            }
+
+            $this->fail($message);
+        }
+    }
+
     protected function assertFunctionCallExists($functionName, $code)
     {
         $this->assertContains(
@@ -64,12 +80,23 @@ abstract class AbstractSuite extends PhpAwareSuite
         return $ele;
     }
 
-    protected function assertNodeContainsText(Crawler $node, $expectedText, $ignoreCase = true)
+    protected function assertNodeContainsText(Crawler $node, $expectedText, $ignoreCase = true, $message = null)
     {
+        if ($message === null) {
+            $message = 'I see your <%element.name%> tag, but it has the wrong text in it. I see "%actual%"';
+        }
+
+        $message = strtr($message, array(
+            '%element.name%' => $node->current() ? $node->current()->nodeName : '',
+            '%element.class%' => $node->attr('class'),
+            '%expected%' => $expectedText,
+            '%actual%' => $node->text()
+        ));
+
         $this->assertContains(
             $expectedText,
             $node->text(),
-            sprintf('I see your <%s> tag, but it has the wrong text in it. I see "%s"', $node->current()->nodeName, $node->text()),
+            $message,
             $ignoreCase
         );
     }
