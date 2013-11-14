@@ -1,6 +1,6 @@
 title:  How to win friends and develop in PHP
 price:  12
-length: 17:43
+length: 21:52
 summary: |
     This course is a work-in-progress, but you can buy it immediately and
     we'll email you when new chapters are added.
@@ -65,6 +65,7 @@ chapters:
     "arrays2":
         title:      Arrays Level 2: Associative Arrays
         is_free:    false
+        length:     4:09
         is_finished: 1
         activities:
             - { name: ch4_associative_array_print, time: 2:28 }
