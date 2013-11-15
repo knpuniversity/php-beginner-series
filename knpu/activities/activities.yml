@@ -99,10 +99,10 @@ ch5_multilevel_arrays:
         Let's print our pets! I've already prepared 3 associative arrays and am using them one by one to print out some
         pets! Create a new indexed array called `$pets` and put each of these 3 arrays inside of it. Then, use `foreach`
         to print out the 3 pets, but without the duplication we have right now.
-    skeletons: { index.php: ch4/multilevel_arrays/index.php }
+    skeletons: { index.php: ch5/multilevel_arrays/index.php }
     worker: php
     entry_point: index.php
-    asserts: ch4/multilevel_arrays/Test.php
+    asserts: ch5/multilevel_arrays/Test.php
 
 # this is a todo for later
 #case_sensitivity_4:

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <title>Arrays!</title>
+        <title>Arrays in your Arrays!</title>
     </head>
     <body>
         <?php

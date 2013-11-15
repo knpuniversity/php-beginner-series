@@ -74,9 +74,9 @@ chapters:
     "arrays3":
         title:      We put Arrays in your Arrays!
         is_free:    false
-        is_finished: 0
-        activities: []
-#            - { name: ch4_multilevel_arrays, time: 0:00 }
+        is_finished: 1
+        activities:
+            - { name: ch5_multilevel_arrays, time: 0:00 }
 #            - { name: ch4_count_array, time: 0:00 }
 #            - { name: ch4_print_multilevel_key, time: 0:00 }
     "files-json-booleans":
