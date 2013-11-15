@@ -64,18 +64,49 @@ abstract class AbstractSuite extends PhpAwareSuite
     /**
      * Returns the Crawler for the single h1 element
      *
-     * @param string $output
+     * @param string|Crawler $output
      * @param string $cssSelector
      * @param string $zeroError
      * @param string $moreThanOneError
      * @return Crawler
      */
-    protected function getCrawlerForSingleElement($output, $cssSelector, $zeroError, $moreThanOneError)
+    protected function getCrawlerForSingleElement($output, $cssSelector, $zeroError = null, $moreThanOneError = null)
     {
-        $crawler = $this->getCrawler($output);
-        $ele = $crawler->filter($cssSelector);
-        $this->assertNotEquals(0, count($ele), $zeroError);
+        $ele = $this->getCrawlerForAtLeastOneElement($output, $cssSelector, $zeroError);
+
+        if ($moreThanOneError === null) {
+            $moreThanOneError = sprintf('I expected only 1 "%s" element, but instead I see %s!', $cssSelector, count($ele));
+        }
+
         $this->assertEquals(1, count($ele), $moreThanOneError);
+
+        return $ele;
+    }
+
+    /**
+     * Returns a Crawler from CSS and makes sure at least one is matched
+     *
+     * @param $output
+     * @param $cssSelector
+     * @param null $zeroError
+     * @return Crawler
+     */
+    protected function getCrawlerForAtLeastOneElement($output, $cssSelector, $zeroError = null)
+    {
+        // the output could already be a Crawler
+        if ($output instanceof Crawler) {
+            $crawler = $output;
+        } else {
+            $crawler = $this->getCrawler($output);
+        }
+
+        $ele = $crawler->filter($cssSelector);
+
+        if ($zeroError === null) {
+            $zeroError = sprintf('Cannot find the "%s" element!', $cssSelector);
+        }
+
+        $this->assertNotEquals(0, count($ele), $zeroError);
 
         return $ele;
     }
@@ -83,11 +114,11 @@ abstract class AbstractSuite extends PhpAwareSuite
     protected function assertNodeContainsText(Crawler $node, $expectedText, $ignoreCase = true, $message = null)
     {
         if ($message === null) {
-            $message = 'I see your <%element.name%> tag, but it has the wrong text in it. I see "%actual%"';
+            $message = 'I see your <%element.name%> tag, but it has the wrong text in it. I see "%actual%" but I expected "%expected%"!';
         }
 
         $message = strtr($message, array(
-            '%element.name%' => $node->current() ? $node->current()->nodeName : '',
+            '%element.name%' => $this->getDomNode($node)->tagName,
             '%element.class%' => $node->attr('class'),
             '%expected%' => $expectedText,
             '%actual%' => $node->text()
@@ -113,5 +144,16 @@ abstract class AbstractSuite extends PhpAwareSuite
             false,
             $ignoreCase
         );
+    }
+
+    /**
+     * @param Crawler $crawler
+     * @return \DOMElement|null
+     */
+    protected function getDomNode(Crawler $crawler)
+    {
+        foreach ($crawler as $node) {
+            return $node;
+        }
     }
 }
