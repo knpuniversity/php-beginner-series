@@ -1,6 +1,6 @@
 title:  How to win friends and develop in PHP
 price:  12
-length: 21:52
+length: 37:00
 summary: |
     This course is a work-in-progress, but you can buy it immediately and
     we'll email you when new chapters are added.
@@ -74,6 +74,7 @@ chapters:
     "arrays3":
         title:      We put Arrays in your Arrays!
         is_free:    false
+        length:     6:33
         is_finished: 1
         activities:
             - { name: ch5_print_multilevel_key, time: 2:35 }
@@ -81,6 +82,7 @@ chapters:
     "files-json-booleans":
         title:      "Working with Files, JSON and Booleans"
         is_free:    false
+        length:     8:35
         is_finished: 1
         activities:
             - { name: ch6_json_encode, time: 1:26 }
