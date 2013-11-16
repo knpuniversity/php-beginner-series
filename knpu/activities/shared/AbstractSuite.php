@@ -114,8 +114,18 @@ abstract class AbstractSuite extends PhpAwareSuite
     protected function assertNodeContainsText(Crawler $node, $expectedText, $ignoreCase = true, $message = null)
     {
         if ($message === null) {
-            $message = 'I see your <%element.name%> tag, but it has the wrong text in it. I see "%actual%" but I expected "%expected%"!';
+            $message = 'I see your %tag% tag, but it has the wrong text in it. I see "%actual%" but I expected "%expected%"!';
         }
+
+        if ($node->attr('class')) {
+            $tag = '<%element.name% class="%element.class%">';
+        } else {
+            $tag = '<%element.name%>';
+        }
+        // replace the tag first, then the element.name/element.class can be replaced next
+        $message = strtr($message, array(
+            '%tag%' => $tag,
+        ));
 
         $message = strtr($message, array(
             '%element.name%' => $this->getDomNode($node)->tagName,

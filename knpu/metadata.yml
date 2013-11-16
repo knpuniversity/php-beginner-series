@@ -77,8 +77,7 @@ chapters:
         is_finished: 1
         activities:
             - { name: ch5_multilevel_arrays, time: 0:00 }
-#            - { name: ch4_count_array, time: 0:00 }
-#            - { name: ch4_print_multilevel_key, time: 0:00 }
+            - { name: ch5_print_multilevel_key, time: 0:00 }
     "files-json-booleans":
         title:      "Working with Files, JSON and Booleans"
         is_free:    false

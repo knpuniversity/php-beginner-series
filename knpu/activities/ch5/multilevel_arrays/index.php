@@ -18,7 +18,7 @@
             $pet3 = array(
                 'name' => 'Pico de Gato',
                 'age'  => '5 years',
-                'breed' => 'Pug',
+                'breed' => 'Bengal',
             );
         ?>
 

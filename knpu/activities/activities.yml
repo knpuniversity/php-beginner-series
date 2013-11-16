@@ -104,6 +104,15 @@ ch5_multilevel_arrays:
     entry_point: index.php
     asserts: ch5/multilevel_arrays/Test.php
 
+ch5_print_multilevel_key:
+    question: |
+        Now, using the array of pet data, see if you can print Spark Pug's breed into the `.spark-pug-breed` div, using the
+        `$pets` variable to access the `breed` key on the second pet:
+    skeletons: { index.php: ch5/print_multilevel_key/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch5/print_multilevel_key/Test.php
+
 # this is a todo for later
 #case_sensitivity_4:
 #    question: |
