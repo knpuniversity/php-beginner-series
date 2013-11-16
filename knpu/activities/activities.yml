@@ -113,6 +113,34 @@ ch5_print_multilevel_key:
     entry_point: index.php
     asserts: ch5/print_multilevel_key/Test.php
 
+ch6_json_encode:
+    question: |
+        Take the `$pets` array and use the `json_encode` function to turn it into a JSON string. Print this inside
+        the `div.json-output` element just to see what it looks like!
+    skeletons: { index.php: ch6/json_encode/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch6/json_encode/Test.php
+
+ch6_read_file:
+    question: |
+        I've just created a `pets.json` file for us right in this directory! See if you can read the contents of this
+        file and dump them to the `div.file-contents` element to see what's inside!
+    skeletons: { index.php: ch6/read_file/index.php, pets.json: ch6/shared/pets.json }
+    worker: php
+    entry_point: index.php
+    asserts: ch6/read_file/Test.php
+
+ch6_json_decode:
+    question: |
+        The `pets.json` file contains all of our pet data. Let's remove the `$pets` array in this file and instead use
+        `json_decode` on the `pets.json` file contents to create the `$pets` variable. In the end, `$pets` will still
+        be an array (except loaded from the `pets.json`) and everything should still print just as before.
+    skeletons: { index.php: ch6/json_decode/index.php, pets.json: ch6/shared/pets.json }
+    worker: php
+    entry_point: index.php
+    asserts: ch6/json_decode/Test.php
+
 # this is a todo for later
 #case_sensitivity_4:
 #    question: |

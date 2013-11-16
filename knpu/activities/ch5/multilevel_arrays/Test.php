@@ -26,6 +26,7 @@ class Test extends AbstractSuite
             $this->fail(sprintf('We only need 1 <div class="pet"> element, but I see %s! If we place this HTML inside the `foreach` statement, we can print 3 pets without duplicating the HTML!', $petClassCount));
         }
 
+        // duplicated in ch6/json_decode
         $petElement = $this->getCrawler($output)->filter('.pet');
         if (count($petElement) != 3) {
             $msg = sprintf('I expected to see 3 "div.pet" tags in the output, but I see "%s".', count($petElement));
