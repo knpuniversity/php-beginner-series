@@ -76,16 +76,16 @@ chapters:
         is_free:    false
         is_finished: 1
         activities:
-            - { name: ch5_multilevel_arrays, time: 0:00 }
-            - { name: ch5_print_multilevel_key, time: 0:00 }
+            - { name: ch5_print_multilevel_key, time: 2:35 }
+            - { name: ch5_multilevel_arrays, time: 3:57 }
     "files-json-booleans":
         title:      "Working with Files, JSON and Booleans"
         is_free:    false
         is_finished: 1
         activities:
-            - { name: ch6_json_encode, time: 0:00 }
-            - { name: ch6_read_file, time: 0:00 }
-            - { name: ch6_json_decode, time: 0:00 }
+            - { name: ch6_json_encode, time: 1:26 }
+            - { name: ch6_read_file, time: 2:53 }
+            - { name: ch6_json_decode, time: 5:54 }
 #            - { name: ch6_move_filename, time: 0:00 }
 #            - { name: ch6_save_file, time: 0:00 }
     "if-statement":
