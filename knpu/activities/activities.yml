@@ -115,8 +115,8 @@ ch5_print_multilevel_key:
 
 ch6_json_encode:
     question: |
-        Take the `$pets` array and use the `json_encode` function to turn it into a JSON string. Print this inside
-        the `div.json-output` element just to see what it looks like!
+        Use the `$pets` array and add in a `json_encode` function to turn `$pets` into a JSON string. Print this inside
+        the `div.json-output` element just for fun! By the way - programmers have a weird idea of what is fun.
     skeletons: { index.php: ch6/json_encode/index.php }
     worker: php
     entry_point: index.php
