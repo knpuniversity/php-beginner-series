@@ -138,11 +138,11 @@ Install PHP
 First, install PHP on your computer. PHP is basically just an executable
 file. Not an executable file like chrome or iTunes that opens up and has
 a cute GUI, more like an executable that you can run from the command line.
-If you're not used to the command line, don't worry: we'll ease into it.
+If you're not used to the command line, it's ok: we'll ease into it.
 
 Since things seem to be most complex in Windows, I'll switch to Windows 7
 for the rest of this chapter. Installing PHP is different in each system,
-so I'll have you follow along with me an some installation details for your
+so I'll have you follow along with me and some installation details for your
 operating system.
 
 There are a lot of ways to install PHP, but the easiest is `XAMPP`_, which
@@ -154,9 +154,9 @@ works on Windows, Mac or Linux.
     PHP through those. If you're on Linux and have a package manager like
     ``apt-get`` or ``yum``, use it to install PHP.
 
-Download `XAMPP`_ for your operating system. the PHP version doesn't matter,
+Download `XAMPP`_ for your operating system. The PHP version doesn't matter,
 just get at least PHP 5.4. With the power of TV, I'll make our download look
-super fast. Now following along with the install instructions.
+super fast. Now to follow along with the install instructions.
 
 In addition to PHP, this also installs Apache - the most common web server
 software - and MySQL - the most common database. We won't worry about this
