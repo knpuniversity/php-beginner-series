@@ -159,17 +159,17 @@ just get at least PHP 5.4. With the power of TV, I'll make our download look
 super fast. Now to follow along with the install instructions.
 
 In addition to PHP, this also installs Apache - the most common web server
-software - and MySQL - the most common database. We won't worry about this
+software - and MySQL - the most common database. We won't worry about these
 right now.
 
-To check if things are working, enter, ``http://localhost/xampp/index.php``
-in your browser. You should see a bright page. If you don't, don't panic.
-First, open up the XAMPP control panel and make sure Apache is running. If
-that's not the problem, ignore it for now. You may have already had Apache
-installed, which means they're righting each other to answer the door. This
-is especially common on a Mac, which comes with a version of Apache and PHP
-already installed. We're not going to use Apache at all right now. So if
-your setup seems broken, ignore it!
+To check if things are working, enter, ``http://localhost`` in your browser
+and choose your language if it asks. You should see a bright page. If you 
+don't, don't panic. First, open up the XAMPP control panel and make sure 
+Apache is running. If that's not the problem, ignore it for now. You may 
+have already had Apache installed, which means they're fighting each other 
+to answer the door. This is especially common on a Mac, which comes with a 
+version of Apache and PHP already installed. We're not going to use Apache 
+at all right now. So if your setup seems broken, ignore it!
 
 Diagnosing how the XAMPP page works
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -180,16 +180,23 @@ to you because it has no ``.com`` or ``.net`` ending, good call! ``localhost``
 is a special hostname that - on every machine in the world - is a pointer
 back to this same machine. So instead of going out to the DNS fairy and asking
 what the IP address of ``localhost`` is, the request immediately bounces
-right back to this machine. ``localhost`` is a handy and very special shortcut
+right back to the computer you are using. ``localhost`` is a handy and very special shortcut
 for web developers.
 
-Next, the request knocks on the door and Apache answers. It knows *where*
-on our computer the files of ``localhost`` live and looks for the ``xampp/index.php``
-file there. So where is this directory? If we read the XAMPP docs, it's
-``C:\xampp\htdocs``. If we go there, we see a ``xampp`` subdirectory and
-an ``index.php`` file. Mystery solved. The directory where your server reads
-from is common called the ``document root`` or ``web root`` and its location
-will vary and can be configured.
+Next, the request knocks on the door and Apache answers. Notice that instead
+of pointing at a file, the URL is just pointing at a directory called ``xampp``.
+When we point to a directory, Apache is usually configured to look for an ``index.php``
+file inside of it and render that. In fact, if we add ``index.php`` to the URL,
+nothing changes - this was the true file being displayed the whole time.
+
+    http://localhost/xampp/index.php
+
+Apache knows *where* on our computer the files of ``localhost`` live and looks
+for the ``xampp/index.php`` file there. So where is this directory? If we read
+the XAMPP docs, it's ``C:\xampp\htdocs``. If we go there, we see a ``xampp``
+subdirectory and an ``index.php`` file. Mystery solved. The directory where
+your server reads from is common called the ``document root`` or ``web root``
+and its location will vary and can be configured.
 
 Building our Project
 ~~~~~~~~~~~~~~~~~~~~
