@@ -186,7 +186,7 @@ for web developers.
 Next, the request knocks on the door and Apache answers. Notice that instead
 of pointing at a file, the URL is just pointing at a directory called ``xampp``.
 When we point to a directory, Apache is usually configured to look for an ``index.php``
-file inside of it and render that. In fact, if we add ``index.php`` to the URL,
+file and render that. In fact, if we add ``index.php`` to the URL,
 nothing changes - this was the true file being displayed the whole time.
 
     http://localhost/xampp/index.php
@@ -195,7 +195,7 @@ Apache knows *where* on our computer the files of ``localhost`` live and looks
 for the ``xampp/index.php`` file there. So where is this directory? If we read
 the XAMPP docs, it's ``C:\xampp\htdocs``. If we go there, we see a ``xampp``
 subdirectory and an ``index.php`` file. Mystery solved. The directory where
-your server reads from is common called the ``document root`` or ``web root``
+your server reads from is commonly called the ``document root`` or ``web root``
 and its location will vary and can be configured.
 
 Building our Project
@@ -210,7 +210,7 @@ document root, but I'm going to put it somewhere else entirely, like a new
     Having a ``Sites`` folder in your home directory is a very common setup
     for Macs.
 
-Apache doesn't ever look in this directory, so if I create an ``index.php``
+Apache doesn't ever look in here, so if I create an ``index.php``
 file, it's not accessible via my web browser. If we wanted to use Apache,
 we'd need to reconfigure the document root to point here. But actually, we
 won't do that: I'll show you an easy trick instead.
@@ -260,11 +260,11 @@ Once here, type the following:
     php -S localhost:8000
 
 and hit enter. If your screen looks like mine, you're in luck! If you have
-an error or see something different, see the `PHP Server Troubleshooting`_
-part on this chapter's page to debut it.
+an error or see something different, scroll down to the `PHP Server Troubleshooting`_
+section in the script below to help you debug it.
 
 Assuming it worked, just let this sit, copy the URL it printed, paste it
-into your browser, and add the ``index.php`` to the end. Woh, it works! PHP
+into your browser, and add ``index.php`` to the end. Woh, it works! PHP
 is now our web server, and it looks right in this directory for its files.
 
 To turn the server off, just press ``Ctrl+c``. To turn it back on, run the
@@ -289,8 +289,6 @@ software weren't already watching that door. Because we did this, if a request
 goes to port 80, our PHP web server won't be there to answer. By adding ``:8000``,
 the request goes to port 8000, our PHP web server is waiting, and everything
 continues like normal.
-
-sdfsdfsdfsdfsd
 
 Congratulations! You have our PHP project running from your computer. You
 can start playing with the files to see what happens. Any editor can be used
