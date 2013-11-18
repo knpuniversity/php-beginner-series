@@ -1,0 +1,163 @@
+ch1_print_string:
+    question: |
+        Welcome to your first PHP activity! Follow the instructions below and hit submit to
+        see how you did! You can press 'skip' or 'next' to continue on to the rest of the tutorial.
+        
+        Use PHP to print out the string "Hello world" between the `<h1>` and `</h1>` tags
+    worker: php
+    entry_point: index.php
+    skeletons: { index.php: shared/index.php }
+    asserts: ch1/Print/PrintStringSuite.php
+
+ch1_set_var:
+    question: |
+        Now it's your turn to create a variable! Remove your 'Hello world' inside the h1 tag and replace it with a variable called `$pageTitle` and set it to the string "Hello World".
+    skeletons: { index.php: shared/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch1/SetVar/SetVarSuite.php
+
+ch1_set_var_pupcount:
+    question: |
+        Time to count your pups! Create a second variable called `$pupCount` and set it to the number 50. Then create and print this inside a `<div class="count">` element.
+    skeletons: { index.php: ch1/SetVarPupCount/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch1/SetVarPupCount/Test.php
+
+ch2_rand_function:
+    # duplication with index.php skeleton and Test between this and the previous activity
+    question: |
+        Give it a try! Use the `rand()` function to get a random number between 10 and 20 and assign it to the `$pupCount` variable.
+    skeletons: { index.php: ch2/rand/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch2/rand/Test.php
+
+ch2_trim_whitespace:
+    question: |
+        In the code below, we're printing a string that has some empty space on both sides. Without changing the string,
+        use the `trim` function to remove those spaces before printing so that the `h1` tag has no spaces
+        (`<h1>No Spaces!</h1>`).
+    skeletons: { index.php: ch2/trim/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch2/trim/Test.php
+
+ch2_two_string_functions:
+    question: |
+        Now a hard one! Let's use 2 functions at once. First, we'll use a new function:
+        `strip_tags`. This removes any HTML elements from a string. For example, `Hello <span>World</span>` would
+          just be "Hello World" if we passed it as an argument to `strip_tags`.
+
+        First, use `strip_tags` to remove the HTML from the `$comment` variable. Then, print out its length inside the
+        `<div class="comment-length"></div>` element using the `strlen` method.
+    skeletons: { index.php: ch2/two_string_functions/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch2/two_string_functions/Test.php
+
+ch3_basic_array_strings:
+    question: |
+        Some of my favorite things are listed below in the 3 `<li>` tags. Unfortunately, needing to write `<li class="my-favorite">`
+        3 times is a bit wasteful. Create an array, put the 3 strings into it (`ice cream`, `high-fives` and `vacation`),
+        and re-render the 3 `<li>` tags dynamically by using a `foreach` statement.
+    skeletons: { index.php: ch3/basic_array_strings/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch3/basic_array_strings/Test.php
+
+ch3_print_array_key:
+    question: |
+        Using the same array of favorite things as before, print out *only* the second item (high-fives) in the new
+        `.second-thing` div.
+    skeletons: { index.php: ch3/print_array_key/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch3/print_array_key/Test.php
+
+ch4_associative_array_print:
+    question: |
+        Let's create our first associative array! Change the array so that Pancake's name is assigned to a `name` key
+        and his age to a `age` key. Once you've done that, update the code below so that we're still printing
+        out Pancake's information.
+    skeletons: { index.php: ch4/associative_array_print/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch4/associative_array_print/Test.php
+ch4_associative_array_more_items:
+    question: |
+        We want to tell people what breed Pancake is, so add a `breed` key to our array, set it to "Pug", and print
+        it in the `div` with the `pet-breed` class.
+    skeletons: { index.php: ch4/associative_array_print/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch4/associative_array_more_items/Test.php
+
+ch5_multilevel_arrays:
+    question: |
+        Let's print our pets! I've already prepared 3 associative arrays and am using them one by one to print out some
+        pets! Create a new indexed array called `$pets` and put each of these 3 arrays inside of it. Then, use `foreach`
+        to print out the 3 pets, but without the duplication we have right now.
+    skeletons: { index.php: ch5/multilevel_arrays/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch5/multilevel_arrays/Test.php
+
+ch5_print_multilevel_key:
+    question: |
+        Now, using the array of pet data, see if you can print Spark Pug's breed into the `.spark-pug-breed` div, using the
+        `$pets` variable to access the `breed` key on the second pet:
+    skeletons: { index.php: ch5/print_multilevel_key/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch5/print_multilevel_key/Test.php
+
+ch6_json_encode:
+    question: |
+        Use the `$pets` array and add in a `json_encode` function to turn `$pets` into a JSON string. Print this inside
+        the `div.json-output` element just for fun! By the way - programmers have a weird idea of what is fun.
+    skeletons: { index.php: ch6/json_encode/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch6/json_encode/Test.php
+
+ch6_read_file:
+    question: |
+        I've just created a `pets.json` file for us right in this directory! See if you can read the contents of this
+        file and dump them to the `div.file-contents` element to see what's inside!
+    skeletons: { index.php: ch6/read_file/index.php, pets.json: ch6/shared/pets.json }
+    worker: php
+    entry_point: index.php
+    asserts: ch6/read_file/Test.php
+
+ch6_json_decode:
+    question: |
+        The `pets.json` file contains all of our pet data. Let's remove the `$pets` array in this file and instead use
+        `json_decode` on the `pets.json` file contents to create the `$pets` variable. In the end, `$pets` will still
+        be an array (except loaded from the `pets.json`) and everything should still print just as before.
+    skeletons: { index.php: ch6/json_decode/index.php, pets.json: ch6/shared/pets.json }
+    worker: php
+    entry_point: index.php
+    asserts: ch6/json_decode/Test.php
+
+# this is a todo for later
+#case_sensitivity_4:
+#    question: |
+#        Is echo case sensitive (i.e. does ECHO work)? What about variable names - can we set `$pageTitle` and then print
+#        `$PAGETITLE`? Does that work? Try it out below to find out.
+#    answers:
+#        1: Both `echo` and variable names are case *insensitive* (`echo` = `ECHO` and `$pageTitle` = `$PAGETITLE`)
+#        2: Both `echo` and variable names are case *sensitive* (`echo` does not equal `ECHO` and `$pageTitle` does not equal `$PAGETITLE`)
+#        3: `echo` is case *insensitive* but variables are case *sensitive* (`echo` = `ECHO` but `$pageTitle` does not equal `$PAGETITLE`)
+#        4: `echo` is case *sensitive* but variables are case *insensitive* (`echo` does not equal `ECHO` but `$pageTitle` = `$PAGETITLE`)
+#    correct: 3
+#    correct_message: |
+#        Many things in PHP are case insensitive, like `ECHO` or even `<?PHP`. But variables are different: PHP sees `$pageTitle`
+#        and `$PAGETITLE` as completely different. But even when things are case insensitive, you'll see us use lowercase
+#        (e.g. `echo`) letters so that our code looks consistent with how most developers write.
+#    coding:
+#        skeletons: { index.php: CaseSensitivity4/index.php }
+#        entry_point: index.php
+#        worker: php
+#        # this is an ungraded coding box

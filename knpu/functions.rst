@@ -118,6 +118,8 @@ When we refresh the browser, every word in the string is upper-cased!
 Since the one argument is required, if we leave it off, PHP will give us
 a "friendly" reminder:
 
+.. code-block:: html+php
+
     <!-- index.php -->
     <!-- ... -->
 
