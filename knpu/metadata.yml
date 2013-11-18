@@ -98,3 +98,7 @@ chapters:
         title:      "System Setup"
         is_free:    false
         is_finished: 0
+    "creating-functions":
+        title:      "Creating Functions"
+        is_free:    false
+        is_finished: 0
