@@ -76,7 +76,7 @@ comes back and knocks on the door to my computer. Let's also assume that I
 have some web server software running and it knows to look for the AirPup
 files right in this directory where I've been working.
 
-So starting simple, if I change my URL to ``http://airpup.com/css/main.css``,
+So starting simple, if I change my URL to ``http://localhost:8000/css/main.css``,
 I see my CSS file in the browser. The web server software sees that we're
 requesting the file ``/css/main.css`` and so it opens up that file and sends
 a response to my browser with the CSS contents. This looks simple, but we
@@ -238,7 +238,9 @@ easy to use. You won't use it on your real production server that hosts
 your finished website because it's not as fast as web servers like Apache.
 But for developing locally, it's wonderful.
 
-First, open up a command line or terminal.
+First, open up a command line or terminal. Actually, XAMPP's control panel
+has a terminal we can use, which also sets up some variables and paths that
+make life easier. I'll use that.
 
 .. tip::
 
@@ -303,7 +305,7 @@ PHP Server Troubleshooting
 --------------------------
 
 TODO
-A) Command not found
+A) Command not found - finding php
 B) Your on 5.3, so you just get the PHP options
 
 .. _`Apache`: http://httpd.apache.org/
