@@ -203,7 +203,7 @@ Building our Project
 
 Ok, enough with that! I *could* start building my project right inside the
 document root, but I'm going to put it somewhere else entirely, like a new
-``Sites/airpup`` directory in my home directory.
+``Sites`` directory in my home directory.
 
 .. tip::
 
@@ -215,10 +215,10 @@ file, it's not accessible via my web browser. If we wanted to use Apache,
 we'd need to reconfigure the document root to point here. But actually, we
 won't do that: I'll show you an easy trick instead.
 
-But first, go to KnpUniversity.com and download the code that goes along
-with this course. Copy the contents of the ``server_setup`` directory into
-the new directory on your computer, wherever it is. This is the code for the
-project we've built so far.
+But first, go to the KnpUniversity GitHub to download the code that goes along
+with this course. Choose the ``server_setup`` branch, download the zip file,
+unzip it into the Sites directory and rename it to ``AirPup``. This is the
+code for the project we've built so far.
 
 Using PHP's Web Server
 ~~~~~~~~~~~~~~~~~~~~~~
