@@ -4,37 +4,36 @@ System Setup
 When you develop a website, it usually looks something like what you've been
 watching me do. You open up a PHP file in some sort of editor, then point
 your browser at some web address that executes the PHP file and shows you
-the output. Hopefully, you've been practicing along with me in the activities.
-Now, it's time to get your computer setup so that you can program for real!
+the output. But of course you've been practicing that diligently in the activities :).
+Now, it's time to get your computer setup so that you can program for realz!
 
-Setting up your computer correctly is one of the biggest stumbling blocks
-when learning any language. It's a necessary evil and every computer is different,
-but we'll try to make your journey an easy one.
+Setting up your computer correctly is one of the hardest things you have to do...
+I mean really it sucks. It's a necessary evil and every computer is different,
+but we'll try to make this as easy as possible.
 
-But first, we're going to learn a little bit about the invisible gears that
+But first, we're going to learn a little bit about the invisible hamsters in wheels that
 run the web.
 
 The Anatomy of Requesting a Page
 --------------------------------
 
-First, there you, on a browser, typing our domain - AirPup.com/index.php into
-the address bar. When you hit enter, the magic starts. At this moment, our
+Initially, there's you, on a browser, going to our domain - AirPup.com/index.php. 
+When you hit enter, the magic starts. At this moment, our
 browser is making a "request", which means we're sending a message into the
 Interwebs. This message says that we're requesting the HTML for the ``index.php``
-file on the AirPup.com domain. That file may be setting on a completely different
-computer thousands of miles away. Eventually, our request message gets to
-that server, the ``index.php`` file is executed, and a "response" message
-full of HTML is sent back. Our browser gets that message and displays the
+file on the AirPup.com domain. That file may be sitting on a completely different
+computer thousands of miles away--enjoying a beach you will never see. Eventually, our 
+request message gets to that server, the ``index.php`` file is executed, and a 
+"response" message full of HTML is sent back. Our browser gets that message and displays the
 HTML. Request, response, that's how the web works. It's like a game of telephone:
-you talk via your browser directly to a computer, tell it what you want,
-and it responds with it.
+you talk via your browser directly to a computer, tell it what you want, and it responds with it.
 
 IP Addresses and the DNS Fairy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order for the request to find its way to our server, a few magic things
 happen. First, a fairy called DNS turns AirPup.com into an IP address. There's
-more magic behind this, but an IP address is an address to a computer, just
+more magic behind this, but an IP address is the address to a computer, just
 like you have a unique address to your house. With it, our request knows
 exactly which tubes to go through to find that server.
 
@@ -61,22 +60,22 @@ that the web server software is looking at ``/var/www/airpup.com`` for the
 AirPup files. Or if you're on Windows, perhaps it's looking at ``C:/sites/airpup.com``
 or something like that. I'm just making these paths up - the important thing
 is that when the web server sees the request for AirPup.com, it knows that
-the files from this site live at a certain directory on the machine.
+the files from this site live in a certain directory on the machine.
 
 Requesting a File
 ~~~~~~~~~~~~~~~~~
 
 Ok, just one more step! Let's pretend that this imaginary server out there
 on the web is actually my computer that you're watching right now. We usually
-thing of servers living in huge rooms with blinking lights and the ability
-to withstand direct missile strikes, but my computer can also be a server.
+think of servers living in huge rooms with blinking lights and the ability
+to withstand the zombie apocalypse, but my computer can also be a server.
 So when I type the domain into my browser, instead of going 1000 miles away
 across the web to some other machine, the request starts to go out and then
 comes back and knocks on the door to my computer. Let's also assume that I
 have some web server software running and it knows to look for the AirPup
 files right in this directory where I've been working.
 
-So starting simple, if I change my URL to ``http://localhost:8000/css/main.css``,
+So starting simple, if I change my URL to ``http://AirPup.com/css/main.css``,
 I see my CSS file in the browser. The web server software sees that we're
 requesting the file ``/css/main.css`` and so it opens up that file and sends
 a response to my browser with the CSS contents. This looks simple, but we
