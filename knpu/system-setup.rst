@@ -78,7 +78,7 @@ files right in this directory where I've been working.
 So starting simple, if I change my URL to ``http://AirPup.com/css/main.css``,
 I see my CSS file in the browser. The web server software sees that we're
 requesting the file ``/css/main.css`` and so it opens up that file and sends
-a response to my browser with the CSS contents. This looks simple, but we
+a response to my browser with its contents. This looks simple, but we
 know that there are a bunch of players involved including my browser, the
 DNS fairy, the server, which happens to be my computer, and finally the web
 server software that grabs the file I've requested and "serves" it back to
@@ -112,11 +112,11 @@ some simple code in there, and put ``contact.php`` in your address bar::
 So what do you think will happen if we rename this file to ``contact.html``
 and access it in the browser? Will the PHP code run? Will it just disappear?
 
-When we try it, we get what *seems* like a blank page. But in you view the
+When we try it, we get what *seems* like a blank page. But if you view the
 HTML source, there's our PHP code! Because the file didn't end in ``.php``,
 our web server software simply returned the raw, unprocesssed file. The only
-reason we didn't see it at first is that the opening PHP tag looks like a
-broken HTML tag, so our browser tries to process it.
+reason we didn't see it at first is that the opening PHP tag looks like
+broken HTML, so our browser tries to process it.
 
 Setting up Your Computer
 ------------------------
@@ -295,10 +295,10 @@ Congratulations! You have our PHP project running from your computer. You
 can start playing with the files to see what happens. Any editor can be used
 to edit the PHP files, since they're just plain text. But do yourself a favor
 and download a good editor: I recommend `PHPStorm`_, `NetBeans`_ or `Sublime Text`_
-if you have a Mac. PHPStorm will tell you when you have a Syntax error, help
+if you have a Mac. PHPStorm will tell you when you have a syntax error, help
 you remember the arguments to PHP functions, and a lot more. It has a free
-trial so check it out. And no, I don't work for them: they just have a great
-editor.
+trial so check it out. And no, they didn't even pay me to say that: they just 
+have a great editor. But if they are listening... :).
 
 PHP Server Troubleshooting
 --------------------------
