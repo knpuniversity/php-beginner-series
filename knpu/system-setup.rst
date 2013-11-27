@@ -182,11 +182,11 @@ what the IP address of ``localhost`` is, the request immediately bounces
 right back to the computer you are using. ``localhost`` is a handy and very special shortcut
 for web developers.
 
-Next, the request knocks on the door and Apache answers. Notice that instead
-of pointing at a file, the URL is just pointing at a directory called ``xampp``.
-When we point to a directory, Apache is usually configured to look for an ``index.php``
-file and render that. In fact, if we add ``index.php`` to the URL,
-nothing changes - this was the true file being displayed the whole time.
+Next, the request knocks on the door and Apache answers. Instead of pointing
+at a file, the URL in your browser may be just pointing at a directory called
+``xampp``. When we point to a directory, Apache is usually configured to look
+for an ``index.php`` file and render that. In fact, if we add ``index.php``
+to the URL, nothing changes - this was the true file being displayed the whole time.
 
     http://localhost/xampp/index.php
 
@@ -202,7 +202,7 @@ Building our Project
 
 Ok, enough with that! I *could* start building my project right inside the
 document root, but I'm going to put it somewhere else entirely, like a new
-``Sites`` directory in my home directory.
+``Sites`` directory in my home directory. Create it if it's not there already.
 
 .. tip::
 
@@ -268,8 +268,8 @@ Assuming it worked, just let this sit, copy the URL it printed, paste it
 into your browser, and add ``index.php`` to the end. Woh, it works! PHP
 is now our web server, and it looks right in this directory for its files.
 
-To turn the server off, just press ``Ctrl+c``. To turn it back on, run the
-command again. Don't forget to start this before you work.
+To turn the server off, just press ``Ctrl+c`` or close the window. To turn
+it back on, run the command again. Don't forget to start this before you work.
 
 .. tip::
 
