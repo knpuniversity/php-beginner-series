@@ -141,6 +141,40 @@ ch6_json_decode:
     entry_point: index.php
     asserts: ch6/json_decode/Test.php
 
+ch7_simple_if:
+    question: |
+        Instead of just printing the `breed` key, use an `if` statement to check if the `breed` is equal to `hidden`.
+        If it is equal to `hidden`, simple print `The breed is not shown`. Otherwise, print the breed!
+    skeletons: { index.php: ch7/simple_if/index.php, pets.json: ch7/shared/pets.json }
+    worker: php
+    entry_point: index.php
+    asserts: ch7/simple_if/Test.php
+
+ch7_if_greater_than:
+    question: |
+        We're already printing the weight of each pet, and that's great! If
+        the pet's weight is *greater than* 30, print `HUGE` after printing
+        the weight (hint use `>` instead of `==` to see if the weight is
+        greater than 30).
+    skeletons: { index.php: ch7/simple_if/index.php, pets.json: ch7/shared/pets.json }
+    worker: php
+    entry_point: index.php
+    asserts: ch7/if_greater_than/Test.php
+
+ch7_if_else_if:
+    question: |
+        In this example, we're use a nested if statement to either say hi
+        directly to "Spark Pug", print out the pets name, or print "Short name"
+        if that name is less than 8 characters.
+
+        Keeping the functionality the same, rewrite the if statement to use
+        a single level, `if-elseif-else` structure. Hint: the first `if`
+        statement should check if the name is "Spark Pug".
+    skeletons: { index.php: ch7/if_else_if/index.php, pets.json: ch7/shared/pets.json }
+    worker: php
+    entry_point: index.php
+    asserts: ch7/if_else_if/Test.php
+
 # this is a todo for later
 #case_sensitivity_4:
 #    question: |

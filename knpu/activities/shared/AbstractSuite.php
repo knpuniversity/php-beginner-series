@@ -20,6 +20,16 @@ abstract class AbstractSuite extends PhpAwareSuite
         $this->assertContains('foreach', $code, 'I don\'t see your "foreach" statement. Did you remember to write "foreach"?');
     }
 
+    protected function assertIfExists($code)
+    {
+        $this->assertContains('if', $code, 'I don\'t see your "if" statement. Did you remember to write "if"?');
+    }
+
+    protected function assertElseIfExists($code)
+    {
+        $this->assertRegExp('/elseif|else if/', $code, 'I don\'t see your "elseif" statement. Did you remember to write "elseif"?');
+    }
+
     protected function assertVariableExists($variableName, $code)
     {
         $this->assertContains('$'.$variableName, $code, sprintf('I don\'t see the variable "%s". Did you remember to create it?', $variableName));
@@ -75,8 +85,12 @@ abstract class AbstractSuite extends PhpAwareSuite
         $ele = $this->getCrawlerForAtLeastOneElement($output, $cssSelector, $zeroError);
 
         if ($moreThanOneError === null) {
-            $moreThanOneError = sprintf('I expected only 1 "%s" element, but instead I see %s!', $cssSelector, count($ele));
+            $moreThanOneError = sprintf('I expected only 1 "%s" element, but instead I see %count%!', $cssSelector);
         }
+
+        $moreThanOneError = strtr($moreThanOneError, array(
+            '%count%' => count($ele)
+        ));
 
         $this->assertEquals(1, count($ele), $moreThanOneError);
 

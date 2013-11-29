@@ -93,6 +93,10 @@ chapters:
         title:      "The wonderful if Statement"
         is_free:    false
         is_finished: 0
+        activities:
+            - { name: ch7_simple_if, time: 1:26 }
+            - { name: ch7_if_greater_than, time: 1:26 }
+            - { name: ch7_if_else_if, time: 1:26 }
     "system-setup":
         title:      "System Setup"
         is_free:    false
