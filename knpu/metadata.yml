@@ -92,7 +92,7 @@ chapters:
     "if-statement":
         title:      "The wonderful if Statement"
         is_free:    false
-        is_finished: 0
+        is_finished: 1
         activities:
             - { name: ch7_simple_if, time: 1:26 }
             - { name: ch7_if_greater_than, time: 1:26 }
