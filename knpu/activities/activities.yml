@@ -153,9 +153,9 @@ ch7_simple_if:
 ch7_if_greater_than:
     question: |
         We're already printing the weight of each pet, and that's great! If
-        the pet's weight is *greater than* 30, print `HUGE` after printing
-        the weight (hint use `>` instead of `==` to see if the weight is
-        greater than 30).
+        the pet's weight is *greater than* 20 *and* the `breed` is equal
+        to `Bulldog`, print `HUGE` after printing the weight (hint use `>`
+        instead of `==` to see if the weight is greater than 20).
     skeletons: { index.php: ch7/simple_if/index.php, pets.json: ch7/shared/pets.json }
     worker: php
     entry_point: index.php

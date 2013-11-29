@@ -1,6 +1,6 @@
 title:  How to win friends and develop in PHP
 price:  12
-length: 37:00
+length: 47:42
 summary: |
     This course is a work-in-progress, but you can buy it immediately and
     we'll email you when new chapters are added.
@@ -92,11 +92,12 @@ chapters:
     "if-statement":
         title:      "The wonderful if Statement"
         is_free:    false
+        length:     10:42
         is_finished: 1
         activities:
-            - { name: ch7_simple_if, time: 1:26 }
-            - { name: ch7_if_greater_than, time: 1:26 }
-            - { name: ch7_if_else_if, time: 1:26 }
+            - { name: ch7_simple_if, time: 2:34 }
+            - { name: ch7_if_greater_than, time: 5:10 }
+            - { name: ch7_if_else_if, time: 10:04 }
     "system-setup":
         title:      "System Setup"
         is_free:    false

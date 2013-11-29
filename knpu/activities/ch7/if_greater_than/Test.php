@@ -20,7 +20,7 @@ class Test extends AbstractSuite
             $output,
             '.pet-weight:contains("HUGE")',
             'I don\'t see the word HUGE inside any div.pet-weight elements. Are you printing this when the pet is kinda fat?',
-            'I see HUGE %count% times, but only 1 pet has a weight greater than 30'
+            'I see HUGE %count% times, but only 1 Bulldog has a weight greater than 20. Are you checking the weight AND the breed?'
         );
     }
 }
