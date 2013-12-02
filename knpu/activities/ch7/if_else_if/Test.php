@@ -7,7 +7,7 @@ require __DIR__ . '/../../shared/AbstractSuite.php';
 
 class Test extends AbstractSuite
 {
-    const EXPECTED = 'The breed is not shown';
+    const EXPECTED_FEISTY = 'Pets with long names are feisty';
 
     public function runTest(Result $result)
     {
@@ -24,10 +24,10 @@ class Test extends AbstractSuite
             $output,
             'I don\'t see "Chew Barka" - his name is more than 8 characters, so it should be printed!'
         );
-        $this->assertContains(
+        $this->assertNotContains(
             'Pico de Gato',
             $output,
-            'I don\'t see "Pico de Gato" - his name is more than 8 characters, so it should be printed!'
+            'I see "Pico de Gato", but his name is 12 characters long, which means we should be printing "'.self::EXPECTED_FEISTY.'" instead!'
         );
         $this->assertContains(
             'Hey Sparky!',
@@ -40,16 +40,11 @@ class Test extends AbstractSuite
             'I see "Spark Pug", but his name shouldn\'t be printed! Instead, we should only print "Hey Spark!" in place of Spark Pug\'s name.'
         );
         $this->assertContains(
-            'Short name',
-            $output,
-            'I don\'t see "Short name" but I should! Since Pancake\'s name is less than 8 characters, we should print "Short name" instead of Pancake.'
-        );
-        $this->assertNotContains(
             'Pancake',
             $output,
-            'I see "Pancake" but I shouldn\'t! Since Pancake\'s name is less than 8 characters, we should print "Short name" instead of Pancake.'
+            'I don\'t see "Pancake" but I should, since Pancake\'s name is only 7 characters long.'
         );
-        $shortNameCount = substr_count($output, 'Short name');
-        $this->assertEquals(1, $shortNameCount, sprintf('I see "Short name" %s times, but we should only see it once since there is only one pet name less than 8 characters!', $shortNameCount));
+        $feistyCount = substr_count($output, self::EXPECTED_FEISTY);
+        $this->assertEquals(1, $feistyCount, sprintf('I see "%s" %s times, but we should only see it once since there is only one pet name more than 11 characters!', self::EXPECTED_FEISTY, $feistyCount));
     }
 }
