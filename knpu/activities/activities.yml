@@ -164,7 +164,8 @@ ch7_if_else_if:
     question: |
         In this example, we're using a nested if statement to either say
         "Hey Sparky" directly to Spark Pug, print out the pet's name, or print
-        "Short name" if that name is less than 8 characters.
+        "Pets with long names are feisty" if that name is more than 11 characters
+        (i.e. Pico de Gato).
 
         Keeping the functionality the same, rewrite the if statement to use
         a single level, `if-elseif-else` structure. Hint: the first `if`
