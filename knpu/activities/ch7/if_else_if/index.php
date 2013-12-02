@@ -13,14 +13,14 @@
             <?php $name = $pet['name']; ?>
             <div class="pet">
                 <?php
-                    if (strlen($name) > 8) {
+                    if (strlen($name) < 11) {
                         if ($name == 'Spark Pug') {
                             echo 'Hey Sparky!';
                         } else {
                             echo $name;
                         }
                     } else {
-                        echo 'Short name';
+                        echo 'Pets with long names are feisty';
                     }
                 ?>
             </div>

@@ -162,9 +162,9 @@ ch7_if_greater_than:
 
 ch7_if_else_if:
     question: |
-        In this example, we're using a nested if statement to either say hi
-        directly to "Spark Pug", print out the pet's name, or print "Short name"
-        if that name is more than 8 characters.
+        In this example, we're using a nested if statement to either say
+        "Hey Sparky" directly to Spark Pug, print out the pet's name, or print
+        "Short name" if that name is less than 8 characters.
 
         Keeping the functionality the same, rewrite the if statement to use
         a single level, `if-elseif-else` structure. Hint: the first `if`
