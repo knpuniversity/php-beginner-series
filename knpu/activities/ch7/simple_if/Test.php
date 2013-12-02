@@ -27,9 +27,9 @@ class Test extends AbstractSuite
                 'hidden',
                 $text,
                 sprintf(<<<EOF
-It looks like the "hidden" breed is being printed. Use an if statement to print "%s" instead.
+It looks like the "hidden" breed is being printed. Use an if statement to print "%s" instead. 
 
-Remember to compare 2 values, use:
+ Remember to compare 2 values, use:
 
  `==` to see if two values are equal;
  `!=` to see if two values are not equal;
