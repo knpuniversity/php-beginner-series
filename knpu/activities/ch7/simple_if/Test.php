@@ -26,7 +26,16 @@ class Test extends AbstractSuite
             $this->assertNotContains(
                 'hidden',
                 $text,
-                sprintf('It looks like the "hidden" breed is being printed. Use an if statement to print "%s" instead.', self::EXPECTED)
+                sprintf(<<<EOF
+It looks like the "hidden" breed is being printed. Use an if statement to print "%s" instead.
+
+Remember to compare 2 values, use:
+
+* `==` to see if two values are equal;
+* `!=` to see if two values are not equal;
+* `>` and `<` to see if one value is greater or less than another value.
+EOF
+                , self::EXPECTED)
             );
         });
 
