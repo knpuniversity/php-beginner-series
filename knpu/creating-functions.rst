@@ -16,8 +16,8 @@ so eventually I want our code to look like this::
 
 Oh, and those two slash marks (``//``) are one of the two ways you can comment
 out lines in PHP. Anything on a line after ``//`` is ignored by PHP entirely.
-This is handy for temporarily removing code or adding helpful comments for
-your future-self.
+This is handy for temporarily removing code or writing little love notes to
+your fellow developers.
 
 Our new function can live anywhere in this file, but let's put it at the top
 and out of the way. Creating a function is really easy: just say ``function``,
