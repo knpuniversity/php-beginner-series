@@ -104,37 +104,12 @@ file:
 * ``include``;
 * ``include_once``.
 
-To see the difference between ``require`` and ``require_once``, duplicate
-the ``require`` call in ``index.php``:
-
-... code-block:: html+php
-
-    <?php
-    // index.php
-    require 'lib/functions.php';
-    require 'lib/functions.php';
-    // ...
-
-When we refresh, we get an error!
-
-    Cannot redeclare function get_pets()
-
-PHP opens ``functions.php`` twice. The second time, it gets angry because
-it thinks you're trying to define 2 ``get_pets`` functions. But if we use
-``require_once``, it will work again:
-
-... code-block:: html+php
-
-    <?php
-    // index.php
-    require_once 'lib/functions.php';
-    require_once 'lib/functions.php';
-    // ...
-
-PHP detects that it's already loaded this file and doesn't load it again.
-This is a silly example, but as your project gets more complex, you may end
-up in a spot where you really don't know whether some file like ``functions.php``
-has been required yet. This is when ``require_once`` is handy.
+The difference between ``require`` and ``require_once`` is simple: ``require``
+will *always* load a file while ``require_once`` will make sure that it only
+loads the file *one* time no matter how many times you call it. So if ``functions.php``
+were doing some initialization and it was *really* important to only include
+this file once, we might use ``require_once`` just to be safe. This becomes
+more important later when you work with classes.
 
 The other two statements are ``include`` and ``include_once``. These are
 exactly the same as ``require`` and ``require_once``, except that if the
