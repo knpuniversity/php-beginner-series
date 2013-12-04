@@ -16,7 +16,7 @@ so eventually I want our code to look like this::
 
 Oh, and those two slash marks (``//``) are one of the two ways you can comment
 out lines in PHP. Anything on a line after ``//`` is ignored by PHP entirely.
-This is handle for temporarily removing code or adding helpful comments for
+This is handy for temporarily removing code or adding helpful comments for
 your future-self.
 
 Our new function can live anywhere in this file, but let's put it at the top
