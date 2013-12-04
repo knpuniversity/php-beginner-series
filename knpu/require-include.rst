@@ -18,7 +18,7 @@ which will tell us how many items are in that array:
 
 But when we try it, it blow up big time!
 
-    Undefined function get_pets();
+    Fatal error: Call to undefined function get_pets() in /php1/contact.php on line 2
 
 Hmm, the function works in ``index.php``, but not in ``contact.php``. Clearly,
 the difference is that ``get_pets()`` actually lives in ``index.php``. And
