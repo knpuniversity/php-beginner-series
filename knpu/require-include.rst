@@ -22,7 +22,7 @@ But when we try it, it blow up big time!
 
 Hmm, the function works in ``index.php``, but not in ``contact.php``. Clearly,
 the difference is that ``get_pets()`` actually lives in ``index.php``. And
-that's totally correct. Even though it sites next to ``index.php``, when
+that's totally correct. Even though it sits next to ``index.php``, when
 PHP executes ``contact.php``, it has no idea what functions or variables
 might live in ``index.php``. These two files exist in perfect isolation.
 
