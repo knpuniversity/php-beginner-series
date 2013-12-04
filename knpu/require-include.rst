@@ -41,13 +41,13 @@ the top of the file:
     
 When we try it, it works... sort of. At the bottom of the page, we see our
 sentence with the correct pets count. But above it is the entire ``index.php``
-page, which we did *not* want. Using ``require`` made using the ``get_pets()``
+page, which we did *not* want. Adding ``require`` made using the ``get_pets()``
 function possible, but it also brought in all the HTMl from the index page
 as well. What can we do?
 
 Let's create a new file called ``functions.php``, which I'll put in a ``lib/``
 directory for organization since this PHP file isn't mean to be a page that's
-accessed directly like ``index.php`` and ``contact.php``. Now, move the ``get_pets()``
+accessed directly like our index and contact files. Now, move the ``get_pets()``
 function in here, being sure to remember your opening PHP tag:
 
 .. code-block:: html+php
@@ -66,15 +66,15 @@ function in here, being sure to remember your opening PHP tag:
 If you're screaming that I forgot the closing PHP tag, you're half-right.
 If the last thing you have in a file is PHP code, adding the closing PHP
 tag is optional, and it's actually better if you leave it off.
-If that confuses you, go ahead and always close your PHP tags for now.
+If that confuses you, go ahead and close your PHP tags for now.
 
 .. tip::
 
     Why is *not* closing your PHP tags better when you don't have to? Great
     question - see http://bit.ly/IsCwPE.
 
-Now, simply ``require`` ``lib/functions.php`` from both ``index.php`` and
-``contact.php``:
+Now, simply ``require`` ``lib/functions.php`` from both the index and contact
+files:
 
 .. code-block:: html+php
 
@@ -90,9 +90,8 @@ Now, simply ``require`` ``lib/functions.php`` from both ``index.php`` and
     require 'lib/functions.php';
     // ...
 
-Both will now have access to the ``get_pets`` function, but without getting
-any extra HTML, since ``functions.php`` doesn't have any. When we try them,
-they both work!
+Both will now have access to the ``get_pets`` function, but without any extra 
+HTML, since ``functions.php`` doesn't have any. When we try them, they both work!
 
 require, require_once, include, include_once
 --------------------------------------------
