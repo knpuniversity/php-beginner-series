@@ -42,11 +42,11 @@ the top of the file:
 When we try it, it works... sort of. At the bottom of the page, we see our
 sentence with the correct pets count. But above it is the entire ``index.php``
 page, which we did *not* want. Adding ``require`` made using the ``get_pets()``
-function possible, but it also brought in all the HTMl from the index page
+function possible, but it also brought in all the HTML from the index page
 as well. What can we do?
 
 Let's create a new file called ``functions.php``, which I'll put in a ``lib/``
-directory for organization since this PHP file isn't mean to be a page that's
+directory for organization since this PHP file isn't meant to be a page that's
 accessed directly like our index and contact files. Now, move the ``get_pets()``
 function in here, being sure to remember your opening PHP tag:
 
