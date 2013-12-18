@@ -303,9 +303,52 @@ have a great editor. But if they are listening... :).
 PHP Server Troubleshooting
 --------------------------
 
-TODO
-A) Command not found - finding php
-B) Your on 5.3, so you just get the PHP options
+Everything working? Cool, you can skip this.
+
+Having problem getting the built-in PHP web server running? Here are the
+most common problems:
+
+Command php not Found
+~~~~~~~~~~~~~~~~~~~~~
+
+When you type the ``php`` command inside your terminal, you may get an error
+that basically says that the command ``php`` isn't found or recognized. PHP
+is an executable file that lives in a specific directory on your system. Normally,
+you can only execute files when you are actually *inside* the same directory
+as that file. But some files are registered in "global" paths. This means
+that when you type ``php``, your computer knows exactly where on your system
+to find that file. If you've installed PHP and you're getting this error,
+this is the problem!
+
+There are 2 fixes, and unfortunately they vary based on your system. First,
+to be safe, close and re-open your terminal. Sometimes this will fix things.
+
+If it doesn't, here are the 2 options:
+
+#. Read the Xampp documentation and find out where the PHP executable lives.
+   Then, instead of typing simply ``php``, you could type the full path to
+   the executable file. This would mean typing something like:
+
+   .. code-block:: bash
+
+       C:\xampp\php\php.exe -S localhost:8000
+
+#. The above is a temporary fix, as it's pretty annoying to need to always
+   include this full path. The real fix is to add the directory of your PHP
+   executable to your system paths. In Windows, for example, there is a system
+   configuration that says "when I type things at the command line, look in
+   these directories for those files". If we can add the ``C:\xampp\php``
+   directory to that list, we're in luck! See `how to access the command line for xampp on windows`_.
+
+Running the command just returns a big set of directions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have an older version of PHP, then running ``php -S localhost:8000``
+won't work. Instead, it will just print a big set of options back to you.
+If this happens, check your version of php by running ``php -v``. If the
+version you have is 5.3.* or lower, you need to upgrade it. The command we're
+running in PHP only works for version 5.4.0 and higher. And that's really
+ok, 5.3 versions are quite old by now :).
 
 .. _`Apache`: http://httpd.apache.org/
 .. _`Nginx`: http://wiki.nginx.org/Main
@@ -317,3 +360,4 @@ B) Your on 5.3, so you just get the PHP options
 .. _`PHPStorm`: http://bit.ly/1a5qdPD
 .. _`NetBeans`: https://netbeans.org/
 .. _`Sublime Text`: http://www.sublimetext.com/
+.. _`how to access the command line for xampp on windows`: http://stackoverflow.com/questions/10753024/how-to-access-the-command-line-for-xampp-on-windows
