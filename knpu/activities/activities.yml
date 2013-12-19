@@ -188,6 +188,20 @@ ch9_simple_function:
     entry_point: index.php
     asserts: ch9/simple_function/Test.php
 
+ch10_require:
+    question: |
+        We now have 2 pages - `page1.php` and `page2.php`, and each needs
+        to use the `hal_9000` function. Move the function into the `functions.php`
+        file and use the `require` statement so that both pages have access
+        to this function.
+    skeletons:
+        "page1.php": ch10/require/page1.php
+        "page2.php": ch10/require/page2.php
+        "functions.php": ch10/require/functions.php
+    worker: php
+    entry_point: page2.php
+    asserts: ch10/require/Test.php
+
 # this is a todo for later
 #case_sensitivity_4:
 #    question: |

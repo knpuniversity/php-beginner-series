@@ -35,6 +35,18 @@ abstract class AbstractSuite extends PhpAwareSuite
         $this->assertContains('$'.$variableName, $code, sprintf('I don\'t see the variable "%s". Did you remember to create it?', $variableName));
     }
 
+    protected function assertRequireExists($filename, $code, $fileBeingProcessed = null)
+    {
+        $this->assertContains('require', $code, 'I don\'t see any `require` statements!'.($fileBeingProcessed ? ' in '.$fileBeingProcessed : ''));
+
+        $err = 'I don\'t see the filename "%s"';
+        if ($fileBeingProcessed) {
+            $err .= ' in '.$fileBeingProcessed;
+        }
+        $err .= ' make sure you\'re requiring this!';
+        $this->assertContains($filename, $code, sprintf($err, $filename));
+    }
+
     protected function assertStringExists($string, $code, $message = null)
     {
         if (stripos($code, "'".$string."'") === false && stripos($code, '"'.$string.'"') === false) {
@@ -52,6 +64,15 @@ abstract class AbstractSuite extends PhpAwareSuite
             $functionName,
             $code,
             sprintf('I don\'t see the %s function being called. Did you remember to write "%s"?', $functionName, $functionName
+        ));
+    }
+
+    protected function assertFunctionDeclarationExists($functionName, $code)
+    {
+        $this->assertContains(
+            'function '.$functionName,
+            $code,
+            sprintf('I don\'t see the %s function being create. Did you remember to write function %s()?', $functionName, $functionName
         ));
     }
 

@@ -114,6 +114,8 @@ chapters:
         is_free:    false
         length:     4:42
         is_finished: 1
+        activities:
+            - { name: ch10_require, time: 3:10 }
     "simple-layout":
         title: Adding a Simple Layout
         is_free:    false
