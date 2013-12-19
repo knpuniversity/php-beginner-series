@@ -1,6 +1,6 @@
 title:  How to win friends and develop in PHP
 price:  12
-length: 47:42
+length: 1:02:06
 summary: |
     This course is a work-in-progress, but you can buy it immediately and
     we'll email you when new chapters are added.
@@ -101,7 +101,8 @@ chapters:
     "system-setup":
         title:      "System Setup"
         is_free:    false
-        is_finished: 0
+        length:     14:24
+        is_finished: 1
     "creating-functions":
         title:      "Creating Functions"
         is_free:    false
