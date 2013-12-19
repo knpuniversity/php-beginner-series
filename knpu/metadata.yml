@@ -18,8 +18,8 @@ illustration: php-ep1.png
 priority: 160
 tags:
     - { name: php }
-status: unfinished
-hasVideoDownload: 0
+status: finished
+hasVideoDownload: 1
 
 chapters:
     "lets-write-php":
