@@ -13,7 +13,6 @@ summary: |
     project, and **coding exercises** throughout the screencast so you can 
     practice immediately.
 
-    
 illustration: php-ep1.png
 priority: 160
 tags:
@@ -108,6 +107,8 @@ chapters:
         is_free:    false
         length:     2:10
         is_finished: 1
+        activities:
+            - { name: ch9_simple_function, time: 1:44 }
     "require-include":
         title: Using require to Include Functions
         is_free:    false

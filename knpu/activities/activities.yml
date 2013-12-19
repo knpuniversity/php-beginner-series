@@ -175,6 +175,19 @@ ch7_if_else_if:
     entry_point: index.php
     asserts: ch7/if_else_if/Test.php
 
+ch9_simple_function:
+    question: |
+        Create a function and call it `hal_9000` and make it return
+        the string `I'm sorry, Dave. I'm afraid I can't do that`. Then,
+        echo this function inside the `div.output` element. HINT: Be careful
+        when you return the string inside `hal_9000` as it contains single
+        quotes. You'll need to escape these with a `\` character e.g.
+        `return 'I\'m a string with a quote';`.
+    skeletons: { index.php: ch9/simple_function/index.php }
+    worker: php
+    entry_point: index.php
+    asserts: ch9/simple_function/Test.php
+
 # this is a todo for later
 #case_sensitivity_4:
 #    question: |

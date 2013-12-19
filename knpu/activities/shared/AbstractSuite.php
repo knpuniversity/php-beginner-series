@@ -85,7 +85,7 @@ abstract class AbstractSuite extends PhpAwareSuite
         $ele = $this->getCrawlerForAtLeastOneElement($output, $cssSelector, $zeroError);
 
         if ($moreThanOneError === null) {
-            $moreThanOneError = sprintf('I expected only 1 "%s" element, but instead I see %count%!', $cssSelector);
+            $moreThanOneError = sprintf('I expected only 1 "%s" element, but instead I see %%count%%!', $cssSelector);
         }
 
         $moreThanOneError = strtr($moreThanOneError, array(
