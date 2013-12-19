@@ -107,11 +107,11 @@ chapters:
         title:      "Creating Functions"
         is_free:    false
         is_finished: 0
-    "require-include"
+    "require-include":
         title: Using require to Include Functions
         is_free:    false
         is_finished: 0
-    "simple-layout"
+    "simple-layout":
         title: Adding a Simple Layout
         is_free:    false
         is_finished: 0
