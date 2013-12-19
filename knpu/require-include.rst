@@ -63,6 +63,9 @@ function in here, being sure to remember your opening PHP tag:
         return $pets;
     }
 
+No Closing PHP Tag?
+~~~~~~~~~~~~~~~~~~~
+
 If you're screaming that I forgot the closing PHP tag, you're half-right.
 If the last thing you have in a file is PHP code, adding the closing PHP
 tag is optional, and it's actually better if you leave it off.
@@ -72,6 +75,9 @@ If that confuses you, go ahead and close your PHP tags for now.
 
     Why is *not* closing your PHP tags better when you don't have to? Great
     question - see http://bit.ly/IsCwPE.
+
+Using functions.php
+~~~~~~~~~~~~~~~~~~~
 
 Now, simply ``require`` ``lib/functions.php`` from both the index and contact
 files:

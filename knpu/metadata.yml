@@ -1,6 +1,6 @@
 title:  How to win friends and develop in PHP
 price:  12
-length: 1:02:06
+length: 1:10:56
 summary: |
     This course is a work-in-progress, but you can buy it immediately and
     we'll email you when new chapters are added.
@@ -106,12 +106,15 @@ chapters:
     "creating-functions":
         title:      "Creating Functions"
         is_free:    false
-        is_finished: 0
+        length:     2:10
+        is_finished: 1
     "require-include":
         title: Using require to Include Functions
         is_free:    false
-        is_finished: 0
+        length:     4:42
+        is_finished: 1
     "simple-layout":
         title: Adding a Simple Layout
         is_free:    false
-        is_finished: 0
+        length:     1:58
+        is_finished: 1
