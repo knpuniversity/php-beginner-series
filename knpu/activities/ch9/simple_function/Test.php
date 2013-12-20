@@ -32,10 +32,10 @@ class Test extends AbstractSuite
         $this->assertContains(
             'return ',
             $code,
-            'Make sure you have a `return` statement in your function that returns the string.'
+            'Make sure you have a `return` statement *inside* your function that returns the string.'
         );
 
-        $this->assertEchoExists($code);
+        $this->assertEchoExists($code, 'Make sure you use `echo` when calling the function: `<?php echo hal_9000(); ?>`');
 
         $outputEl = $this->getCrawlerForSingleElement($output, '.output');
         $this->assertNodeContainsText($outputEl, self::EXPECTED);

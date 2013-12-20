@@ -10,9 +10,12 @@ abstract class AbstractSuite extends PhpAwareSuite
         $this->assertContains('<?php', $code, 'Don\'t forget to write <?php before writing PHP code.');
     }
 
-    protected function assertEchoExists($code)
+    protected function assertEchoExists($code, $msg = null)
     {
-        $this->assertContains('echo', $code, 'I don\'t see your "echo" statement. Did you remember to write "echo"?');
+        if ($msg === null) {
+            $msg = 'I don\'t see your "echo" statement. Did you remember to write "echo"?';
+        }
+        $this->assertContains('echo', $code, $msg);
     }
 
     protected function assertForeachExists($code)
