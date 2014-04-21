@@ -2,9 +2,6 @@ title:  How to win friends and develop in PHP
 price:  12
 length: 1:10:56
 summary: |
-    This course is a work-in-progress, but you can buy it immediately and
-    we'll email you when new chapters are added.
-    
     So you want to become a PHP developer. And not just any ol' programmer, 
     but someone who writes great code and can work on exciting projects. Well 
     then, this screencast series is for you!
@@ -12,6 +9,19 @@ summary: |
     We'll learn how to develop with PHP from the very beginning, with a real
     project, and **coding exercises** throughout the screencast so you can 
     practice immediately.
+
+    In this episode, we learn about:
+
+    * creating your first PHP file
+    * using functions
+    * variables
+    * loops and if statements
+    * reading and updating files
+    * handling JSON
+    * Setting up your computer to run PHP
+    * creating your own functions
+    * Organizing your project into multiple files
+    * Creating a simple layout
 
 illustration: php-ep1.png
 priority: 160
