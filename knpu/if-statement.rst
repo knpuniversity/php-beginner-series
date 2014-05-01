@@ -86,7 +86,7 @@ We'll check the age and only print it if it's *not* empty::
     }
 
 The ``!=`` is what you use when you want to compare 2 values to see if they
-are not the same. If the age is is not empty, then this expression returns
+are not the same. If the age is not empty, then this expression returns
 true and the echo runs.
 
 Make sure also to add an ``else`` statement so that "Unknown" is printed
