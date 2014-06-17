@@ -54,7 +54,7 @@ Let's make this page more interesting!
 Before you write PHP code, you'll always start with the same opening tag: ``<?php``.
 This is what tells PHP that we're not writing HTML anymore - we actually
 want to write some PHP code. Let's print out a cool message by using the
-:php:`echo` statement and surrounding our message with single quotes.
+:phpfunction:`echo` statement and surrounding our message with single quotes.
 Finish off the line with a semicolon and then write the PHP closing tag: ``?>``. 
 These last two characters get us out of PHP mode and back into HTML. 
 The ``<?php`` and ``?>`` tags are exact opposites and always come in a pair. 
