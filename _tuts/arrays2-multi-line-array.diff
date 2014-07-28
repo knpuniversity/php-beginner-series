@@ -1,0 +1,19 @@
+diff --git a/index.php b/index.php
+index 57758d0..3abb174 100644
+--- a/index.php
++++ b/index.php
+@@ -83,7 +83,13 @@
+         $pet2 = 'Spark Pug';
+         $pet3 = 'Pico de Gato';
+ 
+-        $pancake = array('Pancake the Bulldog', '1 year', 9, 'Lorem Ipsum', 'pancake.png');
++        $pancake = array(
++            'name' => 'Pancake the Bulldog',
++            'age'  => '1 year',
++            'weight' => 9,
++            'bio' => 'Lorem Ipsum',
++            'filename' => 'pancake.png'
++        );
+ 
+         $pets = array($pet1, $pet2, $pet3);
+     ?>

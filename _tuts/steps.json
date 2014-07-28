@@ -144,7 +144,17 @@
             "id": "loops-remove-14-from-array",
             "name": "Loops: Remove 14 from array",
             "description": null
+        },
+        {
+            "id": "arrays2-creating-pancake-array",
+            "name": "Arrays2: Creating pancake array",
+            "description": null
+        },
+        {
+            "id": "arrays2-multi-line-array",
+            "name": "Arrays2: Multi-line array",
+            "description": null
         }
     ],
-    "sha": "5124fca9fb7a4b5eb6e3b1c91fc1cae6f02d4b31"
+    "sha": "6b07f407368d48df4f286b59ea43a9a5f2fa6368"
 }
