@@ -1,0 +1,13 @@
+diff --git a/index.php b/index.php
+index 9be7094..24b86f3 100644
+--- a/index.php
++++ b/index.php
+@@ -95,7 +95,7 @@
+                         <?php
+                         if (!array_key_exists('age', $cutePet) || $cutePet['age'] == '') {
+                             echo 'Unknown';
+-                        } elseif ($cutePet['age'] == 'hidden')
++                        } elseif ($cutePet['age'] == 'hidden') {
+                             echo '(contact owner for age)';
+                         } else {
+                             echo $cutePet['age'];

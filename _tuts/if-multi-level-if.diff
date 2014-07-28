@@ -1,0 +1,23 @@
+diff --git a/index.php b/index.php
+index 93a34e7..cdf9c6a 100644
+--- a/index.php
++++ b/index.php
+@@ -84,7 +84,6 @@
+ 
+     <div class="container">
+         <div class="row">
+-            <?php var_dump($pets);die; ?>
+             <?php foreach ($pets as $cutePet) { ?>
+                 <div class="col-lg-4 pet-list-item">
+                     <h2><?php echo $cutePet['name']; ?></h2>
+@@ -95,7 +94,9 @@
+                         <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
+                         <?php
+                         if (array_key_exists('age', $cutePet)) {
+-                            echo $cutePet['age'];
++                            if ($cutePet['age'] != '') {
++                                echo $cutePet['age'];
++                            }
+                         } else {
+                             echo 'Unknown';
+                         }

@@ -244,7 +244,67 @@
             "id": "json-move-file-into-data",
             "name": "JSON: Move file into data",
             "description": null
+        },
+        {
+            "id": "if-remove-age-key-from-json",
+            "name": "If: Remove age key from json",
+            "description": null
+        },
+        {
+            "id": "if-if-with-just-true",
+            "name": "If: if with just true",
+            "description": null
+        },
+        {
+            "id": "if-array-key-exists",
+            "name": "If: array_key_exists",
+            "description": null
+        },
+        {
+            "id": "if-with-else",
+            "name": "If: with else",
+            "description": null
+        },
+        {
+            "id": "if-set-key-to-blank",
+            "name": "If: set key to blank",
+            "description": null
+        },
+        {
+            "id": "if-multi-level-if",
+            "name": "If: Multi-level if",
+            "description": null
+        },
+        {
+            "id": "if-else-for-inner-if",
+            "name": "If: else for inner if",
+            "description": null
+        },
+        {
+            "id": "if-using",
+            "name": "If: Using &&",
+            "description": null
+        },
+        {
+            "id": "if-look-for-hidden-age",
+            "name": "If: Look for hidden age",
+            "description": null
+        },
+        {
+            "id": "if-elseif",
+            "name": "If: elseif",
+            "description": null
+        },
+        {
+            "id": "if-middle-part-of-elseif",
+            "name": "If: Middle part of elseif",
+            "description": null
+        },
+        {
+            "id": "if-fix-syntax",
+            "name": "If: Fix syntax",
+            "description": null
         }
     ],
-    "sha": "b7071a78e9342f273127f9e83914c8652f37fad3"
+    "sha": "ab53a2b44f77dbb27416259d1468e1c425ef2c47"
 }

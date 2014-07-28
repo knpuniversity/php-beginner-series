@@ -1,0 +1,13 @@
+diff --git a/index.php b/index.php
+index cdf9c6a..f0ae8bf 100644
+--- a/index.php
++++ b/index.php
+@@ -96,6 +96,8 @@
+                         if (array_key_exists('age', $cutePet)) {
+                             if ($cutePet['age'] != '') {
+                                 echo $cutePet['age'];
++                            } else {
++                                echo 'Unknown';
+                             }
+                         } else {
+                             echo 'Unknown';

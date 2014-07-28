@@ -1,0 +1,24 @@
+diff --git a/data/pets.json b/data/pets.json
+index d2cdc6a..175e819 100644
+--- a/data/pets.json
++++ b/data/pets.json
+@@ -18,7 +18,6 @@
+     {
+         "name": "Pico de Gato",
+         "breed": "Bengal",
+-        "age": "5 years",
+         "weight": 9,
+         "bio": "Oh hai, if you do not have a can of salmon I am not interested.",
+         "image": "pet3.png"
+diff --git a/index.php b/index.php
+index 38ef958..497deef 100644
+--- a/index.php
++++ b/index.php
+@@ -85,6 +85,7 @@
+     <div class="container">
+         <div class="row">
+             <?php foreach ($pets as $cutePet) { ?>
++                <?php var_dump($cutePet); ?>
+                 <div class="col-lg-4 pet-list-item">
+                     <h2><?php echo $cutePet['name']; ?></h2>
+ 

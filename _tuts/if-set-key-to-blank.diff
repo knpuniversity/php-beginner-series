@@ -1,0 +1,25 @@
+diff --git a/data/pets.json b/data/pets.json
+index 175e819..e0af0bf 100644
+--- a/data/pets.json
++++ b/data/pets.json
+@@ -2,7 +2,7 @@
+     {
+         "name": "Chew Barka",
+         "breed": "Bichon",
+-        "age": "2 years",
++        "age": "",
+         "weight": 8,
+         "bio": "The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!",
+         "image": "pet1.png"
+diff --git a/index.php b/index.php
+index 13ff8fe..93a34e7 100644
+--- a/index.php
++++ b/index.php
+@@ -84,6 +84,7 @@
+ 
+     <div class="container">
+         <div class="row">
++            <?php var_dump($pets);die; ?>
+             <?php foreach ($pets as $cutePet) { ?>
+                 <div class="col-lg-4 pet-list-item">
+                     <h2><?php echo $cutePet['name']; ?></h2>
