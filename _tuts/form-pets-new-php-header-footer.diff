@@ -1,0 +1,11 @@
+diff --git a/pets_new.php b/pets_new.php
+index 7992778..bc52d01 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -1 +1,5 @@
++<?php require 'layout/header.php'; ?>
++
+ HI I AM A PAGE!
++
++<?php require 'layout/footer.php'; ?>
+\ No newline at end of file

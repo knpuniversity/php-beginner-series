@@ -364,7 +364,37 @@
             "id": "layout-create-and-use-header-footer",
             "name": "Layout: Create and use header\/footer",
             "description": null
+        },
+        {
+            "id": "form-create-pets-new-php",
+            "name": "Form: Create pets_new.php",
+            "description": null
+        },
+        {
+            "id": "form-pets-new-php-header-footer",
+            "name": "Form: pets_new.php header+footer",
+            "description": null
+        },
+        {
+            "id": "form-add-header-links",
+            "name": "Form: Add header links",
+            "description": null
+        },
+        {
+            "id": "form-add-bootstrap-layout",
+            "name": "Form: Add Bootstrap Layout",
+            "description": null
+        },
+        {
+            "id": "form-bootstrap-layout",
+            "name": "Form: Bootstrap layout",
+            "description": null
+        },
+        {
+            "id": "form-build-html-form",
+            "name": "Form: Build HTML form",
+            "description": null
         }
     ],
-    "sha": "ec71cc4daeab058f3504c91b8cf500d13da85d3c"
+    "sha": "dee505c1c601bbf2c00ee8167691dcbdacda3a3e"
 }
