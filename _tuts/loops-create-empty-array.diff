@@ -1,0 +1,13 @@
+diff --git a/index.php b/index.php
+index 10dd9e0..b8948b9 100644
+--- a/index.php
++++ b/index.php
+@@ -82,6 +82,8 @@
+         $pet1 = 'Chew Barka';
+         $pet2 = 'Spark Pug';
+         $pet3 = 'Pico de Gato';
++
++        $pets = array();
+     ?>
+ 
+     <div class="container">

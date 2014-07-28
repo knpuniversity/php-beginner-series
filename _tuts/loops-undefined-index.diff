@@ -1,0 +1,14 @@
+diff --git a/index.php b/index.php
+index cf8f8c6..b5e630e 100644
+--- a/index.php
++++ b/index.php
+@@ -85,8 +85,7 @@
+ 
+         $pets = array($pet1, $pet2, $pet3);
+ 
+-        echo $pets[0];
+-        echo $pets[2];
++        echo $pets[3];
+     ?>
+ 
+     <div class="container">

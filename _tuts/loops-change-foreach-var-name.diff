@@ -1,0 +1,17 @@
+diff --git a/index.php b/index.php
+index 672dd3a..feaeb88 100644
+--- a/index.php
++++ b/index.php
+@@ -91,10 +91,10 @@
+             <div class="container">
+                 <div class="row">
+                     <?php
+-                        foreach ($pets as $pet) {
++                        foreach ($pets as $cutePet) {
+                             echo '<div class="col-lg-4">';
+                             echo '<h2>';
+-                            echo $pet;
++                            echo $cutePet;
+                             echo '</h2>';
+                             echo '</div>';
+                         }

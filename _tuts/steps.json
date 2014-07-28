@@ -89,7 +89,62 @@
             "id": "functions-reverting-to-one-line",
             "name": "Functions: Reverting to one line",
             "description": null
+        },
+        {
+            "id": "loops-print-out-3-pets",
+            "name": "Loops: Print out 3 pets",
+            "description": null
+        },
+        {
+            "id": "loops-create-empty-array",
+            "name": "Loops: Create empty array",
+            "description": null
+        },
+        {
+            "id": "loops-put-pets-in-array",
+            "name": "Loops: Put pets in array",
+            "description": null
+        },
+        {
+            "id": "loops-first-foreach",
+            "name": "Loops: First foreach",
+            "description": null
+        },
+        {
+            "id": "loops-change-foreach-var-name",
+            "name": "Loops: Change foreach var name",
+            "description": null
+        },
+        {
+            "id": "loops-var-dump",
+            "name": "Loops: var_dump",
+            "description": null
+        },
+        {
+            "id": "loops-playing-with-indexes",
+            "name": "Loops: Playing with indexes",
+            "description": null
+        },
+        {
+            "id": "loops-undefined-index",
+            "name": "Loops: Undefined index",
+            "description": null
+        },
+        {
+            "id": "loops-remove-bad-index",
+            "name": "Loops: Remove bad index",
+            "description": null
+        },
+        {
+            "id": "loops-add-a-number-into-array",
+            "name": "Loops: Add a number into array",
+            "description": null
+        },
+        {
+            "id": "loops-remove-14-from-array",
+            "name": "Loops: Remove 14 from array",
+            "description": null
         }
     ],
-    "sha": "e08d36378a8500e9f5c72523e1aff45e6a97b31c"
+    "sha": "7d563c175beb644b8f77ebb0f3f66e4bffcefd5c"
 }
