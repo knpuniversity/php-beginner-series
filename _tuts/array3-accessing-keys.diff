@@ -1,0 +1,15 @@
+diff --git a/index.php b/index.php
+index b7efc60..2ea770c 100644
+--- a/index.php
++++ b/index.php
+@@ -116,8 +116,8 @@
+         $pancake['breed'] = 'Bulldog';
+ 
+         $pets = array($pet1, $pet2, $pet3, $pancake);
+-        var_dump($pets);
+-        die;
++        $breed2 = $pets[1]['breed'];
++        var_dump($breed2);die;
+     ?>
+ 
+     <div class="container">

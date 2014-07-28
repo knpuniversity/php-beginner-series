@@ -1,8 +1,8 @@
 diff --git a/index.php b/index.php
-index be4a262..f2842a1 100644
+index be4a262..1275e5d 100644
 --- a/index.php
 +++ b/index.php
-@@ -88,33 +88,15 @@
+@@ -88,33 +88,18 @@
  
      <div class="container">
          <div class="row">
@@ -39,6 +39,9 @@ index be4a262..f2842a1 100644
 +                    echo '<h2>';
 +                    echo $pet;
 +                    echo '</h2>';
++                    echo '<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
++                                        condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
++                                        euismod. Donec sed odio dui. </p>';
 +                    echo '</div>';
 +                }
 +            ?>

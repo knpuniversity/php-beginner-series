@@ -1,0 +1,50 @@
+diff --git a/index.php b/index.php
+index 3e5060e..d6a8808 100644
+--- a/index.php
++++ b/index.php
+@@ -79,9 +79,32 @@
+     </div>
+ 
+     <?php
+-        $pet1 = 'Chew Barka';
+-        $pet2 = 'Spark Pug';
+-        $pet3 = 'Pico de Gato';
++        $pet1 = array(
++            'name' => 'Chew Barka',
++            'breed' => 'Bichon',
++            'age' => '2 years',
++            'weight' => 8,
++            'bio' => 'The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!',
++            'filename' => 'pet1.png'
++        );
++
++        $pet2 = array(
++            'name' => 'Spark Pug',
++            'breed' => 'Pug',
++            'age' => '1.5 years',
++            'weight' => 11,
++            'bio' => 'You want to go to the dog park in style? Then I am your pug!',
++            'filename' => 'pet2.png'
++        );
++
++        $pet3 = array(
++            'name' => 'Pico de Gato',
++            'breed' => 'Bengal',
++            'age' => '5 years',
++            'weight' => 9,
++            'bio' => 'Oh hai, if you do not have a can of salmon I am not interested.',
++            'filename' => 'pet3.png'
++        );
+ 
+         $pancake = array(
+             'name' => 'Pancake the Bulldog',
+@@ -92,8 +115,7 @@
+         );
+         $pancake['breed'] = 'Bulldog';
+ 
+-        $pets = array($pet1, $pet2, $pet3);
+-        $pets[] = 'Kitty Gaga';
++        $pets = array($pet1, $pet2, $pet3, $pancake);
+     ?>
+ 
+     <div class="container">

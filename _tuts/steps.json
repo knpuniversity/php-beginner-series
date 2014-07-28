@@ -164,7 +164,27 @@
             "id": "array2-adding-new-indexed-entry",
             "name": "Array2: Adding new indexed entry",
             "description": null
+        },
+        {
+            "id": "array3-add-pet1-3-arrays",
+            "name": "Array3: Add pet1-3 arrays",
+            "description": null
+        },
+        {
+            "id": "array3-var-dump-multi-dimensional-array",
+            "name": "Array3: var_dump multi-dimensional array",
+            "description": null
+        },
+        {
+            "id": "array3-accessing-keys",
+            "name": "Array3: Accessing keys",
+            "description": null
+        },
+        {
+            "id": "array3-using-cutepet-key",
+            "name": "Array3: Using cutePet key",
+            "description": null
         }
     ],
-    "sha": "e0db66f3b9e5d25b4abf4ae542ddcacf95cd8b62"
+    "sha": "a64e08ab554a98e56961e3a3e4f2e9e4b8535edb"
 }

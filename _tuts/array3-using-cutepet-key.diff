@@ -1,17 +1,13 @@
 diff --git a/index.php b/index.php
-index 1275e5d..da1c03e 100644
+index 2ea770c..4a4e02a 100644
 --- a/index.php
 +++ b/index.php
-@@ -89,10 +89,10 @@
-     <div class="container">
-         <div class="row">
-             <?php
--                foreach ($pets as $pet) {
-+                foreach ($pets as $cutePet) {
+@@ -142,7 +142,7 @@
+                 foreach ($pets as $cutePet) {
                      echo '<div class="col-lg-4">';
                      echo '<h2>';
--                    echo $pet;
-+                    echo $cutePet;
+-                    echo $cutePet;
++                    echo $cutePet['name'];
                      echo '</h2>';
                      echo '<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
                                          condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
