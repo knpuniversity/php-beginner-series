@@ -1,0 +1,14 @@
+diff --git a/index.php b/index.php
+index 522176b..3783de9 100644
+--- a/index.php
++++ b/index.php
+@@ -1,6 +1,7 @@
+ <?php
+-    $petsJson = file_get_contents('dinosaurs.json');
+-    var_dump($petsJson);die;
++    $petsJson = file_get_contents('pets.json');
++    $pets = json_decode($petsJson);
++    var_dump($pets);die;
+ 
+     $pet1 = array(
+         'name' => 'Chew Barka',

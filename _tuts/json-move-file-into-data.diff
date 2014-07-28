@@ -1,0 +1,91 @@
+diff --git a/data/pets.json b/data/pets.json
+new file mode 100644
+index 0000000..d2cdc6a
+--- /dev/null
++++ b/data/pets.json
+@@ -0,0 +1,34 @@
++[
++    {
++        "name": "Chew Barka",
++        "breed": "Bichon",
++        "age": "2 years",
++        "weight": 8,
++        "bio": "The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!",
++        "image": "pet1.png"
++    },
++    {
++        "name": "Spark Pug",
++        "breed": "Pug",
++        "age": "1.5 years",
++        "weight": 11,
++        "bio": "You want to go to the dog park in style? Then I am your pug!",
++        "image": "pet2.png"
++    },
++    {
++        "name": "Pico de Gato",
++        "breed": "Bengal",
++        "age": "5 years",
++        "weight": 9,
++        "bio": "Oh hai, if you do not have a can of salmon I am not interested.",
++        "image": "pet3.png"
++    },
++    {
++        "name": "Pancake",
++        "age": "1 year",
++        "weight": 9,
++        "bio": "Treats and Snoozin!",
++        "image": "pancake.png",
++        "breed": "Bulldog"
++    }
++]
+diff --git a/index.php b/index.php
+index 22f04b4..38ef958 100644
+--- a/index.php
++++ b/index.php
+@@ -1,5 +1,5 @@
+ <?php
+-    $petsJson = file_get_contents('pets.json');
++    $petsJson = file_get_contents('data/pets.json');
+     $pets = json_decode($petsJson, true);
+ 
+     $pets = array_reverse($pets);
+diff --git a/pets.json b/pets.json
+deleted file mode 100644
+index d2cdc6a..0000000
+--- a/pets.json
++++ /dev/null
+@@ -1,34 +0,0 @@
+-[
+-    {
+-        "name": "Chew Barka",
+-        "breed": "Bichon",
+-        "age": "2 years",
+-        "weight": 8,
+-        "bio": "The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!",
+-        "image": "pet1.png"
+-    },
+-    {
+-        "name": "Spark Pug",
+-        "breed": "Pug",
+-        "age": "1.5 years",
+-        "weight": 11,
+-        "bio": "You want to go to the dog park in style? Then I am your pug!",
+-        "image": "pet2.png"
+-    },
+-    {
+-        "name": "Pico de Gato",
+-        "breed": "Bengal",
+-        "age": "5 years",
+-        "weight": 9,
+-        "bio": "Oh hai, if you do not have a can of salmon I am not interested.",
+-        "image": "pet3.png"
+-    },
+-    {
+-        "name": "Pancake",
+-        "age": "1 year",
+-        "weight": 9,
+-        "bio": "Treats and Snoozin!",
+-        "image": "pancake.png",
+-        "breed": "Bulldog"
+-    }
+-]

@@ -204,7 +204,47 @@
             "id": "array3-array-reverse",
             "name": "Array3: array_reverse",
             "description": null
+        },
+        {
+            "id": "json-dumping-out-json-encode",
+            "name": "JSON: Dumping out json_encode",
+            "description": null
+        },
+        {
+            "id": "json-file-get-contents",
+            "name": "JSON: file_get_contents",
+            "description": null
+        },
+        {
+            "id": "json-bad-filename",
+            "name": "JSON: bad filename",
+            "description": null
+        },
+        {
+            "id": "json-json-decode",
+            "name": "JSON: json_decode",
+            "description": null
+        },
+        {
+            "id": "json-json-decode-as-associative-array",
+            "name": "JSON: json_decode as associative array",
+            "description": null
+        },
+        {
+            "id": "json-using-the-file-json-for-pets",
+            "name": "JSON: Using the file json for pets",
+            "description": null
+        },
+        {
+            "id": "json-changing-filename-key-to-image",
+            "name": "JSON: Changing filename key to image",
+            "description": null
+        },
+        {
+            "id": "json-move-file-into-data",
+            "name": "JSON: Move file into data",
+            "description": null
         }
     ],
-    "sha": "e6dd713dd530c54c2ddec34e33ab271890198618"
+    "sha": "b7071a78e9342f273127f9e83914c8652f37fad3"
 }

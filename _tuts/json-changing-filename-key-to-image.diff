@@ -1,0 +1,52 @@
+diff --git a/index.php b/index.php
+index b25af9e..22f04b4 100644
+--- a/index.php
++++ b/index.php
+@@ -88,7 +88,7 @@
+                 <div class="col-lg-4 pet-list-item">
+                     <h2><?php echo $cutePet['name']; ?></h2>
+ 
+-                    <img src="/images/<?php echo $cutePet['filename']; ?>" class="img-rounded">
++                    <img src="/images/<?php echo $cutePet['image']; ?>" class="img-rounded">
+ 
+                     <blockquote class="pet-details">
+                         <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
+diff --git a/pets.json b/pets.json
+index 0bc724f..d2cdc6a 100644
+--- a/pets.json
++++ b/pets.json
+@@ -5,7 +5,7 @@
+         "age": "2 years",
+         "weight": 8,
+         "bio": "The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!",
+-        "filename": "pet1.png"
++        "image": "pet1.png"
+     },
+     {
+         "name": "Spark Pug",
+@@ -13,7 +13,7 @@
+         "age": "1.5 years",
+         "weight": 11,
+         "bio": "You want to go to the dog park in style? Then I am your pug!",
+-        "filename": "pet2.png"
++        "image": "pet2.png"
+     },
+     {
+         "name": "Pico de Gato",
+@@ -21,14 +21,14 @@
+         "age": "5 years",
+         "weight": 9,
+         "bio": "Oh hai, if you do not have a can of salmon I am not interested.",
+-        "filename": "pet3.png"
++        "image": "pet3.png"
+     },
+     {
+         "name": "Pancake",
+         "age": "1 year",
+         "weight": 9,
+         "bio": "Treats and Snoozin!",
+-        "filename": "pancake.png",
++        "image": "pancake.png",
+         "breed": "Bulldog"
+     }
+ ]
