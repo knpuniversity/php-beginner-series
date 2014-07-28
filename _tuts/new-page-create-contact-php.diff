@@ -1,0 +1,7 @@
+diff --git a/contact.php b/contact.php
+new file mode 100644
+index 0000000..0b5b5b3
+--- /dev/null
++++ b/contact.php
+@@ -0,0 +1 @@
++<?php echo 'Contact Us!'; ?>

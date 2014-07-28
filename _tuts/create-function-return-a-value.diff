@@ -1,0 +1,18 @@
+diff --git a/index.php b/index.php
+index 73747ff..751753b 100644
+--- a/index.php
++++ b/index.php
+@@ -1,7 +1,13 @@
+ <?php
++    function get_pets()
++    {
++        return 'Wahoooooo!';
++    }
++
+     // $petsJson = file_get_contents('data/pets.json');
+     // $pets = json_decode($petsJson, true);
+     $pets = get_pets();
++    var_dump($pets);die;
+ 
+     $pets = array_reverse($pets);
+ 

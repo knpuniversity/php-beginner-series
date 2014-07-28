@@ -304,7 +304,32 @@
             "id": "if-fix-syntax",
             "name": "If: Fix syntax",
             "description": null
+        },
+        {
+            "id": "new-page-create-contact-php",
+            "name": "New Page: Create contact.php",
+            "description": null
+        },
+        {
+            "id": "create-function-use-get-pets",
+            "name": "Create Function: use get_pets()",
+            "description": null
+        },
+        {
+            "id": "create-function-create-get-pets",
+            "name": "Create Function: create get_pets()",
+            "description": null
+        },
+        {
+            "id": "create-function-return-a-value",
+            "name": "Create Function: Return a value",
+            "description": null
+        },
+        {
+            "id": "create-function-add-real-get-pets-body",
+            "name": "Create Function: Add real get_pets() body",
+            "description": null
         }
     ],
-    "sha": "ab53a2b44f77dbb27416259d1468e1c425ef2c47"
+    "sha": "2fd45248c9ce5bb61cfedd1d327feae7a0cf4f5e"
 }
