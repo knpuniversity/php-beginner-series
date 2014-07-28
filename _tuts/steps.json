@@ -39,7 +39,57 @@
             "id": "basics-fix-syntax",
             "name": "Basics: Fix syntax",
             "description": null
+        },
+        {
+            "id": "functions-using-rand",
+            "name": "Functions: Using rand",
+            "description": null
+        },
+        {
+            "id": "functions-rand-with-argument",
+            "name": "Functions: rand with argument",
+            "description": null
+        },
+        {
+            "id": "functions-rand-2-arguments",
+            "name": "Functions: rand 2 arguments",
+            "description": null
+        },
+        {
+            "id": "functions-ucwords",
+            "name": "Functions: ucwords",
+            "description": null
+        },
+        {
+            "id": "functions-misisng-arg-error",
+            "name": "Functions: Misisng arg error",
+            "description": null
+        },
+        {
+            "id": "functions-using-strtolower-with-an-echo",
+            "name": "Functions: Using strtolower with an echo",
+            "description": null
+        },
+        {
+            "id": "functions-fxns-in-your-fxns-strrev",
+            "name": "Functions: fxns in your fxns: strrev",
+            "description": null
+        },
+        {
+            "id": "functions-call-order-with-strtoupper",
+            "name": "Functions: call order with strtoupper",
+            "description": null
+        },
+        {
+            "id": "functions-using-multiple-lines-vars",
+            "name": "Functions: Using multiple lines\/vars",
+            "description": null
+        },
+        {
+            "id": "functions-reverting-to-one-line",
+            "name": "Functions: Reverting to one line",
+            "description": null
         }
     ],
-    "sha": "4cffdce210baa8c68ef06dc9b38df09b703684bc"
+    "sha": "e08d36378a8500e9f5c72523e1aff45e6a97b31c"
 }

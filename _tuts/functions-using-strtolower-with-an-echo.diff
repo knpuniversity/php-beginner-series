@@ -1,0 +1,18 @@
+diff --git a/index.php b/index.php
+index bc298bf..e7c46b9 100644
+--- a/index.php
++++ b/index.php
+@@ -66,11 +66,11 @@
+     <div class="jumbotron">
+         <div class="container">
+             <?php
+-                $cleverWelcomeMessage = ucwords();
++                $cleverWelcomeMessage = 'All the love, none of the crap!';
+                 $pupCount = rand(50, 100);
+             ?>
+ 
+-            <h1><?php echo $cleverWelcomeMessage; ?></h1>
++            <h1><?php echo strtolower($cleverWelcomeMessage); ?></h1>
+ 
+             <p>With over <?php echo $pupCount ?> pet friends!</p>
+ 
