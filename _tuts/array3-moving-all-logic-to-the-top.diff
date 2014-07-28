@@ -1,0 +1,109 @@
+diff --git a/index.php b/index.php
+index ea547be..a7c891d 100644
+--- a/index.php
++++ b/index.php
+@@ -1,3 +1,45 @@
++<?php
++    $pet1 = array(
++        'name' => 'Chew Barka',
++        'breed' => 'Bichon',
++        'age' => '2 years',
++        'weight' => 8,
++        'bio' => 'The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!',
++        'filename' => 'pet1.png'
++    );
++
++    $pet2 = array(
++        'name' => 'Spark Pug',
++        'breed' => 'Pug',
++        'age' => '1.5 years',
++        'weight' => 11,
++        'bio' => 'You want to go to the dog park in style? Then I am your pug!',
++        'filename' => 'pet2.png'
++    );
++
++    $pet3 = array(
++        'name' => 'Pico de Gato',
++        'breed' => 'Bengal',
++        'age' => '5 years',
++        'weight' => 9,
++        'bio' => 'Oh hai, if you do not have a can of salmon I am not interested.',
++        'filename' => 'pet3.png'
++    );
++
++    $pancake = array(
++        'name' => 'Pancake the Bulldog',
++        'age'  => '1 year',
++        'weight' => 9,
++        'bio' => 'Lorem Ipsum',
++        'filename' => 'pancake.png'
++    );
++    $pancake['breed'] = 'Bulldog';
++
++    $pets = array($pet1, $pet2, $pet3, $pancake);
++
++    $cleverWelcomeMessage = 'All the love, none of the crap!';
++    $pupCount = count($pets);
++?>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+@@ -65,11 +107,6 @@
+ 
+     <div class="jumbotron">
+         <div class="container">
+-            <?php
+-                $cleverWelcomeMessage = 'All the love, none of the crap!';
+-                $pupCount = count($pets);
+-            ?>
+-
+             <h1><?php echo strtoupper(strtolower($cleverWelcomeMessage)); ?></h1>
+ 
+             <p>With over <?php echo $pupCount ?> pet friends!</p>
+@@ -78,46 +115,6 @@
+         </div>
+     </div>
+ 
+-    <?php
+-        $pet1 = array(
+-            'name' => 'Chew Barka',
+-            'breed' => 'Bichon',
+-            'age' => '2 years',
+-            'weight' => 8,
+-            'bio' => 'The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!',
+-            'filename' => 'pet1.png'
+-        );
+-
+-        $pet2 = array(
+-            'name' => 'Spark Pug',
+-            'breed' => 'Pug',
+-            'age' => '1.5 years',
+-            'weight' => 11,
+-            'bio' => 'You want to go to the dog park in style? Then I am your pug!',
+-            'filename' => 'pet2.png'
+-        );
+-
+-        $pet3 = array(
+-            'name' => 'Pico de Gato',
+-            'breed' => 'Bengal',
+-            'age' => '5 years',
+-            'weight' => 9,
+-            'bio' => 'Oh hai, if you do not have a can of salmon I am not interested.',
+-            'filename' => 'pet3.png'
+-        );
+-
+-        $pancake = array(
+-            'name' => 'Pancake the Bulldog',
+-            'age'  => '1 year',
+-            'weight' => 9,
+-            'bio' => 'Lorem Ipsum',
+-            'filename' => 'pancake.png'
+-        );
+-        $pancake['breed'] = 'Bulldog';
+-
+-        $pets = array($pet1, $pet2, $pet3, $pancake);
+-    ?>
+-
+     <div class="container">
+         <div class="row">
+             <?php foreach ($pets as $cutePet) { ?>

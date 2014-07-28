@@ -1,0 +1,13 @@
+diff --git a/index.php b/index.php
+index 1f18346..ea547be 100644
+--- a/index.php
++++ b/index.php
+@@ -67,7 +67,7 @@
+         <div class="container">
+             <?php
+                 $cleverWelcomeMessage = 'All the love, none of the crap!';
+-                $pupCount = rand(50, 100);
++                $pupCount = count($pets);
+             ?>
+ 
+             <h1><?php echo strtoupper(strtolower($cleverWelcomeMessage)); ?></h1>

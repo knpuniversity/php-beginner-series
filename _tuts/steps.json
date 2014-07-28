@@ -184,7 +184,27 @@
             "id": "array3-using-cutepet-key",
             "name": "Array3: Using cutePet key",
             "description": null
+        },
+        {
+            "id": "array3-using-foreach-for-all-pets",
+            "name": "Array3: Using foreach for all pets",
+            "description": null
+        },
+        {
+            "id": "array3-count-pets",
+            "name": "Array3: count($pets)",
+            "description": null
+        },
+        {
+            "id": "array3-moving-all-logic-to-the-top",
+            "name": "Array3: Moving all logic to the top",
+            "description": null
+        },
+        {
+            "id": "array3-array-reverse",
+            "name": "Array3: array_reverse",
+            "description": null
         }
     ],
-    "sha": "a64e08ab554a98e56961e3a3e4f2e9e4b8535edb"
+    "sha": "e6dd713dd530c54c2ddec34e33ab271890198618"
 }

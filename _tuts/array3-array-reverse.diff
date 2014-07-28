@@ -1,0 +1,12 @@
+diff --git a/index.php b/index.php
+index a7c891d..b29dc2e 100644
+--- a/index.php
++++ b/index.php
+@@ -36,6 +36,7 @@
+     $pancake['breed'] = 'Bulldog';
+ 
+     $pets = array($pet1, $pet2, $pet3, $pancake);
++    $pets = array_reverse($pets);
+ 
+     $cleverWelcomeMessage = 'All the love, none of the crap!';
+     $pupCount = count($pets);
