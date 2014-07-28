@@ -151,8 +151,8 @@
             "description": null
         },
         {
-            "id": "arrays2-multi-line-array",
-            "name": "Arrays2: Multi-line array",
+            "id": "arrays2-associative",
+            "name": "Arrays2: Associative",
             "description": null
         }
     ],
