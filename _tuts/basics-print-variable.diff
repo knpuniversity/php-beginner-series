@@ -1,0 +1,13 @@
+diff --git a/index.php b/index.php
+index 9fa4d02..925d7e8 100644
+--- a/index.php
++++ b/index.php
+@@ -69,7 +69,7 @@
+                 $cleverWelcomeMessage = 'All the love, none of the crap!';
+             ?>
+ 
+-            <h1><?php echo 'Look mom, PHP!'; ?></h1>
++            <h1><?php echo $cleverWelcomeMessage; ?></h1>
+ 
+             <p>This is a template for a simple marketing or informational website. It includes a large callout called the
+                 hero unit and three supporting pieces of content. Use it as a starting point to create something more

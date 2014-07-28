@@ -1,0 +1,15 @@
+diff --git a/index.php b/index.php
+index 6fe9b62..e8ac69a 100644
+--- a/index.php
++++ b/index.php
+@@ -65,6 +65,10 @@
+ 
+     <div class="jumbotron">
+         <div class="container">
++            <?php
++
++            ?>
++
+             <h1><?php echo 'Look mom, PHP!'; ?></h1>
+ 
+             <p>This is a template for a simple marketing or informational website. It includes a large callout called the

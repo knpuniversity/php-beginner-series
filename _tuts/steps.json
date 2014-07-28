@@ -1,0 +1,45 @@
+{
+    "steps": [
+        {
+            "id": "start",
+            "name": "start",
+            "description": null
+        },
+        {
+            "id": "basics-first-echo",
+            "name": "Basics: First echo",
+            "description": null
+        },
+        {
+            "id": "basics-open-php-tag",
+            "name": "Basics: Open php tag",
+            "description": null
+        },
+        {
+            "id": "basics-variable",
+            "name": "Basics: Variable",
+            "description": null
+        },
+        {
+            "id": "basics-print-variable",
+            "name": "Basics: Print variable",
+            "description": null
+        },
+        {
+            "id": "basics-number-variable",
+            "name": "Basics: Number variable",
+            "description": null
+        },
+        {
+            "id": "basics-syntax-error",
+            "name": "Basics: Syntax error",
+            "description": null
+        },
+        {
+            "id": "basics-fix-syntax",
+            "name": "Basics: Fix syntax",
+            "description": null
+        }
+    ],
+    "sha": "4cffdce210baa8c68ef06dc9b38df09b703684bc"
+}

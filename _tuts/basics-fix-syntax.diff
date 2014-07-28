@@ -1,0 +1,13 @@
+diff --git a/index.php b/index.php
+index d2615fa..a924286 100644
+--- a/index.php
++++ b/index.php
+@@ -66,7 +66,7 @@
+     <div class="jumbotron">
+         <div class="container">
+             <?php
+-                $cleverWelcomeMessage = 'All the love, none of the crap!'
++                $cleverWelcomeMessage = 'All the love, none of the crap!';
+                 $pupCount = 5000;
+             ?>
+ 

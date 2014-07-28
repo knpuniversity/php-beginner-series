@@ -1,0 +1,13 @@
+diff --git a/index.php b/index.php
+index 071c1d1..6fe9b62 100644
+--- a/index.php
++++ b/index.php
+@@ -65,7 +65,7 @@
+ 
+     <div class="jumbotron">
+         <div class="container">
+-            <h1>Hello, world!</h1>
++            <h1><?php echo 'Look mom, PHP!'; ?></h1>
+ 
+             <p>This is a template for a simple marketing or informational website. It includes a large callout called the
+                 hero unit and three supporting pieces of content. Use it as a starting point to create something more
