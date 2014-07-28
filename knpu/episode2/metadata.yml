@@ -23,8 +23,7 @@ status: upcoming
 hasVideoDownload: 0
 
 chapters:
-    "simple-layout":
-        title: Adding a Simple Layout
-        is_free:    false
-        length:     1:58
-        is_finished: 1
+    - request-new-page
+    - create-form
+    - reading-form-data
+    - saving-pets
