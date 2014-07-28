@@ -154,7 +154,17 @@
             "id": "arrays2-associative",
             "name": "Arrays2: Associative",
             "description": null
+        },
+        {
+            "id": "arrays2-adding-breed-key-later",
+            "name": "Arrays2: Adding breed key later",
+            "description": null
+        },
+        {
+            "id": "array2-adding-new-indexed-entry",
+            "name": "Array2: Adding new indexed entry",
+            "description": null
         }
     ],
-    "sha": "0eff3e6f7c5be45dbb4e1571611bf71047e0b0af"
+    "sha": "e0db66f3b9e5d25b4abf4ae542ddcacf95cd8b62"
 }
