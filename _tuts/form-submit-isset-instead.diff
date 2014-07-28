@@ -1,0 +1,11 @@
+diff --git a/pets_new.php b/pets_new.php
+index 7c522b9..c590879 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -1,5 +1,5 @@
+ <?php
+-if (array_key_exists('name', $_POST)) {
++if (isset($_POST['name'])) {
+     $name = $_POST['name'];
+ } else {
+     $name = 'A dog without a name';

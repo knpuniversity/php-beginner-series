@@ -1,0 +1,18 @@
+diff --git a/pets_new.php b/pets_new.php
+index c07fe44..36fb6f2 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -1,5 +1,11 @@
+-<?php var_dump($_POST); ?>
+-<?php var_dump($fakeVariable); ?>
++<?php
++$name = $_POST['name'];
++$breed = $_POST['breed'];
++$weight = $_POST['weight'];
++$bio = $_POST['bio'];
++
++var_dump($name, $breed, $weight, $bio);die;
++?>
+ 
+ <?php require 'layout/header.php'; ?>
+ 

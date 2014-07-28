@@ -1,0 +1,10 @@
+diff --git a/pets_new.php b/pets_new.php
+index b204d24..d399eb1 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -1,4 +1,5 @@
+ <?php
++require 'lib/functions.php';
+ 
+ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+ 

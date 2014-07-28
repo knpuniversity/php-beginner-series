@@ -1,0 +1,12 @@
+diff --git a/pets_new.php b/pets_new.php
+index 84e35f7..19c8d1f 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+         'image' => '',
+         'age' => '',
+     );
++    $pets[] = $newPet;
+     var_dump($name, $breed, $weight, $bio);die;
+ }
+ ?>

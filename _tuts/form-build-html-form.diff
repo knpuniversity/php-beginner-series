@@ -1,30 +1,28 @@
 diff --git a/pets_new.php b/pets_new.php
-index 8c1179d..7db8cc7 100644
+index 8c1179d..45c6e87 100644
 --- a/pets_new.php
 +++ b/pets_new.php
-@@ -4,7 +4,24 @@
+@@ -4,7 +4,22 @@
      <div class="col-xs-6">
          <h1>Add your Pet</h1>
  
 -
-+        <form action="" method="POST">
-+            <div class="form-group">
-+                <label for="pet-name" class="control-label">Name</label>
-+                <input type="text" name="name" id="pet-name" class="form-control" />
-+            </div>
-+            <div class="form-group">
-+                <label for="pet-breed" class="control-label">Breed</label>
-+                <input type="text" name="breed" id="pet-breed" class="form-control" />
-+            </div>
-+            <div class="form-group">
-+                <label for="pet-weight" class="control-label">Weight</label>
-+                <input type="number" name="weight" id="pet-weight" class="form-control" />
-+            </div>
-+            <div class="form-group">
-+                <label for="pet-bio" class="control-label">Bio</label>
-+                <textarea name="bio" id="pet-bio" class="form-control"></textarea>
-+            </div>
-+        </form>
++        <div class="form-group">
++            <label for="pet-name" class="control-label">Name</label>
++            <input type="text" name="name" id="pet-name" class="form-control" />
++        </div>
++        <div class="form-group">
++            <label for="pet-breed" class="control-label">Breed</label>
++            <input type="text" name="breed" id="pet-breed" class="form-control" />
++        </div>
++        <div class="form-group">
++            <label for="pet-weight" class="control-label">Weight</label>
++            <input type="number" name="weight" id="pet-weight" class="form-control" />
++        </div>
++        <div class="form-group">
++            <label for="pet-bio" class="control-label">Bio</label>
++            <textarea name="bio" id="pet-bio" class="form-control"></textarea>
++        </div>
  
      </div>
  </div>

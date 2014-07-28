@@ -1,0 +1,13 @@
+diff --git a/pets_new.php b/pets_new.php
+index d399eb1..b88a471 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+     );
+     $pets[] = $newPet;
+ 
+-    $json = json_encode($pets);
++    $json = json_encode($pets, JSON_PRETTY_PRINT);
+     file_put_contents('data/pets.json', $json);
+ }
+ ?>

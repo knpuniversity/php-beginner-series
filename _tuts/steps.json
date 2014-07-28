@@ -389,7 +389,82 @@
             "id": "form-build-html-form",
             "name": "Form: Build HTML form",
             "description": null
+        },
+        {
+            "id": "form-add-form-tag",
+            "name": "Form: Add form tag",
+            "description": null
+        },
+        {
+            "id": "form-submit-var-dump-post",
+            "name": "Form Submit: var_dump $_POST",
+            "description": null
+        },
+        {
+            "id": "form-submit-var-dump-invented-var",
+            "name": "Form Submit: var_dump invented var",
+            "description": null
+        },
+        {
+            "id": "form-submit-dump-each-variable",
+            "name": "Form Submit: dump each variable",
+            "description": null
+        },
+        {
+            "id": "form-submit-array-key-exists",
+            "name": "Form Submit: array_key_exists",
+            "description": null
+        },
+        {
+            "id": "form-submit-isset-instead",
+            "name": "Form Submit: isset instead",
+            "description": null
+        },
+        {
+            "id": "form-submit-isset-on-all-fields",
+            "name": "Form Submit: isset on all fields",
+            "description": null
+        },
+        {
+            "id": "form-submit-var-dump-server",
+            "name": "Form Submit: var_dump $_SERVER",
+            "description": null
+        },
+        {
+            "id": "form-submit-checking-for-request-methdo",
+            "name": "Form Submit: Checking for REQUEST_METHDO",
+            "description": null
+        },
+        {
+            "id": "saving-get-pets",
+            "name": "Saving: get_pets",
+            "description": null
+        },
+        {
+            "id": "saving-create-new-pet-array",
+            "name": "Saving: Create new pet array",
+            "description": null
+        },
+        {
+            "id": "saving-add-pet-to-pets",
+            "name": "Saving: Add pet to $pets",
+            "description": null
+        },
+        {
+            "id": "saving-json-encode-and-file-put-contents",
+            "name": "Saving: json_encode and file_put_contents",
+            "description": null
+        },
+        {
+            "id": "saving-adding-missing-require",
+            "name": "Saving: Adding missing require",
+            "description": null
+        },
+        {
+            "id": "saving-json-pretty-print",
+            "name": "Saving: JSON_PRETTY_PRINT",
+            "description": null
         }
     ],
-    "sha": "dee505c1c601bbf2c00ee8167691dcbdacda3a3e"
+    "sha": "fe552ddebb5899798a9591cfb8de0836dfae252f"
 }
