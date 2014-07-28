@@ -17,7 +17,13 @@ print it manually at the top of our pet list:
     <!-- ... -->
 
     <?php
+        $pet1 = 'Chew Barka';
+        $pet2 = 'Spark Pug';
+        $pet3 = 'Pico de Gato';
+
         $pancake = array('Pancake the Bulldog', '1 year', 9, 'Lorem Ipsum', 'pancake.png');
+
+        $pets = array($pet1, $pet2, $pet3);
     ?>
     
     <div class="container">
@@ -145,6 +151,8 @@ to the array *after* it's been created:
     <!-- ... -->
 
     <?php
+        // ...
+
         $pancake = array(
             'name' => 'Pancake the Bulldog',
             'age'  => '1 year',
@@ -152,8 +160,10 @@ to the array *after* it's been created:
             'bio' => 'Lorem Ipsum',
             'filename' => 'pancake.png'
         );
-        
+
         $pancake['breed'] = 'Bulldog';
+
+        $pets = array($pet1, $pet2, $pet3);
     ?>
 
 Let's render it and refresh to make sure it works. Nice!
@@ -185,6 +195,8 @@ we could guess that it might look something like this:
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
+        
+        // ... pancake code
 
         $pets = array($pet1, $pet2, $pet3);
         

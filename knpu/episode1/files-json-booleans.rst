@@ -13,13 +13,46 @@ I've put right inside my project directory.
 
 .. tip::
 
-    You can find this file in the "resources" directory of the code download.
+    You can find this file in the ``resources/`` directory of the code download.
 
 Open up this file and see what's inside:
 
 .. code-block:: json
 
-    {{ get_file('resources/pets.json') }}
+    [
+        {
+            "name": "Chew Barka",
+            "breed": "Bichon",
+            "age": "2 years",
+            "weight": 8,
+            "bio": "The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!",
+            "filename": "pet1.png"
+        },
+        {
+            "name": "Spark Pug",
+            "breed": "Pug",
+            "age": "1.5 years",
+            "weight": 11,
+            "bio": "You want to go to the dog park in style? Then I am your pug!",
+            "filename": "pet2.png"
+        },
+        {
+            "name": "Pico de Gato",
+            "breed": "Bengal",
+            "age": "5 years",
+            "weight": 9,
+            "bio": "Oh hai, if you do not have a can of salmon I am not interested.",
+            "filename": "pet3.png"
+        },
+        {
+            "name": "Pancake",
+            "age": "1 year",
+            "weight": 9,
+            "bio": "Treats and Snoozin!",
+            "filename": "pancake.png",
+            "breed": "Bulldog"
+        }
+    ]
 
 Ok, let's step back and talk about JSON, which has nothing to do with PHP,
 except that PHP can read it. JSON is a text format that can be used to represent
@@ -168,18 +201,32 @@ something about a "stdClass". This is a PHP object, which you don't need
 to worry about now. Instead, if we look at the :phpfunction`json_decode`
 docs, we see it has an optional second argument, which is a bool or Boolean
 that defaults to ``false``. If we change this to ``true``, the function should
-return an associative array:
+return an associative array::
 
     $petsJson = file_get_contents('pets.json');
     $pets = json_decode($petsJson, true);
     var_dump($pets);die;    
 
 Perfect! This is the exact array we were building by hand, so remove that
-along with the ``var_dump`` statement. When we refresh, our page is back!
-The JSON string is read from the file and then converted into a PHP array.
-Our code is ready to iterate over each pet in that array and print out its
-information by using each pet's keys. This works because the information
-in the JSON file exactly matches the PHP array we had before.
+along with the ``var_dump`` statement::
+
+    <?php
+        $petsJson = file_get_contents('pets.json');
+        $pets = json_decode($petsJson, true);
+        
+        // delete all the other $pet1 and $pets variables
+
+        $pets = array_reverse($pets);
+
+        $cleverWelcomeMessage = 'All the love, none of the crap!';
+        $pupCount = count($pets);
+    ?>
+
+When we refresh, our page is back! The JSON string is read from the file
+and then converted into a PHP array. Our code is ready to iterate over each
+pet in that array and print out its information by using each pet's keys.
+This works because the information in the JSON file exactly matches the PHP
+array we had before.
 
 If we changed the ``filename`` key for each pet in our data source ``pets.json``,
 then we would also need to change it in our application to match:
@@ -188,7 +235,7 @@ then we would also need to change it in our application to match:
 
     [
         {
-            "imageFilename": "pancake.png",
+            "image": "pancake.png",
         },
     ]
 
@@ -200,7 +247,7 @@ then we would also need to change it in our application to match:
             <div class="col-md-4 pet-list-item">
                 <!-- ... -->
 
-                <img src="/images/<?php echo $cutePet['imageFilename']; ?>" class="img-rounded">
+                <img src="/images/<?php echo $cutePet['image']; ?>" class="img-rounded">
 
                 <!-- ... -->
             </div>
@@ -259,6 +306,5 @@ accomplish the exact same thing as ``file_get_contents`` and ``file_put_contents
 they're just harder and weirder to use. To make matters worse, most tutorials on 
 the web teach you to use these functions. Madness! You'll probably use them someday, 
 but forget about them now. Working with files in PHP we need only our 2 handy functions.
-
 
 .. _`JSONView`: https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc
