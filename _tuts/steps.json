@@ -329,7 +329,42 @@
             "id": "create-function-add-real-get-pets-body",
             "name": "Create Function: Add real get_pets() body",
             "description": null
+        },
+        {
+            "id": "include-changing-contact-page",
+            "name": "Include: Changing contact page",
+            "description": null
+        },
+        {
+            "id": "include-use-get-pets-on-contact-php",
+            "name": "Include: Use get_pets on contact.php",
+            "description": null
+        },
+        {
+            "id": "include-require-index-php",
+            "name": "Include: require index.php",
+            "description": null
+        },
+        {
+            "id": "include-new-functions-php-require",
+            "name": "Include: New functions.php + require",
+            "description": null
+        },
+        {
+            "id": "include-require-once",
+            "name": "Include: require_once",
+            "description": null
+        },
+        {
+            "id": "include-require",
+            "name": "Include: require",
+            "description": null
+        },
+        {
+            "id": "layout-create-and-use-header-footer",
+            "name": "Layout: Create and use header\/footer",
+            "description": null
         }
     ],
-    "sha": "2fd45248c9ce5bb61cfedd1d327feae7a0cf4f5e"
+    "sha": "ec71cc4daeab058f3504c91b8cf500d13da85d3c"
 }

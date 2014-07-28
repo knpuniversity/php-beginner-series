@@ -1,8 +1,8 @@
 diff --git a/index.php b/index.php
-index 751753b..84db80c 100644
+index 751753b..250ae5d 100644
 --- a/index.php
 +++ b/index.php
-@@ -1,13 +1,15 @@
+@@ -1,13 +1,13 @@
  <?php
      function get_pets()
      {
@@ -13,8 +13,8 @@ index 751753b..84db80c 100644
 +        return $pets;
      }
  
-     // $petsJson = file_get_contents('data/pets.json');
-     // $pets = json_decode($petsJson, true);
+-    // $petsJson = file_get_contents('data/pets.json');
+-    // $pets = json_decode($petsJson, true);
      $pets = get_pets();
 -    var_dump($pets);die;
  

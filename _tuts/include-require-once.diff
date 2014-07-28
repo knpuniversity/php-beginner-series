@@ -1,0 +1,11 @@
+diff --git a/index.php b/index.php
+index 826ced4..690737d 100644
+--- a/index.php
++++ b/index.php
+@@ -1,5 +1,5 @@
+ <?php
+-    require 'lib/functions.php';
++    require_once 'lib/functions.php';
+ 
+     $pets = get_pets();
+ 
