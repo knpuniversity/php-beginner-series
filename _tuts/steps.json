@@ -376,18 +376,13 @@
             "description": null
         },
         {
-            "id": "form-add-header-links",
-            "name": "Form: Add header links",
-            "description": null
-        },
-        {
             "id": "form-add-bootstrap-layout",
             "name": "Form: Add Bootstrap Layout",
             "description": null
         },
         {
-            "id": "form-bootstrap-layout",
-            "name": "Form: Bootstrap layout",
+            "id": "form-header-links",
+            "name": "Form: Header Links",
             "description": null
         },
         {
