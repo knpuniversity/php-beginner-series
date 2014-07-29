@@ -90,5 +90,5 @@ a form submit.
     about that at all right now.
 
 So when we submit, our browser sends a POST request that has all the values
-on it. If we could just read that, we'd be as dangerous as a loose puppy in
+on it. If we could just read that, we'd be as dangerous as a loose puppy
 at a hot dog stand!
