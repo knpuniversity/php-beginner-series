@@ -1,5 +1,5 @@
 diff --git a/pets_new.php b/pets_new.php
-index c590879..73621b3 100644
+index 60e7275..4116513 100644
 --- a/pets_new.php
 +++ b/pets_new.php
 @@ -5,9 +5,23 @@ if (isset($_POST['name'])) {

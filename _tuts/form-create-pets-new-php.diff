@@ -1,7 +1,9 @@
 diff --git a/pets_new.php b/pets_new.php
 new file mode 100644
-index 0000000..7992778
+index 0000000..e7c9c4e
 --- /dev/null
 +++ b/pets_new.php
-@@ -0,0 +1 @@
+@@ -0,0 +1,3 @@
 +HI I AM A PAGE!
++
++Squirrel!

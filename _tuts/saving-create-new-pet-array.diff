@@ -1,5 +1,5 @@
 diff --git a/pets_new.php b/pets_new.php
-index a0e24d1..84e35f7 100644
+index 915bdaa..518c499 100644
 --- a/pets_new.php
 +++ b/pets_new.php
 @@ -27,6 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -11,7 +11,7 @@ index 332df22..946807b 100644
      file_put_contents('data/pets.json', $json);
  }
 diff --git a/pets_new.php b/pets_new.php
-index 447169c..45cd4e5 100644
+index 998c9d9..cf27aae 100644
 --- a/pets_new.php
 +++ b/pets_new.php
 @@ -38,8 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
