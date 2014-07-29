@@ -9,7 +9,7 @@ Getting the Code, Starting the Web Server
 -----------------------------------------
 
 We're going to keep coding on the project from episode 1. If you don't have
-that code, just download from the screencast page and unzip it. Once you've
+that code, just download it from the screencast page and unzip it. Once you've
 done that, we just need to start the PHP web server.
 
 Open a terminal and move into the directory where the unzipped files live.
@@ -57,11 +57,11 @@ network tab and refresh.
     make sure you're using a good browser. I recommend Google Chrome.
 
 Each line here is an HTTP request that was just made by our browser. The top
-is the request for ``index.php``. The other requests are for the CSS, JS
+is the request for ``contact.php``. The other requests are for the CSS, JS
 and images on the page. Yep, on every page load, your browser is actually
-making a *bunch* of requests into the interwebs.
+making a *bunch* of requests into the internet tubes.
 
-If you click on ``index.php``, we can actually see how *this* HTTP request
+If you click on ``contact.php``, we can actually see how *this* HTTP request
 message looks. Yep, it's a lot of stuff. That ``User-Agent`` is what browser
 you're using and ``Accept-Language`` is how the browser tells the server
 what languages you speak. It's not important now, but we can get any of this
@@ -70,21 +70,22 @@ information from inside PHP!
 We need a New Page!
 -------------------
 
-I want to build a form so a user can post their pet for rent.
+I want to build a form so a user can rent out their pet's love to others.
 
 Let's start by creating a new page. How do we do that? Just create a new
 file called ``pets_new.php`` and scream some text out:
 
 .. code-block:: html
 
-    HI I AM A PAGE!
+    HI I AM A PAGE! 
+    
+    SQUIRREL!
 
-To see us screaming at us, add ``/pets_new.php`` to the end of the URL in
-your browser:
+To see us screaming at us, change the URL to ``/pets_new.php``:
 
     http://localhost:8000/pets_new.php
 
-So every new page is just a new file. In a future episode, I'll teach your
+So every new page is just a new file. In a future episode, I'll teach you
 a way to create URLs and pages that's much fancier than this. But don't worry
 about that quite yet.
 
@@ -96,11 +97,13 @@ Let's make this page properly fancy by copying in the ``header.php`` and
     <?php require 'layout/header.php'; ?>
 
     HI I AM A PAGE!
+    
+    SQUIRREL!
 
     <?php require 'layout/footer.php'; ?>
 
 Refresh to see a page that is only a little ugly. Progress! And a little
-Twitter Bootstrap markup makes this look even a bit better.
+Twitter Bootstrap markup makes this look a tiny bit better.
 
 Navigation like a Real Site
 ---------------------------
