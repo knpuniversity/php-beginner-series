@@ -53,9 +53,7 @@ that's a nice place to put your PHP logic:
 
     <?php require 'layout/header.php'; ?>
 
-This time, refresh your browser. It'll ask if you want to resubmit the form.
-It's actually asking for your permission to re-send the POST request to the
-server with all of the data from the form. And when we agree, success!
+This time, refresh your browser. There's our data!
 
 I took advantage of a cool thing about the ``var_dump`` function: it accepts
 as unlimited number of arguments. Most functions accept 0, 1, 2 or more arguments.
