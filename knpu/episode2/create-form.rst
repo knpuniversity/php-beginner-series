@@ -10,7 +10,7 @@ And hey, why not a bio textarea field too so we can get to know these pets!
     <h1>Add your Pet</h1>
 
     <div class="form-group">
-        <label for="pet-name" class="control-label">Name</label>
+        <label for="pet-name" class="control-label">Pet Name</label>
         <input type="text" name="name" id="pet-name" class="form-control" />
     </div>
     <div class="form-group">
@@ -22,7 +22,7 @@ And hey, why not a bio textarea field too so we can get to know these pets!
         <input type="number" name="weight" id="pet-weight" class="form-control" />
     </div>
     <div class="form-group">
-        <label for="pet-bio" class="control-label">Bio</label>
+        <label for="pet-bio" class="control-label">Pet Bio</label>
         <textarea name="bio" id="pet-bio" class="form-control"></textarea>
     </div>
     
@@ -30,7 +30,7 @@ And hey, why not a bio textarea field too so we can get to know these pets!
 
 I'm adding some divs and classes here that use the Twitter Bootstrap CSS
 that's included in this project. So, nothing to worry about - this just makes
-our site look a better! And hey, that's important too!
+our site a little prettier! And hey, that's important too!
 
 .. note::
 
@@ -53,13 +53,13 @@ attribute to point back to this same page and definitely don't forget the
     
     <!-- ... -->
 
-Finally, don't forget a cool-looking submit button in the form!
+Finally, you're going to need a cool-looking submit button in the form!
 
     <button type="submit" class="btn btn-primary">
         <span class="glyphicon glyphicon-heart"></span> Add
     </button>
 
-Refresh. Now that's good looking-form.
+Refresh. Wow! Now that's a sweet form.
 
 Submit that Form
 ----------------
@@ -90,4 +90,5 @@ a form submit.
     about that at all right now.
 
 So when we submit, our browser sends a POST request that has all the values
-on it. If we could just read that, we'd be really dangerous!
+on it. If we could just read that, we'd be as dangerous as a loose puppy in
+at a hot dog stand!
