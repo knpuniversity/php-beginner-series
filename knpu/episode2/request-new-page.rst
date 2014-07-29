@@ -54,7 +54,8 @@ the project, just download and unzip it. Once you've done that, we just need
 to start the PHP web server.
 
 Open a terminal and move into the directory where the unzipped files live.
-Start the PHP web server by typing the following:
+I already unzipped the files in a ``Sites/php`` directory. Start the PHP
+web server by typing the following:
 
 .. code-block:: bash
 
