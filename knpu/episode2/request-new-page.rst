@@ -3,23 +3,23 @@ Request, New Page and - Hey, You Welcome Back!
 
 Hi there! I knew you'd be back! Learning to be a PHP programmer is a lot
 of work, but totally worth it. So, keep going: you're getting more dangerous
-as each minute goes by.
+with each minute you spend practicing.
 
 What Secrets lie on the HTTP Request?
 -------------------------------------
 
 In episode 1, we learned that the web works via requests and responses. Our
-browser sends an HTTP request message into the interwbs for airpup.com/contact.php.
-This eventually finds our server where it knocks on the door. And with any
+browser sends an HTTP request message into the interwebs for airpup.com/contact.php.
+This eventually finds our server where it scratches on the door. And with any
 luck, some web server software like Apache will be listening, open the door,
 look in a certain directory for the ``contact.php` file`` and process all
-the PHP tags. The final HTML is called an HTTP response, and is sent from
-the server back to our browser.
+the PHP treats . . . I mean tags. The final HTML is called an HTTP response, 
+and is sent from the server back to our browser.
 
 So it all starts when *we* send that HTTP request message. But actually,
 that message has a whole lot more information than just the hostname and
 page we want. It also has our IP address, info on which browser we're using
-and the values of fields when we submit a from.
+and the values of fields when we submit a form.
 
 Peeking at Requests
 -------------------
