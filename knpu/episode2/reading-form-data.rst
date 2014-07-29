@@ -3,7 +3,7 @@ Reading POST'ed (Form) Data
 
 That's done with a super-magic variable called ``$_POST``.
 
-Try it! Let's use favorite debugging tool ``var_dump`` on this variable::
+Try it! Let's use my favorite debugging tool ``var_dump`` on this variable::
 
     <?php var_dump($_POST); ?>
 
@@ -25,12 +25,12 @@ Like when we try this, we *do* get a big warning.
 
 Here's the secret: ``$_POST`` is one of just a few variables called "superglobals".
 That's nothing more than a heroic way of saying that ``$_POST`` is always
-magically defined and equal to any submitted form data.
+magically available and equal to any submitted form data.
 
 The other superglobals include ``$_GET``, ``$_SERVER`` and a few others.
 We'll talk about them later, but they all have one thing in common, besides
 their love of capital letters. Each super-global gives you information about
-the HTTP request out browser sent.
+the HTTP request our browser sent.
 
 Getting the Form Data
 ---------------------
