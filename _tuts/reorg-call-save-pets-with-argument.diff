@@ -1,0 +1,26 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 332df22..946807b 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -10,6 +10,7 @@ function get_pets()
+ 
+ function save_pets($petsToSave)
+ {
++    var_dump($petsToSave);die;
+     $json = json_encode($pets, JSON_PRETTY_PRINT);
+     file_put_contents('data/pets.json', $json);
+ }
+diff --git a/pets_new.php b/pets_new.php
+index 447169c..45cd4e5 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -38,8 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+     );
+     $pets[] = $newPet;
+ 
+-    $json = json_encode($pets, JSON_PRETTY_PRINT);
+-    file_put_contents('data/pets.json', $json);
++    save_pets($pets);
+ 
+     header('Location: /');
+     die;

@@ -1,0 +1,14 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 643465c..2ee101e 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -7,3 +7,8 @@ function get_pets()
+ 
+     return $pets;
+ }
++
++function save_pets()
++{
++
++}
+\ No newline at end of file

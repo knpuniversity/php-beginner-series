@@ -1,0 +1,13 @@
+diff --git a/pets_new.php b/pets_new.php
+index 45cd4e5..b23526c 100644
+--- a/pets_new.php
++++ b/pets_new.php
+@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+     );
+     $pets[] = $newPet;
+ 
+-    save_pets($pets);
++    save_pets('this is some text!');
+ 
+     header('Location: /');
+     die;

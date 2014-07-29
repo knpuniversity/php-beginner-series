@@ -1,0 +1,16 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 6a11f32..332df22 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -8,8 +8,8 @@ function get_pets()
+     return $pets;
+ }
+ 
+-function save_pets()
++function save_pets($petsToSave)
+ {
+     $json = json_encode($pets, JSON_PRETTY_PRINT);
+     file_put_contents('data/pets.json', $json);
+-}
+\ No newline at end of file
++}
