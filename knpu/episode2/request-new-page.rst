@@ -65,6 +65,10 @@ Great! Now just put that URL in your browser and voila!
 
     http://localhost:8000
 
+.. tip::
+
+    Having issues? Check out our `server setup`_ chapter in episode 1!
+
 We need a New Page!
 -------------------
 
@@ -119,3 +123,5 @@ in ``header.php``. We can also make "Home" *actually* go to the homepage.
     </ul>
 
 Refresh. Go team! We have a working nav like a real site!
+
+.. _`server setup`: http://knpuniversity.com/screencast/php-ep1
