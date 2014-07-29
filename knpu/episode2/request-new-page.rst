@@ -105,6 +105,16 @@ Let's make this page properly fancy by copying in the ``header.php`` and
 Refresh to see a page that is only a little ugly. Progress! And a little
 Twitter Bootstrap markup makes this look a tiny bit better.
 
+.. code-block:: html
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h1>Add your Pet</h1>
+            </div>
+        </div>
+    </div>
+
 Navigation like a Real Site
 ---------------------------
 
