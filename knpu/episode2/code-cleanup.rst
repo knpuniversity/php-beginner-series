@@ -9,7 +9,7 @@ function in ``functions.php``::
 
     }
 
-Copy in the 2 lines of code that encode the pets array and writes the file::
+Copy in the 2 lines that encode the pets array and writes the file::
 
     function save_pets()
     {
@@ -27,7 +27,7 @@ Adding Arguments to Our Functions
 We already know that functions can have arguments - we just saw that with
 ``header``, which has one argument. We can make ``save_pets`` require an
 argument too - just add a ``$petsToSave`` variable between the parenthesis
-of ``save_pets``::
+of that function::
 
     function save_pets($petsToSave)
     {
@@ -92,8 +92,8 @@ added. Brilliant!
 Why Use Functions?
 ------------------
 
-Things work the same as before, so why did I make you add ``save_pets``?
-Moving logic into functions gives us 2 really col things.
+Things work the same as before, so why did I make you add this function?
+Moving logic into functions gives us 2 really cool things.
 
 First, if we need to save pets somewhere else, we can just re-use this function.
 We're already doing this with ``get_pets``, which I think we're calling in
@@ -111,6 +111,6 @@ to.
 
 Building great things *and* doing it well, *that's* where you're going. And
 you've just finished another episode you crazy developer you! Congrats! Now
-build something or keep learning with us.
+build something and keep learning with us.
 
 Seeya next time!
