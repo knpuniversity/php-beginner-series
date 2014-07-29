@@ -57,7 +57,7 @@ This time, refresh your browser. This actually re-submits our form with the
 same data we entered a second ago. And there it is!
 
 I took advantage of a cool thing about the ``var_dump`` function: it accepts
-as unlimited number of arguments. Most functions accept 0, 1, 2 or more arguments.
+an unlimited number of arguments. Most functions accept 0, 1, 2 or more arguments.
 That's normal. But a few brave guys accept an unlimited number. ``var_dump``
 is one of those brave functions, and it's documentation shows us that.
 
@@ -141,9 +141,9 @@ looks like::
 
     var_dump($_SERVER);die;
 
-Woh! It's an associative array, and it has a *ton* of stuff in it, 28 things
+Woh! It's an associative array, and it has a *ton* of stuff in it, 25 things
 in my case. What is this stuff? Well, it's information about the HTTP request
-that was just sent. See ``HTTP_USER_AGENT`` key? That comes from a piece
+that was just sent. See the ``HTTP_USER_AGENT`` key? That comes from a piece
 of information our browser included in the request.
 
 No, you don't need to memorize this, or really remember any of it. Occasionally
@@ -151,8 +151,7 @@ you'll need some information, like the user agent. And when you google for
 how to get that in PHP, this will be your answer.
 
 See that ``REQUEST_METHOD`` key? Ah ha! That's the HTTP method, which is
-POST right now. Select the URL in your browser and just hit enter. Now it
-says GET.
+GET right now.
 
 Let's wrap all of our form-processing logic in an ``if`` statement that checks
 to see if the ``REQUEST_METHOD`` key is equal to ``POST``:
