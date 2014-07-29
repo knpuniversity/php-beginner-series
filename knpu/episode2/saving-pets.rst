@@ -123,12 +123,12 @@ If you look at ``pets.json``, it got flattened onto one line. That's ok!
 Spaces and new lines aren't important in JSON, and PHP saved without any
 extra whitespace. Again, that's fine really.
 
-But since I *did* like my file better when it was readable. Give ``json_encode``
+But since I *did* like my file better when it was readable, give ``json_encode``
 a second argument of ``JSON_PRETTY_PRINT``::
 
     $json = json_encode($pets, JSON_PRETTY_PRINT);
 
-Fill out for form again. Hey, now ``pets.json`` looks awesome again. We are 
+Fill out our form again. Hey, now ``pets.json`` looks awesome again. We are 
 really good at training this digital pet :) ``JSON_PRETTY_PRINT``
 is called a *constant*, which is kind of like a variable, exept that it's
 magically available everywhere, doesn't have a ``$``, and its value can't
