@@ -1,0 +1,2 @@
+- status code stuff from the original chapter 2 (redirecting) was removed
+    and should be added back later when we talk 404's.

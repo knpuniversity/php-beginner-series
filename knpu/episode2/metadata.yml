@@ -27,3 +27,5 @@ chapters:
     - create-form
     - reading-form-data
     - saving-pets
+    - redirecting
+    - code-cleanup
