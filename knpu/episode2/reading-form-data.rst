@@ -53,7 +53,8 @@ that's a nice place to put your PHP logic:
 
     <?php require 'layout/header.php'; ?>
 
-This time, refresh your browser. There's our data!
+This time, refresh your browser. This actually re-submits our form with the
+same data we entered a second ago. And there it is!
 
 I took advantage of a cool thing about the ``var_dump`` function: it accepts
 as unlimited number of arguments. Most functions accept 0, 1, 2 or more arguments.
