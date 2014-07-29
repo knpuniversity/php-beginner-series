@@ -10,7 +10,7 @@ We haven't talked about databases yet, and we're not using one. But actually,
 the pet data our site needs *is* being stored in a simple ``pets.json`` file.
 And this file *is* something we can read from and even update. And hey, that's
 basically all a database really does. So if we can figure out how to update
-the the ``pets.json`` file each time we submit this form, we're in business!
+the ``pets.json`` file each time we submit this form, we're in business!
 
 First, we can re-use our ``get_pets`` function to get an array of all of
 the *existing* pets from the file. Let's add this right at the bottom of
@@ -75,8 +75,8 @@ a unique number for us.
 Saving the Pets to pets.json
 ----------------------------
 
-Now, ``$pets`` has all the existing pets, *and* our new one. It basically
-represents *what* we want to save to ``pets.json``.
+Now, ``$pets`` has all the existing little fur balls, *and* our new one. 
+It basically represents *what* we want to save to ``pets.json``.
 
 Let's do it! First, turn ``$pets`` back into JSON with PHP's ``json_encode``
 function. To *actually* save the file, use another PHP function: ``file_put_contents``::
@@ -128,7 +128,8 @@ a second argument of ``JSON_PRETTY_PRINT``::
 
     $json = json_encode($pets, JSON_PRETTY_PRINT);
 
-Fill out for form again. Hey, now ``pets.json`` looks awesome again. ``JSON_PRETTY_PRINT``
+Fill out for form again. Hey, now ``pets.json`` looks awesome again. We are 
+really good at training this digital pet :) ``JSON_PRETTY_PRINT``
 is called a *constant*, which is kind of like a variable, exept that it's
 magically available everywhere, doesn't have a ``$``, and its value can't
-change. You won't use them often, so I don't worry about them too much.
+change. You won't use them often, so don't worry about them too much.
