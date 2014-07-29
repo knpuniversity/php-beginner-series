@@ -2,16 +2,16 @@ The Art of Redirecting
 ======================
 
 Go back to the new pet form and fill it out again. Ok, it looks like it's
-still working. And when we hit refresh, our browser asks us if we want to
-re-submit that form POST again. If we did this a few times, we'd quickly
-have a lot of duplicate "Fidos" in our database.
+still working. Refresh a few times and check out ``pets.json``. Woh,
+we have a lot of duplicate "Fidos" in our file! Each time I refreshed, the
+form resubmitted and added my pet *again*. Bad dog!
 
 In the real world, we don't want users to be able to be able to create duplicate
 records accidentally or so easily. And that's why you should redirect the
 user to a different page after handling a form submit.
 
 Remember: we *always* send back an HTTP response to the user. And so far,
-a response is *always* and HTML page. But it could be something else, like
+a response is *always* an HTML page. But it could be something else, like
 a tiny bit of directions that tell the browser to go to a totally different
 URL. The browser would then make a *second* request to that URL and display
 *that* HTML page. This is called a redirect.
@@ -48,7 +48,7 @@ browser to redirect to the homepage.
 
 When the browser sees this instruction line instead of HTML, it quickly makes
 a GET request to the homepage. This time, our code returns a response message
-with HTML and it displas it. It looked instant, but now we know that our
+with HTML and it displays it. It looked instant, but now we know that our
 browser just made 2 separate requests.
 
 Headers
@@ -56,6 +56,10 @@ Headers
 
 Let's learn something that takes most web developers *years* to figure out.
 Ready?
+
+Don't crowd the elevator doors when it opens, people might be getting out of it.
+
+Ok, want to learn something else that usually takes web developers years?
 
 When our browser makes a request, the most important part is the URL. Of
 course! The server needs to know which page we want! But the request also
@@ -71,10 +75,10 @@ and a few important headers are set for us.
 
 But sometimes, you *do* need to send back a response with a bit of extra
 information. And in fact, when you want to tell a browser to redirect, we
-need to send back a response message with a ``Location`` header. Extra information
-is added to the response with the ``header`` function and each has this format
-of the header name, a colon, then the value. Every browser is programmed
-to look for the ``Location`` header.
+need to send back a response message with a ``Location`` header. This type of 
+extra information is added to the response with the ``header`` function and 
+each has the same format: a header name, a colon, then the value. 
+Every browser is programmed to look for the ``Location`` header.
 
 After, I put a ``die`` statement just to stop everything right there. We
 haven't printed anything yet, so the response has no content. That's perfect:
