@@ -100,9 +100,7 @@ the response.
 If we need another page, just create a new file called ``contact.php``, put
 some simple code in there, and put ``contact.php`` in your address bar::
 
-    <?php
-
-    echo 'Contact Us!';
+    <?php echo 'Contact Us!'; ?>
 
 .. tip::
 

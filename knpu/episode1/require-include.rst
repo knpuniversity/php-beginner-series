@@ -4,17 +4,24 @@ Using require to Include Functions
 I'll show you a few more tricks with functions in a second. But right now,
 let's improve our ``contact.php`` page we started earlier. First, I want
 to be able to have a header that reads "Helping you find your new best friend
-from over 500 pets." Except, I want the number 500 to be dynamic, reflecting
-the true number of pets we have in our ``pets.json`` file. I'll do this by
-calling our ``get_pets()`` function and passing it to PHP's ``count`` function,
-which will tell us how many items are in that array:
+from over 500 pets.":
+
+.. code-block:: html
+
+    <h1>
+        Helping you find your new best friend from over 500 pets.
+    </h1>
+
+Except, I want the number 500 to be dynamic, reflecting the true number of
+pets we have in our ``pets.json`` file. I'll do this by calling our ``get_pets()``
+function and passing it to PHP's ``count`` function, which will tell us how
+many items are in that array:
 
 .. code-block:: html+php
 
-    <?php
-    // contact.php
-    ?>
-    Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets.
+    <h1>
+        Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets.
+    </h1>
 
 But when we try it, it blow up big time!
 
@@ -37,7 +44,10 @@ the top of the file:
     // contact.php
     require 'index.php';
     ?>
-    Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets.
+
+    <h1>
+        Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets.
+    </h1>
     
 When we try it, it works... sort of. At the bottom of the page, we see our
 sentence with the correct pets count. But above it is the entire ``index.php``

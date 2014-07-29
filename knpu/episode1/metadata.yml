@@ -1,5 +1,4 @@
 title:  How to win friends and develop in PHP
-price:  12
 length: 1:10:56
 summary: |
     So you want to become a PHP developer. And not just any ol' programmer, 
@@ -24,10 +23,6 @@ summary: |
     * Creating a simple layout
 
 illustration: php-ep1.png
-priority: 160
-tags:
-    - { name: php }
-status: complete
 hasVideoDownload: 1
 
 chapters:

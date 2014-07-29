@@ -10,9 +10,12 @@ new function called ``get_pets`` that will do this work for us and return
 the finished array. Custom functions are used just like core PHP functions,
 so eventually I want our code to look like this::
 
+    <?php
     // $petsJson = file_get_contents('data/pets.json');
     // $pets = json_decode($petsJson, true);
     $pets = get_pets();
+
+    // ...
 
 Oh, and those two slash marks (``//``) are one of the two ways you can comment
 out lines in PHP. Anything on a line after ``//`` is ignored by PHP entirely.
@@ -27,12 +30,16 @@ and closing curly braces like we do with our 2 other special language constructs
 
     // index.php
     // ...
-    
+
+    <?php
     function get_pets()
     {
-        
+
     }
-    
+
+    // $petsJson = file_get_contents('data/pets.json');
+    // ...
+
 When we call this function, any code between the curly braces will be executed.
 Remember, the job of a function is usually to do some work and return a value.
 Eventually, we'll return an array of pets. But to get things working, just

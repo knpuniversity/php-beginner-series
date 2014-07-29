@@ -37,9 +37,9 @@ manually:
         </div>
     </div>
 
-When we refresh, we see the 3 park friendly pets in our styled list. Now obviously, we're
-repeating code unnecessarily and writing all the ``div`` and ``h2`` tags is too much work. 
-Arrays to the rescue!
+When we refresh, we see the 3 park friendly pets in our styled list. Now
+obviously, we're repeating code unnecessarily and writing all the ``div``
+and ``h2`` tags is too much work.  Arrays to the rescue!
 
 Creating an Array
 -----------------
@@ -49,6 +49,10 @@ To create an array, just say - amazingly - ``array`` and set it to a variable:
 .. code-block:: html+php
 
     <?php
+        $pet1 = 'Chew Barka';
+        $pet2 = 'Spark Pug';
+        $pet3 = 'Pico de Gato';
+
         $pets = array();
     ?>
 
@@ -121,6 +125,8 @@ that will print all 3:
                 }
             ?>
         </div>
+        
+        <!-- ... -->
     </div>
 
 Refresh and success! Congratulations on creating and looping over your first
@@ -239,6 +245,9 @@ When we fresh, we see the first and third pets printed. Now we have real
 control! But be careful, if you try to use an index that doesn't exist, PHP
 gets angry::
 
+    // ...
+    $pets = array($pet1, $pet2, $pet3);
+
     echo $pets[3];
 
 .. highlights::
@@ -266,7 +275,7 @@ like a number:
         $pets = array($pet1, $pet2, $pet3, 14);
     ?>
 
-It's not a particularly exciting pet name, but when we refresh, we see 14
+It's not a particularly exciting pet name, but when we refresh, we see "14"
 in our pet list.
 
 An array is just a container that can hold anything. Each item in the array

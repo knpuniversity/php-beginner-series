@@ -229,7 +229,7 @@ write this using multiple lines:
                 $pupCount = rand(50, 100);
             ?>
 
-            <h1><?php echo strtolower($upperMessage); ?></h1>
+            <h1><?php echo $upperMessage; ?></h1>
             <!-- ... -->
         </div>
     </div>

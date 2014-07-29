@@ -190,7 +190,7 @@ Making PHP Angry with Syntax Errors!
 ------------------------------------
 
 Now, let's make a small error to see what happens. I'll just remove the semicolon
-from the end of the ``$cleverWelcomeMessage = `` line:
+from the end of the ``$cleverWelcomeMessage`` line:
 
 .. code-block:: html+php
 
@@ -219,7 +219,7 @@ from the end of the ``$cleverWelcomeMessage = `` line:
 You'll see a lot of error messages and the trick is to get good at knowing
 what they mean. Be sure to look at the line number and check that line *and*
 the lines *above* it. In this case, the error is being reported in the line
-with ``$pupCount = ``. But there's nothing wrong with this line - the missing
+with ``$pupCount``. But there's nothing wrong with this line - the missing
 semicolon is actually the line *above* this. That's really common with PHP
 errors, so look for it!
 

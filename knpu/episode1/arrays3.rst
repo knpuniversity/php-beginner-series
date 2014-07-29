@@ -77,6 +77,8 @@ like Pancake. I'll paste in the details::
     );
     $pancake['breed'] = 'Bulldog';
 
+    // ...
+
 Next, add ``$pancake`` to our ``$pets`` array and remove Kitty Gaga::
 
     $pets = array($pet1, $pet2, $pet3, $pancake);
@@ -130,22 +132,25 @@ tweak a class name as well so that the our pets tile nicely.
 
 .. code-block:: html+php
 
-    <?php foreach ($pets as $cutePet) { ?>
-        <div class="col-md-4 pet-list-item">
-            <h2><?php echo $cutePet[0]; ?></h2>
+    <div class="row">
+        <?php foreach ($pets as $cutePet) { ?>
+            <div class="col-lg-4 pet-list-item">
+                <h2><?php echo $cutePet['name']; ?></h2>
 
-            <img src="/images/<?php echo $cutePet[4]; ?>" class="img-rounded">
+                <img src="/images/<?php echo $cutePet['filename']; ?>" class="img-rounded">
 
-            <blockquote class="pet-details">
-                <?php echo $cutePet[1]; ?>
-                <?php echo $cutePet[2]; ?> lbs
-            </blockquote>
+                <blockquote class="pet-details">
+                    <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
+                    <?php echo $cutePet['age']; ?>
+                    <?php echo $cutePet['weight']; ?> lbs
+                </blockquote>
 
-            <p>
-                <?php echo $cutePet[3]; ?>
-            </p>
-        </div>
-    <?php } ?>
+                <p>
+                    <?php echo $cutePet['bio']; ?>
+                </p>
+            </div>
+        <?php } ?>
+    </div>
 
 .. tip::
 
@@ -173,7 +178,10 @@ that does exactly that called :phpfunction:`count`:
     <!-- index.php -->
     <!-- ... -->
 
-    <p>Over <?php echo count($pets) ?> pet friends!</p>
+    <?php
+        $cleverWelcomeMessage = 'All the love, none of the crap!';
+        $pupCount = count($pets);
+    ?>
 
 When we refresh, we get an error:
 
@@ -186,7 +194,27 @@ actually created until after this. PHP reads our file from top to bottom like
 a book, so we need to set a variable before using it.
 
 To fix this, let's move every variable all the way up to the top of the
-file. Now when we refresh, it works perfectly. If we add a 5th pet later, it will
+file::
+
+    <!-- Right at the top of index.php -->
+    <?php
+        $pet1 = array(
+            'name' => 'Chew Barka',
+            'breed' => 'Bichon',
+            'age' => '2 years',
+            'weight' => 8,
+            'bio' => 'The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!',
+            'filename' => 'pet1.png'
+        );
+
+        // .. the rest of the PHP code
+        $pets = array($pet1, $pet2, $pet3, $pancake);
+
+        $cleverWelcomeMessage = 'All the love, none of the crap!';
+        $pupCount = count($pets);
+    ?>
+
+Now when we refresh, it works perfectly. If we add a 5th pet later, it will
 update automatically.
 
 Let's go to php.net and look up the docs for the :phpfunction:`count` function.
@@ -199,7 +227,7 @@ While we're here, take a look at the left navigation: it's full of the functions
 in PHP that help you work with arrays. It's a massive list and has great stuff.
 For example, let's look at :phpfunction:`array_reverse`. It takes an array
 as its one required argument, reverses it, and returns it.
-Let's use it to reverse ``$pets``:
+Let's use it to reverse ``$pets``::
 
     $pets = array($pancake, $pet1, $pet2, $pet3);
     $pets = array_reverse($pets);

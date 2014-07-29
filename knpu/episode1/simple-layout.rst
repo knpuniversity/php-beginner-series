@@ -28,11 +28,11 @@ code:
 
     <?php
         // index.php
-        require 'layout/header.php';
-        $petsJson = file_get_contents('data/pets.json');
-        // ... the rest of our PHP code at top
+        // ... the big PHP code block at the top
     ?>
-    <!-- all of the HTML and PHP code form the middle -->
+    <?php require 'layout/header.php'; ?>
+
+    <!-- all of the HTML and PHP code from the middle  ...-->
     
     <?php require 'layout/footer.php'; ?>
 
