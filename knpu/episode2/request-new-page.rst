@@ -5,6 +5,29 @@ Hi there! I knew you'd be back! Learning to be a PHP programmer is a lot
 of work, but totally worth it. So, keep going: you're getting more dangerous
 with each minute you spend practicing.
 
+Getting the Code, Starting the Web Server
+-----------------------------------------
+
+We're going to keep coding on the project from episode 1. If you don't have
+that code, just download from the screencast page and unzip it. Once you've
+done that, we just need to start the PHP web server.
+
+Open a terminal and move into the directory where the unzipped files live.
+I already unzipped the files in a ``Sites/php`` directory. Start the PHP
+web server by typing the following:
+
+.. code-block:: bash
+
+    php -S localhost:8000
+
+Great! Now just put that URL in your browser and voila!
+
+    http://localhost:8000
+
+.. tip::
+
+    Having issues? Check out our `server setup`_ chapter in episode 1!
+
 What Secrets lie on the HTTP Request?
 -------------------------------------
 
@@ -43,31 +66,6 @@ message looks. Yep, it's a lot of stuff. That ``User-Agent`` is what browser
 you're using and ``Accept-Language`` is how the browser tells the server
 what languages you speak. It's not important now, but we can get any of this
 information from inside PHP!
-
-Getting the Code, Starting the Web Server
------------------------------------------
-
-Once you're done nerding out on the request stuff, let's get back to work.
-
-We're going to keep coding on the project from episode 1. If you don't have
-the project, just download and unzip it. Once you've done that, we just need
-to start the PHP web server.
-
-Open a terminal and move into the directory where the unzipped files live.
-I already unzipped the files in a ``Sites/php`` directory. Start the PHP
-web server by typing the following:
-
-.. code-block:: bash
-
-    php -S localhost:8000
-
-Great! Now just put that URL in your browser and voila!
-
-    http://localhost:8000
-
-.. tip::
-
-    Having issues? Check out our `server setup`_ chapter in episode 1!
 
 We need a New Page!
 -------------------
