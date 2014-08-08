@@ -20,20 +20,26 @@ hasVideoDownload: 0
 
 chapters:
     request-new-page:
+        title:      Request, New Page and - Hey, You Welcome Back!
         is_free:    true
         length:     1:00
     create-form:
+        title:      We deserve to Create a Form
         is_free:    false
         length:     1:00
     reading-form-data:
+        title:      Reading POST'ed (Form) Data
         is_free:    false
         length:     1:00
     saving-pets:
+        title:      Saving Pets
         is_free:    false
         length:     1:00
     redirecting:
+        title:      The Art of Redirecting
         is_free:    false
         length:     1:00
     code-cleanup:
+        title:      Cleaning up with save_pets
         is_free:    false
         length:     1:00
