@@ -89,10 +89,10 @@
     <div class="container">
         <div class="row">
             <?php
-                foreach ($pets as $pet) {
+                foreach ($pets as $cutePet) {
                     echo '<div class="col-lg-4">';
                     echo '<h2>';
-                    echo $pet;
+                    echo $cutePet;
                     echo '</h2>';
                     echo '<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
                                         condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
