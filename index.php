@@ -66,7 +66,7 @@
     <div class="jumbotron">
         <div class="container">
             <?php
-
+                $cleverWelcomeMessage = 'All the love, none of the crap!';
             ?>
 
             <h1><?php echo 'Look mom, PHP!'; ?></h1>
