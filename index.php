@@ -1,6 +1,7 @@
 <?php
-    $petsJson = file_get_contents('dinosaurs.json');
-    var_dump($petsJson);die;
+    $petsJson = file_get_contents('pets.json');
+    $pets = json_decode($petsJson);
+    var_dump($pets);die;
 
     $pet1 = array(
         'name' => 'Chew Barka',
