@@ -82,6 +82,8 @@
         $pet1 = 'Chew Barka';
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
+
+        $pets = array();
     ?>
 
     <div class="container">
