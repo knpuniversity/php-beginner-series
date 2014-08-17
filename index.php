@@ -65,6 +65,10 @@
 
     <div class="jumbotron">
         <div class="container">
+            <?php
+
+            ?>
+
             <h1><?php echo 'Look mom, PHP!'; ?></h1>
 
             <p>This is a template for a simple marketing or informational website. It includes a large callout called the
