@@ -612,7 +612,7 @@
         },
         {
             "id": "get-pet-add-the-function",
-            "name": "get_pet: Add the function",
+            "name": "get_pet: Add the query",
             "description": null
         }
     ],
