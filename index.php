@@ -93,6 +93,7 @@
         $pancake['breed'] = 'Bulldog';
 
         $pets = array($pet1, $pet2, $pet3);
+        $pets[] = 'Kitty Gaga';
     ?>
 
     <div class="container">
