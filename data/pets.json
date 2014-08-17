@@ -10,7 +10,7 @@
     {
         "name": "Spark Pug",
         "breed": "Pug",
-        "age": "1.5 years",
+        "age": "hidden",
         "weight": 11,
         "bio": "You want to go to the dog park in style? Then I am your pug!",
         "image": "pet2.png"
