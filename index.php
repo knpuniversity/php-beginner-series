@@ -66,7 +66,7 @@
     <div class="jumbotron">
         <div class="container">
             <?php
-                $cleverWelcomeMessage = 'All the love, none of the crap!';
+                $cleverWelcomeMessage = 'All the love, none of the crap!'
                 $pupCount = 5000;
             ?>
 
