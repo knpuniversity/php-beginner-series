@@ -84,8 +84,6 @@
         $pet3 = 'Pico de Gato';
 
         $pets = array($pet1, $pet2, $pet3);
-
-        echo $pets[3];
     ?>
 
     <div class="container">
