@@ -88,7 +88,7 @@
                 <div class="col-lg-4 pet-list-item">
                     <h2><?php echo $cutePet['name']; ?></h2>
 
-                    <img src="/images/<?php echo $cutePet['filename']; ?>" class="img-rounded">
+                    <img src="/images/<?php echo $cutePet['image']; ?>" class="img-rounded">
 
                     <blockquote class="pet-details">
                         <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
