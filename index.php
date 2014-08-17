@@ -83,7 +83,7 @@
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
 
-        $pets = array($pet1, $pet2, $pet3, 14);
+        $pets = array($pet1, $pet2, $pet3);
     ?>
 
     <div class="container">
