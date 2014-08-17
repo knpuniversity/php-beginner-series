@@ -1,5 +1,5 @@
 diff --git a/lib/functions.php b/lib/functions.php
-index 7bbe052..558d076 100644
+index 9e54136..8fea4ba 100644
 --- a/lib/functions.php
 +++ b/lib/functions.php
 @@ -11,7 +11,7 @@ function get_pets($limit)
@@ -8,6 +8,6 @@ index 7bbe052..558d076 100644
      $sql = 'SELECT * FROM pet';
 -    if ($limit != 0) {
 +    if ($limit) {
-         $sql = $sql .'LIMIT '.$limit;
+         $sql = $sql .' LIMIT '.$limit;
      }
      $result = $pdo->query($sql);

@@ -12,7 +12,7 @@ index 4836a84..804e77a 100644
  
  <?php require 'layout/footer.php'; ?>
 diff --git a/lib/functions.php b/lib/functions.php
-index e403f9c..7bbe052 100644
+index e403f9c..9e54136 100644
 --- a/lib/functions.php
 +++ b/lib/functions.php
 @@ -10,7 +10,11 @@ function get_pets($limit)
@@ -22,7 +22,7 @@ index e403f9c..7bbe052 100644
 -    $result = $pdo->query('SELECT * FROM pet LIMIT '.$limit);
 +    $sql = 'SELECT * FROM pet';
 +    if ($limit != 0) {
-+        $sql = $sql .'LIMIT '.$limit;
++        $sql = $sql .' LIMIT '.$limit;
 +    }
 +    $result = $pdo->query($sql);
      $pets = $result->fetchAll();
