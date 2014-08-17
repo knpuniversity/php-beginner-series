@@ -564,7 +564,27 @@
             "id": "sql-injection-show-example",
             "name": "SQL Injection: Show example",
             "description": null
+        },
+        {
+            "id": "optional-arg-pass-0-to-get-pets",
+            "name": "Optional Arg: Pass 0 to get_pets",
+            "description": null
+        },
+        {
+            "id": "optional-only-using-limit-in-if",
+            "name": "Optional: Only using $limit in if",
+            "description": null
+        },
+        {
+            "id": "optional-make-argument-optional",
+            "name": "Optional: Make argument optional",
+            "description": null
+        },
+        {
+            "id": "optional-default-limit-null",
+            "name": "Optional: Default $limit = null",
+            "description": null
         }
     ],
-    "sha": "fc943a932f4a1313d0e357ddec8a27549cb699fa"
+    "sha": "feddac55a8f2fd4990383a54af296e45518d4466"
 }

@@ -1,0 +1,25 @@
+diff --git a/contact.php b/contact.php
+index 804e77a..4836a84 100644
+--- a/contact.php
++++ b/contact.php
+@@ -4,7 +4,7 @@ require 'lib/functions.php';
+ <?php require 'layout/header.php'; ?>
+ 
+ <h1>
+-    Helping you find your new best friend from over <?php echo count(get_pets(0)); ?> pets.
++    Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets.
+ </h1>
+ 
+ <?php require 'layout/footer.php'; ?>
+diff --git a/lib/functions.php b/lib/functions.php
+index 558d076..af9feaf 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-function get_pets($limit)
++function get_pets($limit = 0)
+ {
+     $config = require 'config.php';
+ 

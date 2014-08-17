@@ -1,0 +1,12 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index af9feaf..9759ea3 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-function get_pets($limit = 0)
++function get_pets($limit = null)
+ {
+     $config = require 'config.php';
+ 
