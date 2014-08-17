@@ -1,3 +1,3 @@
 <h1>
-    Helping you find your new best friend from over 500 pets.
+    Helping you find your new best friend from over <?php echo count(get_pets()); ?> pets.
 </h1>
