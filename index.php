@@ -93,7 +93,7 @@
                     <blockquote class="pet-details">
                         <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
                         <?php
-                        if (true) {
+                        if (array_key_exists('age', $cutePet)) {
                             echo $cutePet['age'];
                         }
                         ?>
