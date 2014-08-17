@@ -1,13 +1,13 @@
 <?php
     function get_pets()
     {
-        return 'Wahoooooo!';
+        $petsJson = file_get_contents('data/pets.json');
+        $pets = json_decode($petsJson, true);
+
+        return $pets;
     }
 
-    // $petsJson = file_get_contents('data/pets.json');
-    // $pets = json_decode($petsJson, true);
     $pets = get_pets();
-    var_dump($pets);die;
 
     $pets = array_reverse($pets);
 
