@@ -67,7 +67,7 @@
         <div class="container">
             <?php
                 $cleverWelcomeMessage = 'All the love, none of the crap!';
-                $pupCount = rand(50);
+                $pupCount = rand(50, 100);
             ?>
 
             <h1><?php echo $cleverWelcomeMessage; ?></h1>
