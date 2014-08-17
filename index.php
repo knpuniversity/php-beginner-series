@@ -1,5 +1,5 @@
 <?php
-    $petsJson = file_get_contents('pets.json');
+    $petsJson = file_get_contents('dinosaurs.json');
     var_dump($petsJson);die;
 
     $pet1 = array(
