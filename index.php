@@ -83,11 +83,28 @@
         $pet2 = 'Spark Pug';
         $pet3 = 'Pico de Gato';
 
+        $pancake = array('Pancake the Bulldog', '1 year', 9, 'Lorem Ipsum', 'pancake.png');
+
         $pets = array($pet1, $pet2, $pet3);
     ?>
 
     <div class="container">
         <div class="row">
+            <div class="col-lg-4 pet-list-item">
+                <h2><?php echo $pancake[0]; ?></h2>
+
+                <img src="/images/<?php echo $pancake[4]; ?>" class="img-rounded">
+
+                <blockquote class="pet-details">
+                    <?php echo $pancake[1]; ?>
+                    <?php echo $pancake[2]; ?> lbs
+                </blockquote>
+
+                <p>
+                    <?php echo $pancake[3]; ?>
+                </p>
+            </div>
+
             <?php
                 foreach ($pets as $cutePet) {
                     echo '<div class="col-lg-4">';
