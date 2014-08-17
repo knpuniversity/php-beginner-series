@@ -95,6 +95,8 @@
                         <?php
                         if (array_key_exists('age', $cutePet)) {
                             echo $cutePet['age'];
+                        } else {
+                            echo 'Unknown';
                         }
                         ?>
                         <?php echo $cutePet['weight']; ?> lbs
