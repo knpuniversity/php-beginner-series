@@ -1,4 +1,7 @@
 <?php
+    $petsJson = file_get_contents('pets.json');
+    var_dump($petsJson);die;
+
     $pet1 = array(
         'name' => 'Chew Barka',
         'breed' => 'Bichon',
@@ -37,7 +40,6 @@
 
     $pets = array($pet1, $pet2, $pet3, $pancake);
     $pets = array_reverse($pets);
-    var_dump(json_encode($pets));die;
 
     $cleverWelcomeMessage = 'All the love, none of the crap!';
     $pupCount = count($pets);
