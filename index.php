@@ -116,8 +116,6 @@
         $pancake['breed'] = 'Bulldog';
 
         $pets = array($pet1, $pet2, $pet3, $pancake);
-        $breed2 = $pets[1]['breed'];
-        var_dump($breed2);die;
     ?>
 
     <div class="container">
@@ -142,7 +140,7 @@
                 foreach ($pets as $cutePet) {
                     echo '<div class="col-lg-4">';
                     echo '<h2>';
-                    echo $cutePet;
+                    echo $cutePet['name'];
                     echo '</h2>';
                     echo '<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
                                         condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis
