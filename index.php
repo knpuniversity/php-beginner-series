@@ -90,6 +90,7 @@
             'bio' => 'Lorem Ipsum',
             'filename' => 'pancake.png'
         );
+        $pancake['breed'] = 'Bulldog';
 
         $pets = array($pet1, $pet2, $pet3);
     ?>
@@ -102,6 +103,7 @@
                 <img src="/images/<?php echo $pancake['filename']; ?>" class="img-rounded">
 
                 <blockquote class="pet-details">
+                    <span class="label label-info"><?php echo $pancake['breed']; ?></span>
                     <?php echo $pancake['age']; ?>
                     <?php echo $pancake['weight']; ?> lbs
                 </blockquote>
