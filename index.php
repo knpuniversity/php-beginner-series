@@ -1,5 +1,5 @@
 <?php
-    require 'lib/functions.php';
+    require_once 'lib/functions.php';
 
     $pets = get_pets();
 
