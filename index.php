@@ -93,12 +93,8 @@
                     <blockquote class="pet-details">
                         <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
                         <?php
-                        if (array_key_exists('age', $cutePet)) {
-                            if ($cutePet['age'] != '') {
-                                echo $cutePet['age'];
-                            } else {
-                                echo 'Unknown';
-                            }
+                        if (array_key_exists('age', $cutePet) && $cutePet['age'] != '') {
+                            echo $cutePet['age'];
                         } else {
                             echo 'Unknown';
                         }
