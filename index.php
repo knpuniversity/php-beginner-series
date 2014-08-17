@@ -95,10 +95,10 @@
                         <?php
                         if (!array_key_exists('age', $cutePet) || $cutePet['age'] == '') {
                             echo 'Unknown';
-                        } elseif ('Condition #2') {
-
+                        } elseif ($cutePet['age'] == 'hidden')
+                            echo '(contact owner for age)';
                         } else {
-                            
+                            echo $cutePet['age'];
                         }
                         ?>
                         <?php echo $cutePet['weight']; ?> lbs
