@@ -96,6 +96,8 @@
                         if (array_key_exists('age', $cutePet)) {
                             if ($cutePet['age'] != '') {
                                 echo $cutePet['age'];
+                            } else {
+                                echo 'Unknown';
                             }
                         } else {
                             echo 'Unknown';
