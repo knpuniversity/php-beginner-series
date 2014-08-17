@@ -85,7 +85,6 @@
     <div class="container">
         <div class="row">
             <?php foreach ($pets as $cutePet) { ?>
-                <?php var_dump($cutePet); ?>
                 <div class="col-lg-4 pet-list-item">
                     <h2><?php echo $cutePet['name']; ?></h2>
 
@@ -93,7 +92,11 @@
 
                     <blockquote class="pet-details">
                         <span class="label label-info"><?php echo $cutePet['breed']; ?></span>
-                        <?php echo $cutePet['age']; ?>
+                        <?php
+                        if (true) {
+                            echo $cutePet['age'];
+                        }
+                        ?>
                         <?php echo $cutePet['weight']; ?> lbs
                     </blockquote>
 
