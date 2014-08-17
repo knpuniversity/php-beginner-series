@@ -1,6 +1,7 @@
 <?php
-    $petsJson = file_get_contents('data/pets.json');
-    $pets = json_decode($petsJson, true);
+    // $petsJson = file_get_contents('data/pets.json');
+    // $pets = json_decode($petsJson, true);
+    $pets = get_pets();
 
     $pets = array_reverse($pets);
 
