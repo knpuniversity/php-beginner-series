@@ -604,7 +604,17 @@
             "id": "show-page-fill-out-html-guts",
             "name": "Show Page: Fill out HTML guts",
             "description": null
+        },
+        {
+            "id": "get-pet-create-the-function",
+            "name": "get_pet: Create the function",
+            "description": null
+        },
+        {
+            "id": "get-pet-add-the-function",
+            "name": "get_pet: Add the query",
+            "description": null
         }
     ],
-    "sha": "205c18261e53594350f3e574f794702597fec0da"
+    "sha": "3006b7d4bc67799a1533f437c0a984f8763f5de0"
 }
