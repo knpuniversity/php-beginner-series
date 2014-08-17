@@ -85,8 +85,7 @@
 
         $pets = array($pet1, $pet2, $pet3);
 
-        echo $pets[0];
-        echo $pets[2];
+        echo $pets[3];
     ?>
 
     <div class="container">
