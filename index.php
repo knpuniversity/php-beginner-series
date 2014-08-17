@@ -116,6 +116,8 @@
         $pancake['breed'] = 'Bulldog';
 
         $pets = array($pet1, $pet2, $pet3, $pancake);
+        var_dump($pets);
+        die;
     ?>
 
     <div class="container">
