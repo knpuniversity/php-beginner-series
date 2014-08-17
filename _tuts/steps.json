@@ -584,7 +584,27 @@
             "id": "optional-default-limit-null",
             "name": "Optional: Default $limit = null",
             "description": null
+        },
+        {
+            "id": "show-page-creating-show-page-and-link",
+            "name": "Show Page: Creating show page and link",
+            "description": null
+        },
+        {
+            "id": "show-page-dump-get",
+            "name": "Show Page: Dump $_GET",
+            "description": null
+        },
+        {
+            "id": "show-page-get-get-id",
+            "name": "Show Page: Get $_GET['id']",
+            "description": null
+        },
+        {
+            "id": "show-page-fill-out-html-guts",
+            "name": "Show Page: Fill out HTML guts",
+            "description": null
         }
     ],
-    "sha": "bef24215c190da4d2b5fea855ba1b12cdcdf684b"
+    "sha": "205c18261e53594350f3e574f794702597fec0da"
 }

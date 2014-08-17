@@ -1,0 +1,33 @@
+diff --git a/index.php b/index.php
+index 7acfa38..722e5a2 100644
+--- a/index.php
++++ b/index.php
+@@ -25,7 +25,11 @@
+         <div class="row">
+             <?php foreach ($pets as $cutePet) { ?>
+                 <div class="col-lg-4 pet-list-item">
+-                    <h2><?php echo $cutePet['name']; ?></h2>
++                    <h2>
++                        <a href="/show.php?id=<?php echo $cutePet['id'] ?>">
++                            <?php echo $cutePet['name']; ?>
++                        </a>
++                    </h2>
+ 
+                     <img src="/images/<?php echo $cutePet['image']; ?>" class="img-rounded">
+ 
+diff --git a/show.php b/show.php
+new file mode 100644
+index 0000000..99c108d
+--- /dev/null
++++ b/show.php
+@@ -0,0 +1,10 @@
++<?php
++require 'lib/functions.php';
++?>
++<?php require 'layout/header.php'; ?>
++
++<h1>
++    Display 1 pet
++</h1>
++
++<?php require 'layout/footer.php'; ?>

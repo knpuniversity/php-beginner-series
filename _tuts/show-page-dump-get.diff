@@ -1,0 +1,12 @@
+diff --git a/show.php b/show.php
+index 99c108d..12315ba 100644
+--- a/show.php
++++ b/show.php
+@@ -1,5 +1,7 @@
+ <?php
+ require 'lib/functions.php';
++var_dump($_GET);die;
++
+ ?>
+ <?php require 'layout/header.php'; ?>
+ 
