@@ -37,6 +37,7 @@
 
     $pets = array($pet1, $pet2, $pet3, $pancake);
     $pets = array_reverse($pets);
+    var_dump(json_encode($pets));die;
 
     $cleverWelcomeMessage = 'All the love, none of the crap!';
     $pupCount = count($pets);
