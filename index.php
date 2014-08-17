@@ -1,6 +1,6 @@
 <?php
     $petsJson = file_get_contents('pets.json');
-    $pets = json_decode($petsJson);
+    $pets = json_decode($petsJson, true);
     var_dump($pets);die;
 
     $pet1 = array(
