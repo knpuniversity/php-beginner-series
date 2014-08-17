@@ -36,6 +36,7 @@
     $pancake['breed'] = 'Bulldog';
 
     $pets = array($pet1, $pet2, $pet3, $pancake);
+    $pets = array_reverse($pets);
 
     $cleverWelcomeMessage = 'All the love, none of the crap!';
     $pupCount = count($pets);
