@@ -1,0 +1,13 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 482fd89..f659fd5 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -9,7 +9,7 @@ function get_pets()
+         $config['database_user'],
+         $config['database_pass']
+     );
+-    $result = $pdo->query('SELECT * FROM pet');
++    $result = $pdo->query('SELECT * FROM pet LIMIT 3');
+     $pets = $result->fetchAll();
+ 
+     return $pets;

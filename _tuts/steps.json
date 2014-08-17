@@ -549,7 +549,22 @@
             "id": "config-return-from-config-php",
             "name": "Config: Return from config.php",
             "description": null
+        },
+        {
+            "id": "limit-hardcode-limit-3",
+            "name": "Limit: Hardcode LIMIT 3",
+            "description": null
+        },
+        {
+            "id": "limit-add-argument-with-sql-injection",
+            "name": "Limit: Add argument with SQL injection",
+            "description": null
+        },
+        {
+            "id": "sql-injection-show-example",
+            "name": "SQL Injection: Show example",
+            "description": null
         }
     ],
-    "sha": "5f63cc69114bd311735e469ab612e70ab56470ad"
+    "sha": "fc943a932f4a1313d0e357ddec8a27549cb699fa"
 }

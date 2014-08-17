@@ -1,0 +1,35 @@
+diff --git a/index.php b/index.php
+index fcf0847..7acfa38 100644
+--- a/index.php
++++ b/index.php
+@@ -1,7 +1,7 @@
+ <?php
+     require 'lib/functions.php';
+ 
+-    $pets = get_pets();
++    $pets = get_pets(3);
+ 
+     $pets = array_reverse($pets);
+ 
+diff --git a/lib/functions.php b/lib/functions.php
+index f659fd5..e403f9c 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-function get_pets()
++function get_pets($limit)
+ {
+     $config = require 'config.php';
+ 
+@@ -9,7 +9,8 @@ function get_pets()
+         $config['database_user'],
+         $config['database_pass']
+     );
+-    $result = $pdo->query('SELECT * FROM pet LIMIT 3');
++    // THIS IS A HUGE SECURITY FLAW - TODO - WE WILL FIX THIS!
++    $result = $pdo->query('SELECT * FROM pet LIMIT '.$limit);
+     $pets = $result->fetchAll();
+ 
+     return $pets;
