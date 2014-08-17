@@ -84,6 +84,7 @@
 
     <div class="container">
         <div class="row">
+            <?php var_dump($pets);die; ?>
             <?php foreach ($pets as $cutePet) { ?>
                 <div class="col-lg-4 pet-list-item">
                     <h2><?php echo $cutePet['name']; ?></h2>
