@@ -70,7 +70,7 @@
                 $pupCount = rand(50, 100);
             ?>
 
-            <h1><?php echo strtolower($cleverWelcomeMessage); ?></h1>
+            <h1><?php echo strrev(strtolower($cleverWelcomeMessage)); ?></h1>
 
             <p>With over <?php echo $pupCount ?> pet friends!</p>
 
