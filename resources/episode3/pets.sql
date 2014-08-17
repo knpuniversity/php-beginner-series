@@ -13,7 +13,7 @@ INSERT INTO `pet`
 INSERT INTO `pet`
     (`id`, `name`, `breed`, `age`, `weight`, `bio`, `image`)
     VALUES
-    (3, 'Pico de Gato', 'Bengal', '5 years', 9, 'Oh hai, if you do not have a can of salmon I am not interested.', 'Oh hai, if you do not have a can of salmon I am not interested.');
+    (3, 'Pico de Gato', 'Bengal', '5 years', 9, 'Oh hai, if you do not have a can of salmon I am not interested.', 'pet3.png');
 
 INSERT INTO `pet`
     (`id`, `name`, `breed`, `age`, `weight`, `bio`, `image`)
