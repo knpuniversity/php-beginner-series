@@ -69,7 +69,7 @@
                 $cleverWelcomeMessage = 'All the love, none of the crap!';
             ?>
 
-            <h1><?php echo 'Look mom, PHP!'; ?></h1>
+            <h1><?php echo $cleverWelcomeMessage; ?></h1>
 
             <p>This is a template for a simple marketing or informational website. It includes a large callout called the
                 hero unit and three supporting pieces of content. Use it as a starting point to create something more
