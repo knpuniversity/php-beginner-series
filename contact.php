@@ -1,5 +1,5 @@
 <?php
-require 'index.php';
+require 'lib/functions.php';
 ?>
 
 <h1>
