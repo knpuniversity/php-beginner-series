@@ -1,0 +1,33 @@
+diff --git a/lib/config.php b/lib/config.php
+new file mode 100644
+index 0000000..25442fe
+--- /dev/null
++++ b/lib/config.php
+@@ -0,0 +1,8 @@
++<?php
++
++$config = array(
++    'database_dsn'  => 'mysql:dbname=air_pup;host=localhost',
++    'database_user' => 'root',
++    'database_pass' => null,
++);
++
+diff --git a/lib/functions.php b/lib/functions.php
+index e934d67..0f43fb3 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -2,7 +2,13 @@
+ 
+ function get_pets()
+ {
+-    $pdo = new PDO('mysql:dbname=air_pup;host=localhost', 'root', null);
++    require 'config.php';
++
++    $pdo = new PDO(
++        $config['database_dsn'],
++        $config['database_user'],
++        $config['database_pass']
++    );
+     $result = $pdo->query('SELECT * FROM pet');
+     $pets = $result->fetchAll();
+ 

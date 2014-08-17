@@ -1,0 +1,12 @@
+diff --git a/lib/config.php b/lib/config.php
+index 25442fe..53ee29c 100644
+--- a/lib/config.php
++++ b/lib/config.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-$config = array(
++$configVars = array(
+     'database_dsn'  => 'mysql:dbname=air_pup;host=localhost',
+     'database_user' => 'root',
+     'database_pass' => null,

@@ -1,0 +1,11 @@
+diff --git a/index.php b/index.php
+index d550d0b..9fc1334 100644
+--- a/index.php
++++ b/index.php
+@@ -1,5 +1,6 @@
+ <?php
+     $pdo = new PDO('mysql:dbname=air_pup;host=localhost', 'root', null);
++    var_dump($pdo);die;
+     $result = $pdo->query('SELECT * FROM pet');
+     $pets = $result->fetchAll();
+ 

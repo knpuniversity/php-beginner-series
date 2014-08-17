@@ -1,0 +1,22 @@
+diff --git a/lib/config.php b/lib/config.php
+index 53ee29c..da3e81f 100644
+--- a/lib/config.php
++++ b/lib/config.php
+@@ -6,3 +6,4 @@ $configVars = array(
+     'database_pass' => null,
+ );
+ 
++return $configVars;
+diff --git a/lib/functions.php b/lib/functions.php
+index 0f43fb3..482fd89 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -2,7 +2,7 @@
+ 
+ function get_pets()
+ {
+-    require 'config.php';
++    $config = require 'config.php';
+ 
+     $pdo = new PDO(
+         $config['database_dsn'],

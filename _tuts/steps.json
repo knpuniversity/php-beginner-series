@@ -499,7 +499,57 @@
             "id": "rreorg-full-working-save-pets-process",
             "name": "RReorg: Full working save_pets process",
             "description": null
+        },
+        {
+            "id": "db-new-pdo",
+            "name": "DB: New PDO",
+            "description": null
+        },
+        {
+            "id": "db-first-query",
+            "name": "DB: First Query",
+            "description": null
+        },
+        {
+            "id": "db-using-query-instead-of-get-pets",
+            "name": "DB: Using query instead of get_pets",
+            "description": null
+        },
+        {
+            "id": "db-dumping-pdo",
+            "name": "DB: Dumping $pdo",
+            "description": null
+        },
+        {
+            "id": "db-calling-query-like-a-flat-function",
+            "name": "DB: Calling query like a flat function",
+            "description": null
+        },
+        {
+            "id": "db-removing-debug-code",
+            "name": "DB: Removing debug code",
+            "description": null
+        },
+        {
+            "id": "db-moving-db-logic-to-get-pets",
+            "name": "DB: Moving db logic to get_pets",
+            "description": null
+        },
+        {
+            "id": "db-create-configuration-file",
+            "name": "DB: Create configuration file",
+            "description": null
+        },
+        {
+            "id": "config-rename-variable",
+            "name": "Config: Rename variable",
+            "description": null
+        },
+        {
+            "id": "config-return-from-config-php",
+            "name": "Config: Return from config.php",
+            "description": null
         }
     ],
-    "sha": "7662c7a560934728b3b5daa88fe7399f66665407"
+    "sha": "5f63cc69114bd311735e469ab612e70ab56470ad"
 }

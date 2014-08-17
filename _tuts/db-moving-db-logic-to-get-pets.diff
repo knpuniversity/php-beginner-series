@@ -1,0 +1,33 @@
+diff --git a/index.php b/index.php
+index d550d0b..fcf0847 100644
+--- a/index.php
++++ b/index.php
+@@ -1,11 +1,7 @@
+ <?php
+-    $pdo = new PDO('mysql:dbname=air_pup;host=localhost', 'root', null);
+-    $result = $pdo->query('SELECT * FROM pet');
+-    $pets = $result->fetchAll();
+-
+     require 'lib/functions.php';
+ 
+-    //$pets = get_pets();
++    $pets = get_pets();
+ 
+     $pets = array_reverse($pets);
+ 
+diff --git a/lib/functions.php b/lib/functions.php
+index f8f8335..e934d67 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -2,8 +2,9 @@
+ 
+ function get_pets()
+ {
+-    $petsJson = file_get_contents('data/pets.json');
+-    $pets = json_decode($petsJson, true);
++    $pdo = new PDO('mysql:dbname=air_pup;host=localhost', 'root', null);
++    $result = $pdo->query('SELECT * FROM pet');
++    $pets = $result->fetchAll();
+ 
+     return $pets;
+ }
