@@ -20,7 +20,51 @@ illustration: logo.png
 hasVideoDownload: 0
 
 chapters:
-    foo:
+    how-to-speak-database:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    queries-databases-tables:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    inserting-selecting-data:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    php-talks-to-mysql:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    object-oriented-intro:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    central-configuration:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    limiting-results:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    optional-function-arguments:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    query-parameters:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    query-for-one-pet:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    sql-injection-escaping:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    prepared-statements:
         title:      foo
         is_free:    true
         length:     0:00
