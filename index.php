@@ -66,7 +66,7 @@
     <div class="jumbotron">
         <div class="container">
             <?php
-                $cleverWelcomeMessage = ucwords('All the love, none of the crap!');
+                $cleverWelcomeMessage = ucwords();
                 $pupCount = rand(50, 100);
             ?>
 
