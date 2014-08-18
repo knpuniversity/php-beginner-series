@@ -1,0 +1,12 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 3b007f0..539ae1d 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -37,6 +37,7 @@ function get_pet($id)
+ {
+     $pdo = get_connection();
+     $query = 'SELECT * FROM pet WHERE id = '.$id;
++    var_dump($query);die;
+     $result = $pdo->query($query);
+ 
+     return $result->fetch();
