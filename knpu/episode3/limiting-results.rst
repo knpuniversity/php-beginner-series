@@ -3,7 +3,7 @@ Limiting the Number of Results
 
 Our app would be a little more fun to play with if we had some more interesting
 pets in our ``pet`` table. So I made a file with some SQL queries that insert
-some pets. Open up the ``resources/episode3/pets.sql`` file:
+some new furry friends. Open up the ``resources/episode3/pets.sql`` file:
 
 .. code-block:: sql
 
@@ -14,9 +14,11 @@ some pets. Open up the ``resources/episode3/pets.sql`` file:
         VALUES
         (1, 'Chew Barka', 'Bichon', '2 years', 8, 'The park, The pool ...', 'pet1.png');
 
-Cool. So the ``TRUNCATE`` query empties the ``pet`` table. After that, we
-just have a bunch of INSERT queries. Copy the contents. Now open up PHPMyAdmin,
-click the SQL tab and paste it in there. And voila! We've got 4 pets.
+Cool. ``TRUNCATE`` is the mysql keyword you use when you want to empty a table.
+It's handy when you're developing - but try not to use this on the production database,
+you'd probably end up in the dog house. After that, we just have a bunch of INSERT queries. 
+Copy the contents. Now open up PHPMyAdmin, click the SQL tab and paste it in there. 
+And voila! We've got 4 pets.
 
 .. tip::
 
@@ -26,8 +28,9 @@ click the SQL tab and paste it in there. And voila! We've got 4 pets.
     
         mysql -u root -p air_pup < resources/episode3/pets.sql
 
-When we refresh the homepage, we our 4 pets. In fact, if we had 1 million
-pets in our table, they would *all* load on this page. That would be a bummer!
+When we refresh the homepage, we see our 4 pets. In fact, if we had 1 million
+pets in our table, they would *all* load on this page. That would be way more
+dog food than I can afford!
 
 Instead, no matter *how* big this table gets, let's *only* show 3 pets on
 the homepage. To do this, we can change our query to tell MySQL to only return
@@ -45,7 +48,7 @@ the homepage. To do this, we can change our query to tell MySQL to only return
         return $pets;
     }
 
-When we refresh, only 3 pets! Hey, that's one more little MySQL trick. But
+When we refresh now, only 3 pets! Hey, that's one more little MySQL trick. But
 ``get_pets()`` is kind of broken now - it *always* returns only 3 results.
 So our contact page says that we only have 3 pets. That's not true!
 
