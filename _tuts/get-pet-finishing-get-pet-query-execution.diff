@@ -1,0 +1,36 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 7c05047..3b007f0 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -1,6 +1,6 @@
+ <?php
+ 
+-function get_pets($limit = null)
++function get_connection()
+ {
+     $config = require 'config.php';
+ 
+@@ -9,6 +9,13 @@ function get_pets($limit = null)
+         $config['database_user'],
+         $config['database_pass']
+     );
++
++    return $pdo;
++}
++
++function get_pets($limit = null)
++{
++    $pdo = get_connection();
+     // THIS IS A HUGE SECURITY FLAW - TODO - WE WILL FIX THIS!
+     $query = 'SELECT * FROM pet';
+     if ($limit) {
+@@ -28,5 +35,9 @@ function save_pets($petsToSave)
+ 
+ function get_pet($id)
+ {
++    $pdo = get_connection();
+     $query = 'SELECT * FROM pet WHERE id = '.$id;
++    $result = $pdo->query($query);
++
++    return $result->fetch();
+ }
