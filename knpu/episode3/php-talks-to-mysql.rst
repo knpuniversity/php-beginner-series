@@ -19,7 +19,8 @@ Connecting to MySQL in PHP
 We're about to take a *huge* step by talking to our database from *inside*
 our code. Actually, making queries from PHP is simpler than what we did in
 the last few chapters. But just like before, step 1 is to connect to the
-server. Open up ``index.php`` and create a new PDO object::
+server. Open up ``index.php`` and create a new PDO object. This shows off
+a new syntax which we will cover in a second::
 
     // index.php
 
@@ -27,7 +28,8 @@ server. Open up ``index.php`` and create a new PDO object::
     // ...
 
 This creates a connection to the server, but doesn't make any queries. It's
-the PHP version of when we typed the first ``mysql`` command to the server.
+the PHP version of when we typed the first ``mysql`` command in the terminal
+to the server.
 
 Before we dissect it, let's query for our pets! We're going to use a function
 called ``query`` but with a new syntax. Set the result to a ``$result`` variable.
@@ -49,7 +51,7 @@ Each item is an associative array with the column names as keys. For convenience
 it also repeats each value with an indexed key, but we won't need that extra
 stuff, so pretend it's not there.
 
-What's really cool is that the array already lokos like the array that ``get_pets``
+What's really cool is that the array already looks like the one that ``get_pets``
 gives us. If we temporarily comment out that function and use the array from
 the database by renaming ``$rows`` to ``$pets``, our page should work!!
 
