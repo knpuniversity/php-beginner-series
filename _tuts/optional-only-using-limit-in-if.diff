@@ -1,13 +1,13 @@
 diff --git a/lib/functions.php b/lib/functions.php
-index 9e54136..8fea4ba 100644
+index 9a6ca4b..e058d48 100644
 --- a/lib/functions.php
 +++ b/lib/functions.php
 @@ -11,7 +11,7 @@ function get_pets($limit)
      );
      // THIS IS A HUGE SECURITY FLAW - TODO - WE WILL FIX THIS!
-     $sql = 'SELECT * FROM pet';
+     $query = 'SELECT * FROM pet';
 -    if ($limit != 0) {
 +    if ($limit) {
-         $sql = $sql .' LIMIT '.$limit;
+         $query = $query .' LIMIT '.$limit;
      }
-     $result = $pdo->query($sql);
+     $result = $pdo->query($query);
