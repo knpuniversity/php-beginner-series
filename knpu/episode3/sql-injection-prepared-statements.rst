@@ -143,9 +143,10 @@ Moving On!
 
 Ok team, we are *killing* it. In just a few short chapters, we've updated almost
 our entire application to use a database. The only part that *doesn't* use
-the database is the new pet for, which we'll fix early in the next episode.
+the database is the new pet form, which we'll fix early in the next episode.
 
 Use your new-found power for good: create some tables in PHPMyAdmin and start
-querying for data.
+querying for data. Don't forget to put up your fence to protect against SQL Injection
+attacks, so that the adorable poodle, fluffy Truncate Table, doesn't cause you problems.
 
 Seeya next time!
