@@ -51,7 +51,7 @@ Using Query Parameters
 The HTTP request coming into the server now contains a little extra information
 via this query parameter. So how can we read this in PHP? Whenever you need
 some data from the incoming request, the answer is *always* one of those
-`supserglobal variables`_. We used ``$_POST`` to get data submitted in a
+`superglobal variables`_. We used ``$_POST`` to get data submitted in a
 form and ``$_SERVER`` to figure out if this is a GET or POST request.
 
 Query parameters are accessed via the ``$_GET`` superglobal. Let's dump this
