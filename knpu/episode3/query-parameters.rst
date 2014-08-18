@@ -20,13 +20,13 @@ statements for ``functions.php``, the header and the footer:
     Eventually, we'll learn a strategy called "routing" that makes creating
     new pages easier and gives you tons of control over how your URLs look.
 
-Ever page follows a fimilar pattern: we do some work at the top - like querying
+Every page follows a familiar pattern: we do some work at the top - like querying
 the database - and then we use the variables we created in the rest of the
 HTML to print things. Here, our "work" will be to query for only *one* pet
 in the database.
 
 But first, let's create a link from each pet on the homepage to this file.
-To tell the page *which* pet we want to display, let's ``?id=`` to the end
+To tell the page *which* pet we want to display, let's add ``?id=`` to the end
 of the URL and print out this pet's ``id``:
 
 .. code-block:: html+php
@@ -43,7 +43,7 @@ of the URL and print out this pet's ``id``:
 
 Refresh and click on the link. We're taken to the new page with a little
 ``?id=`` part on the URL. That's called a query parameter and it's the easiest
-to pass some extra data to a page.
+way to pass some extra data to a page.
 
 Using Query Parameters
 ----------------------
@@ -54,7 +54,7 @@ some data from the incoming request, the answer is *always* one of those
 `supserglobal variables`_. We used ``$_POST`` to get data submitted in a
 form and ``$_SERVER`` to figure out if this is a GET or POST request.
 
-Query parameters are access via the ``$_GET`` superglobal. Let's dump this
+Query parameters are accessed via the ``$_GET`` superglobal. Let's dump this
 whole variable:
 
 .. code-block:: html+php
@@ -73,7 +73,7 @@ Now ``$_GET`` has 3 items in it.
 .. tip::
 
     Query parameters always start with a ``?`` and then every key-value
-    pair is separated by ``&`` afterwards.
+    pair is separated by an ``&`` afterwards.
 
 So let's grab the id key from ``$_GET``:
 
