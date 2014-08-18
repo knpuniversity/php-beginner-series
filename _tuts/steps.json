@@ -614,7 +614,47 @@
             "id": "get-pet-add-the-function",
             "name": "get_pet: Add the query",
             "description": null
+        },
+        {
+            "id": "get-pet-try-using-an-outside-variable",
+            "name": "get_pet: Try using an outside variable",
+            "description": null
+        },
+        {
+            "id": "geget-pet-removing-test-variable",
+            "name": "geget_pet: Removing test variable",
+            "description": null
+        },
+        {
+            "id": "get-pet-finishing-get-pet-query-execution",
+            "name": "get_pet: Finishing get_pet query execution",
+            "description": null
+        },
+        {
+            "id": "sql-injection-dumping-query",
+            "name": "SQL Injection: Dumping query",
+            "description": null
+        },
+        {
+            "id": "sql-injection-get-pet-prepared-statement",
+            "name": "SQL Injection: get_pet prepared statement",
+            "description": null
+        },
+        {
+            "id": "sql-injection-get-pets",
+            "name": "SQL Injection: get_pets",
+            "description": null
+        },
+        {
+            "id": "sql-errors-setting-attr-errmode",
+            "name": "SQL Errors: Setting ATTR_ERRMODE",
+            "description": null
+        },
+        {
+            "id": "sql-errors-setting-param-as-integer",
+            "name": "SQL Errors: Setting param as integer",
+            "description": null
         }
     ],
-    "sha": "3006b7d4bc67799a1533f437c0a984f8763f5de0"
+    "sha": "7022a4722e67f86e0226e58ec7bd8acee78d432c"
 }
