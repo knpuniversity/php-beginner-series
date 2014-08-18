@@ -1,0 +1,19 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 539ae1d..b2ef3c6 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -36,9 +36,10 @@ function save_pets($petsToSave)
+ function get_pet($id)
+ {
+     $pdo = get_connection();
+-    $query = 'SELECT * FROM pet WHERE id = '.$id;
+-    var_dump($query);die;
+-    $result = $pdo->query($query);
++    $query = 'SELECT * FROM pet WHERE id = :idVal';
++    $stmt = $pdo->prepare($query);
++    $stmt->bindParam('idVal', $id);
++    $stmt->execute();
+ 
+-    return $result->fetch();
++    return $stmt->fetch();
+ }
