@@ -44,32 +44,107 @@ Save our Site
 
 How do we save our site? With prepared statements. Don't worry, it's an unfriendly
 term for a simple idea. Prepared statements let us build a query where the
-variable parts are kept separate and are escaped to prevent injection. For
-example, check out this imaginary situation::
+variable parts are kept separate from the rest of the query. By doing this,
+MySQL is able to make sure that the variable parts don't include any nasty
+SQL code.
 
-    $name = "Santa's helper";
-    $sql = "SELECT * FROM pet WHERE name = '".$name."'";
+Using Prepared Statements
+--------------------------
 
-Forget SQL injection, this query will have a syntax error because the apostrophe
-in "Santa's" closes the quotes in the query:
+To use prepared statements, our code needs a little rework. First, change
+the ``query`` function to ``prepare`` and put a ``:idVal`` where the id value
+should go. This returns a ``PDOStatement`` object, so let's rename the variable
+too.
 
-    SELECT * FROM pet WHERE name = 'Santa's helper';
+Now, run the query by calling ``execute`` and passing it an associative array
+with an ``idVal`` key set to the real ``$id`` variable::
 
-But with prepared statements, the final query that's sent to MySQL would
-have an extra slash in it:
+    // lib/functions.php
+    // ...
+    function get_pet($id)
+    {
+        $pdo = get_connection();
+        $query = 'SELECT * FROM pet WHERE id = :idVal';
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam('idVal', $id);
+        $stmt->execute();
 
-    SELECT * FROM pet WHERE name = 'Santa\'s helper';
+        return $stmt->fetch();
+    }
 
-The backslash is called the escape character and tells MySQL to treat the
-next character like a boring letter and not a special string-ending quote.
-This query *would* run successfully. And by the way, this same trick works
-with PHP strings::
+It's a bit longer, but it works! We built the query, but replaced the dynamic
+part with a placeholder: a word that starts with a colon. This isn't any
+PHP magic, it's just how prepared statements work. The ``prepare()`` function
+does *not* actually execute a query, it just returns a ``PDOStatement`` object
+that's ready to go. To actually make the query, we call execute, but not
+before calling ``bindParam`` for each placeholder with the real value.
+To get the data from the query, we finish up by calling either ``fetch()``
+or ``fetchAll()``.
 
-    $name = 'Santa\'s helper';
+This is *actually* how I recommend you write all your queries, whether you
+have any variable parts of not.
 
-.. note::
+Let's repeat the change in ``get_pets()``. Just write the query with the
+LIMIT placeholder, bind the parameter, call ``execute()`` to make the query
+and  ``fetchAll()`` to get the data back. Simple!
 
-    I avoided this before by using double quotes around the string. Remember
-    that double quotes and single quotes do the same things and only have
-    very minor differences.
+    // lib/functions.php
+    function get_pets($limit = null)
+    {
+        $pdo = get_connection();
 
+        $query = 'SELECT * FROM pet';
+        if ($limit) {
+            $query = $query .' LIMIT :resultLimit';
+        }
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam('resultLimit', $limit);
+        $stmt->execute();
+        $pets = $stmt->fetchAll();
+
+        return $pets;
+    }
+
+Refresh the homepage to make sure it's working. Oh crap, it's not! But there's
+also no error.
+
+Debugging Errors
+----------------
+
+Whenever there's a problem with a query, we can configure PHP to tell us
+about it, instead of staying silent like it is now. Find ``get_connection()``
+and add one extra line to configure our PDO object::
+
+    function get_connection()
+    {
+        // ...
+
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $pdo;
+    }
+
+Refresh now! Ah, a nice error! So this is what it looks like if your query
+has an error. The problem is actually subtle and really not that important.
+Pass a third argument to ``bindParam``::
+
+    $stmt->bindParam('resultLimit', $limit, PDO::PARAM_INT);
+
+*Now* it works. This tells MySQL that this value is an integer, not a string.
+This almost never matters, but it does with LIMIT statements. So like I said
+before, don't give this too much thought.
+
+When you *do* have errors with a query, the best way to debug is to try the
+query out first in PHPMyAdmin, then move it to PHP when you have it perfect.
+
+Moving On!
+----------
+
+Ok team, we are *killing* it. In just a few short chapters, we've updated almost
+our entire application to use a database. The only part that *doesn't* use
+the database is the new pet for, which we'll fix early in the next episode.
+
+Use your new-found power for good: create some tables in PHPMyAdmin and start
+querying for data.
+
+Seeya next time!
