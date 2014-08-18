@@ -12,7 +12,7 @@ index 804e77a..4836a84 100644
  
  <?php require 'layout/footer.php'; ?>
 diff --git a/lib/functions.php b/lib/functions.php
-index 8fea4ba..554fde7 100644
+index e058d48..2426f63 100644
 --- a/lib/functions.php
 +++ b/lib/functions.php
 @@ -1,6 +1,6 @@
