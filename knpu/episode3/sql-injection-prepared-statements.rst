@@ -49,7 +49,7 @@ MySQL is able to make sure that the variable parts don't include any nasty
 SQL code.
 
 Using Prepared Statements
---------------------------
+-------------------------
 
 To use prepared statements, our code needs a little rework. First, change
 the ``query`` function to ``prepare`` and put a ``:idVal`` where the id value
