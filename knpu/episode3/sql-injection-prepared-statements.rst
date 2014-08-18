@@ -56,8 +56,9 @@ the ``query`` function to ``prepare`` and put a ``:idVal`` where the id value
 should go. This returns a ``PDOStatement`` object, so let's rename the variable
 too.
 
-Now, run the query by calling ``execute`` and passing it an associative array
-with an ``idVal`` key set to the real ``$id`` variable::
+Next, call ``bindParam`` to tell MySQL that when you say ``:idVal``, you
+really mean the value of the ``$id`` variable. To actually run the query,
+call ``execute()``::
 
     // lib/functions.php
     // ...
