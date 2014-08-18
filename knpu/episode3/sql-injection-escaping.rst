@@ -10,8 +10,8 @@ Change the id value in the URL of your browser to a very specific string:
     http://localhost:8000/show.php?id=4;TRUNCATE pet
 
 Hmm, so things look ok. But refresh again. The pet is gone! In fact, check
-out the database in PHPMyAdmin - the ``pet`` table is empty! We just emptied
-the pet table by playing with the URL!
+out the database in PHPMyAdmin - the ``pet`` table is empty! Seriously, we 
+just emptied the *entire* pet table by playing with the URL!
 
 Let's dump the query in ``get_pet`` and refresh::
 
@@ -32,7 +32,7 @@ This is an SQL injection attack:
 By cleverly changing the URL, our code is now sending *2* queries to the
 database: one to select some data and another to empty our table. If our
 site were in production, imagine all the dogs that would never get walked
-and cats that would never get fed tuna. All because someone injected some
+and cats that would never get fed salmon. All because someone injected some
 SQL to drop all of our data and put us out of business. These attacks can
 also be used to silently steal data instead of destroying it.
 
