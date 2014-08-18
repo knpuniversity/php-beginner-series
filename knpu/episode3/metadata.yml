@@ -32,6 +32,10 @@ chapters:
         title:      foo
         is_free:    true
         length:     0:00
+    updating-deleting:
+        title:      foo
+        is_free:    true
+        length:     0:00
     php-talks-to-mysql:
         title:      foo
         is_free:    true
