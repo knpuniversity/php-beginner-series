@@ -6,9 +6,9 @@ isn't:
 
     http://localhost:8000/contact.php
 
-It still says we have 4 pets. Silly contact page. the problem is that
-``get_pets()`` is still reading from the ``pets.json`` file, instead of
-using the database.
+It lists a different number of pets than we know we have in the database. 
+Silly contact page. the problem is that ``get_pets()`` is still reading 
+from the ``pets.json`` file, instead of using the database.
 
 So instead of putting our query logic right inside of ``index.php``, why
 not just update ``get_pets()`` to pull from the database?
@@ -27,7 +27,7 @@ in the ``lib/functions.php`` file. Make sure to return the queried data::
     }
 
 Try out the contact page! Now that ``get_pets()`` queries the database,
-this shows that we have 2 pets.
+this shows that we have 2 slobbery pets.
 
 Back in ``index.php``, remove the database stuff and uncomment out the line
 that calls ``get_pets()``::
@@ -67,7 +67,7 @@ If we open this file in the browser, nothing happens:
 
 But we expected that: the config file doesn't echo anything, it just sets
 a PHP variable. This file isn't meant to be a page. Instead, we're going
-to require it from other files and us this ``$config`` variable.
+to require it from other files and use this ``$config`` variable.
 
 Let's do this in ``get_pets()``. Replace each argument to PDO with a key
 from the ``$config`` variable::
@@ -94,7 +94,7 @@ editor thinks ``$config`` is undefined, but we know better than that!
 Returning from an Included File
 -------------------------------
 
-But I don't *love* this. Rename ``$config`` to ``$configVars`` in ``config.php``::
+I don't *love* this. Rename ``$config`` to ``$configVars`` in ``config.php``::
 
     // lib/config.php
     $configVars = array(
@@ -140,7 +140,7 @@ create a new variable when you require it::
 
 Try it! It works again. We're using this file almost like a function: require
 it and set its return value to a variable. Most included files won't have
-a ``return`` line, but it's really common for configuration files.
+a ``return`` line, but it's really common for configuration.
 
 So hey, we have a configuration file! The advantage of putting all this stuff
 into one spot is that you can quickly find and control all the little values
