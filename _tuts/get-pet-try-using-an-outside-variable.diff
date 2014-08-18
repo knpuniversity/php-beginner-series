@@ -1,0 +1,14 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 7c05047..65ce86f 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -26,7 +26,9 @@ function save_pets($petsToSave)
+     file_put_contents('data/pets.json', $json);
+ }
+ 
++$test = 'works?';
+ function get_pet($id)
+ {
++    var_dump($test);die;
+     $query = 'SELECT * FROM pet WHERE id = '.$id;
+ }
