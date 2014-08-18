@@ -1,0 +1,13 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 1088226..9d6a837 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -24,7 +24,7 @@ function get_pets($limit = null)
+         $query = $query .' LIMIT :resultLimit';
+     }
+     $stmt = $pdo->prepare($query);
+-    $stmt->bindParam('resultLimit', $limit);
++    $stmt->bindParam('resultLimit', $limit, PDO::PARAM_INT);
+     $stmt->execute();
+     $pets = $stmt->fetchAll();
+ 
