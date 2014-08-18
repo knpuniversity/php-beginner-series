@@ -1,0 +1,24 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index b2ef3c6..49f6ebf 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -16,13 +16,15 @@ function get_connection()
+ function get_pets($limit = null)
+ {
+     $pdo = get_connection();
+-    // THIS IS A HUGE SECURITY FLAW - TODO - WE WILL FIX THIS!
++
+     $query = 'SELECT * FROM pet';
+     if ($limit) {
+-        $query = $query .' LIMIT '.$limit;
++        $query = $query .' LIMIT :resultLimit';
+     }
+-    $result = $pdo->query($query);
+-    $pets = $result->fetchAll();
++    $stmt = $pdo->prepare($query);
++    $stmt->bindParam('resultLimit', $limit);
++    $stmt->execute();
++    $pets = $stmt->fetchAll();
+ 
+     return $pets;
+ }
