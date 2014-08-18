@@ -60,11 +60,7 @@ chapters:
         title:      foo
         is_free:    true
         length:     0:00
-    sql-injection-escaping:
-        title:      foo
-        is_free:    true
-        length:     0:00
-    prepared-statements:
+    sql-injection-prepared-statements:
         title:      foo
         is_free:    true
         length:     0:00
