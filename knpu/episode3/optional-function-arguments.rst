@@ -140,7 +140,8 @@ The Function Signature
 
 By the way, the name and arguments to a function are called the "signature".
 When you hear people talking about a function's signature, it's just a
-smart-sounding way to refer to the arguments that function has. So now you'll
-sound even smarter when talking with your cool new programmer friends.
+smart-sounding way to refer to the arguments that function has and also the
+value it returns. So now you'll sound even smarter when talking with your 
+cool new programmer friends.
 
 
