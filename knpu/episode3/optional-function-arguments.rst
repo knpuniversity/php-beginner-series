@@ -18,7 +18,7 @@ So let's be clever and pass 0:
     </h1>
 
 Next, add an ``if`` statement in ``get_pets()``. Let's only add the limit
-of the ``$limit`` variable is set to something other than zero. We can do
+if the ``$limit`` variable is set to something other than zero. We can do
 this by first creating a ``$query`` variable. Then, if we have a limit, add
 a little bit more to the new variable::
 
@@ -43,9 +43,9 @@ just got a bit more powerful.
 Using Things that Look & Smell Like true/false in an If Statement
 -----------------------------------------------------------------
 
-Whenever we have an ``if`` statement, we always pass it a boolean: some variable
-or little bit of code that equates to either ``true`` or ``false``. When
-we use the ``!=`` operator, PHP compares the values and feeds either true
+Whenever we have an ``if`` statement, we always pass it a boolean: 
+either a variable or little bit of code that equates to ``true`` or ``false``. 
+When we use the ``!=`` operator, PHP compares the values and feeds either true
 or false to the ``if`` statement. That's old news for us.
 
 But let's try something. What if we *just* put the ``$limit`` variable in
@@ -62,11 +62,11 @@ So ``$limit`` isn't a boolean: it's either the number 3 or 0, depending on
 who's calling it. So will this work? Will we get an error?
 
 Refresh the contact page. No error - and it shows 4 pets. Now go to the homepage.
-We have see 3 pets. Things are still working!
+We see 3 pets. Things are still working!
 
 So you *can* pass something other than ``true`` or ``false`` to an ``if``
 statement. And when you do, PHP looks at what's there and tries to figure
-out if what you passed looks and smells more like true or more like false.
+out if it looks and smells more like true or more like false.
 
 For example, empty things like an empty string or the number zero becomes
 false. Everything else becomes true.
@@ -139,7 +139,7 @@ The Function Signature
 ----------------------
 
 By the way, the name and arguments to a function are called the "signature".
-When you here people talking about a function's signature, it's just a
+When you hear people talking about a function's signature, it's just a
 smart-sounding way to refer to the arguments that function has. So now you'll
 sound even smarter when talking with your cool new programmer friends.
 
