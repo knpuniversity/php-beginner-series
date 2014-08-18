@@ -3,8 +3,8 @@ Queries, Databases and Tables: Oh My!
 
 On this screen, we're now talking directly to the MySQL database software
 that's running on our computer. It's kind of like talking to a dumb robot,
-or like talking to Siri! We can ask it questions and give it commands, as
-long as we use a simple syntax it understands.
+like Siri! We can ask it questions and give it commands, as long as we use 
+a simple syntax it understands.
 
 Let's try saying hi. Each command should end with a semicolon:
 
@@ -67,7 +67,7 @@ There it is! This fancy new database is like an empty directory: there's
 nothing in it yet but it's ready to go!
 
 Hey! We already know 3 MySQL commands, or queries: SELECT, CREATE DATABASE
-and SHOW DATABASES; And really, there really aren't that many more to learn.
+and SHOW DATABASES; And there really aren't that many more to learn.
 
 Creating a Table
 ----------------
@@ -89,7 +89,7 @@ In the database world, each of these is a table.
 
 So before we start tossing pets into the database, we need to create a table
 and tell MySQL exactly what fields this it will have. We're going to do this
-the hard way for - you'll thank me later when you *really* understand this
+the hard way first - you'll thank me later when you *really* understand this
 stuff!
 
 Like all things, a table is created by asking the database politely. In other
@@ -132,4 +132,4 @@ Try another query to see all the tables in the database:
     SHOW TABLES;
 
 Ok, only 1 table so far, but great start! We've created our database and
-a table. To celebrate, let's put some data in it!
+a table. To celebrate, let's give it a treat by putting some data in it!
