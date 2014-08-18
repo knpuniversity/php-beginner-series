@@ -1,12 +1,12 @@
 diff --git a/show.php b/show.php
-index c70a3ea..a120790 100644
+index c70a3ea..6d2ff49 100644
 --- a/show.php
 +++ b/show.php
 @@ -1,12 +1,41 @@
  <?php
  require 'lib/functions.php';
  $id = $_GET['id'];
-+$pet = get_pet();
++$pet = get_pet($id);
  
  ?>
  <?php require 'layout/header.php'; ?>
