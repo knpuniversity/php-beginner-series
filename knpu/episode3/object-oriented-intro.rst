@@ -8,7 +8,7 @@ language: objects.
 To talk to the database, we first open a connection using a *class* called
 ``PDO``. This returns an object, which we set to the ``$pdo`` variable. We
 haven't talked about classes or objects yet, but it's not important for you
-to understand them yet. Just know that an *object* is another PHP data type.
+to understand them. Just know that an *object* is another PHP data type.
 So in addition to strings, numbers, arrays and booleans, we have objects.
 We'll learn a little about them now, and a lot more in future episodes.
 
@@ -56,7 +56,7 @@ PDO object. If we try to call it like a global function, it doesn't exist!
 
     Call to undefined function query()
 
-Add the ``$pdo->`` back so that we're calling query on that object. Now
+Add the ``$pdo->`` back so that we're calling a query on that object. Now
 the page works again.
 
 A Peek into Object-Oriented Programming
@@ -65,8 +65,8 @@ A Peek into Object-Oriented Programming
 Classes and objects belong to something called object-oriented programming,
 which might be the most important programming concept you'll ever learn.
 But I don't want to get too far into it now. Just be aware that we'll be
-working with a few objects and that we can control and command these objects
-by calling function on them with this syntax.
+working with a few objects. And each object has its own set of functions that
+we can call, like ``query`` and ``fetchAll``.
 
 The Old-School mysql functions
 ------------------------------
@@ -83,5 +83,5 @@ tutorial on the web will teach you this way::
 See it? Simple enough? Great. Now, *never* **ever** use this. These functions
 are old. In fact, they're said to be "deprecated", which means that a future
 version of PHP will remove these. I want you to be a *great* developer, so
-we're doing to skip straight past these and use the newer, better method
+we're going to skip straight past these and use the newer, better method
 and leave this old stuff in the past.
