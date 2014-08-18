@@ -43,7 +43,7 @@ is usually an integer that auto-increments. If we don't send a value for
 it, MySQL just picks 1, 2, 3, 4 and so on. That's really handy, because the
 primary key of each row needs to be unique in the table.
 
-Let's add anotehr pet, but leave both the ``id`` and ``breed`` columns blank:
+Let's add another pet, but leave both the ``id`` and ``breed`` columns blank:
 
 .. code-block:: sql
 
@@ -90,7 +90,7 @@ Putting it All Together
 When you're all done running queries, just type quit.
 
 Now let's put this all together. MySQL is a database software that runs on a
-server and listeners to port 3306. We tell the ``mysql`` program that there
+server and listens to port 3306. We tell the ``mysql`` program that there
 is database software running on some computer and that it's waiting for us
 to talk to it on port 3306. In this case, the database is right on our computer,
 so we use ``localhost`` instead of the IP address of some other machine.
@@ -184,7 +184,7 @@ XAMPP, you can already access it by going to ``http://localhost/phpmyadmin``:
 
     http://localhost/phpmyadmin
 
-Oh, and this doesn't work, make sure that Apache is running. For XAMPP, you
+Oh, and if this doesn't work, make sure that Apache is running. For XAMPP, you
 can do this in its control panel - we `turned Apache off in episode 1`_, just
 to prove how we weren't using it for our site.
 
