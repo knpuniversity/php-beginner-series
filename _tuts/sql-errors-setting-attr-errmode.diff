@@ -1,0 +1,13 @@
+diff --git a/lib/functions.php b/lib/functions.php
+index 49f6ebf..1088226 100644
+--- a/lib/functions.php
++++ b/lib/functions.php
+@@ -10,6 +10,8 @@ function get_connection()
+         $config['database_pass']
+     );
+ 
++    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
++
+     return $pdo;
+ }
+ 
