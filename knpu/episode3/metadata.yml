@@ -1,0 +1,70 @@
+title:  Starging in PHP Episode 3
+length: 0:00:00
+summary: |
+    Woh, this is episode 3 of our Epic PHP series!
+    
+    * [Episode 1](http://knpuniversity.com/screencast/php-ep1).
+    * [Episode 2](http://knpuniversity.com/screencast/php-ep2).
+
+    This course is a work-in-progress, but if you subscribe (upper right
+    corner of this page), we'll email you when new chapters are added and
+    when this course is ready!
+    
+    After all you've learned in episodes 1 and 2, it's time to keep going
+    by reading and writing from a database, and a whole lot more.
+    
+    We'll learn how to develop with PHP with a real project, and **coding exercises**
+    throughout the screencast so you can practice immediately.
+
+illustration: logo.png
+hasVideoDownload: 0
+
+chapters:
+    how-to-speak-database:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    queries-databases-tables:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    inserting-selecting-data:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    updating-deleting:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    php-talks-to-mysql:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    object-oriented-intro:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    central-configuration:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    limiting-results:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    optional-function-arguments:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    query-parameters:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    query-for-one-pet:
+        title:      foo
+        is_free:    true
+        length:     0:00
+    sql-injection-prepared-statements:
+        title:      foo
+        is_free:    true
+        length:     0:00
