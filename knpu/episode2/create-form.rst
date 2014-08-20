@@ -57,6 +57,8 @@ attribute to point back to this same page and definitely don't forget the
 
 Finally, you're going to need a cool-looking submit button in the form!
 
+.. code-block:: html+php
+
     <button type="submit" class="btn btn-primary">
         <span class="glyphicon glyphicon-heart"></span> Add
     </button>
