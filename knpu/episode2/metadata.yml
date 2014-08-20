@@ -1,5 +1,5 @@
 title:  Episode 2: How to stop worrying and start writing PHP
-length: 0:00:00
+length: 0:26:52
 summary: |
     This is episode 2 of our Epic PHP series. Find episode 1
     [here](http://knpuniversity.com/screencast/php-ep1).
@@ -22,24 +22,24 @@ chapters:
     request-new-page:
         title:      Request, New Page and - Hey, You Welcome Back!
         is_free:    true
-        length:     1:00
+        length:     4:53
     create-form:
         title:      We deserve to Create a Form
         is_free:    false
-        length:     1:00
+        length:     2:57
     reading-form-data:
         title:      Reading POST'ed (Form) Data
         is_free:    false
-        length:     1:00
+        length:     6:19
     saving-pets:
         title:      Saving Pets
         is_free:    false
-        length:     1:00
+        length:     4:22
     redirecting:
         title:      The Art of Redirecting
         is_free:    false
-        length:     1:00
+        length:     5:01
     code-cleanup:
         title:      Cleaning up with save_pets
         is_free:    false
-        length:     1:00
+        length:     3:20
