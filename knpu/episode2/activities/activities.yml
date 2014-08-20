@@ -56,3 +56,17 @@ save_to_file:
         layout/header.php: layout/header.php
         layout/footer.php: layout/footer.php
     asserts: SaveToFileSuite.php
+
+redirect:
+    question: |
+        After you process a form submit, you should always redirect the
+        user to another page. Redirect the user to "/" by using the `header()`
+        function to set the Location response header.
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic_form_handling.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: RedirectSuite.php

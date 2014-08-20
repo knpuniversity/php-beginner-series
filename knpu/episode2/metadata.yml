@@ -46,6 +46,8 @@ chapters:
         title:      The Art of Redirecting
         is_free:    false
         length:     5:01
+        activities:
+            - { name: redirect, time: 0:00 }
     code-cleanup:
         title:      Cleaning up with save_pets
         is_free:    false
