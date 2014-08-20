@@ -116,8 +116,8 @@ Go to the homepage to find out for sure! We didn't give it an image, but
 there's our pet. We don't even have a database, and we already have a dynamic
 app.
 
-Readonable JSON!
-----------------
+Readable JSON!
+--------------
 
 If you look at ``pets.json``, it got flattened onto one line. That's ok!
 Spaces and new lines aren't important in JSON, and PHP saved without any
