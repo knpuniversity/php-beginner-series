@@ -1,0 +1,12 @@
+create_page:
+    question: |
+        I've just created pets_new.php. Add the require statements so that
+        we have our normal header and footer. Then, add an h1 tag in the
+        middle of the page.
+    worker: php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: blank.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: CreatePageSuite.php

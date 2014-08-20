@@ -23,6 +23,8 @@ chapters:
         title:      Request, New Page and - Hey, You Welcome Back!
         is_free:    true
         length:     4:53
+        activities:
+            - { name: create_page, time: 0:00 }
     create-form:
         title:      We deserve to Create a Form
         is_free:    false
