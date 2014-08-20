@@ -40,3 +40,19 @@ check_http_method:
         layout/header.php: layout/header.php
         layout/footer.php: layout/footer.php
     asserts: CheckHttpMethodSuite.php
+
+save_to_file:
+    question: |
+        We've just submitted the form and have the name and bio of the new
+        pet. Convert this array to a JSON string and then save it to a new
+        file called `new_pet.json`. To keep things simple - we're not updating
+        an existing file - just save the JSON string of this *one* pet to
+        this file.
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic_form_handling.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: SaveToFileSuite.php

@@ -40,6 +40,8 @@ chapters:
         title:      Saving Pets
         is_free:    false
         length:     4:22
+        activities:
+            - { name: save_to_file, time: 0:00 }
     redirecting:
         title:      The Art of Redirecting
         is_free:    false
