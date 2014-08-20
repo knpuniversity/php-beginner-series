@@ -1,0 +1,90 @@
+create_page:
+    question: |
+        I've just created pets_new.php. Add the require statements so that
+        we have our normal header and footer. Then, add an h1 tag in the
+        middle of the page.
+    worker: php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: blank.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: CreatePageSuite.php
+
+form_dump_data:
+    question: |
+        Add a `name` textbox and a `bio` textarea to the form. Next, use
+        `var_dump` and `$_POST` to dump each of these at the top of the page.
+        We'll show you what the output would look like if someone filled
+        out both the fields and submitted.
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: FormDumpDataSuite.php
+
+check_http_method:
+    question: |
+        We only want to process the form if it was *actually* submitted.
+        Use the $_SERVER['REQUEST_METHOD'] value and an if statement to
+        *only* dump the values if the user has submitted the form (i.e.
+        if this is a POST request)
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: CheckHttpMethodSuite.php
+
+save_to_file:
+    question: |
+        We've just submitted the form and have the name and bio of the new
+        pet. Convert this array to a JSON string and then save it to a new
+        file called `new_pet.json`. To keep things simple - we're not updating
+        an existing file - just save the JSON string of this *one* pet to
+        this file.
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic_form_handling.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: SaveToFileSuite.php
+
+redirect:
+    question: |
+        After you process a form submit, you should always redirect the
+        user to another page. Redirect the user to "/" by using the `header()`
+        function to set the Location response header.
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic_form_handling.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: RedirectSuite.php
+
+refactor_into_function:
+    question: |
+        We have a working form submit and redirect! To organize things better,
+        fill in the contents of a new `save_new_pet()` function (i.e. encode
+        the `$petArray` to JSON & save it( and then call it from `pets_new.php`.
+        Don't forget to add a `require` statement in `pets_new.php` to include
+        `lib/functions.php`!
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_complete.php
+        lib/functions.php: functions_basic.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: RefactorFunctionSuite.php
+
