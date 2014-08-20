@@ -273,8 +273,8 @@ it back on, run the command again. Don't forget to start this before you work.
 
     By pressing "up", the terminal will re-display the last command you ran.
 
-Port 800 and Port 80
-~~~~~~~~~~~~~~~~~~~~
+Port 8000 and Port 80
+~~~~~~~~~~~~~~~~~~~~~
 
 The ``:8000`` is called the port. A computer has many ports, which are like
 doors from the outside. By default, when a web request goes to a server, it
