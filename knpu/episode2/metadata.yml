@@ -4,15 +4,19 @@ summary: |
     This is episode 2 of our Epic PHP series. Find episode 1
     [here](http://knpuniversity.com/screencast/php-ep1).
 
-    This course is a work-in-progress, but if you subscribe (upper right
-    corner of this page), we'll email you when new chapters are added and
-    when this course is ready!
+    In this episode, we're learning all about forms, form submissions, how
+    this translates the the HTTP Request/Response world, and saving files
+    to the disk. This is a *huge* step forward, and all in under 30 minutes!
+    You'll learn:
     
-    After all you've learned in episode 1, it's time to keep going by reading
-    and writing from a database, and a whole lot more.
-    
-    We'll learn how to develop with PHP with a real project, and **coding exercises**
-    throughout the screencast so you can practice immediately.
+    * How to access submitted form data
+    * What the HTTP method is for a request (and how to read it)
+    * How to save files
+    * How to redirect a user
+    * What request and response "headers" are
+    * Better code organization with functions.
+
+    This will get you ready for episode 3... which is all about databases!
 
 illustration: php-ep2.png
 # status: upcoming
