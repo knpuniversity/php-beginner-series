@@ -70,3 +70,21 @@ redirect:
         layout/header.php: layout/header.php
         layout/footer.php: layout/footer.php
     asserts: RedirectSuite.php
+
+refactor_into_function:
+    question: |
+        We have a working form submit and redirect! To organize things better,
+        fill in the contents of a new `save_new_pet()` function (i.e. encode
+        the `$petArray` to JSON & save it( and then call it from `pets_new.php`.
+        Don't forget to add a `require` statement in `pets_new.php` to include
+        `lib/functions.php`!
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_complete.php
+        lib/functions.php: functions_basic.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: RefactorFunctionSuite.php
+

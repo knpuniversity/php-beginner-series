@@ -61,12 +61,12 @@ abstract class AbstractSuite extends PhpAwareSuite
         }
     }
 
-    protected function assertFunctionCallExists($functionName, $code)
+    protected function assertFunctionCallExists($functionName, $code, $msg = null)
     {
         $this->assertContains(
             $functionName,
             $code,
-            sprintf('I don\'t see the %s function being called. Did you remember to write "%s"?', $functionName, $functionName
+            $msg ? $msg : sprintf('I don\'t see the %s function being called. Did you remember to write "%s"?', $functionName, $functionName
         ));
     }
 

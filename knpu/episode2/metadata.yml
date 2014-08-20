@@ -52,3 +52,5 @@ chapters:
         title:      Cleaning up with save_pets
         is_free:    false
         length:     3:20
+        activities:
+            - { name: refactor_into_function, time: 0:00 }
