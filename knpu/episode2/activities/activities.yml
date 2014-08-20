@@ -25,3 +25,18 @@ form_dump_data:
         layout/header.php: layout/header.php
         layout/footer.php: layout/footer.php
     asserts: FormDumpDataSuite.php
+
+check_http_method:
+    question: |
+        We only want to process the form if it was *actually* submitted.
+        Use the $_SERVER['REQUEST_METHOD'] value and an if statement to
+        *only* dump the values if the user has submitted the form (i.e.
+        if this is a POST request)
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: CheckHttpMethodSuite.php
