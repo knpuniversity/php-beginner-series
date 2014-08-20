@@ -10,3 +10,18 @@ create_page:
         layout/header.php: layout/header.php
         layout/footer.php: layout/footer.php
     asserts: CreatePageSuite.php
+
+form_dump_data:
+    question: |
+        Add a `name` textbox and a `bio` textarea to the form. Next, use
+        `var_dump` and `$_POST` to dump each of these at the top of the page.
+        We'll show you what the output would look like if someone filled
+        out both the fields and submitted.
+    worker: php
+    before_execute: fake_form_submit.php
+    entry_point: pets_new.php
+    skeletons:
+        pets_new.php: pets_new_basic.php
+        layout/header.php: layout/header.php
+        layout/footer.php: layout/footer.php
+    asserts: FormDumpDataSuite.php
