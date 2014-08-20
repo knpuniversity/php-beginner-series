@@ -45,6 +45,8 @@ We also need to wrap all of the fields in a ``form`` tag. Set its ``action``
 attribute to point back to this same page and definitely don't forget the
 ``method="POST"`` part. I'll show you why that's so important in a second:
 
+.. code-block:: html+php
+
     <h1>Add your Pet</h1>
 
     <form action="/pets_new.php" method="POST">
