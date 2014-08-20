@@ -93,7 +93,7 @@ array keys exist, starting with the ``name``:
 We can shorten this slighty by using ``isset``. It's just like ``array_key_exists``,
 but shorter and a bit easier to read:
 
-.. code-block:: hmtl+php
+.. code-block:: html+php
 
     <?php
     if (isset($_POST['name'])) {
