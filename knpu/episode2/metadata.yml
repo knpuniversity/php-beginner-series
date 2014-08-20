@@ -24,7 +24,7 @@ chapters:
         is_free:    true
         length:     4:53
         activities:
-            - { name: create_page, time: 0:00 }
+            - { name: create_page, time: 0:10 }
     create-form:
         title:      We deserve to Create a Form
         is_free:    false
@@ -34,23 +34,23 @@ chapters:
         is_free:    false
         length:     6:19
         activities:
-            - { name: form_dump_data, time: 0:00 }
-            - { name: check_http_method, time: 0:00 }
+            - { name: form_dump_data, time: 0:10 }
+            - { name: check_http_method, time: 0:20 }
     saving-pets:
         title:      Saving Pets
         is_free:    false
         length:     4:22
         activities:
-            - { name: save_to_file, time: 0:00 }
+            - { name: save_to_file, time: 0:10 }
     redirecting:
         title:      The Art of Redirecting
         is_free:    false
         length:     5:01
         activities:
-            - { name: redirect, time: 0:00 }
+            - { name: redirect, time: 0:10 }
     code-cleanup:
         title:      Cleaning up with save_pets
         is_free:    false
         length:     3:20
         activities:
-            - { name: refactor_into_function, time: 0:00 }
+            - { name: refactor_into_function, time: 0:10 }
