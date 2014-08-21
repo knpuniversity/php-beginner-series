@@ -39,7 +39,7 @@ chapters:
         length:     6:19
         activities:
             - { name: form_dump_data, time: 2:02 }
-            - { name: check_http_method, time: 6:12 }
+            - { name: check_http_method, time: 6:13 }
     saving-pets:
         title:      Saving Pets
         is_free:    false
