@@ -19,8 +19,6 @@ summary: |
     This will get you ready for episode 3... which is all about databases!
 
 illustration: php-ep2.png
-# status: upcoming
-hasVideoDownload: 0
 
 chapters:
     request-new-page:
