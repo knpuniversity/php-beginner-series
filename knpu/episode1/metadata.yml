@@ -55,6 +55,7 @@ chapters:
         title:      Arrays and Loops
         is_free:    false
         length:     6:28
+        video_key:  dfyfkbpp0p
         is_finished: 1
         activities:
             # need the ability to have 2 at once for this first one
@@ -71,6 +72,7 @@ chapters:
         title:      Arrays Level 2: Associative Arrays
         is_free:    false
         length:     4:09
+        video_key:  t8odqm2o22
         is_finished: 1
         activities:
             - { name: ch4_associative_array_print, time: 2:28 }
@@ -80,6 +82,7 @@ chapters:
         title:      We put Arrays in your Arrays!
         is_free:    false
         length:     6:33
+        video_key:  w38ndhh39c
         is_finished: 1
         activities:
             - { name: ch5_print_multilevel_key, time: 2:35 }
@@ -88,6 +91,7 @@ chapters:
         title:      "Working with Files, JSON and Booleans"
         is_free:    false
         length:     8:35
+        video_key:  wlu0hfwp4j
         is_finished: 1
         activities:
             - { name: ch6_json_encode, time: 1:26 }
@@ -99,6 +103,7 @@ chapters:
         title:      "The wonderful if Statement"
         is_free:    false
         length:     10:42
+        video_key:  uet07kbiz0
         is_finished: 1
         activities:
             - { name: ch7_simple_if, time: 2:34 }
@@ -108,11 +113,13 @@ chapters:
         title:      "System Setup"
         is_free:    false
         length:     14:24
+        video_key:  p2v3342uc7
         is_finished: 1
     "creating-functions":
         title:      "Creating Functions"
         is_free:    false
         length:     2:10
+        video_key:  luzhukq10p
         is_finished: 1
         activities:
             - { name: ch9_simple_function, time: 1:44 }
@@ -120,6 +127,7 @@ chapters:
         title: Using require to Include Functions
         is_free:    false
         length:     4:42
+        video_key:  a0vrjxeppv
         is_finished: 1
         activities:
             - { name: ch10_require, time: 3:10 }
@@ -127,4 +135,5 @@ chapters:
         title: Adding a Simple Layout
         is_free:    false
         length:     1:58
+        video_key:  36wu53cttm
         is_finished: 1
