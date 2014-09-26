@@ -19,46 +19,38 @@ summary: |
     This will get you ready for episode 3... which is all about databases!
 
 illustration: php-ep2.png
+tuts_hero:
+    start_step:  "Layout: Create and use header/footer"
+    finish_step: "RReorg: Full working save_pets process"
 
 chapters:
     request-new-page:
         title:      Request, New Page and - Hey, You Welcome Back!
         is_free:    true
-        length:     4:53
         video_key:  cqblebjgek
         activities:
-            - { name: create_page, time: 3:52 }
+            - { name: create_page }
     create-form:
         title:      We deserve to Create a Form
-        is_free:    false
-        length:     2:57
         video_key:  lv2ttcf8zn
     reading-form-data:
         title:      Reading POST'ed (Form) Data
-        is_free:    false
-        length:     6:19
         video_key:  ugsivpf04s
         activities:
-            - { name: form_dump_data, time: 2:02 }
-            - { name: check_http_method, time: 6:13 }
+            - { name: form_dump_data }
+            - { name: check_http_method }
     saving-pets:
         title:      Saving Pets
-        is_free:    false
-        length:     4:22
         video_key:  mjbsmkf4qh
         activities:
-            - { name: save_to_file, time: 3:08 }
+            - { name: save_to_file }
     redirecting:
         title:      The Art of Redirecting
-        is_free:    false
-        length:     5:01
         video_key:  bu0it04eyc
         activities:
-            - { name: redirect, time: 2:22 }
+            - { name: redirect }
     code-cleanup:
         title:      Cleaning up with save_pets
-        is_free:    false
-        length:     3:20
         video_key:  nr1nc80or8
         activities:
-            - { name: refactor_into_function, time: 2:17 }
+            - { name: refactor_into_function }
