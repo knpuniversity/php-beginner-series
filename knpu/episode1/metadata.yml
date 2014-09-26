@@ -23,117 +23,85 @@ summary: |
     * Creating a simple layout
 
 illustration: php-ep1.png
-hasVideoDownload: 1
 
 chapters:
     "lets-write-php":
         title:      Let's Write PHP
         is_free:    true
-        length:     5:48
         video_key:  wwqy11pxgn
         activities:
-            - { name: ch1_print_string, time: 2:56 }
-            - { name: ch1_set_var, time: 4:31 }
-            - { name: ch1_set_var_pupcount, time: 5:13 }
+            - { name: ch1_print_string }
+            - { name: ch1_set_var }
+            - { name: ch1_set_var_pupcount }
             # - case_sensitivity_4
     "functions":
         title:      Functions!
-        is_free:    false
-        is_finished: 1
-        length:     5:27
         video_key:  o26kx6853k
         activities:
-            - { name: ch2_rand_function, time: 1:37 }
+            - { name: ch2_rand_function }
             # these are more of a "what happens if" style question - not supported yet
-            # - { name: ch2_can_you_only_specify_arg2, time: 1:37 }
-            # - { name: ch2_upper_case_var, time: 0:00 }
-            # - { name: ch2_pass_too_many_args, time: 0:00 }
-            # - { name: ch2_upper_case_function, time: 0:00 }
-            - { name: ch2_trim_whitespace, time: 2:59 }
-            - { name: ch2_two_string_functions, time: 4:53 }
+            # - { name: ch2_can_you_only_specify_arg2 }
+            # - { name: ch2_upper_case_var }
+            # - { name: ch2_pass_too_many_args }
+            # - { name: ch2_upper_case_function }
+            - { name: ch2_trim_whitespace }
+            - { name: ch2_two_string_functions }
     "arrays-loops":
         title:      Arrays and Loops
-        is_free:    false
-        length:     6:28
         video_key:  dfyfkbpp0p
-        is_finished: 1
         activities:
             # need the ability to have 2 at once for this first one
-            # - { name: ch3_basic_array, time: 2:38 }
-            - { name: ch3_basic_array_strings, time: 2:38 }
-            - { name: ch3_print_array_key, time: 5:51 }
+            # - { name: ch3_basic_array }
+            - { name: ch3_basic_array_strings }
+            - { name: ch3_print_array_key }
             # are meant to be questions that you then have code to experiment with - not supported yet
-            # - { name: ch3_array_multiple_line, time: 0:00 }
-            # - { name: ch3_how_many_items_in_array, time: 0:00 }
-            # - { name: ch3_foreach_whitespace, time: 0:00 }
-            # - { name: ch3_print_array_key, time: 0:00 }
-            # - { name: ch3_guess_keys, time: 0:00 }
+            # - { name: ch3_array_multiple_line }
+            # - { name: ch3_how_many_items_in_array }
+            # - { name: ch3_foreach_whitespace }
+            # - { name: ch3_print_array_key }
+            # - { name: ch3_guess_keys }
     "arrays2":
         title:      Arrays Level 2: Associative Arrays
-        is_free:    false
-        length:     4:09
         video_key:  t8odqm2o22
-        is_finished: 1
         activities:
-            - { name: ch4_associative_array_print, time: 2:28 }
-            # - { name: ch4_associative_add_indexed_key, time: 0:00 }
-            - { name: ch4_associative_array_more_items, time: 3:15 }
+            - { name: ch4_associative_array_print }
+            # - { name: ch4_associative_add_indexed_key }
+            - { name: ch4_associative_array_more_items }
     "arrays3":
         title:      We put Arrays in your Arrays!
-        is_free:    false
-        length:     6:33
         video_key:  w38ndhh39c
-        is_finished: 1
         activities:
-            - { name: ch5_print_multilevel_key, time: 2:35 }
-            - { name: ch5_multilevel_arrays, time: 3:57 }
+            - { name: ch5_print_multilevel_key }
+            - { name: ch5_multilevel_arrays }
     "files-json-booleans":
         title:      "Working with Files, JSON and Booleans"
-        is_free:    false
-        length:     8:35
         video_key:  wlu0hfwp4j
-        is_finished: 1
         activities:
-            - { name: ch6_json_encode, time: 1:26 }
-            - { name: ch6_read_file, time: 2:53 }
-            - { name: ch6_json_decode, time: 5:54 }
-#            - { name: ch6_move_filename, time: 0:00 }
-#            - { name: ch6_save_file, time: 0:00 }
+            - { name: ch6_json_encode }
+            - { name: ch6_read_file }
+            - { name: ch6_json_decode }
+#            - { name: ch6_move_filename }
+#            - { name: ch6_save_file }
     "if-statement":
         title:      "The wonderful if Statement"
-        is_free:    false
-        length:     10:42
         video_key:  uet07kbiz0
-        is_finished: 1
         activities:
-            - { name: ch7_simple_if, time: 2:34 }
-            - { name: ch7_if_greater_than, time: 5:10 }
-            - { name: ch7_if_else_if, time: 10:04 }
+            - { name: ch7_simple_if }
+            - { name: ch7_if_greater_than }
+            - { name: ch7_if_else_if }
     "system-setup":
         title:      "System Setup"
-        is_free:    false
-        length:     14:24
         video_key:  p2v3342uc7
-        is_finished: 1
     "creating-functions":
         title:      "Creating Functions"
-        is_free:    false
-        length:     2:10
         video_key:  luzhukq10p
-        is_finished: 1
         activities:
-            - { name: ch9_simple_function, time: 1:44 }
+            - { name: ch9_simple_function }
     "require-include":
         title: Using require to Include Functions
-        is_free:    false
-        length:     4:42
         video_key:  a0vrjxeppv
-        is_finished: 1
         activities:
-            - { name: ch10_require, time: 3:10 }
+            - { name: ch10_require }
     "simple-layout":
         title: Adding a Simple Layout
-        is_free:    false
-        length:     1:58
         video_key:  36wu53cttm
-        is_finished: 1
