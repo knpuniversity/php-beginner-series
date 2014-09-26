@@ -23,6 +23,8 @@ summary: |
     * Creating a simple layout
 
 illustration: php-ep1.png
+tuts_hero:
+    finish_step: "Layout: Create and use header/footer"
 
 chapters:
     "lets-write-php":
