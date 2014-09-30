@@ -33,32 +33,32 @@ chapters:
         video_key:  
     inserting-selecting-data:
         title:      foo
-        video_key:  
+        video_key:  1vlfztvz9a
     updating-deleting:
         title:      foo
-        video_key:  
+        video_key:  mjezbumcol
     php-talks-to-mysql:
         title:      foo
-        video_key:  
+        video_key:  55huryvixu
     object-oriented-intro:
         title:      foo
-        video_key:  
+        video_key:  ci78yeno9w
     central-configuration:
         title:      foo
-        video_key:  
+        video_key:  n2z59hncjv
     limiting-results:
         title:      foo
-        video_key:  
+        video_key:  qt26g5d4y5
     optional-function-arguments:
         title:      foo
-        video_key:  
+        video_key:  rjgy4eomxr
     query-parameters:
         title:      foo
-        video_key:  
+        video_key:  2bvwhp9rec
     query-for-one-pet:
         title:      foo
-        video_key:  
+        video_key:  wj2frxes2q
     sql-injection-prepared-statements:
         title:      foo
-        video_key:  
+        video_key:  mu9ywnxxlg
 
