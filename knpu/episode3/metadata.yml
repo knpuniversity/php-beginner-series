@@ -26,27 +26,39 @@ tuts_hero:
 chapters:
     how-to-speak-database:
         title:      foo
+        video_key:  
         is_free:    true
     queries-databases-tables:
         title:      foo
+        video_key:  
     inserting-selecting-data:
         title:      foo
+        video_key:  
     updating-deleting:
         title:      foo
+        video_key:  
     php-talks-to-mysql:
         title:      foo
+        video_key:  
     object-oriented-intro:
         title:      foo
+        video_key:  
     central-configuration:
         title:      foo
+        video_key:  
     limiting-results:
         title:      foo
+        video_key:  
     optional-function-arguments:
         title:      foo
+        video_key:  
     query-parameters:
         title:      foo
+        video_key:  
     query-for-one-pet:
         title:      foo
+        video_key:  
     sql-injection-prepared-statements:
         title:      foo
+        video_key:  
 
