@@ -128,3 +128,5 @@ are less important, but you can google them if you're curious.
 So now our table is setup and we have an easy way to see and play with our
 data. Behind the scenes, queries are being sent to our MySQL server software,
 PHPMyAdmin is just taking care of that for us.
+
+.. _`turned Apache off in episode 1`: http://knpuniversity.com/screencast/php-ep1/system-setup#using-php-s-web-server

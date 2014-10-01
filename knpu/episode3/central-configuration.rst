@@ -109,7 +109,7 @@ referencing the old ``$config`` variable inside ``get_pets``, but that wasn't
 very obvious.
 
 Remember how we can return values from a function? We can do the same from
-included files:
+included files::
 
     // lib/config.php
     $configVars = array(

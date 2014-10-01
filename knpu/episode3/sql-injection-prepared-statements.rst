@@ -89,6 +89,8 @@ Let's repeat the change in ``get_pets()``. Just write the query with the
 LIMIT placeholder, bind the parameter, call ``execute()`` to make the query
 and  ``fetchAll()`` to get the data back. Simple!
 
+.. code-block:: php
+
     // lib/functions.php
     function get_pets($limit = null)
     {

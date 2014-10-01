@@ -28,40 +28,28 @@ tuts_hero:
 
 chapters:
     how-to-speak-database:
-        title:      'How to Speak Database'
         video_key:  ayxz5il911
         is_free:    true
     queries-databases-tables:
-        title:      'Queries, Databases & Tables'
         video_key:  27rr4b3h4v
         is_free:    true
     inserting-selecting-data:
-        title:      'Inserting & Selecting Data'
         video_key:  1vlfztvz9a
     updating-deleting:
-        title:      'Updating & Deleting Data'
         video_key:  mjezbumcol
     php-talks-to-mysql:
-        title:      'PHP Talks to MySQL'
         video_key:  55huryvixu
     object-oriented-intro:
-        title:      'OOI Intro'
         video_key:  ci78yeno9w
     central-configuration:
-        title:      'Central Configuration'
         video_key:  n2z59hncjv
     limiting-results:
-        title:      'Limiting Results'
         video_key:  qt26g5d4y5
     optional-function-arguments:
-        title:      'Optional Function Arguments'
         video_key:  rjgy4eomxr
     query-parameters:
-        title:      'Query Parameters'
         video_key:  2bvwhp9rec
     query-for-one-pet:
-        title:      'Query for one Pet'
         video_key:  wj2frxes2q
     sql-injection-prepared-statements:
-        title:      'SQL Injection & Prepared Statements'
         video_key:  mu9ywnxxlg
