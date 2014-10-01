@@ -1,4 +1,4 @@
-title:  Starting in PHP Episode 3
+title:  "Talking to a MySQL Database in PHP | Episode 3"
 length: 0:45:36
 summary: |
     Woh, this is episode 3 of our Epic PHP series!
@@ -6,18 +6,21 @@ summary: |
     * [Episode 1](http://knpuniversity.com/screencast/php-ep1).
     * [Episode 2](http://knpuniversity.com/screencast/php-ep2).
 
-    This course is a work-in-progress, but if you subscribe (upper right
-    corner of this page), we'll email you when new chapters are added and
-    when this course is ready!
-    
-    After all you've learned in episodes 1 and 2, it's time to keep going
-    by reading and writing from a database, and a whole lot more.
-    
-    We'll learn how to develop with PHP with a real project, and **coding exercises**
-    throughout the screencast so you can practice immediately.
+    Yep, and this one is all about databases:
+
+    * What the heck *is* a database anyways?
+    * Connecting to MySQL
+    * Creating a database and tables
+    * INSERT queries
+    * SELECT queries
+    * UPDATE and DELETE queries
+    * Using PDO in PHP to run queries
+    * Limiting Results
+    * Avoiding SQL Injection Attacks
+    * Prepared Statements
+    * Optional Function Arguments
 
 illustration: logo.png
-hasVideoDownload: 0
 
 tuts_hero:
     start_step:  "RReorg: Full working save_pets process"
@@ -31,6 +34,7 @@ chapters:
     queries-databases-tables:
         title:      'Queries, Databases & Tables'
         video_key:  27rr4b3h4v
+        is_free:    true
     inserting-selecting-data:
         title:      'Inserting & Selecting Data'
         video_key:  1vlfztvz9a
@@ -61,4 +65,3 @@ chapters:
     sql-injection-prepared-statements:
         title:      'SQL Injection & Prepared Statements'
         video_key:  mu9ywnxxlg
-
