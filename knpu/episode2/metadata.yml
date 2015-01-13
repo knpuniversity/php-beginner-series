@@ -19,6 +19,7 @@ summary: |
     This will get you ready for episode 3... which is all about databases!
 
 illustration: php-ep2.png
+videoDownloadExtension: mov
 tuts_hero:
     start_step:  "Layout: Create and use header/footer"
     finish_step: "RReorg: Full working save_pets process"
