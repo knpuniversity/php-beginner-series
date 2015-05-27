@@ -143,4 +143,5 @@ its contents into this middle of our page and fill in a few missing pieces:
         </div>
     </div>
 
+.. _`superglobal variables`: http://php.net/manual/en/language.variables.superglobals.php
 
