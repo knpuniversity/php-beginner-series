@@ -1,5 +1,4 @@
 title:  Episode 1: How to win friends and develop in PHP
-length: 1:10:56
 summary: |
     So you want to become a PHP developer. And not just any ol' programmer, 
     but someone who writes great code and can work on exciting projects. Well 
@@ -29,7 +28,6 @@ tuts_hero:
 
 chapters:
     "lets-write-php":
-        title:      Let's Write PHP
         is_free:    true
         video_key:  wwqy11pxgn
         activities:
@@ -38,7 +36,6 @@ chapters:
             - { name: ch1_set_var_pupcount }
             # - case_sensitivity_4
     "functions":
-        title:      Functions!
         video_key:  o26kx6853k
         activities:
             - { name: ch2_rand_function }
@@ -50,7 +47,6 @@ chapters:
             - { name: ch2_trim_whitespace }
             - { name: ch2_two_string_functions }
     "arrays-loops":
-        title:      Arrays and Loops
         video_key:  dfyfkbpp0p
         activities:
             # need the ability to have 2 at once for this first one
@@ -64,20 +60,17 @@ chapters:
             # - { name: ch3_print_array_key }
             # - { name: ch3_guess_keys }
     "arrays2":
-        title:      Arrays Level 2: Associative Arrays
         video_key:  t8odqm2o22
         activities:
             - { name: ch4_associative_array_print }
             # - { name: ch4_associative_add_indexed_key }
             - { name: ch4_associative_array_more_items }
     "arrays3":
-        title:      We put Arrays in your Arrays!
         video_key:  w38ndhh39c
         activities:
             - { name: ch5_print_multilevel_key }
             - { name: ch5_multilevel_arrays }
     "files-json-booleans":
-        title:      "Working with Files, JSON and Booleans"
         video_key:  wlu0hfwp4j
         activities:
             - { name: ch6_json_encode }
@@ -86,25 +79,21 @@ chapters:
 #            - { name: ch6_move_filename }
 #            - { name: ch6_save_file }
     "if-statement":
-        title:      "The wonderful if Statement"
         video_key:  uet07kbiz0
         activities:
             - { name: ch7_simple_if }
             - { name: ch7_if_greater_than }
             - { name: ch7_if_else_if }
     "system-setup":
-        title:      "System Setup"
         video_key:  p2v3342uc7
     "creating-functions":
-        title:      "Creating Functions"
         video_key:  luzhukq10p
         activities:
             - { name: ch9_simple_function }
     "require-include":
-        title: Using require to Include Functions
         video_key:  a0vrjxeppv
         activities:
             - { name: ch10_require }
     "simple-layout":
-        title: Adding a Simple Layout
         video_key:  36wu53cttm
+
