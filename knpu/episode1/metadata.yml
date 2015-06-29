@@ -30,7 +30,7 @@ chapters:
     "lets-write-php":
         is_free:    true
         video_key:  wwqy11pxgn
-        activities:
+        challenges:
             ch1_print_string:
                 question: |
                     Use PHP to print out the string "Hello world" between the `<h1>`
@@ -52,34 +52,34 @@ chapters:
             ch1_set_var_pupcount: ~
     "functions":
         video_key:  o26kx6853k
-        activities:
+        challenges:
             ch2_rand_function: ~
             ch2_trim_whitespace: ~
             ch2_two_string_functions: ~
     "arrays-loops":
         video_key:  dfyfkbpp0p
-        activities:
+        challenges:
             ch3_basic_array_strings: ~
             ch3_print_array_key: ~
     "arrays2":
         video_key:  t8odqm2o22
-        activities:
+        challenges:
             ch4_associative_array_print: ~
             ch4_associative_array_more_items: ~
     "arrays3":
         video_key:  w38ndhh39c
-        activities:
+        challenges:
             ch5_print_multilevel_key: ~
             ch5_multilevel_arrays: ~
     "files-json-booleans":
         video_key:  wlu0hfwp4j
-        activities:
+        challenges:
             ch6_json_encode: ~
             ch6_read_file: ~
             ch6_json_decode: ~
     "if-statement":
         video_key:  uet07kbiz0
-        activities:
+        challenges:
             ch7_simple_if: ~
             ch7_if_greater_than: ~
             ch7_if_else_if: ~
@@ -87,11 +87,11 @@ chapters:
         video_key:  p2v3342uc7
     "creating-functions":
         video_key:  luzhukq10p
-        activities:
+        challenges:
             ch9_simple_function: ~
     "require-include":
         video_key:  a0vrjxeppv
-        activities:
+        challenges:
             ch10_require: ~
     "simple-layout":
         video_key:  36wu53cttm
