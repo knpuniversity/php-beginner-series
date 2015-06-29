@@ -31,7 +31,14 @@ chapters:
         is_free:    true
         video_key:  wwqy11pxgn
         activities:
-            ch1_print_string: ~
+            ch1_print_string:
+                question: |
+                    Use PHP to print out the string "Hello world" between the `<h1>`
+                    and `</h1>` tags.
+                worker: php
+                entry_point: index.php
+                skeletons: { index.php: shared/index.php }
+                asserts: ch1/Print/PrintStringSuite.php
             ch1_set_var: ~
             ch1_set_var_pupcount: ~
     "functions":
@@ -81,14 +88,6 @@ chapters:
         video_key:  36wu53cttm
 
 activities:
-    ch1_print_string:
-        question: |
-            Use PHP to print out the string "Hello world" between the `<h1>` and `</h1>` tags
-        worker: php
-        entry_point: index.php
-        skeletons: { index.php: shared/index.php }
-        asserts: ch1/Print/PrintStringSuite.php
-
     ch1_set_var:
         question: |
             Now it's your turn to create a variable! Remove your 'Hello world' inside the h1 tag and replace it with a variable called `$pageTitle` and set it to the string "Hello World".
