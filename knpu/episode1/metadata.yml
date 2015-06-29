@@ -32,6 +32,7 @@ chapters:
         video_key:  wwqy11pxgn
         challenges:
             ch1_print_string:
+                type: coding
                 question: |
                     Use PHP to print out the string "Hello world" between the `<h1>`
                     and `</h1>` tags.
@@ -39,15 +40,16 @@ chapters:
                 entry_point: index.php
                 skeletons: { index.php: shared/index.php }
                 asserts: ch1/Print/PrintStringSuite.php
-            ch1_ask_a_question:
-                question: What is the capital of Michigan?
-                answers:
-                    a: Lansing
-                    b: Detroit
-                    c: Grand Rapids
-                    d: Traverse City
-                correct_answer: a
-                explanation: 'Lansing - although kind of a crappy place, is the capital'
+            # ch1_ask_a_question:
+            #     type: multiple_choice
+            #     question: What is the capital of Michigan?
+            #     answers:
+            #         a: Lansing
+            #         b: Detroit
+            #         c: Grand Rapids
+            #         d: Traverse City
+            #     correct_answer: a
+            #     explanation: 'Lansing - although kind of a crappy place, is the capital'
             ch1_set_var: ~
             ch1_set_var_pupcount: ~
     "functions":
@@ -98,6 +100,7 @@ chapters:
 
 challenges:
     ch1_set_var:
+        type: coding
         question: |
             Now it's your turn to create a variable! Remove your 'Hello world' inside the h1 tag and replace it with a variable called `$pageTitle` and set it to the string "Hello World".
         skeletons: { index.php: shared/index.php }
@@ -106,6 +109,7 @@ challenges:
         asserts: ch1/SetVar/SetVarSuite.php
 
     ch1_set_var_pupcount:
+        type: coding
         question: |
             Time to count your pups! Create a second variable called `$pupCount` and set it to the number 50. Then create and print this inside a `<div class="count">` element.
         skeletons: { index.php: ch1/SetVarPupCount/index.php }
@@ -114,6 +118,7 @@ challenges:
         asserts: ch1/SetVarPupCount/Test.php
 
     ch2_rand_function:
+        type: coding
         # duplication with index.php skeleton and Test between this and the previous activity
         question: |
             Give it a try! Use the `rand()` function to get a random number between 10 and 20 and assign it to the `$pupCount` variable.
@@ -123,6 +128,7 @@ challenges:
         asserts: ch2/rand/Test.php
 
     ch2_trim_whitespace:
+        type: coding
         question: |
             In the code below, we're printing a string that has some empty space on both sides. Without changing the string,
             use the `trim` function to remove those spaces before printing so that the `h1` tag has no spaces
@@ -133,6 +139,7 @@ challenges:
         asserts: ch2/trim/Test.php
 
     ch2_two_string_functions:
+        type: coding
         question: |
             Now a hard one! Let's use 2 functions at once. First, we'll use a new function:
             `strip_tags`. This removes any HTML elements from a string. For example, `Hello <span>World</span>` would
@@ -146,6 +153,7 @@ challenges:
         asserts: ch2/two_string_functions/Test.php
 
     ch3_basic_array_strings:
+        type: coding
         question: |
             Some of my favorite things are listed below in the 3 `<li>` tags. Unfortunately, needing to write `<li class="my-favorite">`
             3 times is a bit wasteful. Create an array, put the 3 strings into it (`ice cream`, `high-fives` and `vacation`),
@@ -156,6 +164,7 @@ challenges:
         asserts: ch3/basic_array_strings/Test.php
 
     ch3_print_array_key:
+        type: coding
         question: |
             Using the same array of favorite things as before, print out *only* the second item (high-fives) in the new
             `.second-thing` div.
@@ -165,6 +174,7 @@ challenges:
         asserts: ch3/print_array_key/Test.php
 
     ch4_associative_array_print:
+        type: coding
         question: |
             Let's create our first associative array! Change the array so that Pancake's name is assigned to a `name` key
             and his age to a `age` key. Once you've done that, update the code below so that we're still printing
@@ -173,7 +183,9 @@ challenges:
         worker: php
         entry_point: index.php
         asserts: ch4/associative_array_print/Test.php
+
     ch4_associative_array_more_items:
+        type: coding
         question: |
             We want to tell people what breed Pancake is, so add a `breed` key to our array, set it to "Pug", and print
             it in the `div` with the `pet-breed` class.
@@ -183,6 +195,7 @@ challenges:
         asserts: ch4/associative_array_more_items/Test.php
 
     ch5_multilevel_arrays:
+        type: coding
         question: |
             Let's print our pets! I've already prepared 3 associative arrays and am using them one by one to print out some
             pets! Create a new indexed array called `$pets` and put each of these 3 arrays inside of it. Then, use `foreach`
@@ -193,6 +206,7 @@ challenges:
         asserts: ch5/multilevel_arrays/Test.php
 
     ch5_print_multilevel_key:
+        type: coding
         question: |
             Now, using the array of pet data, see if you can print Spark Pug's breed into the `.spark-pug-breed` div, using the
             `$pets` variable to access the `breed` key on the second pet:
@@ -202,6 +216,7 @@ challenges:
         asserts: ch5/print_multilevel_key/Test.php
 
     ch6_json_encode:
+        type: coding
         question: |
             Use the `$pets` array and add in a `json_encode` function to turn `$pets` into a JSON string. Print this inside
             the `div.json-output` element just for fun! By the way - programmers have a weird idea of what is fun.
@@ -211,6 +226,7 @@ challenges:
         asserts: ch6/json_encode/Test.php
 
     ch6_read_file:
+        type: coding
         question: |
             I've just created a `pets.json` file for us right in this directory! See if you can read the contents of this
             file and dump them to the `div.file-contents` element to see what's inside!
@@ -220,6 +236,7 @@ challenges:
         asserts: ch6/read_file/Test.php
 
     ch6_json_decode:
+        type: coding
         question: |
             The `pets.json` file contains all of our pet data. Let's remove the `$pets` array in this file and instead use
             `json_decode` on the `pets.json` file contents to create the `$pets` variable. In the end, `$pets` will still
@@ -230,6 +247,7 @@ challenges:
         asserts: ch6/json_decode/Test.php
 
     ch7_simple_if:
+        type: coding
         question: |
             Instead of just printing the `breed` key, use an `if` statement to check if the `breed` is equal to `hidden`.
             If it is equal to `hidden`, simple print `The breed is not shown`. Otherwise, print the breed!
@@ -239,6 +257,7 @@ challenges:
         asserts: ch7/simple_if/Test.php
 
     ch7_if_greater_than:
+        type: coding
         question: |
             We're already printing the weight of each pet, and that's great! But, let's now echo the word HUGE 
             after printing the weight if the following is true: (1) the pet weighs more than 20 and (2) the breed 
@@ -249,6 +268,7 @@ challenges:
         asserts: ch7/if_greater_than/Test.php
 
     ch7_if_else_if:
+        type: coding
         question: |
             In this example, we're using a nested if statement to either say
             "Hey Sparky" directly to Spark Pug, print out the pet's name, or print
@@ -264,6 +284,7 @@ challenges:
         asserts: ch7/if_else_if/Test.php
 
     ch9_simple_function:
+        type: coding
         question: |
             Create a function and call it `hal_9000` and make it return
             the string `I'm sorry, Dave. I'm afraid I can't do that`. Then,
@@ -277,6 +298,7 @@ challenges:
         asserts: ch9/simple_function/Test.php
 
     ch10_require:
+        type: coding
         question: |
             We now have 2 pages - `page1.php` and `page2.php`, and each needs
             to use the `hal_9000` function. Move the function into the `functions.php`
