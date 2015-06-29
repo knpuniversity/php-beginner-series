@@ -39,6 +39,15 @@ chapters:
                 entry_point: index.php
                 skeletons: { index.php: shared/index.php }
                 asserts: ch1/Print/PrintStringSuite.php
+            ch1_ask_a_question:
+                question: What is the capital of Michigan?
+                answers:
+                    a: Lansing
+                    b: Detroit
+                    c: Grand Rapids
+                    d: Traverse City
+                correct_answer: a
+                explanation: 'Lansing - although kind of a crappy place, is the capital'
             ch1_set_var: ~
             ch1_set_var_pupcount: ~
     "functions":
@@ -87,7 +96,7 @@ chapters:
     "simple-layout":
         video_key:  36wu53cttm
 
-activities:
+challenges:
     ch1_set_var:
         question: |
             Now it's your turn to create a variable! Remove your 'Hello world' inside the h1 tag and replace it with a variable called `$pageTitle` and set it to the string "Hello World".
