@@ -31,15 +31,6 @@ chapters:
         is_free:    true
         video_key:  wwqy11pxgn
         challenges:
-            ch1_print_string:
-                type: coding
-                question: |
-                    Use PHP to print out the string "Hello world" between the `<h1>`
-                    and `</h1>` tags.
-                worker: php
-                entry_point: index.php
-                skeletons: { index.php: shared/index.php }
-                asserts: ch1/Print/PrintStringSuite.php
             ch1_ask_a_question:
                 type: multiple_choice
                 question: |
@@ -56,6 +47,16 @@ chapters:
                     As soon as you write `<?php` you are in PHP mode. So, `<?php echo 'Hello'; ?>`
                     gets you into PHP mode and executes `echo 'Hello'`. The `?>` gets
                     you *out* of PHP mode, and back into normal HTML land.
+            ch1_print_string:
+                type: coding
+                question: |
+                    Use PHP to print out "I <3 Puppies"
+                worker: php
+
+                assert:
+                    - "source.assertContains('<?php')"
+                    - "source.assertContains('echo')"
+                    - "output.assertContains('I <3 Puppies')"
             ch1_set_var: ~
             ch1_set_var_pupcount: ~
     "functions":
@@ -112,7 +113,7 @@ challenges:
         skeletons: { index.php: shared/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch1/SetVar/SetVarSuite.php
+        assert: ch1/SetVar/SetVarSuite.php
 
     ch1_set_var_pupcount:
         type: coding
@@ -121,7 +122,7 @@ challenges:
         skeletons: { index.php: ch1/SetVarPupCount/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch1/SetVarPupCount/Test.php
+        assert: ch1/SetVarPupCount/Test.php
 
     ch2_rand_function:
         type: coding
@@ -131,7 +132,7 @@ challenges:
         skeletons: { index.php: ch2/rand/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch2/rand/Test.php
+        assert: ch2/rand/Test.php
 
     ch2_trim_whitespace:
         type: coding
@@ -142,7 +143,7 @@ challenges:
         skeletons: { index.php: ch2/trim/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch2/trim/Test.php
+        assert: ch2/trim/Test.php
 
     ch2_two_string_functions:
         type: coding
@@ -156,7 +157,7 @@ challenges:
         skeletons: { index.php: ch2/two_string_functions/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch2/two_string_functions/Test.php
+        assert: ch2/two_string_functions/Test.php
 
     ch3_basic_array_strings:
         type: coding
@@ -167,7 +168,7 @@ challenges:
         skeletons: { index.php: ch3/basic_array_strings/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch3/basic_array_strings/Test.php
+        assert: ch3/basic_array_strings/Test.php
 
     ch3_print_array_key:
         type: coding
@@ -177,7 +178,7 @@ challenges:
         skeletons: { index.php: ch3/print_array_key/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch3/print_array_key/Test.php
+        assert: ch3/print_array_key/Test.php
 
     ch4_associative_array_print:
         type: coding
@@ -188,7 +189,7 @@ challenges:
         skeletons: { index.php: ch4/associative_array_print/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch4/associative_array_print/Test.php
+        assert: ch4/associative_array_print/Test.php
 
     ch4_associative_array_more_items:
         type: coding
@@ -198,7 +199,7 @@ challenges:
         skeletons: { index.php: ch4/associative_array_print/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch4/associative_array_more_items/Test.php
+        assert: ch4/associative_array_more_items/Test.php
 
     ch5_multilevel_arrays:
         type: coding
@@ -209,7 +210,7 @@ challenges:
         skeletons: { index.php: ch5/multilevel_arrays/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch5/multilevel_arrays/Test.php
+        assert: ch5/multilevel_arrays/Test.php
 
     ch5_print_multilevel_key:
         type: coding
@@ -219,7 +220,7 @@ challenges:
         skeletons: { index.php: ch5/print_multilevel_key/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch5/print_multilevel_key/Test.php
+        assert: ch5/print_multilevel_key/Test.php
 
     ch6_json_encode:
         type: coding
@@ -229,7 +230,7 @@ challenges:
         skeletons: { index.php: ch6/json_encode/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch6/json_encode/Test.php
+        assert: ch6/json_encode/Test.php
 
     ch6_read_file:
         type: coding
@@ -239,7 +240,7 @@ challenges:
         skeletons: { index.php: ch6/read_file/index.php, pets.json: ch6/shared/pets.json }
         worker: php
         entry_point: index.php
-        asserts: ch6/read_file/Test.php
+        assert: ch6/read_file/Test.php
 
     ch6_json_decode:
         type: coding
@@ -250,7 +251,7 @@ challenges:
         skeletons: { index.php: ch6/json_decode/index.php, pets.json: ch6/shared/pets.json }
         worker: php
         entry_point: index.php
-        asserts: ch6/json_decode/Test.php
+        assert: ch6/json_decode/Test.php
 
     ch7_simple_if:
         type: coding
@@ -260,7 +261,7 @@ challenges:
         skeletons: { index.php: ch7/simple_if/index.php, pets.json: ch7/shared/pets.json }
         worker: php
         entry_point: index.php
-        asserts: ch7/simple_if/Test.php
+        assert: ch7/simple_if/Test.php
 
     ch7_if_greater_than:
         type: coding
@@ -271,7 +272,7 @@ challenges:
         skeletons: { index.php: ch7/simple_if/index.php, pets.json: ch7/shared/pets.json }
         worker: php
         entry_point: index.php
-        asserts: ch7/if_greater_than/Test.php
+        assert: ch7/if_greater_than/Test.php
 
     ch7_if_else_if:
         type: coding
@@ -287,7 +288,7 @@ challenges:
         skeletons: { index.php: ch7/if_else_if/index.php, pets.json: ch7/shared/pets.json }
         worker: php
         entry_point: index.php
-        asserts: ch7/if_else_if/Test.php
+        assert: ch7/if_else_if/Test.php
 
     ch9_simple_function:
         type: coding
@@ -301,7 +302,7 @@ challenges:
         skeletons: { index.php: ch9/simple_function/index.php }
         worker: php
         entry_point: index.php
-        asserts: ch9/simple_function/Test.php
+        assert: ch9/simple_function/Test.php
 
     ch10_require:
         type: coding
@@ -316,4 +317,4 @@ challenges:
             "functions.php": ch10/require/functions.php
         worker: php
         entry_point: page2.php
-        asserts: ch10/require/Test.php
+        assert: ch10/require/Test.php
