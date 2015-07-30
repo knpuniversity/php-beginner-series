@@ -31,34 +31,12 @@ chapters:
         is_free:    true
         video_key:  wwqy11pxgn
         challenges:
-            ch1_ask_a_question:
-                type: multiple_choice
-                question: |
-                    Everything in a PHP file is just HTML code at first. If you want
-                    to write some dynamic PHP code, you active PHP mode by always
-                    writing this first:
-                answers:
-                    a: <PHP
-                    b: <?php
-                    c: ?>
-                    d: echo
-                correct_answer: b
-                explanation: |
-                    As soon as you write `<?php` you are in PHP mode. So, `<?php echo 'Hello'; ?>`
-                    gets you into PHP mode and executes `echo 'Hello'`. The `?>` gets
-                    you *out* of PHP mode, and back into normal HTML land.
-            ch1_print_string:
-                type: coding
-                question: |
-                    Use PHP to print out "I <3 Puppies"
-                worker: php
-
-                assert:
-                    - "source.assertContains('<?php')"
-                    - "source.assertContains('echo')"
-                    - "output.assertContains('I <3 Puppies')"
-            ch1_set_var: ~
-            ch1_set_var_pupcount: ~
+            # teaching: <?php, echo, creating variables, semi-colons
+            - Challenge\OpenPhpMC
+            - Challenge\SimpleEchoCoding
+            - Challenge\JobOfEcho
+            - Challenge\CreateVariableCoding
+            - Challenge\FixMissingSemicolon
     "functions":
         video_key:  o26kx6853k
         challenges:
