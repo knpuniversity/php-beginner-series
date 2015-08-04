@@ -1,0 +1,12 @@
+{
+    "name": "knpuniversity/php-beginner-series",
+    "require": {
+        "knpuniversity/activity-runner": "dev-v2-refactor"
+    },
+    "authors": [
+        {
+            "name": "Ryan Weaver",
+            "email": "ryan@knpuniversity.com"
+        }
+    ]
+}
