@@ -1,6 +1,6 @@
 <?php
 
-namespace Challenge;
+namespace Challenges;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
 use KnpU\ActivityRunner\Activity\CodingChallengeInterface;

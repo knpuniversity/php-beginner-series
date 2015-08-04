@@ -32,11 +32,11 @@ chapters:
         video_key:  wwqy11pxgn
         challenges:
             # teaching: <?php, echo, creating variables, semi-colons
-            - Challenge\OpenPhpMC
-            - Challenge\SimpleEchoCoding
-            - Challenge\JobOfEcho
-            - Challenge\CreateVariableCoding
-            - Challenge\FixMissingSemicolon
+            - Challenges\OpenPhpMC
+            - Challenges\SimpleEchoCoding
+            - Challenges\JobOfEcho
+            - Challenges\CreateVariableCoding
+            - Challenges\FixMissingSemicolon
     "functions":
         video_key:  o26kx6853k
         challenges:
