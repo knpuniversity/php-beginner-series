@@ -2,7 +2,7 @@
 
 namespace Challenges;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\MultipleChoice\AnswerBuilder;
+use KnpU\ActivityRunner\Activity\MultipleChoice\AnswerBuilder;
 use KnpU\ActivityRunner\Activity\MultipleChoiceChallengeInterface;
 
 class OpenPhpMC implements MultipleChoiceChallengeInterface
