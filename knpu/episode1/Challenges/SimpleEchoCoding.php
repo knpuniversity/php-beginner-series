@@ -51,7 +51,7 @@ EOF;
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
         $correctAnswer->setFileContents('index.php', <<<EOF
-<h2><?php echo 'i luv puppies'; ?>
+<h2><?php echo 'i luv puppies'; ?></h2>
 EOF
         );
     }

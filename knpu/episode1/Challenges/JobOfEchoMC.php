@@ -5,7 +5,7 @@ namespace Challenges;
 use KnpU\ActivityRunner\Activity\MultipleChoice\AnswerBuilder;
 use KnpU\ActivityRunner\Activity\MultipleChoiceChallengeInterface;
 
-class JobOfEcho implements MultipleChoiceChallengeInterface
+class JobOfEchoMC implements MultipleChoiceChallengeInterface
 {
     public function getQuestion()
     {
