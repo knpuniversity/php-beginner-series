@@ -39,6 +39,10 @@ chapters:
             - Challenges\FixMissingSemicolon
     "functions":
         video_key:  o26kx6853k
+        challenges:
+            - Challenges\UseRandFunctionCoding
+            - Challenges\ReverseAndLowercaseCoding
+            - Challenges\NestedFunctionsMC
     "arrays-loops":
         video_key:  dfyfkbpp0p
     "arrays2":
