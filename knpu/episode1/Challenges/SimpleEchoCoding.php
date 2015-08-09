@@ -3,6 +3,7 @@
 namespace Challenges;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
+use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
 use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
@@ -17,8 +18,8 @@ class SimpleEchoCoding implements CodingChallengeInterface
     {
         return <<<EOF
 AirPupNMeow needs you to start their site! It's a humble beginning.
-Start by opening PHP, then echo their tag line: "I <3 puppies"
-inside an <h2> tag.
+Start by opening PHP, then echo their tag line: "I luv puppies"
+inside an `<h2>` tag.
 EOF;
     }
 
@@ -41,9 +42,17 @@ EOF;
 
     public function grade(CodingExecutionResult $result)
     {
-        $expected = 'I <3 puppies';
+        $expected = 'I luv puppies';
+        $result->assertInputContains('index.php', 'echo');
         $result->assertOutputContains($expected);
         $result->assertElementContains('h2', $expected);
-        $result->assertInputContains('index.php', 'echo');
+    }
+
+    public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
+    {
+        $correctAnswer->setFileContents('index.php', <<<EOF
+<h2><?php echo 'i luv puppies'; ?>
+EOF
+        );
     }
 }

@@ -3,6 +3,7 @@
 namespace Challenges;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
+use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
 use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
@@ -29,11 +30,11 @@ EOF;
         $fileBuilder->addFileContents('index.php', <<<EOF
 
 <?php
-\$airpupTag = 'I <3 kittens'
+\$airpupTag = 'I luv kittens'
 \$yearFounded = 2015;
 
 <h2>
-    <?php echo \$airPupTag; ?> (founded <?php echo \$yearFonded; ?>)
+    <?php echo \$airpupTag; ?> (founded <?php echo \$yearFonded; ?>)
 </h2>
 EOF
         );
@@ -54,9 +55,24 @@ EOF
     {
         // sanity checks to make sure they didn't just clear the file
         // mostly, we want them to fix the errors
-        $expected = 'I <3 kittens';
+        $expected = 'I luv kittens';
         $result->assertOutputContains($expected);
         $result->assertElementContains('h2', $expected);
         $result->assertElementContains('h2', 2015);
+    }
+
+    public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
+    {
+        $correctAnswer->setFileContents('index.php', <<<EOF
+<?php
+\$airpupTag = 'I luv kittens';
+\$yearFounded = 2015;
+?>
+
+<h2>
+    <?php echo \$airpupTag; ?> (founded <?php echo \$yearFounded; ?>)
+</h2>
+EOF
+        );
     }
 }
