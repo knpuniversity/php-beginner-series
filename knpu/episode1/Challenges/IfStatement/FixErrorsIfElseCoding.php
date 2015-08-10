@@ -46,6 +46,8 @@ EOF;
 <?php } ?>
 EOF
         );
+        $fileBuilder->setEntryPointFilename('index.php');
+
         $fileBuilder->addFileContents('toys.json', <<<EOF
 [
     {

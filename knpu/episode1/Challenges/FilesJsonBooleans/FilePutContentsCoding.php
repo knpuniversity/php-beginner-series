@@ -9,7 +9,7 @@ use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
 use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
 
-class FilePutContents implements CodingChallengeInterface
+class FilePutContentsCoding implements CodingChallengeInterface
 {
     /**
      * @return string

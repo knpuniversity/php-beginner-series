@@ -9,7 +9,7 @@ use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
 use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
 
-class ReadFileJsonDecode implements CodingChallengeInterface
+class ReadFileJsonDecodeCoding implements CodingChallengeInterface
 {
     /**
      * @return string
@@ -37,6 +37,8 @@ EOF;
 <?php } ?>
 EOF
         );
+        $fileBuilder->setEntryPointFilename('index.php');
+
         $fileBuilder->addFileContents('toys.json', <<<EOF
 [
     {
