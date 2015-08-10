@@ -66,8 +66,8 @@ chapters:
         video_key:  wlu0hfwp4j
         challenges:
             - Challenges\FilesJsonBooleans\JsonEncodeMC
-            - Challenges\FilesJsonBooleans\ReadFileJsonDecode
-            - Challenges\FilesJsonBooleans\FilePutContents
+            - Challenges\FilesJsonBooleans\ReadFileJsonDecodeCoding
+            - Challenges\FilesJsonBooleans\FilePutContentsCoding
     "if-statement":
         video_key:  uet07kbiz0
         challenges:
@@ -76,9 +76,21 @@ chapters:
             - Challenges\IfStatement\FixErrorsIfElseCoding
     "system-setup":
         video_key:  p2v3342uc7
+        challenges:
+            - Challenges\SystemSetup\DnsFairyMC
+            - Challenges\SystemSetup\LocalhostPortFilenameMC
     "creating-functions":
         video_key:  luzhukq10p
+        challenges:
+            - Challanges\CreatingFunctions\FunWithCommentsMC
+            - Challanges\CreatingFunctions\CreateFunctionCoding
     "require-include":
         video_key:  a0vrjxeppv
+        challenges:
+            - Challenges\RequireInclude\IsolateFunctionUseRequireCoding
+            - Challenges\RequireInclude\NoClosingPhpTagMC
     "simple-layout":
         video_key:  36wu53cttm
+        challenges:
+            - Challenges\SimpleLayout\LayoutWithRequireCoding
+            - Challenges\SimpleLayout\RequireAndVariablesMC
