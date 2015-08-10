@@ -200,12 +200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/knpuniversity/activity-runner.git",
-                "reference": "23fe3a2c9bafc5a639392c16b7f1fd4bde2d5389"
+                "reference": "e50e5eb913aaca685023680a8166f5fcb9cbf0f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/knpuniversity/activity-runner/zipball/23fe3a2c9bafc5a639392c16b7f1fd4bde2d5389",
-                "reference": "23fe3a2c9bafc5a639392c16b7f1fd4bde2d5389",
+                "url": "https://api.github.com/repos/knpuniversity/activity-runner/zipball/e50e5eb913aaca685023680a8166f5fcb9cbf0f3",
+                "reference": "e50e5eb913aaca685023680a8166f5fcb9cbf0f3",
                 "shasum": ""
             },
             "require": {
@@ -222,6 +222,7 @@
                 "symfony/expression-language": "~2.7",
                 "symfony/finder": "~2.2",
                 "symfony/process": "~2.2",
+                "symfony/property-access": "^2.7",
                 "symfony/yaml": "~2.2",
                 "twig/twig": "~1.12"
             },
@@ -251,7 +252,7 @@
                 }
             ],
             "description": "Executes Twig & PHP activities in a safe manner",
-            "time": "2015-08-09 16:32:54"
+            "time": "2015-08-10 14:45:40"
         },
         {
             "name": "monolog/monolog",
@@ -1547,6 +1548,66 @@
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
             "time": "2015-07-01 11:25:50"
+        },
+        {
+            "name": "symfony/property-access",
+            "version": "v2.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/PropertyAccess.git",
+                "reference": "e61e1a292c397273f654b15389600fe1d5a210de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/PropertyAccess/zipball/e61e1a292c397273f654b15389600fe1d5a210de",
+                "reference": "e61e1a292c397273f654b15389600fe1d5a210de",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\PropertyAccess\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony PropertyAccess Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "access",
+                "array",
+                "extraction",
+                "index",
+                "injection",
+                "object",
+                "property",
+                "property path",
+                "reflection"
+            ],
+            "time": "2015-07-16 12:21:55"
         },
         {
             "name": "symfony/routing",

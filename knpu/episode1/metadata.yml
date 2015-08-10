@@ -45,8 +45,17 @@ chapters:
             - Challenges\Functions\NestedFunctionsMC
     "arrays-loops":
         video_key:  dfyfkbpp0p
+        challenges:
+            - Challenges\ArraysLoops\CreateArrayCoding
+            - Challenges\ArraysLoops\ForEachCoding
+            - Challenges\ArraysLoops\VarDumpCoding
+            - Challenges\ArraysLoops\ArrayKeysMC
     "arrays2":
         video_key:  t8odqm2o22
+        challenges:
+            - Challenges\Arrays2\ConvertToAssociativeCoding
+            - Challenges\Arrays2\AddNewKeyCoding
+            - Challenges\Arrays2\GuessAutoKeyMC
     "arrays3":
         video_key:  w38ndhh39c
     "files-json-booleans":
