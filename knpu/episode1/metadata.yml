@@ -58,10 +58,22 @@ chapters:
             - Challenges\Arrays2\GuessAutoKeyMC
     "arrays3":
         video_key:  w38ndhh39c
+        challenges:
+            - Challenges\Arrays3\MultiArrayKeysCoding
+            - Challenges\Arrays3\ForeachAssociativeCoding
+            - Challenges\Arrays3\CountAndVariableReorderCoding
     "files-json-booleans":
         video_key:  wlu0hfwp4j
+        challenges:
+            - Challenges\FilesJsonBooleans\JsonEncodeMC
+            - Challenges\FilesJsonBooleans\ReadFileJsonDecode
+            - Challenges\FilesJsonBooleans\FilePutContents
     "if-statement":
         video_key:  uet07kbiz0
+        challenges:
+            - Challenges\IfStatement\IfNoToyColorCoding
+            - Challenges\IfStatement\IfElseIfElseCoding
+            - Challenges\IfStatement\FixErrorsIfElseCoding
     "system-setup":
         video_key:  p2v3342uc7
     "creating-functions":

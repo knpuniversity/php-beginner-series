@@ -86,7 +86,9 @@ EOF
 <h2><?php echo \$waggyPig['name']; ?></h2>
 <div class="age"><?php echo \$waggyPig['age']; ?></div>
 <div class="weight"><?php echo \$waggyPig['weight']; ?></div>
-<div class="breed"><?php echo \$waggyPig['breed']; ?></div>
+<div class="breed">
+    <?php echo \$waggyPig['breed']; ?>
+</div>
 <p>
     <?php echo \$waggyPig['bio']; ?>
 </p>
