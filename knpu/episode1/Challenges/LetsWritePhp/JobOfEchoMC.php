@@ -1,6 +1,6 @@
 <?php
 
-namespace Challenges;
+namespace Challenges\LetsWritePhp;
 
 use KnpU\ActivityRunner\Activity\MultipleChoice\AnswerBuilder;
 use KnpU\ActivityRunner\Activity\MultipleChoiceChallengeInterface;

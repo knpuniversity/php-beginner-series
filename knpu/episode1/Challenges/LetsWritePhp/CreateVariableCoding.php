@@ -1,6 +1,6 @@
 <?php
 
-namespace Challenges;
+namespace Challenges\LetsWritePhp;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
 use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
@@ -9,7 +9,7 @@ use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
 use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
 
-class ReverseAndLowercaseCoding implements CodingChallengeInterface
+class CreateVariableCoding implements CodingChallengeInterface
 {
     /**
      * @return string
@@ -17,19 +17,24 @@ class ReverseAndLowercaseCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Someone was working at midnight, and started printing out
-things in reverse! Don't worry! We've sent them on holiday and
-now it's your job to fix things. As a challenge, see if you
-can reverse and set all characters to lowercase in one line
-using functions.
+The management of AirPupnMeow is always changing its mind. To simplify
+the life of our devs, let's use a variable so that when management
+changes the tag line, we only have to update one spot. Create
+a variable called `airpupTag` and set it to `I luv kittens`. Then print
+this inside the `<h2>` tag.
 EOF;
     }
 
     public function getFileBuilder()
     {
         $fileBuilder = new FileBuilder();
+
         $fileBuilder->addFileContents('index.php', <<<EOF
-<?php echo '!emosewaP yltcefrruP erA steP ruO'; ?>
+<!-- create the variable here -->
+
+<h2>
+    <!-- print the variable here -->
+</h2>
 EOF
         );
 
@@ -47,16 +52,22 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $expected = 'our pets are purrfectly pawesome!';
-        $result->assertInputContains('index.php', 'strrev(');
-        $result->assertInputContains('index.php', 'strtolower(');
+        $expected = 'I luv kittens';
+        $result->assertVariableEquals('airpupTag', $expected);
+        $result->assertInputContains('index.php', 'echo');
         $result->assertOutputContains($expected);
+        $result->assertElementContains('h2', $expected);
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
         $correctAnswer->setFileContents('index.php', <<<EOF
-<?php echo strtolower(strrev('!emosewaP yltcefrruP erA steP ruO')); ?>
+<!-- create the variable here -->
+<?php \$airpupTag = 'I luv kittens'; ?>
+
+<h2>
+    <?php echo \$airpupTag; ?>
+</h2>
 EOF
         );
     }

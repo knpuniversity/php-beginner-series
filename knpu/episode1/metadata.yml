@@ -32,17 +32,17 @@ chapters:
         video_key:  wwqy11pxgn
         challenges:
             # teaching: <?php, echo, creating variables, semi-colons
-            - Challenges\OpenPhpMC
-            - Challenges\SimpleEchoCoding
-            - Challenges\JobOfEcho
-            - Challenges\CreateVariableCoding
-            - Challenges\FixMissingSemicolon
+            - Challenges\LetsWritePhp\OpenPhpMC
+            - Challenges\LetsWritePhp\SimpleEchoCoding
+            - Challenges\LetsWritePhp\JobOfEcho
+            - Challenges\LetsWritePhp\CreateVariableCoding
+            - Challenges\LetsWritePhp\FixMissingSemicolon
     "functions":
         video_key:  o26kx6853k
         challenges:
-            - Challenges\UseRandFunctionCoding
-            - Challenges\ReverseAndLowercaseCoding
-            - Challenges\NestedFunctionsMC
+            - Challenges\Functions\UseRandFunctionCoding
+            - Challenges\Functions\ReverseAndLowercaseCoding
+            - Challenges\Functions\NestedFunctionsMC
     "arrays-loops":
         video_key:  dfyfkbpp0p
     "arrays2":

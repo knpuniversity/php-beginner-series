@@ -1,6 +1,6 @@
 <?php
 
-namespace Challenges;
+namespace Challenges\Functions;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
 use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
@@ -9,7 +9,7 @@ use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
 use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
 
-class SimpleEchoCoding implements CodingChallengeInterface
+class ReverseAndLowercaseCoding implements CodingChallengeInterface
 {
     /**
      * @return string
@@ -17,16 +17,21 @@ class SimpleEchoCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-AirPupNMeow needs you to start their site! It's a humble beginning.
-Start by opening PHP, then echo their tag line: "I luv puppies"
-inside an `<h2>` tag.
+Someone was working at midnight, and started printing out
+things in reverse! Don't worry! We've sent them on holiday and
+now it's your job to fix things. As a challenge, see if you
+can reverse and set all characters to lowercase in one line
+using functions.
 EOF;
     }
 
     public function getFileBuilder()
     {
         $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('index.php', '');
+        $fileBuilder->addFileContents('index.php', <<<EOF
+<?php echo '!emosewaP yltcefrruP erA steP ruO'; ?>
+EOF
+        );
 
         return $fileBuilder;
     }
@@ -42,16 +47,16 @@ EOF;
 
     public function grade(CodingExecutionResult $result)
     {
-        $expected = 'I luv puppies';
-        $result->assertInputContains('index.php', 'echo');
+        $expected = 'our pets are purrfectly pawesome!';
+        $result->assertInputContains('index.php', 'strrev(');
+        $result->assertInputContains('index.php', 'strtolower(');
         $result->assertOutputContains($expected);
-        $result->assertElementContains('h2', $expected);
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
         $correctAnswer->setFileContents('index.php', <<<EOF
-<h2><?php echo 'i luv puppies'; ?></h2>
+<?php echo strtolower(strrev('!emosewaP yltcefrruP erA steP ruO')); ?>
 EOF
         );
     }

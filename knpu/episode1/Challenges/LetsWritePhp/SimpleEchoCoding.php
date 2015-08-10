@@ -1,6 +1,6 @@
 <?php
 
-namespace Challenges;
+namespace Challenges\LetsWritePhp;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
 use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
@@ -9,7 +9,7 @@ use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
 use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
 
-class FixMissingSemicolon implements CodingChallengeInterface
+class SimpleEchoCoding implements CodingChallengeInterface
 {
     /**
      * @return string
@@ -17,27 +17,16 @@ class FixMissingSemicolon implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Poor devs. Management was so excited about variables that they
-tried to edit the code themselves. We've send the dev team for
-ice cream to make up for it. While they're gone, fix the errors
-in this file for them.
+AirPupNMeow needs you to start their site! It's a humble beginning.
+Start by opening PHP, then echo their tag line: "I luv puppies"
+inside an `<h2>` tag.
 EOF;
     }
 
     public function getFileBuilder()
     {
         $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('index.php', <<<EOF
-
-<?php
-\$airpupTag = 'I luv kittens'
-\$yearFounded = 2015;
-
-<h2>
-    <?php echo \$airpupTag; ?> (founded <?php echo \$yearFonded; ?>)
-</h2>
-EOF
-        );
+        $fileBuilder->addFileContents('index.php', '');
 
         return $fileBuilder;
     }
@@ -53,25 +42,16 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        // sanity checks to make sure they didn't just clear the file
-        // mostly, we want them to fix the errors
-        $expected = 'I luv kittens';
+        $expected = 'I luv puppies';
+        $result->assertInputContains('index.php', 'echo');
         $result->assertOutputContains($expected);
         $result->assertElementContains('h2', $expected);
-        $result->assertElementContains('h2', 2015);
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
         $correctAnswer->setFileContents('index.php', <<<EOF
-<?php
-\$airpupTag = 'I luv kittens';
-\$yearFounded = 2015;
-?>
-
-<h2>
-    <?php echo \$airpupTag; ?> (founded <?php echo \$yearFounded; ?>)
-</h2>
+<h2><?php echo 'i luv puppies'; ?></h2>
 EOF
         );
     }

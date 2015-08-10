@@ -1,6 +1,6 @@
 <?php
 
-namespace Challenges;
+namespace Challenges\LetsWritePhp;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
 use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
@@ -9,7 +9,7 @@ use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
 use KnpU\ActivityRunner\Activity\Exception\GradingException;
 use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
 
-class CreateVariableCoding implements CodingChallengeInterface
+class FixMissingSemicolon implements CodingChallengeInterface
 {
     /**
      * @return string
@@ -17,23 +17,24 @@ class CreateVariableCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-The management of AirPupnMeow is always changing its mind. To simplify
-the life of our devs, let's use a variable so that when management
-changes the tag line, we only have to update one spot. Create
-a variable called `airpupTag` and set it to `I luv kittens`. Then print
-this inside the `<h2>` tag.
+Poor devs. Management was so excited about variables that they
+tried to edit the code themselves. We've send the dev team for
+ice cream to make up for it. While they're gone, fix the errors
+in this file for them.
 EOF;
     }
 
     public function getFileBuilder()
     {
         $fileBuilder = new FileBuilder();
-
         $fileBuilder->addFileContents('index.php', <<<EOF
-<!-- create the variable here -->
+
+<?php
+\$airpupTag = 'I luv kittens'
+\$yearFounded = 2015;
 
 <h2>
-    <!-- print the variable here -->
+    <?php echo \$airpupTag; ?> (founded <?php echo \$yearFonded; ?>)
 </h2>
 EOF
         );
@@ -52,21 +53,24 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
+        // sanity checks to make sure they didn't just clear the file
+        // mostly, we want them to fix the errors
         $expected = 'I luv kittens';
-        $result->assertVariableEquals('airpupTag', $expected);
-        $result->assertInputContains('index.php', 'echo');
         $result->assertOutputContains($expected);
         $result->assertElementContains('h2', $expected);
+        $result->assertElementContains('h2', 2015);
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
         $correctAnswer->setFileContents('index.php', <<<EOF
-<!-- create the variable here -->
-<?php \$airpupTag = 'I luv kittens'; ?>
+<?php
+\$airpupTag = 'I luv kittens';
+\$yearFounded = 2015;
+?>
 
 <h2>
-    <?php echo \$airpupTag; ?>
+    <?php echo \$airpupTag; ?> (founded <?php echo \$yearFounded; ?>)
 </h2>
 EOF
         );

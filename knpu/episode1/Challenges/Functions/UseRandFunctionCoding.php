@@ -1,6 +1,6 @@
 <?php
 
-namespace Challenges;
+namespace Challenges\Functions;
 
 use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
 use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
