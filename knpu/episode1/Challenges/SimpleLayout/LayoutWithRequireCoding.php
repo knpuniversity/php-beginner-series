@@ -17,11 +17,13 @@ class LayoutWithRequireCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-The site has just one page - `index.php` - and even still, people *love* the it
-(trust us)! Now we want to create a second page - `aboutUs.php` - but we need to
-re-use the layout that's in `index.php`. To do that, move all the header HTML into
-`header.php`, move all the footer HTML into `footer.php`, and then `require` each
-of these files in `index.php` and `aboutUs.php` so that we get the same, "nice" layout.
+The site has just one page - `index.php` - and even still, people *love* it
+(trust us)! Now we've created a second page - `aboutUs.php`, but boy is it ugly!
+We need to re-use the layout that's in `index.php` in order to make it prettier.
+
+To do that, move all the header HTML into `header.php`, move all the footer HTML
+into `footer.php`, and then `require` each of these files in `index.php` and `aboutUs.php`
+so that we get the same, "nice" layout.
 EOF;
     }
 
@@ -61,16 +63,18 @@ EOF
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 </head>
 <body>
+    <div class="container">
 <!-- HEADER CODE ENDS HERE -->
 
     <h1>Welcome to AirPupNMeow.com!</h1>
     <h3><?php echo \$airpupTagLine; ?></h3>
 
 <!-- FOOTER CODE STARTS HERE -->
+	<footer>
+        &copy; 2015 AirPupNMeow.com
+	</footer>
+	</div>
 </body>
-<footer>
-    &copy; 2015 AirPupNMeow.com
-</footer>
 </html>
 <!-- FOOTER CODE STARTS HERE -->
 EOF
@@ -156,16 +160,18 @@ EOF
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 </head>
 <body>
+    <div class="container">
 <!-- HEADER CODE ENDS HERE -->
 EOF
         );
 
         $correctAnswer->setFileContents('layout/footer.php', <<<EOF
 <!-- FOOTER CODE STARTS HERE -->
+	<footer>
+        &copy; 2015 AirPupNMeow.com
+	</footer>
+	</div>
 </body>
-<footer>
-    &copy; 2015 AirPupNMeow.com
-</footer>
 </html>
 <!-- FOOTER CODE STARTS HERE -->
 EOF

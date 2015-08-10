@@ -55,7 +55,7 @@ EOF
     public function grade(CodingExecutionResult $result)
     {
         $result->assertInputContains('index.php', 'count');
-        $result->assertElementContains('h4', 3);
+        $result->assertElementContains('h4', 3, 'I don\'t see the number 3 inside the `<h4>` tag. Are you printing the `count()` there?');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)

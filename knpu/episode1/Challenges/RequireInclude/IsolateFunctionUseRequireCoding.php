@@ -18,7 +18,7 @@ class IsolateFunctionUseRequireCoding implements CodingChallengeInterface
     {
         return <<<EOF
 The pet toy business is really taking off! So the site's getting
-bigger and we need to stay organized! Move the `get_toys()` function
+bigger and we need to stay organized! Move the `get_great_pet_toys()` function
 out of `index.php` and into the new `lib/functions.php` file so we can
 re-use it later.
 EOF;
@@ -95,7 +95,7 @@ EOF
     {
         $correctAnswer->setFileContents('index.php', <<<EOF
 <?php
-require 'lib/functions.php'
+require 'lib/functions.php';
 
 \$toys = get_great_pet_toys();
 ?>

@@ -17,7 +17,7 @@ class FilePutContentsCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Use `file_put_contents` to save the text 'Dogs rule!' into a
+Use `file_put_contents` to save the text `Dogs rule!` into a
 new file called `doglife.txt`. Then read that file and print
 the string into the `<h2>` tag
 EOF;

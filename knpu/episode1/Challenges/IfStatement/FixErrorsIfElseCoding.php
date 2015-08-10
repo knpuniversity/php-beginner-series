@@ -81,7 +81,11 @@ EOF
     {
         $result->assertInputContains('index.php', 'if');
         $result->assertElementContains('h4', 'Surprise Color');
-        $result->assertElementContains('h4', 'Yellow', 'The Tennis ball isn\'t printing as Yellow. Maybe there\'s a more sublte error in our code still.');
+        $result->assertElementContains(
+            'h4',
+            'Yellow',
+            'The Tennis ball is printing as `Surprise Color!`, but it *should* be `Yellow`. There\'s a more subtle mistake in the first part of the `if` statement...'
+        );
         $result->assertElementContains('h4', 'no color');
     }
 

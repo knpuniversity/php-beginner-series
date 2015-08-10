@@ -17,9 +17,9 @@ class IfNoToyColorCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Unfortunately, we don't always know the `color` of a toy.
-Use an `if` statement to prevent the site from having a huge error
-when this happens! If we don't know the color, print "no color".
+Oh no! Some of the toys are missing a `color` key and now the page
+is giving us a huge error!  Use an `if` statement to fix this.
+If we don't know the color, print `no color`.
 EOF;
     }
 
@@ -74,6 +74,10 @@ EOF
         $result->assertInputContains('index.php', 'if');
         $result->assertInputContains('index.php', 'array_key_exists');
         // make sure they're still printing
+        $result->assertOutputContains(
+            'no color',
+            'The `Bacon Bone` doesn\'t have a color, so it *should* say "no color" for that toy.'
+        );
         $result->assertElementContains('h4', 'Yellow');
     }
 
@@ -87,9 +91,13 @@ EOF
 
 <?php foreach (\$toys as \$toy) { ?>
     <h3><?php echo \$toy['name']; ?></h3>
-    <?php if (array_key_exists('color', \$toy)) { ?>
-        <h4><?php echo \$toy['color']; ?></h4>
-    <?php } ?>
+    <h4>
+        <?php if (array_key_exists('color', \$toy)) { ?>
+	        <?php echo \$toy['color']; ?>
+        <?php } else { ?>
+            no color
+        <?php } ?>
+	</h4>
 <?php } ?>
 EOF
         );

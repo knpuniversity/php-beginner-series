@@ -44,7 +44,7 @@ EOF;
     {
         return <<<EOF
 When you `require` or `include` a file, all variables that you currently have access
-to  - like `\$secretWord` are still accessible in the new file. When you use `require`,
+to  - like `\$secretWord` - are still accessible in the new file. When you use `require`,
 it's almost like someone copies the contents of `header.php` and pastes it into
 `index.php`.
 EOF;

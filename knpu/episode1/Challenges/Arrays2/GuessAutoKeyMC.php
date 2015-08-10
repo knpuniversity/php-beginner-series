@@ -13,6 +13,7 @@ class GuessAutoKeyMC implements MultipleChoiceChallengeInterface
 The dog-walking service is a hit! So, we've added `Bear` to the
 list:
 
+```php
 <?php
 \$walker1 = 'Kitty';
 \$walker2 = 'Tiger';
@@ -21,6 +22,7 @@ list:
 \$dogWalkers = array(\$walker1, \$walker2, \$walker3);
 \$dogWalker[] = 'Bear';
 ?>
+```
 
 What array key will PHP automatically assign to `Bear`?
 EOF;

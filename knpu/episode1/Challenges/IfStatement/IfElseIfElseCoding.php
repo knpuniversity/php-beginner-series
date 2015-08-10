@@ -21,9 +21,9 @@ The toys are really getting complicated now, so be careful!
 Use an `if - elseif - else` statement to handle these three possible
 situations:
 
-#. If the `color` key exists and is set to `multiple`, print "Multiple Colors".
-#. If the `color` key does not exist, print "no color"
-#. Otherwise, print the actual color value
+1. If the `color` key exists and is set to `multiple`, print "Multiple Colors".
+1. If the `color` key does not exist, print "no color"
+1. Otherwise, print the actual color value
 EOF;
     }
 
@@ -99,7 +99,7 @@ EOF
     <h3><?php echo \$toy['name']; ?></h3>
     <h4>
         <?php
-        if (array_key_exists('color', \$toy) && \$toy['color'] == 'multiple) {
+        if (array_key_exists('color', \$toy) && \$toy['color'] == 'multiple') {
             echo 'Multiple Colors';
         } elseif (!array_key_exists('color', \$toy)) {
             echo 'no color';

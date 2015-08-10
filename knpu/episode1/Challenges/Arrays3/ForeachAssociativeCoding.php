@@ -55,7 +55,7 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertElementContains('h3', 'Back Bone');
+        $result->assertElementContains('h3', 'Bacon Bone');
         $result->assertElementContains('h3', 'Tennis Ball');
         $result->assertElementContains('h4', 'Bacon-colored');
         $result->assertElementContains('h4', 'Yellow');

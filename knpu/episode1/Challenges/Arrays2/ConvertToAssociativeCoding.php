@@ -62,6 +62,14 @@ EOF
             'bio' => 'Sleepy white fluffy dog'
         ));
         $result->assertElementContains('h2', 'Waggy Pig');
+
+        // help them out - I reversed the order on the elements
+        if ($result->getElementText('.age') == '10') {
+            throw new GradingException(
+                'Careful! Be sure to print the `age` key in the `.age` element and the
+                `weight` key in the `.weight` element. You might have them reversed.'
+            );
+        }
         $result->assertElementContains('.age', 7);
         $result->assertElementContains('.weight', 10);
         $result->assertElementContains('p', 'Sleepy white fluffy dog');

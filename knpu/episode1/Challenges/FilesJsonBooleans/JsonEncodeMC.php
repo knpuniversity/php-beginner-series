@@ -26,7 +26,21 @@ EOF;
     {
         return <<<EOF
 The first argument to `json_encode` is a PHP array. It then encodes this and
-returns the equivalent JSON string.
+returns the equivalent JSON string:
+
+```php
+<?php echo json_encode('lions', 'tigers', 'bears'); ?>
+```
+
+This would print:
+
+```json
+[
+    "lions",
+    "tigers",
+    "bears"
+]
+```
 EOF;
     }
 }
