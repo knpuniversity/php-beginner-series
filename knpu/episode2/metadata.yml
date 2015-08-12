@@ -29,29 +29,18 @@ chapters:
         title:      Request, New Page and - Hey, You Welcome Back!
         is_free:    true
         video_key:  cqblebjgek
-        activities:
-            - { name: create_page }
     create-form:
         title:      We deserve to Create a Form
         video_key:  lv2ttcf8zn
     reading-form-data:
         title:      Reading POST'ed (Form) Data
         video_key:  ugsivpf04s
-        activities:
-            - { name: form_dump_data }
-            - { name: check_http_method }
     saving-pets:
         title:      Saving Pets
         video_key:  mjbsmkf4qh
-        activities:
-            - { name: save_to_file }
     redirecting:
         title:      The Art of Redirecting
         video_key:  bu0it04eyc
-        activities:
-            - { name: redirect }
     code-cleanup:
         title:      Cleaning up with save_pets
         video_key:  nr1nc80or8
-        activities:
-            - { name: refactor_into_function }
