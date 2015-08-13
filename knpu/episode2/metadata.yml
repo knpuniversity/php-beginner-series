@@ -29,12 +29,22 @@ chapters:
         title:      Request, New Page and - Hey, You Welcome Back!
         is_free:    true
         video_key:  cqblebjgek
+        challenges:
+            - Challenges\RequestNewPage\RequestPostDataMC
     create-form:
         title:      We deserve to Create a Form
         video_key:  lv2ttcf8zn
+        challenges:
+            - Challenges\CreateForm\PostVersusGetMC
+            - Challenges\CreateForm\CreateHtmlFormCoding
     reading-form-data:
         title:      Reading POST'ed (Form) Data
         video_key:  ugsivpf04s
+        challenges:
+            - Challenges\ReadingFormData\FetchPOSTDataCoding
+            - Challenges\ReadingFormData\CheckHttpMethodCoding
+            - Challenges\ReadingFormData\ArrayKeyExistsIssetMC
+            - Challenges\ReadingFormData\PlayingWithSERVERCoding
     saving-pets:
         title:      Saving Pets
         video_key:  mjbsmkf4qh
