@@ -17,8 +17,9 @@ class PlayingWithSERVERCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Dump the \$_SERVER variable and run your code (it's ok that you'll have a wrong
-answer) to figure out which key stores information about what browser you're using.
+Dump the \$_SERVER variable and run your code to figure out which key stores information 
+about what browser you're using. It's ok that you'll have a wrong answer to do this. 
+
 Then, remove the dump, but print the browser information in the `h3` tag!
 
 EOF;
