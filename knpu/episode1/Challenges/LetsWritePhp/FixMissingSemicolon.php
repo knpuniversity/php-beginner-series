@@ -18,7 +18,7 @@ class FixMissingSemicolon implements CodingChallengeInterface
     {
         return <<<EOF
 Poor devs. Management was so excited about variables that they
-tried to edit the code themselves. We've send the dev team for
+tried to edit the code themselves. We've sent the dev team for
 ice cream to make up for it. While they're gone, fix the errors
 in this file for them.
 EOF;
