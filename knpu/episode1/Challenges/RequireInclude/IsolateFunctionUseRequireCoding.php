@@ -17,7 +17,7 @@ class IsolateFunctionUseRequireCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-The pet toy business is really taking off! So the site's getting
+The pet toy business is really taking off! The site is getting
 bigger and we need to stay organized! Move the `get_great_pet_toys()` function
 out of `index.php` and into the new `lib/functions.php` file so we can
 re-use it later.
