@@ -14,7 +14,7 @@ class ArrayKeysMC implements MultipleChoiceChallengeInterface
 \$brands = array('SuperDog', 'Doggie-Os', 'Beef Bites', 'Puppy Gruel', 'Fancy Feast');
 ```
 
-Which option below will print "Puppy Gruel"?
+Puppies love dinner time! Which option below will print "Puppy Gruel"?
 EOF;
 
     }
