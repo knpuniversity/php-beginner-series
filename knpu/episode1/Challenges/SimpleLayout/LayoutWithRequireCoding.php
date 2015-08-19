@@ -17,13 +17,13 @@ class LayoutWithRequireCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-The site has just one page - `index.php` - and even still, people *love* it
-(trust us)! Now we've created a second page - `aboutUs.php`, but boy is it ugly!
-We need to re-use the layout that's in `index.php` in order to make it prettier.
+The site has just one page - `index.php` - and people *love* it (trust us)! 
+Now we've created a second page - `aboutUs.php`, but boy is it ugly! Woof.
+We need to re-use the layout that's in `index.php` to make it prettier.
 
 To do that, move all the header HTML into `header.php`, move all the footer HTML
 into `footer.php`, and then `require` each of these files in `index.php` and `aboutUs.php`
-so that we get the same, "nice" layout.
+to get the same, "nice" layout in both of our pages.
 EOF;
     }
 
