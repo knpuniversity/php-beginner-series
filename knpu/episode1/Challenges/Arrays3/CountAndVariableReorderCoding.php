@@ -17,7 +17,7 @@ class CountAndVariableReorderCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Using the `count` function, print the total number of toys
+Using the `count` function, print the total number of pet toys
 that we're selling in the `<h4>` tag.
 EOF;
     }
