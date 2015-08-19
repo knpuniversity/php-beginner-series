@@ -17,7 +17,7 @@ class SimpleEchoCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-AirPupNMeow needs you to start their site! It's a humble beginning.
+AirPupNMeow needs you to create their site! It's a humble beginning.
 Start by opening PHP, then echo their tag line: "I luv puppies"
 inside an `<h2>` tag.
 EOF;
