@@ -41,7 +41,7 @@ EOF;
     {
         return <<<EOF
 The keys are automatically assigned, starting with *zero*, and when you add a new
-item to the array later, it uses the first available number. So, since `\$walker3`
+item to the array later, it uses the first available number. Since `\$walker3`
 was assigned the `2` index, `Bear` gets the next available number: `3`.
 EOF;
     }
