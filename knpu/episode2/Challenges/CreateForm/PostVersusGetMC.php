@@ -22,7 +22,7 @@ EOF;
         $builder->addAnswer('POST is used when the user needs to send data. GET is used when a user just wants to fetch a page')
             ->addAnswer('A GET request cannot send any data (i.e. filled-in form fields)', true)
             ->addAnswer('After making both GET and POST requests, the server sends back a response (often the next HTML page to display)')
-            ->addAnswer('There\'s not much *real* difference between GET and POST requests: both can send data, both cause a response to be returned, but *typically* POST is used to send data.');
+            ->addAnswer('There\'s no *real* difference between GET and POST requests: both can send data, both cause a response to be returned, but *typically* POST is used to send data.');
     }
 
     public function getExplanation()
