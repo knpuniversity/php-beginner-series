@@ -48,9 +48,18 @@ chapters:
     saving-pets:
         title:      Saving Pets
         video_key:  mjbsmkf4qh
+        challenges:
+            - Challenges\SavingPets\FormSubmitLogicCoding
+            - Challenges\SavingPets\JSONEncodeReadableMC
     redirecting:
         title:      The Art of Redirecting
         video_key:  bu0it04eyc
+        challenges:
+            - Challenges\ArtOfRedirecting\FormSubmitRedirectMC
+            - Challenges\ArtOfRedirecting\RedirectUserToyListCoding
+            - Challenges\ArtOfRedirecting\RedirectResponseMC
     code-cleanup:
         title:      Cleaning up with save_pets
         video_key:  nr1nc80or8
+        challenges:
+            - Challenges\CleaningUpWithSavedPets\RefactorToySavingCoding
