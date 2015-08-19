@@ -26,7 +26,7 @@ EOF;
     public function getExplanation()
     {
         return <<<EOF
-`echo` - as in `echo 'this question was no problem`;` - is used to print anything
+`echo` - as in `echo 'this question was no problem';` - is used to print anything
 out. There are a few other ways to print stuff, but `echo` is by far the most important.
 You rock `echo`!
 EOF;
