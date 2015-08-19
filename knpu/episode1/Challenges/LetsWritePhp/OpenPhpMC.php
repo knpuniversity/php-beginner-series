@@ -11,7 +11,7 @@ class OpenPhpMC implements MultipleChoiceChallengeInterface
     {
         return <<<EOF
 Everything in a PHP file is just HTML code at first. If you want
-to write some dynamic PHP code, you activate PHP mode by always
+to write some dynamic PHP code, you'll activate PHP mode by always
 writing this first:
 EOF;
 
