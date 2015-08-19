@@ -17,7 +17,8 @@ class FixErrorsIfElseCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Oh no, management tried coding again! Fix the errors below.
+Oh no, management tried coding again, someone put a pin code
+on the github repo! Fix the errors below.
 EOF;
     }
 
