@@ -18,11 +18,11 @@ class ForeachAssociativeCoding implements CodingChallengeInterface
     {
         return <<<EOF
 The site is *so* popular that we're adding a store that
-sells dog toys. Using the `\$toys` array below, create a
-`foreach` statement and print each toy's `name` inside an
-`h3` tag and its `color` inside an `h4` tag. Avoid needing
-to echo the HTML tags by closing PHP at the end of the `foreach`
-line.
+sells the world's squeekiest dog toys. Using the `\$toys` 
+array below, create a `foreach` statement and print each toy's 
+`name` inside an `h3` tag and its `color` inside an `h4` tag. 
+Avoid needing to echo the HTML tags by closing PHP at the end 
+of the `foreach` line.
 EOF;
     }
 
