@@ -17,6 +17,7 @@ class MultiArrayKeysCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
+Let's get to know one of the friendliest pets in town!
 Access the bio on Pancake and print it inside the `<h1>` tag.
 EOF;
     }
