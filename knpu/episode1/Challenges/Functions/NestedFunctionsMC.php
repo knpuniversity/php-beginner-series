@@ -10,6 +10,7 @@ class NestedFunctionsMC implements MultipleChoiceChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
+Clearly the dev team has been drinking too much Red Bull.
 Things have gotten out of hand with all these reversed words. See if you
 can figure out what this prints:
 
