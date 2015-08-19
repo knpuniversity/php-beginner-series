@@ -18,7 +18,7 @@ class AddNewKeyCoding implements CodingChallengeInterface
     {
         return <<<EOF
 We went to ancestry.com and have discovered Waggy Pig's breed:
-a `bichon`. Add a new `breed` key on a new line after the `\$waggyPig`
+`bichon`. Add a new `breed` key on a new line after the `\$waggyPig`
 array has already been created. Print this new info below!
 EOF;
     }
