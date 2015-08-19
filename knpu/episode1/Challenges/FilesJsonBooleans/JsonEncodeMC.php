@@ -10,7 +10,7 @@ class JsonEncodeMC implements MultipleChoiceChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-`json_encode` does which of the following?
+Pop Quiz: `json_encode` does which of the following?
 EOF;
 
     }
