@@ -17,7 +17,7 @@ class ConvertToAssociativeCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Our favorite pet - Waggy Pig - is a cute white dumb dog. Update
+Our favorite pet - Waggy Pig - is a cute white silly dog. Update
 the code below to use an associative array: set they keys of the array
 to `name`, `weight`, `age` and `bio`. Then, update the code below so
 Waggy Pig's bio still prints out!
