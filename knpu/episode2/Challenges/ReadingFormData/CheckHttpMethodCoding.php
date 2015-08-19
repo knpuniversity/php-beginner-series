@@ -18,12 +18,14 @@ class CheckHttpMethodCoding implements CodingChallengeInterface
     {
         return <<<EOF
 Great! When you press the submit button, we're printing out whatever was entered
-into the form. Pretty soon, we'll start saving and selling the new toy!
+into the form. Pretty soon, we'll start saving and selling the newest and loudest
+squeeky toy ever invented!
 
 But when a user just surfs to this page and hasn't filled out the form yet,
-we *don't* want to look for the submitted data or print it out. Add an `if`
-statement around our logic so that it only runs when the user submits the
-form (i.e. makes a POST request).
+we *don't* want to look for the submitted data or print it out. 
+
+Add an `if` statement around our logic so that it only runs when the user submits 
+the form (i.e. makes a POST request).
 
 EOF;
     }
