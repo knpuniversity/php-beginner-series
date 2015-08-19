@@ -17,8 +17,8 @@ class FetchPOSTDataCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Ok, the toy form is setup! Now, when the user submits the form, we need to capture
-the toy information. Set the submitted name to a `\$name` variable, the description
+Our toy form is setup! Now, when the user submits the form, we need to capture
+the information. Set the submitted name to a `\$name` variable, the description
 to a `\$description` variable, then `var_dump()` both variables to see what's being
 submitted.
 
