@@ -75,7 +75,7 @@ chapters:
             - Challenges\IfStatement\IfElseIfElseCoding
             - Challenges\IfStatement\FixErrorsIfElseCoding
     "system-setup":
-        video_key:  bkgnoa6avr
+        video_key:  fkr3k42s39
         challenges:
             - Challenges\SystemSetup\DnsFairyMC
             - Challenges\SystemSetup\LocalhostPortFilenameMC
