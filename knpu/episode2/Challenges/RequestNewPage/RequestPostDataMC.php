@@ -44,7 +44,7 @@ The form *might* live at `/pets_new.php`, but that's not important - the form co
 live anywhere. The important part is that it submits to `/pets_new.php`.
 
 The data in the bottom are the form fields. So, this form has two fields: one with
-`name="pet_name"` - that the user filled in with `Waggy` - and another with `name="breed"`
+`name="pet_name"` - that the user filled in with `Waggy Pig` - and another with `name="breed"`
 that was filled in with `bichon`.
 EOF;
     }

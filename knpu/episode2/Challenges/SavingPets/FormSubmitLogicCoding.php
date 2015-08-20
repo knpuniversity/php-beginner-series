@@ -19,7 +19,8 @@ class FormSubmitLogicCoding implements CodingChallengeInterface
         return <<<EOF
 Let's finish the form submit logic! Fetch the existing pet toys with the `get_great_pet_toys()`
 function, add the new toy to the array, then save the JSON back to `toys.json`. To
-prove it's working, read the file again with `file_get_contents()` and `var_dump()`.
+prove it's working, read the file again with `file_get_contents()` and `var_dump()`
+that JSON string.
 
 EOF;
     }
@@ -86,18 +87,22 @@ EOF
 
     public function setupContext(CodingContext $context)
     {
-        // TODO - add some form submit code!
-        // toy_name = "Fluffy Pig Stuffed Animal"
-        // description = "Your dog will *love* to chew and destroy this adorable pig!"
+        $request = $context->fakeHttpRequest('/new_toy.php', 'POST');
+        $request->setPOSTData(array(
+            'name' => 'Fluffy Pig Stuffed Animal',
+            'description' => 'Your dog will *love* to chew and destroy this adorable pig!'
+        ));
     }
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertOutputContains('Bacon Bone', '`var_dump() the file contents of `toys.json` after saving the new toy');
-        $result->assertInputContains('new_toy.php', 'var_dump()', '`var_dump() the file contents of `toys.json` after saving the new toy');
-        $result->assertInputContains('new_toy.php', 'file_get_contents', '`var_dump() the file contents of `toys.json` after saving the new toy');
-        $result->assertOutputContains('Fluffy Pig Stuffed Animal', 'Did you add the submitted toy to the toys array before saving `toys.json`?');
+        $result->assertInputContains('new_toy.php', 'json_encode', 'Use `json_encode()` in `new_toy.php` to encode the toys array before saving it');
+        $result->assertInputContains('new_toy.php', 'file_put_contents', 'Use `file_put_contents()` in `new_toy.php` to save the new JSON string');
+        $result->assertInputContains('new_toy.php', 'var_dump', '`var_dump()` the file contents of `toys.json` after saving the new toy');
+
         $result->assertInputContains('new_toy.php', 'get_great_pet_toys', 'Call `get_great_pet_toys()` first to get the existing toys');
+        $result->assertOutputContains('Bacon Bone', 'I don\'t see `Bacon Bone` in `toys.json` - double-check that you\'re keeping the original pets, not replacing them entirely.');
+        $result->assertOutputContains('Fluffy Pig Stuffed Animal', 'I don\'t see the new "Fluffy Pig" toy in `toys.json`. Are you adding it to the toys array before calling `json_encode()` and saving the file?');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)

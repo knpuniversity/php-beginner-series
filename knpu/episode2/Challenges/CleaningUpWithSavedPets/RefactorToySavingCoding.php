@@ -88,10 +88,17 @@ EOF
 
     public function setupContext(CodingContext $context)
     {
+        $request = $context->fakeHttpRequest('/new_toy.php', 'POST');
+        $request->setPOSTData(array(
+            'name' => 'Fluffy Pig Stuffed Animal',
+            'description' => 'Your dog will *love* to chew and destroy this adorable pig!'
+        ));
     }
 
     public function grade(CodingExecutionResult $result)
     {
+        $result->assertInputContains('functions.php', 'save_toys(', 'Put the `save_toys` function into `functions.php` for organization');
+        $result->assertInputContains('new_toy.php', 'save_toys(', 'Be sure to call the `save_toys()` function from within `new_toy.php`');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)

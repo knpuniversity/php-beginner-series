@@ -200,12 +200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/knpuniversity/activity-runner.git",
-                "reference": "8b80308d0a3119603b03b6c5c794509c7454c3b8"
+                "reference": "2ea17747129c74bfc292d522b02a70f78ab9a5f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/knpuniversity/activity-runner/zipball/8b80308d0a3119603b03b6c5c794509c7454c3b8",
-                "reference": "8b80308d0a3119603b03b6c5c794509c7454c3b8",
+                "url": "https://api.github.com/repos/knpuniversity/activity-runner/zipball/2ea17747129c74bfc292d522b02a70f78ab9a5f7",
+                "reference": "2ea17747129c74bfc292d522b02a70f78ab9a5f7",
                 "shasum": ""
             },
             "require": {
@@ -252,7 +252,7 @@
                 }
             ],
             "description": "Executes Twig & PHP activities in a safe manner",
-            "time": "2015-08-19 18:16:57"
+            "time": "2015-08-19 21:45:43"
         },
         {
             "name": "monolog/monolog",

@@ -1,5 +1,4 @@
 title:  Episode 2: How to stop worrying and start writing PHP
-length: 0:26:52
 summary: |
     This is episode 2 of our Epic PHP series. Find episode 1
     [here](http://knpuniversity.com/screencast/php-ep1).
@@ -26,19 +25,16 @@ tuts_hero:
 
 chapters:
     request-new-page:
-        title:      Request, New Page and - Hey, You Welcome Back!
         is_free:    true
         video_key:  cqblebjgek
         challenges:
             - Challenges\RequestNewPage\RequestPostDataMC
     create-form:
-        title:      We deserve to Create a Form
         video_key:  lv2ttcf8zn
         challenges:
             - Challenges\CreateForm\PostVersusGetMC
             - Challenges\CreateForm\CreateHtmlFormCoding
     reading-form-data:
-        title:      Reading POST'ed (Form) Data
         video_key:  ugsivpf04s
         challenges:
             - Challenges\ReadingFormData\FetchPOSTDataCoding
@@ -46,20 +42,17 @@ chapters:
             - Challenges\ReadingFormData\ArrayKeyExistsIssetMC
             - Challenges\ReadingFormData\PlayingWithSERVERCoding
     saving-pets:
-        title:      Saving Pets
         video_key:  mjbsmkf4qh
         challenges:
             - Challenges\SavingPets\FormSubmitLogicCoding
             - Challenges\SavingPets\JSONEncodeReadableMC
     redirecting:
-        title:      The Art of Redirecting
         video_key:  bu0it04eyc
         challenges:
             - Challenges\ArtOfRedirecting\FormSubmitRedirectMC
             - Challenges\ArtOfRedirecting\RedirectUserToyListCoding
             - Challenges\ArtOfRedirecting\RedirectResponseMC
     code-cleanup:
-        title:      Cleaning up with save_pets
         video_key:  nr1nc80or8
         challenges:
             - Challenges\CleaningUpWithSavedPets\RefactorToySavingCoding

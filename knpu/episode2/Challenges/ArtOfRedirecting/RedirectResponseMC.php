@@ -19,27 +19,35 @@ EOF;
     public function configureAnswers(AnswerBuilder $builder)
     {
         $builder->addAnswer(<<<EOF
+```
 HTTP/1.1 302 Found
 Location: /thanks.php
 
 <h1>Thanks for adding a new toy!</h1>
+```
 EOF
         )
             ->addAnswer(<<<EOF
+```
 HTTP/1.1 302 Found
 Location: /thanks.php
+```
 EOF
         , true)
             ->addAnswer(<<<EOF
+```
 GET /new_toy.php
 Host: localhost:8000
 
 <h1>Add a new toy</h1>
+```
 EOF
         )
             ->addAnswer(<<<EOF
+```
 POST /new_toy.php
 Location: /new_toy.php
+```
 EOF
         );
     }

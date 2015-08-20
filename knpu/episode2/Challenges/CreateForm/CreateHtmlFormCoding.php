@@ -58,7 +58,7 @@ EOF
         }
 
         if (strtolower($crawler->attr('method')) != 'post') {
-            throw new GradingException('Make sure your form has a method attribute set to `POST`');
+            throw new GradingException('Make sure your form has a `method` attribute on your `form` set to `POST`');
         }
 
         $form = $crawler->form();

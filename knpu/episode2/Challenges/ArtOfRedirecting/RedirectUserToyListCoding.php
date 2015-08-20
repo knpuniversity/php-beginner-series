@@ -23,7 +23,11 @@ of other sites are still linking to `/aboutUs.php`, and any user clicking those 
 are getting an error.
 
 So, you decide to re-create `aboutUs.php`, and just make it redirect to `/about.php`.
-Fill on the logic:
+Fill in the logic to redirect to `/about.php`.
+
+**Note**: You won't see any output, because redirects actually return a blank response.
+In the real world, your browser would quickly make a second request to `about.php`
+(and you'd see that page).
 EOF;
     }
 
@@ -34,6 +38,7 @@ EOF;
 
 EOF
         );
+        $fileBuilder->setEntryPointFilename('aboutUs.php');
 
         $fileBuilder->addFileContents('about.php', <<<EOF
 <h1>Yea! About us!</h1>
@@ -50,12 +55,13 @@ EOF
 
     public function setupContext(CodingContext $context)
     {
+        $context->fakeHttpRequest('GET', '/aboutUs.php');
     }
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertInputContains('header(', 'Use the `header()` function to redirect');
-        $result->assertInputContains('Location:', 'Set the `Location:` header to `/about.php`');
+        $result->assertInputContains('aboutUs.php', 'header(', 'Use the `header()` function to redirect');
+        $result->assertInputContains('aboutUs.php', 'Location:', 'Set the `Location:` header to `/about.php`');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)

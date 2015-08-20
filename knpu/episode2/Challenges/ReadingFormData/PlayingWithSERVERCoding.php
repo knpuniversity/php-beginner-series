@@ -17,8 +17,10 @@ class PlayingWithSERVERCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-Dump the \$_SERVER variable and run your code to figure out which key stores information 
-about what browser you're using. It's ok that you'll have a wrong answer to do this. 
+Dump the `\$_SERVER` variable and run your code to figure out which key stores information
+about what browser you're using. It's ok that you'll have a wrong answer at first to
+figure this out. *Hint* The browser information is a big long string that (in this
+example) will include `Mozilla` in it.
 
 Then, remove the dump, but print the browser information in the `h3` tag!
 
@@ -45,14 +47,15 @@ EOF
 
     public function setupContext(CodingContext $context)
     {
-        // TODO - code up stuff to fake the form submit!
+        $request = $context->fakeHttpRequest('/new_toy.php', 'GET');
+        $request->addHeader('User-Agent', 'Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10');
     }
 
     public function grade(CodingExecutionResult $result)
     {
         $result->assertInputContains('new_toy.php', '$_SERVER');
         $result->assertInputContains('new_toy.php', 'HTTP_USER_AGENT');
-        // todo - can we assert the specific user agent?
+        $result->assertOutputContains('Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)

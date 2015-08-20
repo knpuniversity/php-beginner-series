@@ -21,10 +21,8 @@ Great! When you press the submit button, we're printing out whatever was entered
 into the form. Pretty soon, we'll start saving and selling the newest and loudest
 squeeky toy ever invented!
 
-But when a user just surfs to this page and hasn't filled out the form yet,
-we *don't* want to look for the submitted data or print it out. 
-
-Add an `if` statement around our logic so that it only runs when the user submits 
+But now, we're just surfing to the page directly and getting an error!
+Add an `if` statement around our logic so that it only runs when the user submits
 the form (i.e. makes a POST request).
 
 EOF;
@@ -60,7 +58,7 @@ EOF
 
     public function setupContext(CodingContext $context)
     {
-        // TODO - code up stuff to fake the form submit!
+        $request = $context->fakeHttpRequest('/new_toy.php', 'GET');
     }
 
     public function grade(CodingExecutionResult $result)

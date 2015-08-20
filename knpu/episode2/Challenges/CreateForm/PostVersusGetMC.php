@@ -31,7 +31,8 @@ EOF;
 Even though `POST` requests are typically used to send data, data can be sent via
 both `POST` and `GET` requests (with, for example, a `<form method="GET">` form).
 So really, there's nothing you can do with a GET request that you can't do with a
-POST request and vice-versa.
+POST request and vice-versa. But don't be confused: in practice, POST requests are
+used for almost all form submits and GET requests are used everywhere else.
 EOF;
     }
 }
