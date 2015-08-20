@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f2511bffa91cc1577c7bed0c2190037c",
+    "hash": "e71d76b972da0753e341cbdc04b3425b",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -196,16 +196,16 @@
         },
         {
             "name": "knpuniversity/activity-runner",
-            "version": "dev-v2-refactor",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/knpuniversity/activity-runner.git",
-                "reference": "2ea17747129c74bfc292d522b02a70f78ab9a5f7"
+                "reference": "deef223093cfec215029d3d321f77e1092900ecb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/knpuniversity/activity-runner/zipball/2ea17747129c74bfc292d522b02a70f78ab9a5f7",
-                "reference": "2ea17747129c74bfc292d522b02a70f78ab9a5f7",
+                "url": "https://api.github.com/repos/knpuniversity/activity-runner/zipball/deef223093cfec215029d3d321f77e1092900ecb",
+                "reference": "deef223093cfec215029d3d321f77e1092900ecb",
                 "shasum": ""
             },
             "require": {
@@ -252,7 +252,7 @@
                 }
             ],
             "description": "Executes Twig & PHP activities in a safe manner",
-            "time": "2015-08-19 21:45:43"
+            "time": "2015-08-20 02:34:06"
         },
         {
             "name": "monolog/monolog",
@@ -1790,9 +1790,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "knpuniversity/activity-runner": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

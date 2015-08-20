@@ -1,7 +1,7 @@
 {
     "name": "knpuniversity/php-beginner-series",
     "require": {
-        "knpuniversity/activity-runner": "dev-v2-refactor"
+        "knpuniversity/activity-runner": "0.2.*"
     },
     "authors": [
         {
