@@ -34,7 +34,7 @@ chapters:
             # teaching: <?php, echo, creating variables, semi-colons
             - Challenges\LetsWritePhp\OpenPhpMC
             - Challenges\LetsWritePhp\SimpleEchoCoding
-            - Challenges\LetsWritePhp\JobOfEcho
+            - Challenges\LetsWritePhp\JobOfEchoMC
             - Challenges\LetsWritePhp\CreateVariableCoding
             - Challenges\LetsWritePhp\FixMissingSemicolon
     "functions":
