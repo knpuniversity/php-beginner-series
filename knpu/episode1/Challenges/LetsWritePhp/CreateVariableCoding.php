@@ -17,7 +17,7 @@ class CreateVariableCoding implements CodingChallengeInterface
     public function getQuestion()
     {
         return <<<EOF
-The management of AirPupNMeow is always changing its mind. To simplify
+The management of AirPupnMeow is always changing its mind. To simplify
 the life of our devs, let's use a variable so that when management
 changes the tag line, we only have to update one spot. Create
 a variable called `airpupTag` and set it to `I luv kittens`. Then print

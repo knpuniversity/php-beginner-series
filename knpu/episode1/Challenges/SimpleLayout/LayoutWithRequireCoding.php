@@ -41,7 +41,7 @@ We're just a couple of <mark>crazy</mark> cats with a dog-gone good idea!
 </p>
 
 <address>
-  <strong>AirPupNMeow</strong><br>
+  <strong>AirpupNMeow</strong><br>
   555 Main Street<br>
   San Francisco, CA 94107<br>
   <abbr title="Phone">P:</abbr> (123) 456-7890
@@ -129,7 +129,7 @@ We're just a couple of <mark>crazy</mark> cats with a dog-gone good idea!
 </p>
 
 <address>
-  <strong>AirPupNMeow</strong><br>
+  <strong>AirpupNMeow</strong><br>
   555 Main Street<br>
   San Francisco, CA 94107<br>
   <abbr title="Phone">P:</abbr> (123) 456-7890

@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.ico">
 
-    <title>AirPupNMeow.com: All the love, none of the crap!</title>
+    <title>AirPupnMeow.com: All the love, none of the crap!</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -29,7 +29,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">AirPupNMeow</a>
+                <a class="navbar-brand" href="#">AirPupnMeow</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -109,7 +109,7 @@
         <hr>
 
         <footer>
-            <p>&copy; AirPupNMeow.com</p>
+            <p>&copy; AirPupnMeow.com</p>
         </footer>
     </div>
     <!-- /container -->
