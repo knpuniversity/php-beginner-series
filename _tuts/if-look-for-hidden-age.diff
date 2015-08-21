@@ -12,7 +12,7 @@ index e0af0bf..81caaca 100644
          "bio": "You want to go to the dog park in style? Then I am your pug!",
          "image": "pet2.png"
 diff --git a/index.php b/index.php
-index 5916cd2..65fb435 100644
+index 3014524..b623333 100644
 --- a/index.php
 +++ b/index.php
 @@ -94,7 +94,11 @@

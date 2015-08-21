@@ -14,7 +14,7 @@ index 2ea2638..4836a84 100644
 +
 +<?php require 'layout/footer.php'; ?>
 diff --git a/index.php b/index.php
-index 826ced4..fcf0847 100644
+index fa8965a..44e4f55 100644
 --- a/index.php
 +++ b/index.php
 @@ -8,70 +8,8 @@
@@ -30,7 +30,7 @@ index 826ced4..fcf0847 100644
 -    <meta name="author" content="">
 -    <link rel="shortcut icon" href="favicon.ico">
  
--    <title>AirPupnMeow.com: All the love, none of the crap!</title>
+-    <title>AirPupNMeow.com: All the love, none of the crap!</title>
 -
 -    <link href="css/bootstrap.css" rel="stylesheet">
 -    <link href="css/main.css" rel="stylesheet">
@@ -52,7 +52,7 @@ index 826ced4..fcf0847 100644
 -                    <span class="icon-bar"></span>
 -                    <span class="icon-bar"></span>
 -                </button>
--                <a class="navbar-brand" href="#">AirPupnMeow</a>
+-                <a class="navbar-brand" href="#">AirPupNMeow</a>
 -            </div>
 -            <div class="navbar-collapse collapse">
 -                <ul class="nav navbar-nav">
@@ -89,29 +89,29 @@ index 826ced4..fcf0847 100644
  
      <div class="jumbotron">
          <div class="container">
-@@ -114,13 +52,4 @@
+@@ -114,6 +52,9 @@
  
          <hr>
  
--        <footer>
--            <p>&copy; AirPupnMeow.com</p>
--        </footer>
--    </div>
--    <!-- /container -->
--
--    <script src="js/jquery.js"></script>
--    <script src="js/bootstrap.min.js"></script>
--</body>
--</html>
++<<<<<<< HEAD
 +<?php require 'layout/footer.php'; ?>
++=======
+         <footer>
+             <p>&copy; AirPupNMeow.com</p>
+         </footer>
+@@ -124,3 +65,4 @@
+     <script src="js/bootstrap.min.js"></script>
+ </body>
+ </html>
++>>>>>>> _tuts/master/include-require
 diff --git a/layout/footer.php b/layout/footer.php
 new file mode 100644
-index 0000000..27d64c1
+index 0000000..06dbe2c
 --- /dev/null
 +++ b/layout/footer.php
 @@ -0,0 +1,10 @@
 +<footer>
-+            <p>&copy; AirPupnMeow.com</p>
++            <p>&copy; AirPupNMeow.com</p>
 +        </footer>
 +    </div>
 +    <!-- /container -->
@@ -122,7 +122,7 @@ index 0000000..27d64c1
 +</html>
 diff --git a/layout/header.php b/layout/header.php
 new file mode 100644
-index 0000000..c285ea1
+index 0000000..cbaa157
 --- /dev/null
 +++ b/layout/header.php
 @@ -0,0 +1,64 @@
@@ -135,7 +135,7 @@ index 0000000..c285ea1
 +    <meta name="author" content="">
 +    <link rel="shortcut icon" href="favicon.ico">
 +
-+    <title>AirPupnMeow.com: All the love, none of the crap!</title>
++    <title>AirPupNMeow.com: All the love, none of the crap!</title>
 +
 +    <link href="css/bootstrap.css" rel="stylesheet">
 +    <link href="css/main.css" rel="stylesheet">
@@ -157,7 +157,7 @@ index 0000000..c285ea1
 +                    <span class="icon-bar"></span>
 +                    <span class="icon-bar"></span>
 +                </button>
-+                <a class="navbar-brand" href="#">AirPupnMeow</a>
++                <a class="navbar-brand" href="#">AirPupNMeow</a>
 +            </div>
 +            <div class="navbar-collapse collapse">
 +                <ul class="nav navbar-nav">

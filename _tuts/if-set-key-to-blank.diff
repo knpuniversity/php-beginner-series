@@ -12,7 +12,7 @@ index 175e819..e0af0bf 100644
          "bio": "The park, The pool or the Playground - I love to go anywhere! I am really great at... SQUIRREL!",
          "image": "pet1.png"
 diff --git a/index.php b/index.php
-index 13ff8fe..93a34e7 100644
+index c5916ae..b7b0a03 100644
 --- a/index.php
 +++ b/index.php
 @@ -84,6 +84,7 @@

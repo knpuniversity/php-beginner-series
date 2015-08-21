@@ -11,7 +11,7 @@ index d2cdc6a..175e819 100644
          "bio": "Oh hai, if you do not have a can of salmon I am not interested.",
          "image": "pet3.png"
 diff --git a/index.php b/index.php
-index 38ef958..497deef 100644
+index 0059d7d..02b53f9 100644
 --- a/index.php
 +++ b/index.php
 @@ -85,6 +85,7 @@
