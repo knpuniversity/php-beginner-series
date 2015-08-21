@@ -14,7 +14,7 @@ index 2ea2638..4836a84 100644
 +
 +<?php require 'layout/footer.php'; ?>
 diff --git a/index.php b/index.php
-index fa8965a..44e4f55 100644
+index fa8965a..fcf0847 100644
 --- a/index.php
 +++ b/index.php
 @@ -8,70 +8,8 @@
@@ -89,21 +89,21 @@ index fa8965a..44e4f55 100644
  
      <div class="jumbotron">
          <div class="container">
-@@ -114,6 +52,9 @@
+@@ -114,13 +52,4 @@
  
          <hr>
  
-+<<<<<<< HEAD
+-        <footer>
+-            <p>&copy; AirPupNMeow.com</p>
+-        </footer>
+-    </div>
+-    <!-- /container -->
+-
+-    <script src="js/jquery.js"></script>
+-    <script src="js/bootstrap.min.js"></script>
+-</body>
+-</html>
 +<?php require 'layout/footer.php'; ?>
-+=======
-         <footer>
-             <p>&copy; AirPupNMeow.com</p>
-         </footer>
-@@ -124,3 +65,4 @@
-     <script src="js/bootstrap.min.js"></script>
- </body>
- </html>
-+>>>>>>> _tuts/master/include-require
 diff --git a/layout/footer.php b/layout/footer.php
 new file mode 100644
 index 0000000..06dbe2c
