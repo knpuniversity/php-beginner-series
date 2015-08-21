@@ -30,7 +30,7 @@ index 826ced4..fcf0847 100644
 -    <meta name="author" content="">
 -    <link rel="shortcut icon" href="favicon.ico">
  
--    <title>AirPupnMeow.com: All the love, none of the crap!</title>
+-    <title>AirPupNMeow.com: All the love, none of the crap!</title>
 -
 -    <link href="css/bootstrap.css" rel="stylesheet">
 -    <link href="css/main.css" rel="stylesheet">
@@ -52,7 +52,7 @@ index 826ced4..fcf0847 100644
 -                    <span class="icon-bar"></span>
 -                    <span class="icon-bar"></span>
 -                </button>
--                <a class="navbar-brand" href="#">AirPupnMeow</a>
+-                <a class="navbar-brand" href="#">AirPupNMeow</a>
 -            </div>
 -            <div class="navbar-collapse collapse">
 -                <ul class="nav navbar-nav">
@@ -94,7 +94,7 @@ index 826ced4..fcf0847 100644
          <hr>
  
 -        <footer>
--            <p>&copy; AirPupnMeow.com</p>
+-            <p>&copy; AirPupNMeow.com</p>
 -        </footer>
 -    </div>
 -    <!-- /container -->
@@ -111,7 +111,7 @@ index 0000000..27d64c1
 +++ b/layout/footer.php
 @@ -0,0 +1,10 @@
 +<footer>
-+            <p>&copy; AirPupnMeow.com</p>
++            <p>&copy; AirPupNMeow.com</p>
 +        </footer>
 +    </div>
 +    <!-- /container -->
@@ -135,7 +135,7 @@ index 0000000..c285ea1
 +    <meta name="author" content="">
 +    <link rel="shortcut icon" href="favicon.ico">
 +
-+    <title>AirPupnMeow.com: All the love, none of the crap!</title>
++    <title>AirPupNMeow.com: All the love, none of the crap!</title>
 +
 +    <link href="css/bootstrap.css" rel="stylesheet">
 +    <link href="css/main.css" rel="stylesheet">
@@ -157,7 +157,7 @@ index 0000000..c285ea1
 +                    <span class="icon-bar"></span>
 +                    <span class="icon-bar"></span>
 +                </button>
-+                <a class="navbar-brand" href="#">AirPupnMeow</a>
++                <a class="navbar-brand" href="#">AirPupNMeow</a>
 +            </div>
 +            <div class="navbar-collapse collapse">
 +                <ul class="nav navbar-nav">
