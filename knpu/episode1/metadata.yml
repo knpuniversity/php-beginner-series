@@ -82,8 +82,8 @@ chapters:
     "creating-functions":
         video_key:  luzhukq10p
         challenges:
-            - Challanges\CreatingFunctions\FunWithCommentsMC
-            - Challanges\CreatingFunctions\CreateFunctionCoding
+            - Challenges\CreatingFunctions\FunWithCommentsMC
+            - Challenges\CreatingFunctions\CreateFunctionCoding
     "require-include":
         video_key:  a0vrjxeppv
         challenges:
