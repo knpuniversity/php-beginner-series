@@ -18,7 +18,7 @@ gal that any of your friends know - probably :)
 The Project
 -----------
 
-We're going to build a site that we're calling `AirPupnMeow.com`. Imagine a
+We're going to build a site that we're calling `AirPupNMeow.com`. Imagine a
 site like Airbnb.com, except where people rent cute pets instead of apartments.
 If you're looking for companionship without all that responsibility of walking
 your dog every morning and bringing a bag to pick up his... uh gifts,
