@@ -20,7 +20,7 @@ list:
 \$walker3 = 'Jay';
 
 \$dogWalkers = array(\$walker1, \$walker2, \$walker3);
-\$dogWalker[] = 'Bear';
+\$dogWalkers[] = 'Bear';
 ?>
 ```
 
