@@ -6,7 +6,7 @@ the exact same thing: both contain items and each item has a unique key we
 can use to access it. We *choose* that key for items in an associated array
 and we let PHP choose the keys for us in an indexed array. And because PHP
 isn't very creative, it just chooses a number that gets higher each
-time we add something. But Regardless of who makes the choice, every key in an
+time we add something. But regardless of who makes the choice, every key in an
 array is either a string or a whole number, which we programmers and mathematicians
 call an integer. And that's the end of the story: array keys are *only ever*
 strings or integers in all of PHP.
