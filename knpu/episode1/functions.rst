@@ -235,7 +235,7 @@ write this using multiple lines:
     </div>
 
 The most important thing to remember is that PHP has a lot of functions, which
-are always written with a set or parenthesis after their name. Some have one
+are always written with a set of parenthesis after their name. Some have one
 or more arguments that allow you to control the function and the documentation
 explains these. Functions typically do some work and return a value, which
 you can assign to variables or print using echo. Got it? Ok, onto practicing with
