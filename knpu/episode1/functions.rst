@@ -207,7 +207,7 @@ When we refresh, the string displays completely in upper case:
 
 This proves that the string is lowercased first and *then* uppercased. Functions
 work from the inside out. Initially ``cleverWelcomeMessage`` is passed as the
-first argument to ``strtolower` and a lowercase string is returned. This
+first argument to ``strtolower`` and a lowercase string is returned. This
 lowercase string is then passed as the first argument to ``strtoupper``, which
 returns an upper case string. Which is finally printed with ``echo``.
 Phew!
