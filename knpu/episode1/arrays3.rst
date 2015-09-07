@@ -8,7 +8,7 @@ and we let PHP choose the keys for us in an indexed array. And because PHP
 isn't very creative, it just chooses a number that gets higher each
 time we add something. But regardless of who makes the choice, every key in an
 array is either a string or a whole number, which we programmers and mathematicians
-call an integer. And that's the end of the story: array keys are *only ever*
+call an `integer`. And that's the end of the story: array keys are *only ever*
 strings or integers in all of PHP.
 
 .. code-block:: text
@@ -21,7 +21,7 @@ strings or integers in all of PHP.
     );
 
 But each *value* in an array can be *any* type of PHP value. So far we know
-three data types in PHP: a string, a number and an array. And as promised,
+three data types in PHP: a `string`, an `integer` and an `array`. And as promised,
 all three can be put into an array:
 
 .. code-block:: text
