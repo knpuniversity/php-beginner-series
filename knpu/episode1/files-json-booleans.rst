@@ -239,19 +239,19 @@ then we would also need to change it in our application to match:
         },
     ]
 
-    .. code-block:: html+php
-    
-        <!-- ... index.php -->
+.. code-block:: html+php
 
-        <?php foreach ($pets as $cutePet) { ?>
-            <div class="col-md-4 pet-list-item">
-                <!-- ... -->
+    <!-- ... index.php -->
 
-                <img src="/images/<?php echo $cutePet['image']; ?>" class="img-rounded">
+    <?php foreach ($pets as $cutePet) { ?>
+        <div class="col-md-4 pet-list-item">
+            <!-- ... -->
 
-                <!-- ... -->
-            </div>
-        <?php } ?>
+            <img src="/images/<?php echo $cutePet['image']; ?>" class="img-rounded">
+
+            <!-- ... -->
+        </div>
+    <?php } ?>
 
 Directory Path to a File
 ------------------------
