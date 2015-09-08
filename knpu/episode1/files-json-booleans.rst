@@ -198,7 +198,7 @@ to go the other direction::
 
 When we refresh, it mostly looks right. But instead of an array, it says
 something about a "stdClass". This is a PHP object, which you don't need
-to worry about now. Instead, if we look at the :phpfunction`json_decode`
+to worry about now. Instead, if we look at the :phpfunction:`json_decode`
 docs, we see it has an optional second argument, which is a bool or Boolean
 that defaults to ``false``. If we change this to ``true``, the function should
 return an associative array::
