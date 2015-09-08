@@ -181,7 +181,7 @@ type. To review, we have:
 
 Like with the other 3 data types, we can assign Booleans to variables and
 functions can return Booleans. ``file_get_contents`` returns a string or
-``False``, which we now know is a ``Boolean``.
+``false``, which we now know is a ``boolean`` type.
 
 Decoding JSON into an Array
 ---------------------------
