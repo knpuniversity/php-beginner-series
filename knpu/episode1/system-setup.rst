@@ -213,7 +213,7 @@ we'd need to reconfigure the document root to point here. But actually, we
 won't do that: I'll show you an easy trick instead.
 
 But first, go to the KnpUniversity GitHub to download the code that goes along
-with this course. Choose the ``server_setup`` branch, download the zip file,
+with this course. Choose the `server_setup`_ branch, download the zip file,
 unzip it into the Sites directory and rename it to ``AirPup``. This is the
 code for the project we've built so far.
 
@@ -359,3 +359,4 @@ ok, 5.3 versions are quite old by now :).
 .. _`NetBeans`: https://netbeans.org/
 .. _`Sublime Text`: http://www.sublimetext.com/
 .. _`how to access the command line for xampp on windows`: http://stackoverflow.com/questions/10753024/how-to-access-the-command-line-for-xampp-on-windows
+.. _`server_setup`: https://github.com/knpuniversity/php-beginner-series/tree/server_setup
