@@ -343,7 +343,7 @@ Running the command just returns a big set of directions
 
 If you have an older version of PHP, then running ``php -S localhost:8000``
 won't work. Instead, it will just print a big set of options back to you.
-If this happens, check your version of php by running ``php -v``. If the
+If this happens, check your version of PHP by running ``php -v``. If the
 version you have is 5.3.* or lower, you need to upgrade it. The command we're
 running in PHP only works for version 5.4.0 and higher. And that's really
 ok, 5.3 versions are quite old by now :).
