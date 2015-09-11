@@ -159,7 +159,7 @@ In addition to PHP, this also installs Apache - the most common web server
 software - and MySQL - the most common database. We won't worry about these
 right now.
 
-To check if things are working, enter, ``http://localhost`` in your browser
+To check if things are working, enter ``http://localhost`` in your browser
 and choose your language if it asks. You should see a bright page. If you 
 don't, don't panic. First, open up the XAMPP control panel and make sure 
 Apache is running. If that's not the problem, ignore it for now. You may 
