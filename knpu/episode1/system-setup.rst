@@ -241,7 +241,7 @@ make life easier. I'll use that.
 
 .. tip::
 
-    In OSX, open up spotlight and type ``terminal``. It's also in
+    In OS X, open up spotlight and type ``terminal``. It's also in
     ``Applications/Utilities/Terminal``.
 
 Move into the directory you created. Of course, this looks different on
@@ -249,7 +249,7 @@ Windows and your directory will live in a different location.
 
 .. tip::
 
-    In OSX and Linux, if you created a ``Sites/airpup`` folder in your home
+    In OS X and Linux, if you created a ``Sites/airpup`` folder in your home
     directory, then you can move into it by typing ``cd ~/Sites/airpup``.
 
 Once here, type the following:
