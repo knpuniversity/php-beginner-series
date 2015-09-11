@@ -133,7 +133,7 @@ Install PHP
 ~~~~~~~~~~~
 
 First, install PHP on your computer. PHP is basically just an executable
-file. Not an executable file like chrome or iTunes that opens up and has
+file. Not an executable file like Chrome or iTunes that opens up and has
 a cute GUI, more like an executable that you can run from the command line.
 If you're not used to the command line, it's ok: we'll ease into it.
 
