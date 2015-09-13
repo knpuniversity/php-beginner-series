@@ -12,7 +12,9 @@ from the bottom into footer:
     <!-- layout/header.php -->
     <!DOCTYPE html>
     <html lang="en">
-    <head>
+    <head>...</head>
+    <body>
+    <!-- header code here... -->
 
 .. code-block:: html+php
 
