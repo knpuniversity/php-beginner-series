@@ -35,7 +35,7 @@ In episode 1, we learned that the web works via requests and responses. Our
 browser sends an HTTP request message into the interwebs for airpup.com/contact.php.
 This eventually finds our server where it scratches on the door. And with any
 luck, some web server software like Apache will be listening, open the door,
-look in a certain directory for the ``contact.php` file`` and process all
+look in a certain directory for the ``contact.php`` file and process all
 the PHP treats . . . I mean tags. The final HTML is called an HTTP response, 
 and is sent from the server back to our browser.
 
