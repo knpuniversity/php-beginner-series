@@ -137,4 +137,4 @@ Refresh. Go team! We have a working nav like a real site!
 
 
 .. _`episode 1`: https://knpuniversity.com/screencast/php-ep1
-.. _`server setup`: http://knpuniversity.com/screencast/php-ep1
+.. _`server setup`: http://knpuniversity.com/screencast/php-ep1/system-setup
