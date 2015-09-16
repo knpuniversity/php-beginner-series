@@ -86,7 +86,7 @@ Next, add ``$pancake`` to our ``$pets`` array and remove Kitty Gaga::
 Notice that instead of passing a string as each item, we're now passing an
 array with lots of information about each pet. Before we go any further,
 let's use ``var_dump`` to see how this array looks. I'm also going to use
-a new function called :phpfunction:`die`.
+a new function called :phpfunction:`die`::
 
     $pets = array($pet1, $pet2, $pet3, $pancake);
     var_dump($pets);
