@@ -109,7 +109,7 @@ to use it, we need to ``require`` that file:
 
 Ok, refresh and re-post the form. Hmm, it looks like it did nothing. But
 that's not true! We submitted the form, our code detected this was a POST
-request, we saved the new stuff to``pets.json`` , and then the page continued
+request, we saved the new stuff to ``pets.json``, and then the page continued
 rendering the blank form. There weren't any fireworks, but I think this worked!
 
 Go to the homepage to find out for sure! We didn't give it an image, but
