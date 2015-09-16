@@ -16,7 +16,7 @@ Where does $_POST Come From?
 
 Wait, not so fast! Where did this variable come from? We already learned
 that if we try to reference a variable name that doesn't exist, PHP gets
-really angry and tells us about it:
+really angry and tells us about it::
 
     <?php var_dump($_POST); ?>
     <?php var_dump($fakeVariable); ?>
