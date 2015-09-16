@@ -107,10 +107,10 @@ out what it does or its purpose. But when it's inside a function called
 We'll go through this process of writing code and reorganizaing it over and
 over again. Our site is measured by more than just whether or not it works:
 you also want your code to be easy to understand and easy to make more changes
-to.
+too.
 
 Building great things *and* doing it well, *that's* where you're going. And
-you've just finished another episode you crazy developer you! Congrats! Now
+you've just finished another episode you crazy developer! Congrats! Now
 build something and keep learning with us.
 
 Seeya next time!
