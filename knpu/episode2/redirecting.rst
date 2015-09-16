@@ -89,7 +89,7 @@ redirect so quickly.
 I thought you said die was bad?
 -------------------------------
 
-Ok, I admit, in episode 1, I said that you should never use ``die`` except
+Ok, I admit, in `episode 1`_, I said that you should never use ``die`` except
 for debugging. Yes, I'm violating that temporarily because we need to learn
 a few more things before we can re-organize code and get rid of this. We'll
 see that in a future screencast.
@@ -102,3 +102,6 @@ be able to refresh a finished form and create duplicate pet data. And now,
 we've done that! Refresh here: instead of re-submitting the form, it just
 makes another GET request to the homepage. Whenever you process a form submit,
 add a redirect by setting the ``Location`` response header.
+
+
+.. _`episode 1`: https://knpuniversity.com/screencast/php-ep1/arrays3
