@@ -8,7 +8,7 @@ with each minute you spend practicing.
 Getting the Code, Starting the Web Server
 -----------------------------------------
 
-We're going to keep coding on the project from episode 1. If you don't have
+We're going to keep coding on the project from `episode 1`_. If you don't have
 that code, just download it from the screencast page and unzip it. Once you've
 done that, we just need to start the PHP web server.
 
@@ -26,12 +26,12 @@ Great! Now just put that URL in your browser and voila!
 
 .. tip::
 
-    Having issues? Check out our `server setup`_ chapter in episode 1!
+    Having issues? Check out our `server setup`_ chapter in `episode 1`_!
 
 What Secrets lie on the HTTP Request?
 -------------------------------------
 
-In episode 1, we learned that the web works via requests and responses. Our
+In `episode 1`_, we learned that the web works via requests and responses. Our
 browser sends an HTTP request message into the interwebs for airpup.com/contact.php.
 This eventually finds our server where it scratches on the door. And with any
 luck, some web server software like Apache will be listening, open the door,
@@ -135,4 +135,6 @@ in ``header.php``. We can also make "Home" *actually* go to the homepage.
 
 Refresh. Go team! We have a working nav like a real site!
 
+
+.. _`episode 1`: https://knpuniversity.com/screencast/php-ep1
 .. _`server setup`: http://knpuniversity.com/screencast/php-ep1
