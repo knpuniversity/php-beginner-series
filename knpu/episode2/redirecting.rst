@@ -6,7 +6,7 @@ still working. Refresh a few times and check out ``pets.json``. Woh,
 we have a lot of duplicate "Fidos" in our file! Each time I refreshed, the
 form resubmitted and added my pet *again*. Bad dog!
 
-In the real world, we don't want users to be able to be able to create duplicate
+In the real world, we don't want users to be able to create duplicate
 records accidentally or so easily. And that's why you should redirect the
 user to a different page after handling a form submit.
 
