@@ -10,6 +10,8 @@ row to a table, use the ``INSERT INTO`` query:
 
 Heck, let's add another one:
 
+.. code-block:: sql
+
     INSERT INTO pet (name, breed) VALUES ("Spark Pug", "Pug");
 
 ``INSERT INTO`` means "add a new row to this table". The syntax is a little
