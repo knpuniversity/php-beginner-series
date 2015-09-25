@@ -29,7 +29,7 @@ tuts_hero:
 chapters:
     "lets-write-php":
         is_free:    true
-        video_key:  wwqy11pxgn
+        video_key:  140189285
         challenges:
             # teaching: <?php, echo, creating variables, semi-colons
             - Challenges\LetsWritePhp\OpenPhpMC
@@ -38,59 +38,59 @@ chapters:
             - Challenges\LetsWritePhp\CreateVariableCoding
             - Challenges\LetsWritePhp\FixMissingSemicolon
     "functions":
-        video_key:  o26kx6853k
+        video_key:  140189281
         challenges:
             - Challenges\Functions\UseRandFunctionCoding
             - Challenges\Functions\ReverseAndLowercaseCoding
             - Challenges\Functions\NestedFunctionsMC
     "arrays-loops":
-        video_key:  dfyfkbpp0p
+        video_key:  140189284
         challenges:
             - Challenges\ArraysLoops\CreateArrayCoding
             - Challenges\ArraysLoops\ForEachCoding
             - Challenges\ArraysLoops\VarDumpCoding
             - Challenges\ArraysLoops\ArrayKeysMC
     "arrays2":
-        video_key:  t8odqm2o22
+        video_key:  140189280
         challenges:
             - Challenges\Arrays2\ConvertToAssociativeCoding
             - Challenges\Arrays2\AddNewKeyCoding
             - Challenges\Arrays2\GuessAutoKeyMC
     "arrays3":
-        video_key:  w38ndhh39c
+        video_key:  140189283
         challenges:
             - Challenges\Arrays3\MultiArrayKeysCoding
             - Challenges\Arrays3\ForeachAssociativeCoding
             - Challenges\Arrays3\CountAndVariableReorderCoding
     "files-json-booleans":
-        video_key:  wlu0hfwp4j
+        video_key:  140189282
         challenges:
             - Challenges\FilesJsonBooleans\JsonEncodeMC
             - Challenges\FilesJsonBooleans\ReadFileJsonDecodeCoding
             - Challenges\FilesJsonBooleans\FilePutContentsCoding
     "if-statement":
-        video_key:  uet07kbiz0
+        video_key:  140189287
         challenges:
             - Challenges\IfStatement\IfNoToyColorCoding
             - Challenges\IfStatement\IfElseIfElseCoding
             - Challenges\IfStatement\FixErrorsIfElseCoding
     "system-setup":
-        video_key:  fkr3k42s39
+        video_key:  140189286
         challenges:
             - Challenges\SystemSetup\DnsFairyMC
             - Challenges\SystemSetup\LocalhostPortFilenameMC
     "creating-functions":
-        video_key:  luzhukq10p
+        video_key:  140189288
         challenges:
             - Challenges\CreatingFunctions\FunWithCommentsMC
             - Challenges\CreatingFunctions\CreateFunctionCoding
     "require-include":
-        video_key:  a0vrjxeppv
+        video_key:  140189289
         challenges:
             - Challenges\RequireInclude\IsolateFunctionUseRequireCoding
             - Challenges\RequireInclude\NoClosingPhpTagMC
     "simple-layout":
-        video_key:  36wu53cttm
+        video_key:  140189290
         challenges:
             - Challenges\SimpleLayout\LayoutWithRequireCoding
             - Challenges\SimpleLayout\RequireAndVariablesMC
