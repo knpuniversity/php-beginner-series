@@ -25,33 +25,33 @@ tuts_hero:
 chapters:
     request-new-page:
         is_free:    true
-        video_key:  https://vimeo.com/album/3577787/video/140189925
+        video_key:  140189925
         challenges:
             - Challenges\RequestNewPage\RequestPostDataMC
     create-form:
-        video_key:  https://vimeo.com/album/3577787/video/140189922
+        video_key:  140189922
         challenges:
             - Challenges\CreateForm\PostVersusGetMC
             - Challenges\CreateForm\CreateHtmlFormCoding
     reading-form-data:
-        video_key:  https://vimeo.com/album/3577787/video/140189923
+        video_key:  140189923
         challenges:
             - Challenges\ReadingFormData\FetchPOSTDataCoding
             - Challenges\ReadingFormData\CheckHttpMethodCoding
             - Challenges\ReadingFormData\ArrayKeyExistsIssetMC
             - Challenges\ReadingFormData\PlayingWithSERVERCoding
     saving-pets:
-        video_key:  https://vimeo.com/album/3577787/video/140189924
+        video_key:  140189924
         challenges:
             - Challenges\SavingPets\FormSubmitLogicCoding
             - Challenges\SavingPets\JSONEncodeReadableMC
     redirecting:
-        video_key:  https://vimeo.com/album/3577787/video/140189927
+        video_key:  140189927
         challenges:
             - Challenges\ArtOfRedirecting\FormSubmitRedirectMC
             - Challenges\ArtOfRedirecting\RedirectUserToyListCoding
             - Challenges\ArtOfRedirecting\RedirectResponseMC
     code-cleanup:
-        video_key:  https://vimeo.com/album/3577787/video/140189926
+        video_key:  140189926
         challenges:
             - Challenges\CleaningUpWithSavedPets\RefactorToySavingCoding
