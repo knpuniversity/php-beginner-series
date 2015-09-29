@@ -20,35 +20,34 @@ summary: |
     * Optional Function Arguments
 
 illustration: php-ep3.png
-videoDownloadExtension: mov
 tuts_hero:
     start_step:  "RReorg: Full working save_pets process"
     finish_step: "SQL Errors: Setting param as integer"
 
 chapters:
     how-to-speak-database:
-        video_key:  ayxz5il911
+        video_key:  140088337
         is_free:    true
     queries-databases-tables:
-        video_key:  27rr4b3h4v
+        video_key:  140088339
         is_free:    true
     inserting-selecting-data:
-        video_key:  1vlfztvz9a
+        video_key:  140088342
     updating-deleting:
-        video_key:  mjezbumcol
+        video_key:  140088343
     php-talks-to-mysql:
-        video_key:  55huryvixu
+        video_key:  140088338
     object-oriented-intro:
-        video_key:  ci78yeno9w
+        video_key:  140088344
     central-configuration:
-        video_key:  n2z59hncjv
+        video_key:  140088345
     limiting-results:
-        video_key:  qt26g5d4y5
+        video_key:  140088346
     optional-function-arguments:
-        video_key:  rjgy4eomxr
+        video_key:  140088348
     query-parameters:
-        video_key:  2bvwhp9rec
+        video_key:  140088351
     query-for-one-pet:
-        video_key:  wj2frxes2q
+        video_key:  140088350
     sql-injection-prepared-statements:
-        video_key:  mu9ywnxxlg
+        video_key:  140088349
