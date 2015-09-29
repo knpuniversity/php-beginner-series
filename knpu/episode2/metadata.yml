@@ -18,7 +18,6 @@ summary: |
     This will get you ready for episode 3... which is all about databases!
 
 illustration: php-ep2.png
-videoDownloadExtension: mov
 tuts_hero:
     start_step:  "Layout: Create and use header/footer"
     finish_step: "RReorg: Full working save_pets process"
@@ -26,33 +25,33 @@ tuts_hero:
 chapters:
     request-new-page:
         is_free:    true
-        video_key:  cqblebjgek
+        video_key:  https://vimeo.com/album/3577787/video/140189925
         challenges:
             - Challenges\RequestNewPage\RequestPostDataMC
     create-form:
-        video_key:  lv2ttcf8zn
+        video_key:  https://vimeo.com/album/3577787/video/140189922
         challenges:
             - Challenges\CreateForm\PostVersusGetMC
             - Challenges\CreateForm\CreateHtmlFormCoding
     reading-form-data:
-        video_key:  ugsivpf04s
+        video_key:  https://vimeo.com/album/3577787/video/140189923
         challenges:
             - Challenges\ReadingFormData\FetchPOSTDataCoding
             - Challenges\ReadingFormData\CheckHttpMethodCoding
             - Challenges\ReadingFormData\ArrayKeyExistsIssetMC
             - Challenges\ReadingFormData\PlayingWithSERVERCoding
     saving-pets:
-        video_key:  mjbsmkf4qh
+        video_key:  https://vimeo.com/album/3577787/video/140189924
         challenges:
             - Challenges\SavingPets\FormSubmitLogicCoding
             - Challenges\SavingPets\JSONEncodeReadableMC
     redirecting:
-        video_key:  bu0it04eyc
+        video_key:  https://vimeo.com/album/3577787/video/140189927
         challenges:
             - Challenges\ArtOfRedirecting\FormSubmitRedirectMC
             - Challenges\ArtOfRedirecting\RedirectUserToyListCoding
             - Challenges\ArtOfRedirecting\RedirectResponseMC
     code-cleanup:
-        video_key:  nr1nc80or8
+        video_key:  https://vimeo.com/album/3577787/video/140189926
         challenges:
             - Challenges\CleaningUpWithSavedPets\RefactorToySavingCoding
