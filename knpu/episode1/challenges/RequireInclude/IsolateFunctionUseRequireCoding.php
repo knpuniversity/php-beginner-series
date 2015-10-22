@@ -117,7 +117,7 @@ EOF
 <?php
 function get_great_pet_toys()
 {
-    \$contents = file_get_contents('toys.json');
+    \$contents = file_get_contents(__DIR__.'/../toys.json');
     \$toys = json_decode(\$contents, true);
 
     return \$toys;
