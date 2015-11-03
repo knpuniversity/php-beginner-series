@@ -2,12 +2,13 @@
 
 namespace Challenges\ArtOfRedirecting;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
-use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
-use KnpU\ActivityRunner\Activity\Exception\GradingException;
-use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
+use KnpU\Gladiator\CodingChallengeInterface;
+use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\PhpGradingTool;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class RedirectUserToyListCoding implements CodingChallengeInterface
 {
@@ -31,26 +32,26 @@ In the real world, your browser would quickly make a second request to `about.ph
 EOF;
     }
 
-    public function getFileBuilder()
+    public function getChallengeBuilder()
     {
-        $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('aboutUs.php', <<<EOF
-
+        $builder = new ChallengeBuilder();
+        $builder
+            ->addFileContents('aboutUs.php', <<<EOF
 EOF
-        );
-        $fileBuilder->setEntryPointFilename('aboutUs.php');
-
-        $fileBuilder->addFileContents('about.php', <<<EOF
+            )
+            ->addFileContents('about.php', <<<EOF
 <h1>Yea! About us!</h1>
 EOF
-        );
+            )
+            ->setEntryPointFilename('aboutUs.php')
+        ;
 
-        return $fileBuilder;
+        return $builder;
     }
 
-    public function getExecutionMode()
+    public function getWorkerConfig(WorkerLoaderInterface $loader)
     {
-        return self::EXECUTION_MODE_PHP_NORMAL;
+        return $loader->load(__DIR__.'/../php_worker.yml');
     }
 
     public function setupContext(CodingContext $context)
@@ -60,19 +61,23 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertInputContains('aboutUs.php', 'header(', 'Use the `header()` function to redirect');
-        $result->assertInputContains('aboutUs.php', 'Location:', 'Set the `Location:` header to `/about.php`');
+        $phpGrader = new PhpGradingTool($result);
+
+        $phpGrader->assertInputContains('aboutUs.php', 'header(', 'Use the `header()` function to redirect');
+        $phpGrader->assertInputContains('aboutUs.php', 'Location:', 'Set the `Location:` header to `/about.php`');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('aboutUs.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('aboutUs.php', <<<EOF
 <?php
 // this is extra credit: a 301 redirect is good for search engines in this case!
 http_response_code(301);
 
 header('Location: /about.php');
 EOF
-        );
+            )
+        ;
     }
 }
