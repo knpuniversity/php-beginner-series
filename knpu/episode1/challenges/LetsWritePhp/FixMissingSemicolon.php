@@ -4,12 +4,10 @@ namespace Challenges\LetsWritePhp;
 
 use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
 use KnpU\Gladiator\Grading\HtmlOutputGradingTool;
-use KnpU\Gladiator\Grading\PhpGradingTool;
 use KnpU\Gladiator\CodingChallenge\CodingContext;
 use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
 use KnpU\Gladiator\CodingChallengeInterface;
 use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
-use KnpU\Gladiator\CodingChallenge\Exception\GradingException;
 use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class FixMissingSemicolon implements CodingChallengeInterface
@@ -56,7 +54,7 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $phpGrader = new PhpGradingTool($result);
+//        $phpGrader = new PhpGradingTool($result);
         $htmlGrader = new HtmlOutputGradingTool($result);
 
         // sanity checks to make sure they didn't just clear the file

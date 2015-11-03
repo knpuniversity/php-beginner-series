@@ -9,7 +9,6 @@ use KnpU\Gladiator\CodingChallenge\CodingContext;
 use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
 use KnpU\Gladiator\CodingChallengeInterface;
 use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
-use KnpU\Gladiator\CodingChallenge\Exception\GradingException;
 use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class CreateFunctionCoding implements CodingChallengeInterface
