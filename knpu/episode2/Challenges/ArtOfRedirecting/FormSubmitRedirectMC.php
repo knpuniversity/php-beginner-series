@@ -2,8 +2,8 @@
 
 namespace Challenges\ArtOfRedirecting;
 
-use KnpU\ActivityRunner\Activity\MultipleChoice\AnswerBuilder;
-use KnpU\ActivityRunner\Activity\MultipleChoiceChallengeInterface;
+use KnpU\Gladiator\MultipleChoice\AnswerBuilder;
+use KnpU\Gladiator\MultipleChoiceChallengeInterface;
 
 class FormSubmitRedirectMC implements MultipleChoiceChallengeInterface
 {
@@ -12,15 +12,16 @@ class FormSubmitRedirectMC implements MultipleChoiceChallengeInterface
         return <<<EOF
 After a successful form submit, we always redirect the user to another page. Why?
 EOF;
-
     }
 
     public function configureAnswers(AnswerBuilder $builder)
     {
-        $builder->addAnswer('Redirecting prevents the user from accidentally re-submitting the form', true)
+        $builder
+            ->addAnswer('Redirecting prevents the user from accidentally re-submitting the form', true)
             ->addAnswer('POST requests (which most form submits are) cannot have responses with content, so we need to redirect to another page')
             ->addAnswer('Redirecting prevents the form from being re-populated with the same data')
-            ->addAnswer('Some older browsers cannot properly handle a form submit, unless it redirects');
+            ->addAnswer('Some older browsers cannot properly handle a form submit, unless it redirects')
+        ;
     }
 
     public function getExplanation()
