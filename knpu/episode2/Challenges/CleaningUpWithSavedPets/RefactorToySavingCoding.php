@@ -27,6 +27,7 @@ EOF;
     public function getChallengeBuilder()
     {
         $builder = new ChallengeBuilder();
+
         $builder
             ->addFileContents('new_toy.php', <<<EOF
 <?php
@@ -106,7 +107,8 @@ EOF
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <?php
 require 'functions.php';
 
@@ -125,9 +127,8 @@ save_toys(\$toys);
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
-
-        $correctAnswer->setFileContents('functions.php', <<<EOF
+            )
+            ->setFileContents('functions.php', <<<EOF
 <?php
 function get_great_pet_toys()
 {
@@ -143,6 +144,7 @@ function save_toys(\$toys)
     file_put_contents('toys.json', \$json);
 }
 EOF
-        );
+            )
+        ;
     }
 }

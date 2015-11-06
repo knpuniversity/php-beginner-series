@@ -7,6 +7,7 @@ use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
 use KnpU\Gladiator\CodingChallengeInterface;
 use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
 use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\HtmlOutputGradingTool;
 use KnpU\Gladiator\Grading\PhpGradingTool;
 use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
@@ -24,7 +25,6 @@ figure this out. *Hint* The browser information is a big long string that (in th
 example) will include `Mozilla` in it.
 
 Then, remove the dump, but print the browser information in the `h3` tag!
-
 EOF;
     }
 
@@ -57,11 +57,12 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
+        $htmlGrader = new HtmlOutputGradingTool($result);
         $phpGrader = new PhpGradingTool($result);
 
         $phpGrader->assertInputContains('new_toy.php', '$_SERVER');
         $phpGrader->assertInputContains('new_toy.php', 'HTTP_USER_AGENT');
-        $phpGrader->assertOutputContains('Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10');
+        $htmlGrader->assertOutputContains('Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)

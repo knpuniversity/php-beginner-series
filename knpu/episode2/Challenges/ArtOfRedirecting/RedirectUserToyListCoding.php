@@ -35,6 +35,7 @@ EOF;
     public function getChallengeBuilder()
     {
         $builder = new ChallengeBuilder();
+
         $builder
             ->addFileContents('aboutUs.php', <<<EOF
 EOF

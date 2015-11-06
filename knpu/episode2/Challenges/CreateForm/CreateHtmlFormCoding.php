@@ -31,9 +31,13 @@ EOF;
     public function getChallengeBuilder()
     {
         $builder = new ChallengeBuilder();
-        $builder->addFileContents('new_toy.php', <<<EOF
+
+        $builder
+            ->addFileContents('new_toy.php', <<<EOF
 EOF
-        );
+            )
+            ->setEntryPointFilename('new_toy.php')
+        ;
 
         return $builder;
     }
@@ -75,7 +79,8 @@ EOF
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <form action="/new_toy.php" method="POST">
     <input type="text" name="toy_name" />
     <textarea name="description"></textarea>
@@ -83,6 +88,7 @@ EOF
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
+            )
+        ;
     }
 }
