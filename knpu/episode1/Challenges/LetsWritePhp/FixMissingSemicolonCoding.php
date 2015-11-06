@@ -10,7 +10,7 @@ use KnpU\Gladiator\CodingChallengeInterface;
 use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
 use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
-class FixMissingSemicolon implements CodingChallengeInterface
+class FixMissingSemicolonCoding implements CodingChallengeInterface
 {
     /**
      * @return string
