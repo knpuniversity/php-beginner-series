@@ -57,7 +57,7 @@ EOF
 
         $crawler = $htmlGrader->getCrawler()->filter('form');
         if (count($crawler) == 0) {
-            throw new GradingException('Did you create a `<form>` tag yet?');
+            throw new GradingException('Did you create a `form` tag yet?');
         }
 
         if ($crawler->attr('action') != '/new_toy.php') {
