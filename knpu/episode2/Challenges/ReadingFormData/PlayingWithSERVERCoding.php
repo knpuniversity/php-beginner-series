@@ -2,12 +2,14 @@
 
 namespace Challenges\ReadingFormData;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
-use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
-use KnpU\ActivityRunner\Activity\Exception\GradingException;
-use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
+use KnpU\Gladiator\CodingChallengeInterface;
+use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\HtmlOutputGradingTool;
+use KnpU\Gladiator\Grading\PhpGradingTool;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class PlayingWithSERVERCoding implements CodingChallengeInterface
 {
@@ -23,26 +25,28 @@ figure this out. *Hint* The browser information is a big long string that (in th
 example) will include `Mozilla` in it.
 
 Then, remove the dump, but print the browser information in the `h3` tag!
-
 EOF;
     }
 
-    public function getFileBuilder()
+    public function getChallengeBuilder()
     {
-        $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('new_toy.php', <<<EOF
+        $builder = new ChallengeBuilder();
+
+        $builder
+            ->addFileContents('new_toy.php', <<<EOF
 <h3>
 Print the browser information of your user here
 </h3>
 EOF
-        );
+            )
+        ;
 
-        return $fileBuilder;
+        return $builder;
     }
 
-    public function getExecutionMode()
+    public function getWorkerConfig(WorkerLoaderInterface $loader)
     {
-        return self::EXECUTION_MODE_PHP_NORMAL;
+        return $loader->load(__DIR__.'/../php_worker.yml');
     }
 
     public function setupContext(CodingContext $context)
@@ -53,18 +57,23 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertInputContains('new_toy.php', '$_SERVER');
-        $result->assertInputContains('new_toy.php', 'HTTP_USER_AGENT');
-        $result->assertOutputContains('Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10');
+        $htmlGrader = new HtmlOutputGradingTool($result);
+        $phpGrader = new PhpGradingTool($result);
+
+        $phpGrader->assertInputContains('new_toy.php', '$_SERVER');
+        $phpGrader->assertInputContains('new_toy.php', 'HTTP_USER_AGENT');
+        $htmlGrader->assertOutputContains('Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <h3>
     <?php echo \$_SERVER['HTTP_USER_AGENT']; ?>
 </h3>
 EOF
-        );
+            )
+        ;
     }
 }

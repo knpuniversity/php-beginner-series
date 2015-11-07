@@ -2,12 +2,14 @@
 
 namespace Challenges\CreateForm;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
-use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
-use KnpU\ActivityRunner\Activity\Exception\GradingException;
-use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
+use KnpU\Gladiator\CodingChallenge\Exception\GradingException;
+use KnpU\Gladiator\CodingChallengeInterface;
+use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\HtmlOutputGradingTool;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class CreateHtmlFormCoding implements CodingChallengeInterface
 {
@@ -26,20 +28,23 @@ called `description`:
 EOF;
     }
 
-    public function getFileBuilder()
+    public function getChallengeBuilder()
     {
-        $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('new_toy.php', <<<EOF
+        $builder = new ChallengeBuilder();
 
+        $builder
+            ->addFileContents('new_toy.php', <<<EOF
 EOF
-        );
+            )
+            ->setEntryPointFilename('new_toy.php')
+        ;
 
-        return $fileBuilder;
+        return $builder;
     }
 
-    public function getExecutionMode()
+    public function getWorkerConfig(WorkerLoaderInterface $loader)
     {
-        return self::EXECUTION_MODE_PHP_NORMAL;
+        return $loader->load(__DIR__.'/../php_worker.yml');
     }
 
     public function setupContext(CodingContext $context)
@@ -48,9 +53,11 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $crawler = $result->getCrawler()->filter('form');
+        $htmlGrader = new HtmlOutputGradingTool($result);
+
+        $crawler = $htmlGrader->getCrawler()->filter('form');
         if (count($crawler) == 0) {
-            throw new GradingException('Did you create a `<form>` tag yet?');
+            throw new GradingException('Did you create a `form` tag yet?');
         }
 
         if ($crawler->attr('action') != '/new_toy.php') {
@@ -72,7 +79,8 @@ EOF
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <form action="/new_toy.php" method="POST">
     <input type="text" name="toy_name" />
     <textarea name="description"></textarea>
@@ -80,6 +88,7 @@ EOF
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
+            )
+        ;
     }
 }

@@ -2,12 +2,14 @@
 
 namespace Challenges\SavingPets;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
-use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
-use KnpU\ActivityRunner\Activity\Exception\GradingException;
-use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
+use KnpU\Gladiator\CodingChallengeInterface;
+use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\HtmlOutputGradingTool;
+use KnpU\Gladiator\Grading\PhpGradingTool;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class FormSubmitLogicCoding implements CodingChallengeInterface
 {
@@ -21,14 +23,15 @@ Let's finish the form submit logic! Fetch the existing pet toys with the `get_gr
 function, add the new toy to the array, then save the JSON back to `toys.json`. To
 prove it's working, read the file again with `file_get_contents()` and `var_dump()`
 that JSON string.
-
 EOF;
     }
 
-    public function getFileBuilder()
+    public function getChallengeBuilder()
     {
-        $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('new_toy.php', <<<EOF
+        $builder = new ChallengeBuilder();
+
+        $builder
+            ->addFileContents('new_toy.php', <<<EOF
 <?php
 require 'functions.php';
 
@@ -44,10 +47,8 @@ require 'functions.php';
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
-        $fileBuilder->setEntryPointFilename('new_toy.php');
-
-        $fileBuilder->addFileContents('functions.php', <<<EOF
+            )
+            ->addFileContents('functions.php', <<<EOF
 <?php
 function get_great_pet_toys()
 {
@@ -57,9 +58,8 @@ function get_great_pet_toys()
     return \$toys;
 }
 EOF
-        );
-
-        $fileBuilder->addFileContents('toys.json', <<<EOF
+            )
+            ->addFileContents('toys.json', <<<EOF
 [
     {
         "name": "Bacon Bone",
@@ -75,20 +75,22 @@ EOF
     }
 ]
 EOF
-        );
+            )
+            ->setEntryPointFilename('new_toy.php')
+        ;
 
-        return $fileBuilder;
+        return $builder;
     }
 
-    public function getExecutionMode()
+    public function getWorkerConfig(WorkerLoaderInterface $loader)
     {
-        return self::EXECUTION_MODE_PHP_NORMAL;
+        return $loader->load(__DIR__.'/../php_worker.yml');
     }
 
     public function setupContext(CodingContext $context)
     {
         $request = $context->fakeHttpRequest('/new_toy.php', 'POST');
-        $request->setPOSTData(array(
+        $request->setPostData(array(
             'name' => 'Fluffy Pig Stuffed Animal',
             'description' => 'Your dog will *love* to chew and destroy this adorable pig!'
         ));
@@ -96,18 +98,22 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertInputContains('new_toy.php', 'json_encode', 'Use `json_encode()` in `new_toy.php` to encode the toys array before saving it');
-        $result->assertInputContains('new_toy.php', 'file_put_contents', 'Use `file_put_contents()` in `new_toy.php` to save the new JSON string');
-        $result->assertInputContains('new_toy.php', 'var_dump', '`var_dump()` the file contents of `toys.json` after saving the new toy');
+        $htmlGrader = new HtmlOutputGradingTool($result);
+        $phpGrader = new PhpGradingTool($result);
 
-        $result->assertInputContains('new_toy.php', 'get_great_pet_toys', 'Call `get_great_pet_toys()` first to get the existing toys');
-        $result->assertOutputContains('Bacon Bone', 'I don\'t see `Bacon Bone` in `toys.json` - double-check that you\'re keeping the original pets, not replacing them entirely.');
-        $result->assertOutputContains('Fluffy Pig Stuffed Animal', 'I don\'t see the new "Fluffy Pig" toy in `toys.json`. Are you adding it to the toys array before calling `json_encode()` and saving the file?');
+        $phpGrader->assertInputContains('new_toy.php', 'json_encode', 'Use `json_encode()` in `new_toy.php` to encode the toys array before saving it');
+        $phpGrader->assertInputContains('new_toy.php', 'file_put_contents', 'Use `file_put_contents()` in `new_toy.php` to save the new JSON string');
+        $phpGrader->assertInputContains('new_toy.php', 'var_dump', '`var_dump()` the file contents of `toys.json` after saving the new toy');
+
+        $phpGrader->assertInputContains('new_toy.php', 'get_great_pet_toys', 'Call `get_great_pet_toys()` first to get the existing toys');
+        $htmlGrader->assertOutputContains('Bacon Bone', 'I don\'t see `Bacon Bone` in `toys.json` - double-check that you\'re keeping the original pets, not replacing them entirely.');
+        $htmlGrader->assertOutputContains('Fluffy Pig Stuffed Animal', 'I don\'t see the new "Fluffy Pig" toy in `toys.json`. Are you adding it to the toys array before calling `json_encode()` and saving the file?');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <?php
 require 'functions.php';
 
@@ -129,6 +135,7 @@ var_dump(file_get_contents('toys.json'));
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
+            )
+        ;
     }
 }

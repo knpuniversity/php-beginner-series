@@ -2,12 +2,13 @@
 
 namespace Challenges\ReadingFormData;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
-use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
-use KnpU\ActivityRunner\Activity\Exception\GradingException;
-use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
+use KnpU\Gladiator\CodingChallengeInterface;
+use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\PhpGradingTool;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class FetchPOSTDataCoding implements CodingChallengeInterface
 {
@@ -28,10 +29,12 @@ so you can see what the data looks like.
 EOF;
     }
 
-    public function getFileBuilder()
+    public function getChallengeBuilder()
     {
-        $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('new_toy.php', <<<EOF
+        $builder = new ChallengeBuilder();
+
+        $builder
+            ->addFileContents('new_toy.php', <<<EOF
 <!-- set variables and var_dump() up here -->
 
 <form action="/new_toy.php" method="POST">
@@ -41,14 +44,15 @@ EOF;
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
+            )
+        ;
 
-        return $fileBuilder;
+        return $builder;
     }
 
-    public function getExecutionMode()
+    public function getWorkerConfig(WorkerLoaderInterface $loader)
     {
-        return self::EXECUTION_MODE_PHP_NORMAL;
+        return $loader->load(__DIR__.'/../php_worker.yml');
     }
 
     public function setupContext(CodingContext $context)
@@ -62,15 +66,18 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertInputContains('new_toy.php', '$_POST');
-        $result->assertVariableEquals('name', 'Fluffy Pig Stuffed Animal');
-        $result->assertVariableEquals('description', 'Your dog will *love* to chew and destroy this adorable pig!');
-        $result->assertInputContains('new_toy.php', 'var_dump');
+        $phpGrader = new PhpGradingTool($result);
+
+        $phpGrader->assertInputContains('new_toy.php', '$_POST');
+        $phpGrader->assertVariableEquals('name', 'Fluffy Pig Stuffed Animal');
+        $phpGrader->assertVariableEquals('description', 'Your dog will *love* to chew and destroy this adorable pig!');
+        $phpGrader->assertInputContains('new_toy.php', 'var_dump');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <?php
 \$name = \$_POST['name'];
 \$description = \$_POST['description'];
@@ -85,6 +92,7 @@ var_dump(\$name, \$description);
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
+            )
+        ;
     }
 }

@@ -2,12 +2,13 @@
 
 namespace Challenges\CleaningUpWithSavedPets;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
-use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
-use KnpU\ActivityRunner\Activity\Exception\GradingException;
-use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
+use KnpU\Gladiator\CodingChallengeInterface;
+use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\PhpGradingTool;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class RefactorToySavingCoding implements CodingChallengeInterface
 {
@@ -23,10 +24,12 @@ called `save_toys()`. Be sure to call this function to keep things working!
 EOF;
     }
 
-    public function getFileBuilder()
+    public function getChallengeBuilder()
     {
-        $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('new_toy.php', <<<EOF
+        $builder = new ChallengeBuilder();
+
+        $builder
+            ->addFileContents('new_toy.php', <<<EOF
 <?php
 require 'functions.php';
 
@@ -46,10 +49,8 @@ file_put_contents('toys.json', \$json);
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
-        $fileBuilder->setEntryPointFilename('new_toy.php');
-
-        $fileBuilder->addFileContents('functions.php', <<<EOF
+            )
+            ->addFileContents('functions.php', <<<EOF
 <?php
 function get_great_pet_toys()
 {
@@ -59,9 +60,8 @@ function get_great_pet_toys()
     return \$toys;
 }
 EOF
-        );
-
-        $fileBuilder->addFileContents('toys.json', <<<EOF
+            )
+            ->addFileContents('toys.json', <<<EOF
 [
     {
         "name": "Bacon Bone",
@@ -77,13 +77,15 @@ EOF
     }
 ]
 EOF
-        );
-        return $fileBuilder;
+            )
+            ->setEntryPointFilename('new_toy.php')
+        ;
+        return $builder;
     }
 
-    public function getExecutionMode()
+    public function getWorkerConfig(WorkerLoaderInterface $loader)
     {
-        return self::EXECUTION_MODE_PHP_NORMAL;
+        return $loader->load(__DIR__.'/../php_worker.yml');
     }
 
     public function setupContext(CodingContext $context)
@@ -97,13 +99,16 @@ EOF
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertInputContains('functions.php', 'save_toys(', 'Put the `save_toys` function into `functions.php` for organization');
-        $result->assertInputContains('new_toy.php', 'save_toys(', 'Be sure to call the `save_toys()` function from within `new_toy.php`');
+        $phpGrader = new PhpGradingTool($result);
+
+        $phpGrader->assertInputContains('functions.php', 'save_toys(', 'Put the `save_toys` function into `functions.php` for organization');
+        $phpGrader->assertInputContains('new_toy.php', 'save_toys(', 'Be sure to call the `save_toys()` function from within `new_toy.php`');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <?php
 require 'functions.php';
 
@@ -122,9 +127,8 @@ save_toys(\$toys);
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
-
-        $correctAnswer->setFileContents('functions.php', <<<EOF
+            )
+            ->setFileContents('functions.php', <<<EOF
 <?php
 function get_great_pet_toys()
 {
@@ -140,6 +144,7 @@ function save_toys(\$toys)
     file_put_contents('toys.json', \$json);
 }
 EOF
-        );
+            )
+        ;
     }
 }

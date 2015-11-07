@@ -35,7 +35,7 @@ chapters:
             - Challenges\LetsWritePhp\SimpleEchoCoding
             - Challenges\LetsWritePhp\JobOfEchoMC
             - Challenges\LetsWritePhp\CreateVariableCoding
-            - Challenges\LetsWritePhp\FixMissingSemicolon
+            - Challenges\LetsWritePhp\FixMissingSemicolonCoding
     "functions":
         video_key:  140189281
         challenges:

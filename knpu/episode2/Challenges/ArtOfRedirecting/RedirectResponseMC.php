@@ -2,8 +2,8 @@
 
 namespace Challenges\ArtOfRedirecting;
 
-use KnpU\ActivityRunner\Activity\MultipleChoice\AnswerBuilder;
-use KnpU\ActivityRunner\Activity\MultipleChoiceChallengeInterface;
+use KnpU\Gladiator\MultipleChoice\AnswerBuilder;
+use KnpU\Gladiator\MultipleChoiceChallengeInterface;
 
 class RedirectResponseMC implements MultipleChoiceChallengeInterface
 {
@@ -13,12 +13,12 @@ class RedirectResponseMC implements MultipleChoiceChallengeInterface
 Which of the following best shows the raw response that's sent back when we redirect
 a user from a page?
 EOF;
-
     }
 
     public function configureAnswers(AnswerBuilder $builder)
     {
-        $builder->addAnswer(<<<EOF
+        $builder
+            ->addAnswer(<<<EOF
 ```
 HTTP/1.1 302 Found
 Location: /thanks.php
@@ -26,14 +26,14 @@ Location: /thanks.php
 <h1>Thanks for adding a new toy!</h1>
 ```
 EOF
-        )
+            )
             ->addAnswer(<<<EOF
 ```
 HTTP/1.1 302 Found
 Location: /thanks.php
 ```
 EOF
-        , true)
+            , true)
             ->addAnswer(<<<EOF
 ```
 GET /new_toy.php
@@ -42,14 +42,15 @@ Host: localhost:8000
 <h1>Add a new toy</h1>
 ```
 EOF
-        )
+            )
             ->addAnswer(<<<EOF
 ```
 POST /new_toy.php
 Location: /new_toy.php
 ```
 EOF
-        );
+            )
+        ;
     }
 
     public function getExplanation()

@@ -2,8 +2,8 @@
 
 namespace Challenges\RequestNewPage;
 
-use KnpU\ActivityRunner\Activity\MultipleChoice\AnswerBuilder;
-use KnpU\ActivityRunner\Activity\MultipleChoiceChallengeInterface;
+use KnpU\Gladiator\MultipleChoice\AnswerBuilder;
+use KnpU\Gladiator\MultipleChoiceChallengeInterface;
 
 class RequestPostDataMC implements MultipleChoiceChallengeInterface
 {
@@ -24,15 +24,16 @@ pet_name=Waggy%20Pig&breed=bichon
 
 Which of the following most accurately describes this request?
 EOF;
-
     }
 
     public function configureAnswers(AnswerBuilder $builder)
     {
-        $builder->addAnswer('The user just browsed to this page, and the form will be pre-filled with the data on the last line.')
+        $builder
+            ->addAnswer('The user just browsed to this page, and the form will be pre-filled with the data on the last line.')
             ->addAnswer('The user surfed to `/pets_new.php` and submitted a form. The data on the bottom is what they filled in for the form fields.')
             ->addAnswer('The user just performed a search for all pets named "Waggy Pig" and breed "bichon"')
-            ->addAnswer('The user just submitted a form  with `<form action="/pets_new.php" method="POST">`and the data on the bottom is what they filled in for the form fields.', true);
+            ->addAnswer('The user just submitted a form  with `<form action="/pets_new.php" method="POST">`and the data on the bottom is what they filled in for the form fields.', true)
+        ;
     }
 
     public function getExplanation()

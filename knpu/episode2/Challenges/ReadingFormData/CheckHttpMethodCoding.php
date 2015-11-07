@@ -2,12 +2,13 @@
 
 namespace Challenges\ReadingFormData;
 
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingContext;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CorrectAnswer;
-use KnpU\ActivityRunner\Activity\CodingChallengeInterface;
-use KnpU\ActivityRunner\Activity\CodingChallenge\CodingExecutionResult;
-use KnpU\ActivityRunner\Activity\Exception\GradingException;
-use KnpU\ActivityRunner\Activity\CodingChallenge\FileBuilder;
+use KnpU\Gladiator\CodingChallenge\CodingContext;
+use KnpU\Gladiator\CodingChallenge\CorrectAnswer;
+use KnpU\Gladiator\CodingChallengeInterface;
+use KnpU\Gladiator\CodingChallenge\CodingExecutionResult;
+use KnpU\Gladiator\CodingChallenge\ChallengeBuilder;
+use KnpU\Gladiator\Grading\PhpGradingTool;
+use KnpU\Gladiator\Worker\WorkerLoaderInterface;
 
 class CheckHttpMethodCoding implements CodingChallengeInterface
 {
@@ -24,14 +25,15 @@ squeeky toy ever invented!
 But now, we're just surfing to the page directly and getting an error!
 Add an `if` statement around our logic so that it only runs when the user submits
 the form (i.e. makes a POST request).
-
 EOF;
     }
 
-    public function getFileBuilder()
+    public function getChallengeBuilder()
     {
-        $fileBuilder = new FileBuilder();
-        $fileBuilder->addFileContents('new_toy.php', <<<EOF
+        $builder = new ChallengeBuilder();
+
+        $builder
+            ->addFileContents('new_toy.php', <<<EOF
 <?php
 \$name = \$_POST['name'];
 \$description = \$_POST['description'];
@@ -46,31 +48,35 @@ var_dump(\$name, \$description);
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
+            )
+        ;
 
-        return $fileBuilder;
+        return $builder;
     }
 
-    public function getExecutionMode()
+    public function getWorkerConfig(WorkerLoaderInterface $loader)
     {
-        return self::EXECUTION_MODE_PHP_NORMAL;
+        return $loader->load(__DIR__.'/../php_worker.yml');
     }
 
     public function setupContext(CodingContext $context)
     {
-        $request = $context->fakeHttpRequest('/new_toy.php', 'GET');
+        $context->fakeHttpRequest('/new_toy.php', 'GET');
     }
 
     public function grade(CodingExecutionResult $result)
     {
-        $result->assertInputContains('new_toy.php', '$_SERVER');
-        $result->assertInputContains('new_toy.php', 'REQUEST_METHOD');
-        $result->assertInputContains('new_toy.php', 'POST', 'Are you checking that the request method equals POST?');
+        $phpGrader = new PhpGradingTool($result);
+
+        $phpGrader->assertInputContains('new_toy.php', '$_SERVER');
+        $phpGrader->assertInputContains('new_toy.php', 'REQUEST_METHOD');
+        $phpGrader->assertInputContains('new_toy.php', 'POST', 'Are you checking that the request method equals POST?');
     }
 
     public function configureCorrectAnswer(CorrectAnswer $correctAnswer)
     {
-        $correctAnswer->setFileContents('new_toy.php', <<<EOF
+        $correctAnswer
+            ->setFileContents('new_toy.php', <<<EOF
 <?php
 if (\$_SERVER['REQUEST_METHOD'] == 'POST') {
     \$name = \$_POST['name'];
@@ -87,6 +93,7 @@ if (\$_SERVER['REQUEST_METHOD'] == 'POST') {
     <button type="submit">Add toy</button>
 </form>
 EOF
-        );
+            )
+        ;
     }
 }
