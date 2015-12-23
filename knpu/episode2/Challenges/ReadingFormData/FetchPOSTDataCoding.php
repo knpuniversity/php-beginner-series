@@ -38,7 +38,7 @@ EOF;
 <!-- set variables and var_dump() up here -->
 
 <form action="/new_toy.php" method="POST">
-    <input type="text" name="toy_name" />
+    <input type="text" name="name" />
     <textarea name="description"></textarea>
 
     <button type="submit">Add toy</button>
@@ -86,7 +86,7 @@ var_dump(\$name, \$description);
 ?>
 
 <form action="/new_toy.php" method="POST">
-    <input type="text" name="toy_name" />
+    <input type="text" name="name" />
     <textarea name="description"></textarea>
 
     <button type="submit">Add toy</button>
