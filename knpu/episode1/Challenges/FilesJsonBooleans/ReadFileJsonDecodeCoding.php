@@ -45,15 +45,15 @@ EOF
 [
     {
         "name": "Bacon Bone",
-        "toy_color": "Bacon-colored"
+        "color": "Bacon-colored"
     },
     {
         "name": "Tennis Ball",
-        "toy_color": "Yellow"
+        "color": "Yellow"
     },
     {
         "name": "Frisbee",
-        "toy_color": "Red"
+        "color": "Red"
     }
 ]
 EOF
@@ -92,7 +92,7 @@ EOF
 
 <?php foreach (\$toys as \$toy) { ?>
     <h3><?php echo \$toy['name']; ?></h3>
-    <h4><?php echo \$toy['toy_color']; ?></h4>
+    <h4><?php echo \$toy['color']; ?></h4>
 <?php } ?>
 EOF
         );
