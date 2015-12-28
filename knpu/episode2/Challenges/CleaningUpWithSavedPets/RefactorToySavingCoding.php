@@ -43,7 +43,7 @@ file_put_contents('toys.json', \$json);
 ?>
 
 <form action="/new_toy.php" method="POST">
-    <input type="text" name="toy_name" />
+    <input type="text" name="name" />
     <textarea name="description"></textarea>
 
     <button type="submit">Add toy</button>
@@ -121,7 +121,7 @@ save_toys(\$toys);
 ?>
 
 <form action="/new_toy.php" method="POST">
-    <input type="text" name="toy_name" />
+    <input type="text" name="name" />
     <textarea name="description"></textarea>
 
     <button type="submit">Add toy</button>

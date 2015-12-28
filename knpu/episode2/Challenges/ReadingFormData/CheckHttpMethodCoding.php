@@ -42,7 +42,7 @@ var_dump(\$name, \$description);
 ?>
 
 <form action="/new_toy.php" method="POST">
-    <input type="text" name="toy_name" />
+    <input type="text" name="name" />
     <textarea name="description"></textarea>
 
     <button type="submit">Add toy</button>
@@ -87,7 +87,7 @@ if (\$_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <form action="/new_toy.php" method="POST">
-    <input type="text" name="toy_name" />
+    <input type="text" name="name" />
     <textarea name="description"></textarea>
 
     <button type="submit">Add toy</button>
