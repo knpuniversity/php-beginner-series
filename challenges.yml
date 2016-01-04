@@ -1,0 +1,50 @@
+easy_challenge:
+    type: coding
+    question: >
+        What *will* you do when you see this question?
+        Well, you should totally try to answer it.
+    step: step1-change-message
+    files:
+        - functions.php
+    features:
+        editor: ~
+        browser: ~
+        terminal: ~
+
+    grading:
+        # each needs to communicate yes/no things are good (and why not)
+        # possible states:
+        #   - true/false (which could be a warning or error)
+        #       e.g. the command has/has not been executed
+        #   - not run
+        #       e.g. PHP code hasn't even been executed
+        gradeClassUsage:
+            # ok, or error+message
+            type: php
+            insert_at: AppBundle\Controller\GhostController::homepageAction
+            grader: ToughChallenge::gradeClassUsage
+            # insert_at: index.php
+            # position: end
+            # what if this code isn't hit? Due to a throw or an earlier return?
+            # we should be able to cut-in on all of those cases and add that as
+            # the context
+        clear_cache:
+            # ok, or warning+message
+            type: command
+            grader: ToughChallenge:checkCacheClear
+            # if the item has never been called or never set explicitly to successful
+            undecided:
+                type: warning
+                message: You might still need to clear your cache
+        basic_output:
+            type: http_response
+            assert_status: 200
+            assert_text:
+                # use default message
+                'Hello world': ~
+            assert_css_exists:
+                'h1': 'Did you add the h1 element?'
+                'h1:contains("Hello world")': 'The h1 does not say Hello world'
+        click_link_populates:
+            type: javascript
+            grader: tough_challenge.js
