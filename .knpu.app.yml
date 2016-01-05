@@ -1,10 +1,8 @@
-name: main
-
-type: php:5.6
 
 web:
-    document_root: "/"
-    passthru: "/index.php"
+    type: php
+    port: 8000
+    command: "php -S localhost:8000 -t web"
 
 hooks:
     # testing out some build stuff
