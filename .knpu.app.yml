@@ -2,7 +2,7 @@
 web:
     type: php
     port: 8000
-    command: "php -S localhost:8000 -t web"
+    command: "php -S localhost:8000"
 
 hooks:
     # testing out some build stuff
