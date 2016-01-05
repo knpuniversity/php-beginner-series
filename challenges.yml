@@ -3,7 +3,7 @@ easy_challenge:
     question: >
         What *will* you do when you see this question?
         Well, you should totally try to answer it.
-    step: step1-change-message
+    step: basics-number-variable
     files:
         - functions.php
     features:
