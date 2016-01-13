@@ -1,8 +1,9 @@
-easy_challenge:
+open-php-mc:
     type: coding
     question: >
-        What *will* you do when you see this question?
-        Well, you should totally try to answer it.
+        Everything in a PHP file is just HTML code at first. If you want
+        to write some dynamic PHP code, you'll activate PHP mode by always
+        writing this first:
     step: basics-number-variable
     files:
         - functions.php
