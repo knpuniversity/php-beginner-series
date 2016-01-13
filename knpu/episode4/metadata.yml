@@ -10,8 +10,8 @@ summary: |
     an update if you'd like to know when it's released!
 
 illustration: php-ep4.png
-# tuts_hero:
-#     start_step:  "RReorg: Full working save_pets process"
-#     finish_step: "SQL Errors: Setting param as integer"
+tuts_hero:
+    start_step:  "start"
+    finish_step: "start"
 
 chapters: []
