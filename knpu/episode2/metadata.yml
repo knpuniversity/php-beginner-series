@@ -27,31 +27,31 @@ chapters:
         is_free:    true
         video_key:  140189925
         challenges:
-            - Challenges\RequestNewPage\RequestPostDataMC
+            - requestnewpage_requestpostdatamc
     create-form:
         video_key:  140189922
         challenges:
-            - Challenges\CreateForm\PostVersusGetMC
-            - Challenges\CreateForm\CreateHtmlFormCoding
+            - createform_postversusgetmc
+            - createform_createhtmlformcoding
     reading-form-data:
         video_key:  140189923
         challenges:
-            - Challenges\ReadingFormData\FetchPOSTDataCoding
-            - Challenges\ReadingFormData\CheckHttpMethodCoding
-            - Challenges\ReadingFormData\ArrayKeyExistsIssetMC
-            - Challenges\ReadingFormData\PlayingWithSERVERCoding
+            - readingformdata_fetchpostdatacoding
+            - readingformdata_checkhttpmethodcoding
+            - readingformdata_arraykeyexistsissetmc
+            - readingformdata_playingwithservercoding
     saving-pets:
         video_key:  140189924
         challenges:
-            - Challenges\SavingPets\FormSubmitLogicCoding
-            - Challenges\SavingPets\JSONEncodeReadableMC
+            - savingpets_formsubmitlogiccoding
+            - savingpets_jsonencodereadablemc
     redirecting:
         video_key:  140189927
         challenges:
-            - Challenges\ArtOfRedirecting\FormSubmitRedirectMC
-            - Challenges\ArtOfRedirecting\RedirectUserToyListCoding
-            - Challenges\ArtOfRedirecting\RedirectResponseMC
+            - artofredirecting_formsubmitredirectmc
+            - artofredirecting_redirectusertoylistcoding
+            - artofredirecting_redirectresponsemc
     code-cleanup:
         video_key:  140189926
         challenges:
-            - Challenges\CleaningUpWithSavedPets\RefactorToySavingCoding
+            - cleaningupwithsavedpets_refactortoysavingcoding

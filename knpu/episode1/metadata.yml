@@ -32,65 +32,65 @@ chapters:
         video_key:  140189285
         challenges:
             # teaching: <?php, echo, creating variables, semi-colons
-            - Challenges\LetsWritePhp\OpenPhpMC
-            - Challenges\LetsWritePhp\SimpleEchoCoding
-            - Challenges\LetsWritePhp\JobOfEchoMC
-            - Challenges\LetsWritePhp\CreateVariableCoding
-            - Challenges\LetsWritePhp\FixMissingSemicolonCoding
+            - letswritephp_openphpmc
+            - letswritephp_simpleechocoding
+            - letswritephp_jobofechomc
+            - letswritephp_createvariablecoding
+            - letswritephp_fixmissingsemicoloncoding
     "functions":
         video_key:  140189281
         challenges:
-            - Challenges\Functions\UseRandFunctionCoding
-            - Challenges\Functions\ReverseAndLowercaseCoding
-            - Challenges\Functions\NestedFunctionsMC
+            - functions_userandfunctioncoding
+            - functions_reverseandlowercasecoding
+            - functions_nestedfunctionsmc
     "arrays-loops":
         video_key:  140189284
         challenges:
-            - Challenges\ArraysLoops\CreateArrayCoding
-            - Challenges\ArraysLoops\ForEachCoding
-            - Challenges\ArraysLoops\VarDumpCoding
-            - Challenges\ArraysLoops\ArrayKeysMC
+            - arraysloops_createarraycoding
+            - arraysloops_foreachcoding
+            - arraysloops_vardumpcoding
+            - arraysloops_arraykeysmc
     "arrays2":
         video_key:  140189280
         challenges:
-            - Challenges\Arrays2\ConvertToAssociativeCoding
-            - Challenges\Arrays2\AddNewKeyCoding
-            - Challenges\Arrays2\GuessAutoKeyMC
+            - arrays2_converttoassociativecoding
+            - arrays2_addnewkeycoding
+            - arrays2_guessautokeymc
     "arrays3":
         video_key:  140189283
         challenges:
-            - Challenges\Arrays3\MultiArrayKeysCoding
-            - Challenges\Arrays3\ForeachAssociativeCoding
-            - Challenges\Arrays3\CountAndVariableReorderCoding
+            - arrays3_multiarraykeyscoding
+            - arrays3_foreachassociativecoding
+            - arrays3_countandvariablereordercoding
     "files-json-booleans":
         video_key:  140189282
         challenges:
-            - Challenges\FilesJsonBooleans\JsonEncodeMC
-            - Challenges\FilesJsonBooleans\ReadFileJsonDecodeCoding
-            - Challenges\FilesJsonBooleans\FilePutContentsCoding
+            - filesjsonbooleans_jsonencodemc
+            - filesjsonbooleans_readfilejsondecodecoding
+            - filesjsonbooleans_fileputcontentscoding
     "if-statement":
         video_key:  140189287
         challenges:
-            - Challenges\IfStatement\IfNoToyColorCoding
-            - Challenges\IfStatement\IfElseIfElseCoding
-            - Challenges\IfStatement\FixErrorsIfElseCoding
+            - ifstatement_ifnotoycolorcoding
+            - ifstatement_ifelseifelsecoding
+            - ifstatement_fixerrorsifelsecoding
     "system-setup":
         video_key:  140189286
         challenges:
-            - Challenges\SystemSetup\DnsFairyMC
-            - Challenges\SystemSetup\LocalhostPortFilenameMC
+            - systemsetup_dnsfairymc
+            - systemsetup_localhostportfilenamemc
     "creating-functions":
         video_key:  140189288
         challenges:
-            - Challenges\CreatingFunctions\FunWithCommentsMC
-            - Challenges\CreatingFunctions\CreateFunctionCoding
+            - creatingfunctions_funwithcommentsmc
+            - creatingfunctions_createfunctioncoding
     "require-include":
         video_key:  140189289
         challenges:
-            - Challenges\RequireInclude\IsolateFunctionUseRequireCoding
-            - Challenges\RequireInclude\NoClosingPhpTagMC
+            - requireinclude_isolatefunctionuserequirecoding
+            - requireinclude_noclosingphptagmc
     "simple-layout":
         video_key:  140189290
         challenges:
-            - Challenges\SimpleLayout\LayoutWithRequireCoding
-            - Challenges\SimpleLayout\RequireAndVariablesMC
+            - simplelayout_layoutwithrequirecoding
+            - simplelayout_requireandvariablesmc
