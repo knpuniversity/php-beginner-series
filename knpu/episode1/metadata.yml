@@ -26,6 +26,8 @@ tuts_hero:
     start_step: start
     finish_step: "Layout: Create and use header/footer"
 
+challenge_repo: knpuniversity/php-beginner-series-challenges
+
 chapters:
     "lets-write-php":
         is_free:    true
