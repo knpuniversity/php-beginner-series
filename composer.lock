@@ -4,43 +4,10 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "249a9f65796267bbcc9b9f4ee8f9b201",
-    "content-hash": "beea0055fae36985de375a61a0fa75cc",
+    "hash": "54aa58648762956714d49e13e6c8006b",
+    "content-hash": "e2d2ec2f27a9bd4f71f4a01cf86ff008",
     "packages": [],
     "packages-dev": [
-        {
-            "name": "knpuniversity/gladiator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/knpuniversity/Gladiator.git",
-                "reference": "6e77e6f4988d4b803600d138f991298bb94d294d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/knpuniversity/Gladiator/zipball/6e77e6f4988d4b803600d138f991298bb94d294d",
-                "reference": "6e77e6f4988d4b803600d138f991298bb94d294d",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "KnpU\\Gladiator\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "KnpUniversity",
-                    "email": "hello@knpuniversity.com"
-                }
-            ],
-            "description": "Classes to support KnpUniversity challenges",
-            "time": "2015-10-21 19:29:31"
-        },
         {
             "name": "symfony/dom-crawler",
             "version": "v2.7.6",
@@ -148,9 +115,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "knpuniversity/gladiator": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

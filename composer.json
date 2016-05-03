@@ -1,7 +1,6 @@
 {
     "name": "knpuniversity/php-beginner-series",
     "require-dev": {
-        "knpuniversity/gladiator": "dev-master",
         "symfony/dom-crawler": "~2.7",
         "symfony/http-foundation": "~2.7"
     },
