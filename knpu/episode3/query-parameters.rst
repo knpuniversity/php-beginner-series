@@ -89,7 +89,7 @@ You know the drill from here! We'll query the database for this one pet and
 use that information to build the page. But wait! Should we build the query
 right here or put it in a function? Easy choice: a function will help keep
 things organized. Call an imaginary ``get_pet()`` function and pass it the
-``$id``::
+``$id``:
 
 .. code-block:: html+php
 
