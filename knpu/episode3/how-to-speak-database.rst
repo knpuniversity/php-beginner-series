@@ -103,5 +103,5 @@ Now for Queries!
 
 .. _`PostgreSQL`: http://www.postgresql.org/
 .. _`SQLite`: http://www.sqlite.org/
-.. _`installed XAMPP in episode 1`: knpuniversity.com/screencast/php-ep1/system-setup
-.. _`XAMPP's control panel`: http://knpuniversity.com/screencast/php-ep1/system-setup#using-php-s-web-server
+.. _`installed XAMPP in episode 1`: https://symfonycasts.com/screencast/php-ep1/system-setup
+.. _`XAMPP's control panel`: https://symfonycasts.com/screencast/php-ep1/system-setup#using-php-s-web-server
