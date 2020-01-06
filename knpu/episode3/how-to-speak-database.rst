@@ -56,9 +56,9 @@ in episode 1. I recommend using that or downloading Git, which comes with
 a nice "Git Bash" terminal program. Windows *does* have a built-in terminal
 called "cmd", but it's really light on features.
 
-***TIP
-If you are getting a connection error, make sure that MySQL server is running in XAMPP control panel!
-***
+.. tip::
+
+    If you are getting a connection error, make sure that MySQL server is running in XAMPP control panel!
 
 We're going to ease into using the command line, so don't worry. You probably
 *can* avoid using the terminal, but you'll be a much better developer if
