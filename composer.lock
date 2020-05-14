@@ -1,11 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "54aa58648762956714d49e13e6c8006b",
-    "content-hash": "e2d2ec2f27a9bd4f71f4a01cf86ff008",
+    "content-hash": "98a59f3b5e1bddc126679e5d6e6ebbb9",
     "packages": [],
     "packages-dev": [
         {
@@ -58,7 +57,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-11 09:39:48"
+            "time": "2015-10-11T09:39:48+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -110,7 +109,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-23 14:47:27"
+            "time": "2015-10-23T14:47:27+00:00"
         }
     ],
     "aliases": [],
@@ -119,5 +118,9 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "5.3.9"
+    },
+    "plugin-api-version": "1.1.0"
 }

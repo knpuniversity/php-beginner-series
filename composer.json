@@ -9,5 +9,10 @@
             "name": "Ryan Weaver",
             "email": "ryan@knpuniversity.com"
         }
-    ]
+    ],
+    "config": {
+        "platform": {
+            "php": "5.3.9"
+        }
+    }
 }
