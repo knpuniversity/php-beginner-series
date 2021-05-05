@@ -9,8 +9,9 @@ Getting the Code, Starting the Web Server
 -----------------------------------------
 
 We're going to keep coding on the project from `episode 1`_. If you don't have
-that code, just download it from the screencast page and unzip it. Once you've
-done that, we just need to start the PHP web server.
+that code, just download it from the screencast page and unzip it or from 
+[github](https://github.com/knpuniversity/php-beginner-series/archive/refs/heads/master.zip). 
+Once you've done that, we just need to start the PHP web server.
 
 Open a terminal and move into the directory where the unzipped files live.
 I already unzipped the files in a ``Sites/php`` directory. Start the PHP
