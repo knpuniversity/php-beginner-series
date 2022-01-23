@@ -33,7 +33,7 @@ When we refresh, we see our number is now dynamic: each time we refresh, the
 .. tip::
 
     Generating random numbers is actually kind of tough for computers. Another
-    function, :phpfunction`mt_rand`, generates "better" random numbers.
+    function, :phpfunction:`mt_rand`, generates "better" random numbers.
 
 PHP comes with a lot of built-in functions like ``rand`` that you can use immediately.
 On php.net, you can lookup your function and learn all about it.
