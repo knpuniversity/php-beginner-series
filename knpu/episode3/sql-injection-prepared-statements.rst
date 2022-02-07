@@ -101,7 +101,9 @@ and  ``fetchAll()`` to get the data back. Simple!
             $query = $query .' LIMIT :resultLimit';
         }
         $stmt = $pdo->prepare($query);
-        $stmt->bindParam('resultLimit', $limit);
+        if ($limit) {
+            $stmt->bindParam('resultLimit', $limit);
+        }
         $stmt->execute();
         $pets = $stmt->fetchAll();
 
