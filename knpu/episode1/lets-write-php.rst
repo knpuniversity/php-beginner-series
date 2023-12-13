@@ -76,10 +76,6 @@ One gets us into PHP mode and the other exits PHP mode:
 Before we talk about what we did, let's celebrate, because when I refresh
 the page, it works! PHP is printing our message in the middle of the page.
 
-The key is the :phpfunction:`echo` statement, whose job is to print things
-out. The message itself is called a "string" and strings are always surrounded
-by single quotes when you write them.
-
 .. tip::
 
     You can actually use single quotes (``'Foo'``) or double quotes (``"Foo"``).
